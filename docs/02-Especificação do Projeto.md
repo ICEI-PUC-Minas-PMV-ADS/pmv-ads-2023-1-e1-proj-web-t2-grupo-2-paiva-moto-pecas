@@ -35,8 +35,13 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando a
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O site deve exibir todos os produtos e serviços oferecidos pela oficina, com mídias e suas respectivas informações técnicas. | ALTA | 
+|RF-002| O site deve possibilitar, por meio de um botão, o contato com a oficina pelo aplicativo WhatsApp. | ALTA | 
+|RF-003| O site deve possuir um banner com o nome e logotipo da oficina na página inicial, e em posição de destaque em todas as demais páginas. | MÉDIA |
+|RF-004| O site deve fornecer a localização da oficina, com a possibilidade de redirecionamento para um serviço de gps com o endereço da oficina já configurado. | MÉDIA |
+|RF-005| O site deve permitir que os usuários naveguem pelos produtos disponíveis para venda, filtrando-os por critérios pré estabelecidos. | MÉDIA |
+|RF-006| O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características. | ALTA |
+|RF-007| O site deve conter a história da empresa, informações dos funcionários, horário de funcionamento e avaliações de clientes sobre a oficina. | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -44,8 +49,10 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O site deve ser publicado em um ambiente acessível publicamente na internet (GitHub Pages). | ALTA | 
+|RNF-002| O site deverá ser responsivo permitindo a visualização em diferentes dispositivos de forma adequada. | ALTA | 
+|RNF-003| O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge). | ALTA | 
+|RNF-004| O site deve cumprir com boas práticas de acessibilidade, como por exemplo: contraste adequado, atributos para leitores de tela, tags semânticas em HTML, etc. | MÉDIA | 
 
 ## Restrições
 
