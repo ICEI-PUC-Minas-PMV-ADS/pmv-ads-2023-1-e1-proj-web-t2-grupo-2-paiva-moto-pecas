@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# PAIVA MOTO PEÇAS
 
-`CURSO`
+`CURSO:` Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+`DISCIPLINA:` Projeto: Desenvolvimento de Aplicação Web Front-End
 
-`SEMESTRE`
+`SEMESTRE:` Eixo 1
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alessandra Santos
+* Enzo Moura
+* Ingrid Barros
+* Karina Barbosa
+* Lucas Vazzoller Marangoni
+* Paloma Rizzon
 
 ## Orientador
 
-* Nome completo do professor 1
+* Joyce Carvalho
 
 ## Instruções de utilização
 
@@ -41,7 +43,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* Insira o endereço eletrônico público de acesso ao conteúdo publicado.
 
 # Armazenamento do Código-Fonte
 
