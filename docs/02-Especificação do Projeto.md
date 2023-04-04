@@ -19,7 +19,12 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Bruna Silva  | quero conseguir ser atendida pelo WhatsApp         | para conseguir tirar minhas dúvidas e conseguir me sentir segura para a compra             |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Bruna Silva       | quero conseguir filtrar os produtos por marca, categoria, tipo e relevância               | para facilitar a minha busca |
+|Bruna Silva       | quero poder realizar buscas personalizadas             | para que eu possa encontrar o que eu quero com facilidade e rapidez |
+|Bruna Silva       | quero ter informações técnicas sobre os produtos e serviços               | para que eu possa avaliar previamente minha compra |
+|Pedro Ribeiro       | quero que o cliente consiga chegar até minha oficina com facilidade             | para que ele não deixe de comprar pela dificuldade de se localizar |
+|Pedro Ribeiro       | quero que o cliente possa conhecer mais sobre a oficina              | para que o cliente se sinta seguro na compra |
+|Pedro Ribeiro       | quero que o site mostre, com destaque, o nome e logotipo da oficina              | para que o cliente consiga identificar com facilidade nossa oficina. |
 
 ## Requisitos
 
