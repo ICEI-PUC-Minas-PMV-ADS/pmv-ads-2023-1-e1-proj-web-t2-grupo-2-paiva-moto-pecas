@@ -60,5 +60,6 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 25/06/2023. |
+|RE-02| O aplicativo deve se restringir às tecnologias básicas de Web Front-end. |
+|RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho. |
