@@ -6,7 +6,7 @@
 
 `SEMESTRE:` Eixo 1
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto se trata de uma aplicação web responsavel pela distruibuição e divulgação de produtos da paiva moto peças, dentre eles serviços e peças para motos
 
 ## Integrantes
 
