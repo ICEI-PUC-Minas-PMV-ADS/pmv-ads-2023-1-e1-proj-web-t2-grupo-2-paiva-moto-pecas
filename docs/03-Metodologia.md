@@ -9,6 +9,15 @@ A primeira etapa iniciou-se com pesquisas, visando coletar dados e informações
 Etapa 2
 Nesta etapa desenvolveu-se a metodologia utilizada no projeto, criando a relação de ambiente de trabalho que contempla: repositório de código fonte, documentos do projeto, projeto de interface e  wireframes, gerenciamento do projeto, nesta fase, o gerenciamento do projeto está dividido em: scrum master, product owner, equipe de desenvolvimento, equipe de design, sendo que o projeto  é separado em cinco sprints e dentro de cada sprint existem ações a serem realizadas, essas ações estão dispostas em cards no backlog do produto, seguindo com a elaboração do projeto de interface, criando o fluxo de usuário que traz a visão geral da interação do usuário com as telas de funcionalidades que fazem parte do sistema wireframes, contendo cabeçalho, conteúdo e rodapé, buscando atender as necessidades dos usuários.
 
+## Relação de Ambientes de Trabalho
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+
+|AMBIENTE| PLATAFORMA | LINK DE ACESSO |
+|--------------------|------------------------------------|----------------------------------------|
+| Repositório de código fonte | GitHub  | [Repositório de código fonte](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas) |
+| Documentos do projeto  | Github | [Documentos do projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas) |
+| Projeto de Interface e  Wireframes | Figma | [Projeto de Interface e  Wireframes](https://www.figma.com/file/AQnV3bdBiIJOyrLcBKpZvp/Projeto?node-id=0-1)|
+| Gerenciamento do Projeto  | GitHub Projects | [Gerenciamento do Projeto](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/382)|
 
 ## Controle de Versão
 
