@@ -3,7 +3,12 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Etapa 1
+A primeira etapa iniciou-se com pesquisas, visando coletar dados e informações a respeito do tema, seguimos com a elaboração do problema, definição dos objetivos, justificativa e público-alvo, desenvolveu-se as especificações do projeto que contemplam a criação das personas, elaboração de histórias de usuários e descrição dos requisitos funcionais e não funcionais, pensando sempre em atender da melhor forma possível as necessidades do dono e seus clientes.
+
+Etapa 2
+Nesta etapa desenvolveu-se a metodologia utilizada no projeto, criando a relação de ambiente de trabalho que contempla: repositório de código fonte, documentos do projeto, projeto de interface e  wireframes, gerenciamento do projeto, nesta fase, o gerenciamento do projeto está dividido em: scrum master, product owner, equipe de desenvolvimento, equipe de design, sendo que o projeto  é separado em cinco sprints e dentro de cada sprint existem ações a serem realizadas, essas ações estão dispostas em cards no backlog do produto, seguindo com a elaboração do projeto de interface, criando o fluxo de usuário que traz a visão geral da interação do usuário com as telas de funcionalidades que fazem parte do sistema wireframes, contendo cabeçalho, conteúdo e rodapé, buscando atender as necessidades dos usuários.
+
 
 ## Controle de Versão
 
