@@ -6,7 +6,7 @@
 
 `SEMESTRE:` Eixo 1
 
-O projeto se trata de uma aplicação web responsavel pela distruibuição e divulgação de produtos da paiva moto peças, dentre eles serviços e peças para motos
+O projeto se trata de uma aplicação web responsável pela divulgação de produtos e serviços da oficina Paiva Moto Peças.
 
 ## Integrantes
 
