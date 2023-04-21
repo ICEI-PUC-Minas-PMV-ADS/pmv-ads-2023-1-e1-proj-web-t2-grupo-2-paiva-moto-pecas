@@ -26,4 +26,4 @@ Observa-se que a falta de disponibilização de um serviço que oferece atendime
 
 O foco deste trabalho está no público que tem interesse em motos e soluções automotivas, seja para compra de produtos relacionados a esse nicho ou serviços para manutenção de motos em geral, e também o proprietário do estabelecimento que contratou a equipe para desenvolver a aplicação web.
 
-Sendo assim, determinou-se como público-alvo desta solução pessoas que procuram por produtos e serviços relacionados a motos, por meio de buscas on-line em dispositivos móveis e computadores, com a finalidade de ter acesso fácil a esse tipo de comércio. Também é definido como público-alvo o proprietário do comércio que quer ter um site para expor os produtos e serviços vendidos em seu estabelecimento. 
+Sendo assim, determinou-se como público-alvo desta solução o dono da oficina e  pessoas que procuram por produtos e serviços relacionados a motos, por meio de buscas on-line em dispositivos móveis e computadores, com a finalidade de ter acesso fácil a esse tipo de comércio. 
