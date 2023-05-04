@@ -1,4 +1,4 @@
-import { produtos } from './database/prdutos-db.js'
+import { produtos } from '../database/prdutos-db.js'
 
 const divProduto = document.querySelector('#divProduto');
 
