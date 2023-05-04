@@ -40,9 +40,7 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
 
 .produtoUnit{
@@ -56,4 +54,14 @@ footer{
     width: 200px;
     height: 300px;
     background-color: white;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.divFilter{
+    display: flex;    
 }

@@ -1,9 +1,8 @@
 import { produtos } from '../database/produtos-db.js';
 
-console.log(produtos);
 const divProduto = document.querySelector('#divProduto');
 
-function produto(imagem, nome, apresentacao) {
+function printProdutos(imagem, nome, apresentacao) {
     divProduto.innerHTML += `
     <div  class="produtoUnit" >    
         <img id="img" src="../database/public/${imagem}.png" alt="">
@@ -13,13 +12,47 @@ function produto(imagem, nome, apresentacao) {
     `
 }
 
-for (let i = 0; i < produtos.length; i++) {
-    produto(
-        produtos[i].imagem,
-        produtos[i].nome,
-        produtos[i].apresentacao
-    )
+const honda = document.querySelector('#honda')
+
+
+let filtrados
+
+
+
+
+
+function change() {
+
+    honda.addEventListener('change', () => {
+        if (honda.checked === true) {
+            filtrados = produtos.filter((produto) => {
+                return produto.marca == 'Honda'
+            })
+        }
+        if (honda.checked === false) {
+            location.reload();
+        }
+        divProduto.innerHTML = ''
+        return filtrados.map((produt) => {
+            printProdutos(
+                produt.imagem,
+                produt.nome,
+                produt.apresentacao
+            )
+        })
+    })
+    return produtos.map((produto) => {
+        printProdutos(
+            produto.imagem,
+            produto.nome,
+            produto.apresentacao
+        )
+    })
 }
 
 
+
+
+
+change()
 
