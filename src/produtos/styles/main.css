@@ -45,7 +45,7 @@ footer{
     
 }
 
-/* .produtoUnit{
+.produtoUnit{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,4 +56,4 @@ footer{
     width: 200px;
     height: 300px;
     background-color: white;
-} */
+}
