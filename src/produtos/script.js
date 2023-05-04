@@ -1,11 +1,11 @@
-import { produtos } from '../database/produtos-db.js';
+import { produtos } from '../database/produtos/produtos-db.js';
 
 const divProduto = document.querySelector('#divProduto');
 
 function printProdutos(imagem, nome, apresentacao) {
     divProduto.innerHTML += `
     <div  class="produtoUnit" >    
-        <img id="img" src="../database/public/${imagem}.png" alt="">
+        <img id="img" src="../database/produtos/public/${imagem}.png" alt="">
         <h3>${nome}</h3>
         <p>${apresentacao}</p>
     </div>     
