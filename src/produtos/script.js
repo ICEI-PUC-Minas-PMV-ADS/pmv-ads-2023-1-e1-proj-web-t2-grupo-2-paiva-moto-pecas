@@ -5,6 +5,8 @@ const divProduto = document.querySelector('#divProduto');
 const honda = document.querySelector('#honda')
 const yamaha = document.querySelector('#yamaha')
 
+const checkBox = [honda, yamaha]
+const marcas = ["Honda", "Yamaha"]
 
 function printProdutos(imagem, nome, apresentacao) {
     divProduto.innerHTML += `
@@ -31,10 +33,10 @@ function printFilterProdutos(imagem, nome, apresentacao) {
 }
 
 
-let filtrados
-// let filtradosHonda
-// let filtradosYamaha
+let filtrados = []
 
+let ArrayFilterHonda = []
+let ArrayFilterYamaha = []
 
 function initial() {
     return produtos.map((produto) => {
@@ -42,6 +44,37 @@ function initial() {
             produto.imagem,
             produto.nome,
             produto.apresentacao
+        )
+    })
+}
+
+/*
+Criar lets diferentes para cada um dos filtros, e coloca-los em contêineres 
+diferentes para poder limpar o contêiner quando for desmarcada a checkbox do filtro
+
+*/
+function change() {
+    checkBox.forEach((check) => {
+        check.addEventListener('change', () => {
+            if (check.checked === true) {
+                filtrados = produtos.filter((produto) => {
+                    return produto.marca === check.value
+                })
+
+                divProduto.innerHTML = ''
+                return filtrados.map((produto) => {
+                    printFilterProdutos(
+                        produto.imagem,
+                        produto.nome,
+                        produto.apresentacao
+                    )
+                })
+            } else if (honda.checked === false && yamaha.checked === false) {                
+                location.reload();
+            } else if (honda.checked === false) {
+                filtrados = [] 
+            }
+        }
         )
     })
 }
@@ -94,5 +127,7 @@ function changeYamaha() {
 
 
 initial()
-changeHonda()
-changeYamaha()
+// changeHonda()
+// changeYamaha()
+
+change()
