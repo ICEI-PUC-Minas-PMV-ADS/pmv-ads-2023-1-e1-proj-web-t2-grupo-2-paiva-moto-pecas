@@ -18,25 +18,42 @@ function printProdutos(imagem, nome, apresentacao) {
     `
 }
 
+let filtrados = []
+
 function printFilterProdutos(imagem, nome, apresentacao) {
-    loja.innerHTML += `
-    <section class="clasProcutos" id="filterSection">        
-    </section >`
-    const filterSection = document.querySelector('#filterSection')
-    filterSection.innerHTML += `        
+
+    marcas.forEach((marca) => {
+        loja.innerHTML += `
+    <section class="clasProcutos" id=filterSection${marca}></section >`
+    })
+
+    document.querySelector(`#filterSectionHonda`).innerHTML += `        
         <div class="produtoUnit" >
             <img id="img" src="../database/produtos/public/${imagem}.png" alt="">
             <h3>${nome}</h3>
             <p>${apresentacao}</p>
         </div>     
     `
+    document.querySelector(`#filterSectionYamaha`).innerHTML += `        
+        <div class="produtoUnit" >
+            <img id="img" src="../database/produtos/public/${imagem}.png" alt="">
+            <h3>${nome}</h3>
+            <p>${apresentacao}</p>
+        </div>     
+    `
+
+
+    if (honda.checked === false && yamaha.checked === true) {
+        document.querySelector(`#filterSectionHonda`).style.display = 'none'
+    }
+
+    if (yamaha.checked === false && honda.checked === true) {
+        document.querySelector(`#filterSectionYamaha`).style.display = 'none'
+    }
 }
 
 
-let filtrados = []
 
-let ArrayFilterHonda = []
-let ArrayFilterYamaha = []
 
 function initial() {
     return produtos.map((produto) => {
@@ -48,11 +65,6 @@ function initial() {
     })
 }
 
-/*
-Criar lets diferentes para cada um dos filtros, e coloca-los em contêineres 
-diferentes para poder limpar o contêiner quando for desmarcada a checkbox do filtro
-
-*/
 function change() {
     checkBox.forEach((check) => {
         check.addEventListener('change', () => {
@@ -60,74 +72,24 @@ function change() {
                 filtrados = produtos.filter((produto) => {
                     return produto.marca === check.value
                 })
-
                 divProduto.innerHTML = ''
                 return filtrados.map((produto) => {
+                    const { imagem, nome, apresentacao } = produto
                     printFilterProdutos(
-                        produto.imagem,
-                        produto.nome,
-                        produto.apresentacao
+                        imagem,
+                        nome,
+                        apresentacao
                     )
                 })
-            } else if (honda.checked === false && yamaha.checked === false) {                
+            } else if (check.checked === false) {
                 location.reload();
-            } else if (honda.checked === false) {
-                filtrados = [] 
             }
+
+
         }
         )
     })
 }
 
-function changeHonda() {
-
-    honda.addEventListener('change', () => {
-        if (honda.checked === true) {
-            filtrados = produtos.filter((produto) => {
-                return produto.marca === 'Honda'
-            })
-        }
-        if (honda.checked === false) {
-            location.reload();
-        }
-        divProduto.innerHTML = ''
-        return filtrados.map((produto) => {
-            printFilterProdutos(
-                produto.imagem,
-                produto.nome,
-                produto.apresentacao
-            )
-        })
-    })
-
-}
-
-function changeYamaha() {
-
-    yamaha.addEventListener('change', () => {
-        if (yamaha.checked === true) {
-            filtrados = produtos.filter((produto) => {
-                return produto.marca === 'Yamaha'
-            })
-        }
-        if (yamaha.checked === false) {
-            location.reload();
-        }
-        divProduto.innerHTML = ''
-        return filtrados.map((produto) => {
-            printFilterProdutos(
-                produto.imagem,
-                produto.nome,
-                produto.apresentacao
-            )
-        })
-    })
-
-}
-
-
 initial()
-// changeHonda()
-// changeYamaha()
-
 change()
