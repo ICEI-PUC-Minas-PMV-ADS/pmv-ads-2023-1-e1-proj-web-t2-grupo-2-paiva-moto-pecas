@@ -1,11 +1,11 @@
 import { listingSelectedElements, reloadPage, getMarcas } from './components/filtro.js'
 import { produtos } from '../database/produtos/produtos-db.js';
 
-const divProduto = document.querySelector('#divProduto');
+const completeSection = document.querySelector('#completeSection');
 
 
 function printProdutos(imagem, nome, apresentacao) {
-    divProduto.innerHTML += `
+    completeSection.innerHTML += `
     <div  class="produtoUnit" >    
         <img class="img" src="../database/produtos/public/${imagem}.png" alt="">
         <h3>${nome}</h3>
@@ -14,7 +14,7 @@ function printProdutos(imagem, nome, apresentacao) {
     `
 }
 
-export function initial() {
+export function initialSection() {
     return produtos.map((produto) => {
         const { imagem, nome, apresentacao } = produto
         printProdutos(
@@ -25,15 +25,17 @@ export function initial() {
     })
 }
 
-initial()
+initialSection()
 
 const marcas = []
 getMarcas.map((marca) => {
     marcas.push(marca.split(' ').join(""))
 })
+const marcaComHashtag = marcas.map(marca => '#' + marca);
 
 for (let i = 0; i < marcas.length; i++) {
-    listingSelectedElements(marcas[i], marcas[i])
+    listingSelectedElements(marcaComHashtag[i], marcas[i])
 }
 
-reloadPage(marcas)
+reloadPage(marcaComHashtag)
+

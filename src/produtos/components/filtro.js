@@ -25,21 +25,21 @@ async function creatingSelectedElements(filterSection, imagem, nome, apresentaca
                     <h3>${nome}</h3>
                     <p>${apresentacao}</p>
             </div>
-        `
+           `
 }
 
-export function listingSelectedElements(marca, filterSection) {
-    let filtrados = []
-    const marcaID = document.querySelector(`#${marca.split(' ').join("")}`)
-    const divProduto = document.querySelector('#divProduto');
+export function listingSelectedElements(marca, filterSection) {    
+    const marcaID = document.querySelector(`${marca.split(' ').join("")}`)
+    const completeSection = document.querySelector('#completeSection');
     const filterSectionMarca = document.querySelector(`#filterSection${filterSection}`)
+    let filtrados = []
 
     marcaID.addEventListener('change', () => {
         if (marcaID.checked === true) {
             filtrados = produtos.filter((produto) => {
                 return produto.marca === marcaID.value
             })
-            divProduto.innerHTML = ''
+            completeSection.innerHTML = ''
             filtrados.map((produto) => {
                 const { imagem, nome, apresentacao } = produto
                 creatingSelectedElements(
@@ -53,7 +53,6 @@ export function listingSelectedElements(marca, filterSection) {
         } else if (marcaID.checked === false) {
             filterSectionMarca.innerHTML = ''
         }
-
     })
 
 }
@@ -67,20 +66,18 @@ function checkingCheckboxes() {
             break
         }
     }
-
     if (!isChecked) {
         isChecked;
     }
-
     return isChecked;
 }
 
-export function reloadPage(...marcas) {    
-    const marcaID = document.querySelectorAll(`#${marcas}`)
+export function reloadPage(...marcas) {
+    const marcaID = document.querySelectorAll(`${marcas}`)
 
-    marcaID.forEach((marca) => {
+    marcaID.forEach((marca) => {       
         marca.addEventListener('change', () => {
-            if (checkingCheckboxes() === true) {               
+            if (checkingCheckboxes() === true) {
                 marca.addEventListener('change', () => {
                     if (checkingCheckboxes() === false) {
                         location.reload();
