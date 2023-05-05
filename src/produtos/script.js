@@ -1,4 +1,4 @@
-import { onEvent, reloadPage } from './components/filtro.js'
+import { listingSelectedElements, reloadPage, getMarcas } from './components/filtro.js'
 import { produtos } from '../database/produtos/produtos-db.js';
 
 const divProduto = document.querySelector('#divProduto');
@@ -27,25 +27,13 @@ export function initial() {
 
 initial()
 
-const inputs = [
-    '#Honda',
-    '#Yamaha',
-    '#MetalLeve',
-    '#Magnetron',
-    '#ProTork',
-    '#Michelin']
+const marcas = []
+getMarcas.map((marca) => {
+    marcas.push(marca.split(' ').join(""))
+})
 
-const filters = [
-    '#filterSectionHonda',
-    '#filterSectionYamaha',
-    '#filterSectionMetalLeve',
-    '#filterSectionMagnetron',
-    '#filterSectionProTork',
-    '#filterSectionMichelin']
-
-for (let i = 0; i < inputs.length; i++) {
-    onEvent(inputs[i], filters[i])
+for (let i = 0; i < marcas.length; i++) {
+    listingSelectedElements(marcas[i], marcas[i])
 }
 
-
-reloadPage(inputs)
+reloadPage(marcas)

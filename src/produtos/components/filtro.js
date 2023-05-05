@@ -5,15 +5,11 @@ const loja = document.querySelector('#loja');
 const marcas = produtos.map((produto) => {
     return produto.marca
 })
-const getMarcas = marcas.filter((valor, indice, arr) => arr.indexOf(valor) === indice);
-
+export const getMarcas = marcas.filter((valor, indice, arr) => arr.indexOf(valor) === indice);
 const inputsMarca = document.querySelector('#inputsMarca');
 
 getMarcas.map((marca) => {
     loja.innerHTML += `<section class="classProcutos" id="filterSection${marca.split(' ').join("")}">`
-})
-
-getMarcas.map((marca) => {
     inputsMarca.innerHTML += `
     <div class="divFilter">
         <input id="${marca.split(' ').join("")}" type="checkbox" name="${marca}" value="${marca}">
@@ -21,8 +17,8 @@ getMarcas.map((marca) => {
     </div>`
 })
 
-async function filterMarca(filterSection, imagem, nome, apresentacao) {
-    const filterSectionMarca = document.querySelector(`${filterSection}`)
+async function creatingSelectedElements(filterSection, imagem, nome, apresentacao) {
+    const filterSectionMarca = document.querySelector(`#filterSection${filterSection}`)
     filterSectionMarca.innerHTML += `
             <div class="produtoUnit" >
                 <img class="img" src="../database/produtos/public/${imagem}.png" alt="">
@@ -30,14 +26,13 @@ async function filterMarca(filterSection, imagem, nome, apresentacao) {
                     <p>${apresentacao}</p>
             </div>
         `
-
 }
 
-export function onEvent(marca, filterSection) {
+export function listingSelectedElements(marca, filterSection) {
     let filtrados = []
-    const marcaID = document.querySelector(`${marca}`)
+    const marcaID = document.querySelector(`#${marca.split(' ').join("")}`)
     const divProduto = document.querySelector('#divProduto');
-    const filterSectionMarca = document.querySelector(`${filterSection}`)
+    const filterSectionMarca = document.querySelector(`#filterSection${filterSection}`)
 
     marcaID.addEventListener('change', () => {
         if (marcaID.checked === true) {
@@ -47,7 +42,7 @@ export function onEvent(marca, filterSection) {
             divProduto.innerHTML = ''
             filtrados.map((produto) => {
                 const { imagem, nome, apresentacao } = produto
-                filterMarca(
+                creatingSelectedElements(
                     filterSection,
                     imagem,
                     nome,
@@ -62,7 +57,7 @@ export function onEvent(marca, filterSection) {
     })
 
 }
-function check() {
+function checkingCheckboxes() {
     let isChecked = false;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
@@ -80,14 +75,14 @@ function check() {
     return isChecked;
 }
 
-export function reloadPage(...marcas) {
-    const marcaID = document.querySelectorAll(`${marcas}`)
+export function reloadPage(...marcas) {    
+    const marcaID = document.querySelectorAll(`#${marcas}`)
 
     marcaID.forEach((marca) => {
         marca.addEventListener('change', () => {
-            if (check() === true) {               
+            if (checkingCheckboxes() === true) {               
                 marca.addEventListener('change', () => {
-                    if (check() === false) {
+                    if (checkingCheckboxes() === false) {
                         location.reload();
                     }
                 })
