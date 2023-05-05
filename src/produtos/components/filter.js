@@ -30,7 +30,7 @@ fullItens.map((item) => {
 async function creatingSelectedElements(filterSection, picture, name, presentation) {
     const filterSectionBrand = document.querySelector(`#filterSection${filterSection}`)
     filterSectionBrand.innerHTML += `
-            <div class="productUnit" >
+            <div class="produtoUnit" >
                 <img class="img" src="../database/produtos/public/${picture}.png" alt="">
                     <h3>${name}</h3>
                     <p>${presentation}</p>
@@ -43,7 +43,7 @@ export function listingSelectedElements(brand, filterSection) {
     const completeSection = document.querySelector('#completeSection');
     const filterSectionBrand = document.querySelector(`#filterSection${filterSection}`)
     let filtered = []
-    
+
     itemID.addEventListener('change', () => {
         if (itemID.checked === true) {
             filtered = products.filter((product) => {
