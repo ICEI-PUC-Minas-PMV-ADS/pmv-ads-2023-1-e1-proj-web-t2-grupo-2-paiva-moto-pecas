@@ -48,4 +48,4 @@ for (let i = 0; i < inputs.length; i++) {
 }
 
 
-reloadPage('#Honda', '#Yamaha', '#MetalLeve', '#Magnetron', '#ProTork', '#Michelin')
+reloadPage(inputs)
