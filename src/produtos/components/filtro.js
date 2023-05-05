@@ -6,7 +6,6 @@ const marcas = produtos.map((produto) => {
     return produto.marca
 })
 const getMarcas = marcas.filter((valor, indice, arr) => arr.indexOf(valor) === indice);
-console.log(getMarcas);
 
 const inputsMarca = document.querySelector('#inputsMarca');
 
@@ -17,7 +16,7 @@ getMarcas.map((marca) => {
 getMarcas.map((marca) => {
     inputsMarca.innerHTML += `
     <div class="divFilter">
-        <input id="${marca}" type="checkbox" name="${marca}" value="${marca}">
+        <input id="${marca.split(' ').join("")}" type="checkbox" name="${marca}" value="${marca}">
         <p>${marca}</p>
     </div>`
 })
@@ -86,8 +85,7 @@ export function reloadPage(...marcas) {
 
     marcaID.forEach((marca) => {
         marca.addEventListener('change', () => {
-            if (check() === true) {
-                console.log('checked');
+            if (check() === true) {               
                 marca.addEventListener('change', () => {
                     if (check() === false) {
                         location.reload();

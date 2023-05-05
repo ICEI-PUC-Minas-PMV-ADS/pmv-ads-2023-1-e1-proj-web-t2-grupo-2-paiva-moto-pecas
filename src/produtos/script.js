@@ -27,7 +27,25 @@ export function initial() {
 
 initial()
 
-onEvent('#Honda', '#filterSectionHonda')
-onEvent('#Yamaha', '#filterSectionYamaha')
+const inputs = [
+    '#Honda',
+    '#Yamaha',
+    '#MetalLeve',
+    '#Magnetron',
+    '#ProTork',
+    '#Michelin']
 
-reloadPage('#Honda', '#Yamaha')
+const filters = [
+    '#filterSectionHonda',
+    '#filterSectionYamaha',
+    '#filterSectionMetalLeve',
+    '#filterSectionMagnetron',
+    '#filterSectionProTork',
+    '#filterSectionMichelin']
+
+for (let i = 0; i < inputs.length; i++) {
+    onEvent(inputs[i], filters[i])
+}
+
+
+reloadPage('#Honda', '#Yamaha', '#MetalLeve', '#Magnetron', '#ProTork', '#Michelin')
