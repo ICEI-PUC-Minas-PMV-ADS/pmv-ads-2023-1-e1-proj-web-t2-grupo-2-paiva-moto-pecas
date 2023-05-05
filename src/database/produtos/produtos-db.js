@@ -187,7 +187,7 @@ export const produtos = [
         nome: 'Kit Cilindro Pistão Anéis',
         apresentacao: `Titan, nxr 125 2002/2008`,
         descricao: `    
-        Kit cilindro pistão e anéis metal leve
+        Kit cilindro pistão e anéis metal leve.
         Conteúdo da embalagem: Cilindro, camisa, pistão, anéis de segmento, 
         pino do pistão, travas do pino do pistão.
         `,

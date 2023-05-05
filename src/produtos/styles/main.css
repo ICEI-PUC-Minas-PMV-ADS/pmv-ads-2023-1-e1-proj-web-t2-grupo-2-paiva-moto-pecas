@@ -15,7 +15,7 @@ body{
 }
 
 #loja{
-    background-color: antiquewhite;
+    background-color: rgb(165, 163, 161);
 }
 
 header{
@@ -30,24 +30,25 @@ footer{
     text-align: center;
 }
 
-#img{
+.img{
     width: 150px;
     height: 150px;
 }
 
-.clasProcutos{
+.classProcutos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;   
+    column-gap: 2rem;
 }
 
 .produtoUnit{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
