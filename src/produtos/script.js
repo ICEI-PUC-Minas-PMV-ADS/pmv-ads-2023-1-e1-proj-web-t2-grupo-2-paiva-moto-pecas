@@ -1,4 +1,4 @@
-import { change } from './components/filtro.js'
+import { onEvent, reloadPage } from './components/filtro.js'
 import { produtos } from '../database/produtos/produtos-db.js';
 
 const divProduto = document.querySelector('#divProduto');
@@ -26,5 +26,8 @@ export function initial() {
 }
 
 initial()
-change()
 
+onEvent('#Honda', '#filterSectionHonda')
+onEvent('#Yamaha', '#filterSectionYamaha')
+
+reloadPage('#Honda', '#Yamaha')

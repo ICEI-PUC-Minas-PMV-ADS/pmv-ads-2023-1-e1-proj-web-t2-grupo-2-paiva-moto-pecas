@@ -1,101 +1,102 @@
 import { produtos } from '../../database/produtos/produtos-db.js';
 
 const loja = document.querySelector('#loja');
-const divProduto = document.querySelector('#divProduto');
-const yamaha = document.querySelector('#yamaha')
-const honda = document.querySelector('#honda')
 
-const checkbox = [yamaha, honda]
-let filtrados = []
+const marcas = produtos.map((produto) => {
+    return produto.marca
+})
+const getMarcas = marcas.filter((valor, indice, arr) => arr.indexOf(valor) === indice);
+console.log(getMarcas);
 
-export function change() {
+const inputsMarca = document.querySelector('#inputsMarca');
 
-    const printFilterProdutosHonda = (imagem, nome, apresentacao) => {
-        let filterSectionHonda = document.querySelector('#filterSectionHonda')
-        filterSectionHonda.innerHTML += `
+getMarcas.map((marca) => {
+    loja.innerHTML += `<section class="classProcutos" id="filterSection${marca.split(' ').join("")}">`
+})
+
+getMarcas.map((marca) => {
+    inputsMarca.innerHTML += `
+    <div class="divFilter">
+        <input id="${marca}" type="checkbox" name="${marca}" value="${marca}">
+        <p>${marca}</p>
+    </div>`
+})
+
+async function filterMarca(filterSection, imagem, nome, apresentacao) {
+    const filterSectionMarca = document.querySelector(`${filterSection}`)
+    filterSectionMarca.innerHTML += `
             <div class="produtoUnit" >
                 <img class="img" src="../database/produtos/public/${imagem}.png" alt="">
                     <h3>${nome}</h3>
                     <p>${apresentacao}</p>
             </div>
         `
-    }
 
-    const printFilterProdutosYamaha = (imagem, nome, apresentacao) => {
-        let filterSectionYamaha = document.querySelector('#filterSectionYamaha')
-        filterSectionYamaha.innerHTML += `
-            <div class="produtoUnit" >
-                <img class="img" src="../database/produtos/public/${imagem}.png" alt="">
-                    <h3>${nome}</h3>
-                    <p>${apresentacao}</p>
-            </div>        `
+}
 
+export function onEvent(marca, filterSection) {
+    let filtrados = []
+    const marcaID = document.querySelector(`${marca}`)
+    const divProduto = document.querySelector('#divProduto');
+    const filterSectionMarca = document.querySelector(`${filterSection}`)
 
-    }
-
-
-    honda.addEventListener('change', () => {
-        if (honda.checked === true) {
+    marcaID.addEventListener('change', () => {
+        if (marcaID.checked === true) {
             filtrados = produtos.filter((produto) => {
-                return produto.marca === honda.value
+                return produto.marca === marcaID.value
             })
             divProduto.innerHTML = ''
             filtrados.map((produto) => {
                 const { imagem, nome, apresentacao } = produto
-                printFilterProdutosHonda(
+                filterMarca(
+                    filterSection,
                     imagem,
                     nome,
                     apresentacao
                 )
             })
 
-        } else if (honda.checked === false) {
-            filterSectionHonda.innerHTML = ''
+        } else if (marcaID.checked === false) {
+            filterSectionMarca.innerHTML = ''
         }
-
 
     })
 
-    yamaha.addEventListener('change', () => {
-        if (yamaha.checked === true) {
-            filtrados = produtos.filter((produto) => {
-                return produto.marca === yamaha.value
-            })
-            divProduto.innerHTML = ''
-            filtrados.map((produto) => {
-                const { imagem, nome, apresentacao } = produto
-                printFilterProdutosYamaha(
-                    imagem,
-                    nome,
-                    apresentacao
-                )
-            })
-        } else if (yamaha.checked === false) {
-            filterSectionYamaha.innerHTML = ''
+}
+function check() {
+    let isChecked = false;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isChecked = true;
+            break
         }
-    })
+    }
 
+    if (!isChecked) {
+        isChecked;
+    }
 
-    checkbox.forEach((item) => {
-        item.addEventListener('change', () => {
-            if (yamaha.checked === true || honda.checked === true) {
+    return isChecked;
+}
+
+export function reloadPage(...marcas) {
+    const marcaID = document.querySelectorAll(`${marcas}`)
+
+    marcaID.forEach((marca) => {
+        marca.addEventListener('change', () => {
+            if (check() === true) {
                 console.log('checked');
-                checkbox.forEach((item) => {
-                    item.addEventListener('change', () => {
-                        if (honda.checked === false && yamaha.checked === false) {
-                            location.reload();
-                        }
-                    })
+                marca.addEventListener('change', () => {
+                    if (check() === false) {
+                        location.reload();
+                    }
                 })
             }
         })
     })
-
-
 }
-
-
-
 
 
 
