@@ -14,7 +14,7 @@ body{
     text-align: center;
 }
 
-#loja{
+#store{
     background-color: rgb(165, 163, 161);
 }
 
@@ -44,7 +44,7 @@ footer{
     column-gap: 2rem;
 }
 
-.produtoUnit{
+.productUnit{
     display: flex;
     flex-direction: column;
     justify-content: center;

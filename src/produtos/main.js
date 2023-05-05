@@ -6,7 +6,7 @@ const completeSection = document.querySelector('#completeSection');
 
 function printProdutos(picture, name, presentation) {
     completeSection.innerHTML += `
-    <div  class="produtoUnit" >    
+    <div  class="productUnit" >    
         <img class="img" src="../database/produtos/public/${picture}.png" alt="">
         <h3>${name}</h3>
         <p>${presentation}</p>

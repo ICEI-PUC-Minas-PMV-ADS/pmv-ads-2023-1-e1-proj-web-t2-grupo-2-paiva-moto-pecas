@@ -27,7 +27,7 @@ O bloco de Cabeçalho traz o menu fixo para navegação. O bloco de rodapé cont
 - Produtos em destaque;
 - Serviços em destaque;
 - Depoimentos de clientes;
-- Mapa com a localização exata da loja.
+- Mapa com a localização exata da store.
 
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-home-page.jpg?raw=true" />
 Figura D - Tela Home-Page

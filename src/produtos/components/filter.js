@@ -1,7 +1,7 @@
 import { products } from '../../database/produtos/produtos-db.js';
 
-const loja = document.querySelector('#loja');
-const inputsfullItens = document.querySelector('#inputsMarca');
+const store = document.querySelector('#store');
+const inputsfullItens = document.querySelector('#inputsBrand');
 
 const brands = products.map((product) => {
     return product.brand
@@ -13,16 +13,16 @@ const categories = products.map((product) => {
 export const fullItens = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
 
 fullItens.map((item) => {
-    loja.innerHTML += `<section class="classProcutos" id="filterSection${item.split(' ').join("")}">`
+    store.innerHTML += `<section class="classProcutos" id="filterSection${item.split(' ').join("")}">`
     inputsfullItens.innerHTML += `
     <div class="divFilter">
         <input id="${item.split(' ').join("")}" type="checkbox" name="${item}" value="${item}">
         <p>${item}</p>
     </div>`
 
-    const sections = loja.querySelectorAll("section");
+    const sections = store.querySelectorAll("section");
     if (sections.length == 7) {
-        inputsMarca.innerHTML += `<h3>Categorias</h3>`
+        inputsBrand.innerHTML += `<h3>Categorias</h3>`
 
     }
 })
@@ -30,7 +30,7 @@ fullItens.map((item) => {
 async function creatingSelectedElements(filterSection, picture, name, presentation) {
     const filterSectionBrand = document.querySelector(`#filterSection${filterSection}`)
     filterSectionBrand.innerHTML += `
-            <div class="produtoUnit" >
+            <div class="productUnit" >
                 <img class="img" src="../database/produtos/public/${picture}.png" alt="">
                     <h3>${name}</h3>
                     <p>${presentation}</p>
