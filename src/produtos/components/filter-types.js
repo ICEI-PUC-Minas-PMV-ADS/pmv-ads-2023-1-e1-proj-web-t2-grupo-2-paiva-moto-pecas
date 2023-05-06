@@ -1,7 +1,6 @@
-export function filterTypes(numbers, type) {
+export function filterTypes(numbersOfSections, Filtertype) {
     const sections = store.querySelectorAll("section");
-    if (sections.length == numbers) {
-        inputsBrand.innerHTML += `<h3>${type}</h3>`
-
+    if (sections.length == numbersOfSections) {
+        inputsBrand.innerHTML += `<h3>${Filtertype}</h3>`
     }
 }
