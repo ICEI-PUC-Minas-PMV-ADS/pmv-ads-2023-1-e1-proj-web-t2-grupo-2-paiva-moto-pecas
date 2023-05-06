@@ -1,21 +1,5 @@
 export const products = [
     {
-        name: 'Rabeta traseira (para-lama)',
-        presentation: `
-        Rabeta traseira para-lama para moto fan start 160 e CG 150        
-        `,
-        description: `
-        Rabeta traseira para-lama fan start 160, CG 150.        
-        Aplicação:
-        Fan 125 - 2014 em diante, Fan 150 - 2014 em diante,  Fan 160 - 2014 em diante
-        Start 150 - 2014/2015, Start 160 - 2016 em diante, Titan 150 - 2014/2015, Titan 160 - 2016 em diante
-        `,
-        brand: 'Honda',
-        category: 'Chassis',
-        picture: '1',
-        sector: "Produto"
-    },
-    {
         name: 'Caixa Direção CG Honda',
         presentation: 'Caixa de direção original honda CG 125, CG 150, CG 160',
         description: `
@@ -30,6 +14,80 @@ export const products = [
         brand: 'Honda',
         category: 'Chassis',
         picture: '2',
+        sector: "Produto"
+    },
+    {
+        name: 'Embreagem Completa (17 Peças) Yzf R1',
+        presentation: ` Embreagem dos discos para moto Yzf R1 Ano 2004 A 2008.`,
+        description: `       
+        Embreagem Completa (17 Peças) Yzf R1 Ano 2004 A 2008
+        Tipo de embreagem: Dos discos; 
+        Inclui disco: Sim
+        `,
+        brand: 'Yamaha',
+        category: 'Transmissão',
+        picture: '7',
+        sector: "Produto"
+    },
+    {
+        name: 'Rabeta traseira (para-lama)',
+        presentation: `
+        Rabeta traseira para-lama para moto fan start 160 e CG 150        
+        `,
+        description: `
+        Rabeta traseira para-lama fan start 160, CG 150.        
+        Aplicação:
+        Fan 125 - 2014 em diante, Fan 150 - 2014 em diante,  Fan 160 - 2014 em diante
+        Start 150 - 2014/2015, Start 160 - 2016 em diante, Titan 150 - 2014/2015, Titan 160 - 2016 em diante
+        `,
+        brand: 'Metal Leve', // Honda (marca original)
+        category: 'Chassis',
+        picture: '1',
+        sector: "Produto"
+    },
+    {
+        name: 'Placa De Partida',
+        presentation: `Ybr 125 E/ Ed 2002 A 2005`,
+        description: `    
+        Placa De Partida para Yamaha Ybr 125 E/ Ed 2002 A 2005        
+        Aplicação: 
+        Yamaha XTZ 125 E 2002 A 2005; 
+        Yamaha YBR 125 E 2002 A 2005; 
+        Yamaha YBR 125 ED 2002 A 2005
+        `,
+        brand: 'Magnetron',
+        category: 'Peças de Partida',
+        picture: '14',
+        sector: "Produto"
+    },
+    {
+        name: 'Cabo Acelerador B Shadow 750',
+        presentation: `
+        Cabo Acelerador B Shadow 750 2011 2012 2013 2014.         
+        `,
+        description: `       
+        Tipo de veículo: Moto/Quadriciclo; 
+        Material do cabo de acelerador: 1; 
+        Comprimento da capa do cabo de acelerador: 1 cm
+        Aplicação: Shadow 750: 2011,2012, 2013, 2014
+        `,
+        brand: 'Pro Tork', // Honda (marca original)
+        category: 'Chassis',
+        picture: '5',
+        sector: "Produto"
+    },
+    {
+        name: 'Pneu dianteira para moto',
+        presentation: `Maggion Viper C/c 90/90-19 T 52`,
+        description: `    
+        A largura da seção é de 90mm, possui um diâmetro de 19", em relação entre 
+        altura e largura é de 90, recomendado para usar on road/off road, mantém 
+        a estabilidade em pisos molhados, projetado para alcançar a firmeza que 
+        você precisa ao pilotar.
+        `,
+        brand: 'Michelin',
+        category: 'Pneu',
+        picture: '21',
         sector: "Produto"
     },
     {
@@ -60,25 +118,9 @@ export const products = [
         Diâmetro: 20 cm; 
         Comprimento: 30 cm;
         `,
-        brand: 'Honda',
+        brand: 'Michelin',
         category: 'Chassis',
         picture: '4',
-        sector: "Produto"
-    },
-    {
-        name: 'Cabo Acelerador B Shadow 750',
-        presentation: `
-        Cabo Acelerador B Shadow 750 2011 2012 2013 2014 Honda.         
-        `,
-        description: `       
-        Tipo de veículo: Moto/Quadriciclo; 
-        Material do cabo de acelerador: 1; 
-        Comprimento da capa do cabo de acelerador: 1 cm
-        Aplicação: Shadow 750: 2011,2012, 2013, 2014
-        `,
-        brand: 'Honda',
-        category: 'Chassis',
-        picture: '5',
         sector: "Produto"
     },
     {
@@ -92,22 +134,9 @@ export const products = [
         Tipo de disco de freio: Ventilado; 
         Diâmetro externo: 1 mm.
         `,
-        brand: 'Honda',
+        brand: 'Magnetron', // Honda (marca original)
         category: 'Chassis',
         picture: '6',
-        sector: "Produto"
-    },
-    {
-        name: 'Embreagem Completa (17 Peças) Yzf R1',
-        presentation: ` Embreagem dos discos para moto Yzf R1 Ano 2004 A 2008.`,
-        description: `       
-        Embreagem Completa (17 Peças) Yzf R1 Ano 2004 A 2008
-        Tipo de embreagem: Dos discos; 
-        Inclui disco: Sim
-        `,
-        brand: 'Yamaha',
-        category: 'Transmissão',
-        picture: '7',
         sector: "Produto"
     },
     {
@@ -128,7 +157,7 @@ export const products = [
         (Semi Novo)   
         Eixo Pinhão Xt 660 Ténéré 660 Original.
         `,
-        brand: 'Yamaha',
+        brand: 'Metal Leve',
         category: 'Transmissão',
         picture: '9',
         sector: "Produto"
@@ -140,7 +169,7 @@ export const products = [
         TAMPA DO CVT NMAX - 2021 EM DIANTE -B6HE543100
         Aplicação: YAMAHA NMAX
         `,
-        brand: 'Yamaha',
+        brand: 'Pro Tork', // Yamaha (marca original)
         category: 'Transmissão',
         picture: '10',
         sector: "Produto"
@@ -197,21 +226,6 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Placa De Partida Yamaha',
-        presentation: `Ybr 125 E/ Ed 2002 A 2005`,
-        description: `    
-        Placa De Partida Yamaha Ybr 125 E/ Ed 2002 A 2005        
-        Aplicação: 
-        Yamaha XTZ 125 E 2002 A 2005; 
-        Yamaha YBR 125 E 2002 A 2005; 
-        Yamaha YBR 125 ED 2002 A 2005
-        `,
-        brand: 'Magnetron',
-        category: 'Peças de Partida',
-        picture: '14',
-        sector: "Produto"
-    },
-    {
         name: 'Motor Partida Arranque',
         presentation: `Cg 150, Titan 150, Fan Nxr150`,
         description: `    
@@ -256,22 +270,23 @@ export const products = [
         Cg 160 Titan 2016 até 2021 - Cg 160 Cargo 2018 a 2021 - 
         Cg 160 Start 2018 a 2021.
         `,
-        brand: 'Magnetron',
+        brand: 'Pro Tork',
         category: 'Peças de Partida',
         picture: '17',
         sector: "Produto"
     },
     {
-        name: 'Escapamento street e off road',
-        presentation: `Produzido em aço carbono, entrega excelentes níveis de potência.`,
+        name: 'Ponteira Com Curva',
+        presentation: `Crf 230 Powercore 3, Produzido em aço carbon, excelentes níveis de potência`,
         description: `    
         Produzido em aço carbono, entrega excelentes níveis de potência 
         para motocicletas street e off road, com a melhor relação 
         custo/benefício do mercado. O projeto contempla tubos bem dimensionados, 
         garantindo maior potência em baixas, médias e altas rotações, 
         além de retomadas certas nas saídas de curvas
+        Aplicação: Crf 230 Powercore 3 2007 A 2020
         `,
-        brand: 'Pro Tork',
+        brand: 'Yamaha',
         category: 'Escapamento',
         picture: '18',
         sector: "Produto"
@@ -285,7 +300,7 @@ export const products = [
         Titan 125 KS/KSE; 
         Fan 125. 
         `,
-        brand: 'Pro Tork',
+        brand: 'Honda', // Pro Tork
         category: 'Escapamento',
         picture: '19',
         sector: "Produto"
@@ -301,20 +316,6 @@ export const products = [
         brand: 'Michelin',
         category: 'Pneu',
         picture: '20',
-        sector: "Produto"
-    },
-    {
-        name: 'Pneu dianteira para moto',
-        presentation: `Maggion Viper C/c 90/90-19 T 52`,
-        description: `    
-        A largura da seção é de 90mm, possui um diâmetro de 19", em relação entre 
-        altura e largura é de 90, recomendado para usar on road/off road, mantém 
-        a estabilidade em pisos molhados, projetado para alcançar a firmeza que 
-        você precisa ao pilotar.
-        `,
-        brand: 'Michelin',
-        category: 'Pneu',
-        picture: '21',
         sector: "Produto"
     },
     {
