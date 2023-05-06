@@ -1,5 +1,5 @@
 import { products } from '../../database/produtos/produtos-db.js';
-import { filterTypes } from './filter-types.js'
+import { filterTypes } from './filter-components/filter-types.js'
 
 const brands = products.map((product) => {
     return product.brand

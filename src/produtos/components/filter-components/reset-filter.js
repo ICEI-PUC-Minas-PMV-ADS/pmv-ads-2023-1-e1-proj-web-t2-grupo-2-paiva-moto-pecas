@@ -1,4 +1,4 @@
-import { initialSection } from '../main.js';
+import { initialSection } from '../../main.js';
 
 function checkingCheckboxes() {
     let isChecked = false;

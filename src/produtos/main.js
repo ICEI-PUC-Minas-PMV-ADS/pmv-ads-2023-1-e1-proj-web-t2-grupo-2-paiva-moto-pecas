@@ -1,5 +1,5 @@
 import { listingSelectedElements, fullItens } from './components/filter.js'
-import { resetFilter } from './components/reset-filter.js'
+import { resetFilter } from './components/filter-components/reset-filter.js'
 import { products } from '../database/produtos/produtos-db.js';
 
 function printProdutos(picture, name, presentation) {
