@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap");
 
 :root {
-  --amarelo-principal: #ffde59;
+  --amarelo-primario: #ffde59;
+  --amarelo-secundario: #ddc04d;
+  --cinza-claro: #eeeeee;
+  --cinza: #d1d1d1;
+  --cinza-escuro: #535353;
+  --branco: #fff;
   --preto: #000;
 }
 
@@ -9,7 +14,12 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
+
+/* main {
+  width: 100vw;
+} */
 
 section {
   padding: 40px 0;
@@ -27,17 +37,17 @@ h3 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -49,13 +59,45 @@ p {
 
 .btn {
   width: 100%;
-  font-size: 14px;
+  max-width: 320px;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 12px;
+  color: var(--preto);
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .btn-amarelo {
-  background-color: var(--amarelo-principal);
+  background-color: var(--amarelo-primario);
+}
+
+.btn-amarelo:hover {
+  background-color: var(--amarelo-secundario);
+}
+
+.btn-cinza {
+  background-color: var(--cinza-claro);
+}
+
+.btn-cinza:hover {
+  background-color: var(--cinza);
+}
+
+.btn-preto {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+.btn-preto:hover {
+  background-color: var(--cinza-escuro);
+}
+
+.faixa-amarela {
+  width: 100%;
+  height: 20px;
+  background-color: var(--amarelo-primario);
 }
 
 @media (min-width: 80em) {
@@ -66,5 +108,21 @@ p {
   .container {
     padding: 0 72px;
     max-width: 80em;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
   }
 }
