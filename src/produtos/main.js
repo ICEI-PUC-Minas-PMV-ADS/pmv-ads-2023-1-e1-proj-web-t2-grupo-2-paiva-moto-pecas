@@ -2,8 +2,6 @@ import { listingSelectedElements, fullItens } from './components/filter.js'
 import { resetFilter } from './components/reset-filter.js'
 import { products } from '../database/produtos/produtos-db.js';
 
-const completeSection = document.querySelector('#completeSection');
-
 function printProdutos(picture, name, presentation) {
     completeSection.innerHTML += `
     <div  class="productUnit" >    

@@ -1,7 +1,5 @@
 import { products } from '../../database/produtos/produtos-db.js';
-
-const store = document.querySelector('#store');
-const inputsfullItens = document.querySelector('#inputsBrand');
+import { filterTypes } from './filter-types.js'
 
 const brands = products.map((product) => {
     return product.brand
@@ -14,17 +12,13 @@ export const fullItens = [...brands, ...categories].filter((value, index, arr) =
 
 fullItens.map((item) => {
     store.innerHTML += `<section class="classProcutos" id="filterSection${item.split(' ').join("")}">`
-    inputsfullItens.innerHTML += `
+    inputsBrand.innerHTML += `
     <div class="divFilter">
         <input id="${item.split(' ').join("")}" type="checkbox" name="${item}" value="${item}">
         <p>${item}</p>
     </div>`
 
-    const sections = store.querySelectorAll("section");
-    if (sections.length == 7) {
-        inputsBrand.innerHTML += `<h3>Categorias</h3>`
-
-    }
+    filterTypes(7, 'Categorias')    
 })
 
 async function creatingSelectedElements(filterSection, picture, name, presentation) {
@@ -40,7 +34,6 @@ async function creatingSelectedElements(filterSection, picture, name, presentati
 
 export function listingSelectedElements(brand, filterSection) {
     const itemID = document.querySelector(`${brand.split(' ').join("")}`)
-    const completeSection = document.querySelector('#completeSection');
     const filterSectionBrand = document.querySelector(`#filterSection${filterSection}`)
     let filtered = []
 
