@@ -2,9 +2,9 @@ import { listingSelectedElements, allItens } from './components/filter.js'
 import { resetFilter } from './components/filter-components/reset-filter.js'
 import { products } from '../database/produtos/produtos-db.js';
 
-export function listProducts(picture, name, presentation, teste) {
-    teste.innerHTML += `
-    <div  class="productUnit" >    
+export function listProducts(picture, name, presentation, targetTag) {
+    targetTag.innerHTML += `
+    <div  class="card" >    
         <img class="img" src="../database/produtos/assets/${picture}.png" alt="">
         <h3>${name}</h3>
         <p>${presentation}</p>
