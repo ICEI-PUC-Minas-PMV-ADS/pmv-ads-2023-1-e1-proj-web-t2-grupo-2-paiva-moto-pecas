@@ -1,5 +1,7 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
+import { listProducts } from '../main.js'
+
 
 const brands = products.map((product) => {
     return product.brand
@@ -8,28 +10,22 @@ const categories = products.map((product) => {
     return product.category
 })
 
-export const fullItens = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
+export const allItens = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
 
-fullItens.map((item) => {
-    store.innerHTML += `<section class="classProcutos" id="filterSection${item.split(' ').join("")}">`
+allItens.map((item) => {
+    store.innerHTML += `<div class="card-product" id="filterSection${item.split(' ').join("")}">`
     inputsBrand.innerHTML += `
     <div class="divFilter">
         <input id="${item.split(' ').join("")}" type="checkbox" name="${item}" value="${item}">
         <p>${item}</p>
     </div>`
 
-    filterTypes(7, 'Categorias')    
+    filterTypes(brands, 'Categorias')
 })
 
-async function creatingSelectedElements(filterSection, picture, name, presentation) {
+function creatingSelectedElements(filterSection, picture, name, presentation) {
     const filterSectionBrand = document.querySelector(`#filterSection${filterSection}`)
-    filterSectionBrand.innerHTML += `
-            <div class="productUnit" >
-                <img class="img" src="../database/produtos/public/${picture}.png" alt="">
-                    <h3>${name}</h3>
-                    <p>${presentation}</p>
-            </div>
-           `
+    listProducts(picture, name, presentation, filterSectionBrand)   
 }
 
 export function listingSelectedElements(brand, filterSection) {

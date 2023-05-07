@@ -9,7 +9,7 @@ export const products = [
         Diâmetro do tubo de direção: 26 mm; 
         Diâmetro do garfo: 1 mm; 
         Diâmetro do guidão: 1 mm. 
-        Aplicação: Cg fan 125 - cg titan 125 - cg fan 150 - cg titan 150 - cg fan 160 - cg titan 160 - cg start 160
+        Aplicação: CG fan 125 - CG titan 125 - CG fan 150 - CG titan 150 - CG fan 160 - CG titan 160 - CG start 160
         `,
         brand: 'Honda',
         category: 'Chassis',
@@ -17,7 +17,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Embreagem Completa (17 Peças) Yzf R1',
+        name: 'Embreagem Completa',
         presentation: ` Embreagem dos discos para moto Yzf R1 Ano 2004 A 2008.`,
         description: `       
         Embreagem Completa (17 Peças) Yzf R1 Ano 2004 A 2008
@@ -30,7 +30,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Rabeta traseira (para-lama)',
+        name: 'Rabeta traseira',
         presentation: `
         Rabeta traseira para-lama para moto fan start 160 e CG 150        
         `,
@@ -61,7 +61,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Cabo Acelerador B Shadow 750',
+        name: 'Cabo Acelerador',
         presentation: `
         Cabo Acelerador B Shadow 750 2011 2012 2013 2014.         
         `,
@@ -77,7 +77,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Pneu dianteira para moto',
+        name: 'Pneu dianteira',
         presentation: `Maggion Viper C/c 90/90-19 T 52`,
         description: `    
         A largura da seção é de 90mm, possui um diâmetro de 19", em relação entre 
@@ -91,16 +91,16 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Borracha Pedaleira Estribo Original',
+        name: 'Borracha Pedaleira Estribo ',
         presentation: `
-        Par borracha estribo para CG Titan, Fan 125 e 150.          
+        Original para CG Titan, Fan 125 e 150.          
         `,
         description: `
-        Par borracha estribo cg / today / titan 125 / 150 / fan / mix
+        Par borracha estribo CG / today / titan 125 / 150 / fan / mix
         Material: borracha; 
-        posição: traseiro/dianteiro; 
+        Posição: traseiro/dianteiro; 
         comprimento x largura: 10 cm x 10 cm
-        Aplicação: Titan 125  - titan 150 - fan 125 - cg 125 
+        Aplicação: Titan 125  - titan 150 - fan 125 - CG 125 
         `,
         brand: 'Honda',
         category: 'Chassis',
@@ -108,7 +108,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Amortecedor Traseiro Bros 160',
+        name: 'Amortecedor Traseiro',
         presentation: `
         Amortecedor traseiro Bros 150 original Honda.          
         `,
@@ -124,7 +124,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Disco De Freio Traseiro Honda Cb 500',
+        name: 'Disco De Freio Traseiro',
         presentation: `
         Disco Freio Traseiro Honda Cb 500 Ano 1997 Até 2005.         
         `,
@@ -151,7 +151,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Eixo Pinhão Yamaha Xt 660 Ténéré 660 ',
+        name: 'Eixo Pinhão',
         presentation: `Eixo Pinhão Yamaha Xt 660 Ténéré 660 Original.(Semi Novo)`,
         description: `    
         (Semi Novo)   
@@ -227,7 +227,7 @@ export const products = [
     },
     {
         name: 'Motor Partida Arranque',
-        presentation: `Cg 150, Titan 150, Fan Nxr150`,
+        presentation: `CG 150, Titan 150, Fan Nxr150`,
         description: `    
         Motor Partida Honda Titan 150 Magnetron
         Aplicação:
@@ -262,13 +262,13 @@ export const products = [
     },
     {
         name: 'Engrenagem Embreagem Partida',
-        presentation: `Bros Cargo Cg Start Titan 160`,
+        presentation: `Bros Cargo CG Start Titan 160`,
         description: `    
-        Engrenagem Embreagem Partida Bros Cargo Cg Start Titan 160
+        Engrenagem Embreagem Partida Bros Cargo CG Start Titan 160
         Indicação de Uso: Nxr 160 Bros Esd 2015 - Nxr 160 Bros Edd 2015 até 2021 - 
-        Nxr 160 Bros Es 2017 até 2017, Cg 160 FAN 2016 até 2021 - 
-        Cg 160 Titan 2016 até 2021 - Cg 160 Cargo 2018 a 2021 - 
-        Cg 160 Start 2018 a 2021.
+        Nxr 160 Bros Es 2017 até 2017, CG 160 FAN 2016 até 2021 - 
+        CG 160 Titan 2016 até 2021 - CG 160 Cargo 2018 a 2021 - 
+        CG 160 Start 2018 a 2021.
         `,
         brand: 'Pro Tork',
         category: 'Peças de Partida',
@@ -292,7 +292,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Escapamento Moto Cg',
+        name: 'Escapamento Moto CG',
         presentation: `O Escapamento Original Titan 125 Pro Tork.`,
         description: `    
         O Escapamento Original Titan 125 Pro Tork é fabricado em aço de alta qualidade e resistência para garantir o máximo de segurança , possui uma instalação simples e rápida.
@@ -319,7 +319,7 @@ export const products = [
         sector: "Produto"
     },
     {
-        name: 'Câmaras De Ar Michelin',
+        name: 'Câmaras De Ar',
         presentation: `Aro 21 + Aro 17 Xt600 - xt660 - gs650`,
         description: `    
         Câmaras de ar aro 21 - MD 21 e aro 17 - MH 17 - Michelin.

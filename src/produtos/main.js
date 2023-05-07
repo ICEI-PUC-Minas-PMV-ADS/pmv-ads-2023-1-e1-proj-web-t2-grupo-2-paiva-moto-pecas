@@ -1,13 +1,14 @@
-import { listingSelectedElements, fullItens } from './components/filter.js'
+import { listingSelectedElements, allItens } from './components/filter.js'
 import { resetFilter } from './components/filter-components/reset-filter.js'
 import { products } from '../database/produtos/produtos-db.js';
 
-function printProdutos(picture, name, presentation) {
-    completeSection.innerHTML += `
+export function listProducts(picture, name, presentation, teste) {
+    teste.innerHTML += `
     <div  class="productUnit" >    
-        <img class="img" src="../database/produtos/public/${picture}.png" alt="">
+        <img class="img" src="../database/produtos/assets/${picture}.png" alt="">
         <h3>${name}</h3>
         <p>${presentation}</p>
+        <a href="#">Adicionar ao carrinho</a>
     </div>     
     `
 }
@@ -15,17 +16,19 @@ function printProdutos(picture, name, presentation) {
 export function initialSection() {
     return products.map((product) => {
         const { picture, name, presentation } = product
-        printProdutos(
+        listProducts(
             picture,
             name,
-            presentation
+            presentation,
+            completeSection
         )
     })
 }
+
 initialSection()
 
 const itens = []
-fullItens.map((brand) => {
+allItens.map((brand) => {
     itens.push(brand.split(' ').join(""))
 })
 const itemWithHashtag = itens.map(brand => '#' + brand);
