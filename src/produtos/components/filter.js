@@ -12,7 +12,7 @@ const categories = products.map((product) => {
 export const allItens = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
 
 allItens.map((item) => {
-    store.innerHTML += `<div class="card-product" id="filterSection">`    
+    store.innerHTML += `<div class="card-product" id="filterSection">`
     inputsBrand.innerHTML += `
     <div class="divFilter">
         <input id="${item.split(' ').join("")}" type="checkbox" name="${item}" value="${item}">
@@ -46,13 +46,23 @@ export function listingSelectedElements(brand) {
                     presentation
                 )
             })
-
         } else if (itemID.checked === false) {
+            filtered = []
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    filtered = products.filter((product) => {
+                        return product.brand === checkboxes[i].value || product.category === checkboxes[i].value
+                    })
+                }
+            }
+
+
+
+
             filterSectionBrand.innerHTML = ''
-            filtered = products.filter((product) => {
-                return product.brand === itemID.value || product.category === itemID.value
-            })
-            console.log(filtered);
+
+
             filtered.map((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(
@@ -60,11 +70,14 @@ export function listingSelectedElements(brand) {
                     name,
                     presentation
                 )
-            })
-        }
-    })
-}
 
+            })
+
+        }
+
+    })
+
+}
 
 
 
