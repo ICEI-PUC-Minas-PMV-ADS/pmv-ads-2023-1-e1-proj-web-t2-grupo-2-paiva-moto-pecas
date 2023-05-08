@@ -1,4 +1,5 @@
 import { products } from '../../database/produtos/produtos-db.js';
+import { buttonShowMore } from './button-show-more.js'
 
 export function listProducts(picture, name, presentation, targetTag) {
     targetTag.innerHTML += `
@@ -13,6 +14,7 @@ export function listProducts(picture, name, presentation, targetTag) {
 
 export function initialSection() {
     completeSection.innerHTML = ''
+    buttonShowMore(1470, 3450) 
     return products.map((product) => {
         const { picture, name, presentation } = product
         listProducts(

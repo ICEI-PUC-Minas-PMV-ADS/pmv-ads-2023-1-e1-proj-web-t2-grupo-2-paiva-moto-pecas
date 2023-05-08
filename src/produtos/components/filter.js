@@ -1,6 +1,8 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
 import { listProducts } from './list-itens.js'
+import { buttonShowMore } from './button-show-more.js'
+
 
 const brands = products.map((product) => {
     return product.brand
@@ -26,14 +28,19 @@ allIOptions.map((option) => {
     filterTypes(brands, 'Categorias')
 })
 
+
 function creatingSelectedElements(picture, name, presentation) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     listProducts(picture, name, presentation, containerFilterInputsOptions)
+    buttonShowMore(800, 2000)
+    console.log(creatingSelectedElements.length);
+
 }
 
 export function listingSelectedElements(brand) {
     const optionID = document.querySelector(`${brand}`)
     const containerFilterInputsOptionsBrand = document.querySelector(`#containerFilterInputsOptions`)
+
     let filtered = []
 
     optionID.addEventListener('change', () => {
@@ -64,11 +71,11 @@ export function listingSelectedElements(brand) {
 
             for (const option of newFiltered) {
                 const matchingProducts = products.filter((product) => {
-                  return product.brand === option || product.category === option;
+                    return product.brand === option || product.category === option;
                 });
-                
+
                 filtered.push(...matchingProducts);
-              }
+            }
 
             // filtered = products.filter((product) => {
             //     return newFiltered.includes(product.brand) || newFiltered.includes(product.category);
@@ -86,8 +93,8 @@ export function listingSelectedElements(brand) {
         }
 
     })
-
 }
+
 
 
 

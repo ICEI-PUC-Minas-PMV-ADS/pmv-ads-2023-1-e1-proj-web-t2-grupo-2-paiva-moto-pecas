@@ -3,12 +3,11 @@ body{
     margin: auto;
 }
 
-
-#page{
-    display: flex;    
+main{
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
 }
-
-
 
 header{
     display: flex;
@@ -36,41 +35,39 @@ footer{
     margin: auto;    
 }
 
-
 .card{
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     -webkit-box-align: center;
-    align-items: center;   
+    align-items: center;  
+    
     gap: 1rem;    
     border-radius: 0.25rem;
     transition: box-shadow 200ms;
-    text-align: center;
+    text-align: center;    
 }
 
 .img{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 3rem;
 }
 
 .card h3{   
     width: 200px;
-    height: 45px;
-
-    font-size: 20px;
-
-
-    
+    height: 20px;
+    overflow: hidden;
+    font-size: 18px;    
 }
 
 .card p{
-    width: 200px;
-    height: 65px;
-    font-size: 16px;
+    width: 190px;
+    height: 30px;
+    font-size: 14px;
     text-align: justify;
+    overflow: hidden;
 }
 
 .card a{
@@ -101,6 +98,7 @@ footer{
 aside{
     position: inherit;   
     width: 289px;
+    height: 100%;
     padding: 57px 0px;
 
     border-left: 3px solid var(--cinza-escuro);
@@ -121,10 +119,7 @@ aside{
     row-gap: 1rem;        
     margin-left: 1rem;
     margin-top: 2rem;
-
-    padding: 15px 25px;
-   
-  
+    padding: 15px 25px;  
 }
 
 #inputsFilterOptions h3:nth-of-type(n+2){   
@@ -136,14 +131,44 @@ aside{
 
 
 #store{
-    display: flex;    
+    display: flex;        
     flex-direction: column;    
-    justify-content: center;    
-    /* text-align: center; */
+    justify-content: center;       
     gap: 49px;
-    width: 988px;    
+    width: 988px;       
+    height: auto;
     background-color: var(--cinza-claro);
     border-right: 3px solid var(--cinza-escuro);       
+}
+
+#store > button{     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 763px;   
+   
+    width: 200px;
+    height: 41px;
+    padding: 12px;    
+    border-radius: 12px;    
+
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border: transparent;     
+
+    cursor: pointer;    
+}
+
+#store > button:hover{     
+    opacity: 90%;
+}
+
+#store > button:active{     
+    opacity: 50%;
 }
 
 #searchContainer{
@@ -179,7 +204,7 @@ aside{
     align-items: center;
     padding: 12px 24px;
     gap: 19px;   
-    margin: auto;
+    margin: auto;    
 }
 
 #buttonsChangePage button{
@@ -195,6 +220,8 @@ aside{
     background-color: var(--amarelo-secundario);
     border: transparent;
     border-radius: 12px;
+
+    cursor: pointer;
 }
 
 #buttonsChangePage button:hover{
