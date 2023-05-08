@@ -17,6 +17,35 @@
   box-sizing: border-box;
 }
 
+nav {
+  padding: 20px 0;
+  background-color: var(--amarelo-primario);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li:hover {
+  font-weight: 700;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--preto);
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   width: 100%;
 }
@@ -51,10 +80,12 @@ h3 {
   font-weight: 700;
 }
 
-p {
+p,
+li {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.1;
+  transition: 0.3s ease;
 }
 
 .btn {
@@ -66,7 +97,6 @@ p {
   color: var(--preto);
   font-size: 14px;
   text-align: center;
-  text-decoration: none;
   transition: 0.3s ease;
 }
 
@@ -93,6 +123,12 @@ p {
 
 .btn-preto:hover {
   background-color: var(--cinza-escuro);
+}
+
+.whatsapp {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
 }
 
 .card {
@@ -130,6 +166,27 @@ p {
   background-color: var(--amarelo-primario);
 }
 
+footer {
+  padding: 64px 0;
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer div {
+  max-width: 340px;
+}
+
+footer h3 {
+  margin-bottom: 16px;
+}
+
 @media (min-width: 80em) {
   section {
     padding: 64px 0;
@@ -139,6 +196,10 @@ p {
     padding: 0 72px;
     max-width: 80em;
     margin: 0 auto;
+  }
+
+  nav ul {
+    justify-content: space-between;
   }
 
   h1 {
