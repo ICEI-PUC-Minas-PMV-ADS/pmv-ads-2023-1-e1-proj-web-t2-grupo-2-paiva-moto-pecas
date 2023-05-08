@@ -1,0 +1,65 @@
+.banner-principal .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-principal svg {
+  width: 200px;
+  height: 100%;
+}
+
+.banner-principal h1 {
+  text-align: center;
+}
+
+.produtos-destaque {
+  background-color: var(--cinza-claro);
+}
+
+.produtos-destaque .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.produtos-destaque .produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.depoimentos {
+  background: linear-gradient(var(--cinza-claro) 50%, var(--preto) 50%);
+  padding: 0;
+}
+
+.depoimentos .depoimento {
+  background-color: var(--amarelo-primario);
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.mapa {
+  background-color: var(--preto);
+}
+
+.mapa h2 {
+  margin: 0 0 20px 0;
+  color: var(--branco);
+  text-align: center;
+}
+
+.mapa iframe {
+  width: 100%;
+}
+
+@media (min-width: 80em) {
+  .depoimentos .depoimento {
+    padding: 64px 72px;
+  }
+}
