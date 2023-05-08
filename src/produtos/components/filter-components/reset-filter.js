@@ -1,4 +1,5 @@
-import { initialSection } from '../../main.js';
+import { initialSection } from '../list-itens.js';
+import { products } from '../../../database/produtos/produtos-db.js';
 
 function checkingCheckboxes() {
     let isChecked = false;

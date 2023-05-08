@@ -1,6 +1,6 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
-import { listProducts } from '../main.js'
+import { listProducts } from './list-itens.js'
 
 const brands = products.map((product) => {
     return product.brand
@@ -9,14 +9,18 @@ const categories = products.map((product) => {
     return product.category
 })
 
-export const allItens = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
+const allIOptions = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
+export const OptionsWithoutSpaces = []
+allIOptions.map((option) => {
+    OptionsWithoutSpaces.push(option.split(' ').join(""))
+})
 
-allItens.map((item) => {
+allIOptions.map((option) => {
     store.innerHTML += `<div class="card-product" id="filterSection">`
-    inputsBrand.innerHTML += `
+    inputsFilterOptions.innerHTML += `
     <div class="divFilter">
-        <input id="${item.split(' ').join("")}" type="checkbox" name="${item}" value="${item}">
-        <p>${item}</p>
+        <input id="${option.split(' ').join("")}" type="checkbox" name="${option}" value="${option}">
+        <p>${option}</p>
     </div>`
 
     filterTypes(brands, 'Categorias')
@@ -28,14 +32,14 @@ function creatingSelectedElements(picture, name, presentation) {
 }
 
 export function listingSelectedElements(brand) {
-    const itemID = document.querySelector(`${brand.split(' ').join("")}`)
+    const optionID = document.querySelector(`${brand}`)
     const filterSectionBrand = document.querySelector(`#filterSection`)
     let filtered = []
 
-    itemID.addEventListener('change', () => {
-        if (itemID.checked === true) {
+    optionID.addEventListener('change', () => {
+        if (optionID.checked) {
             filtered = products.filter((product) => {
-                return product.brand === itemID.value || product.category === itemID.value
+                return product.brand === optionID.value || product.category === optionID.value
             })
             completeSection.innerHTML = ''
             filtered.map((product) => {
@@ -46,23 +50,22 @@ export function listingSelectedElements(brand) {
                     presentation
                 )
             })
-        } else if (itemID.checked === false) {
+        } else if (!optionID.checked) {
             filtered = []
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            for (let i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].checked) {
-                    filtered = products.filter((product) => {
-                        return product.brand === checkboxes[i].value || product.category === checkboxes[i].value
-                    })
-                }
-            }
-
-
-
-
             filterSectionBrand.innerHTML = ''
+            let newFiltered = []
 
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    newFiltered.push(checkbox.value);
+                }
+            })          
 
+            filtered = products.filter((product) => {
+                return newFiltered.includes(product.brand) || newFiltered.includes(product.category);
+            })
+          
             filtered.map((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(
@@ -70,7 +73,6 @@ export function listingSelectedElements(brand) {
                     name,
                     presentation
                 )
-
             })
 
         }
