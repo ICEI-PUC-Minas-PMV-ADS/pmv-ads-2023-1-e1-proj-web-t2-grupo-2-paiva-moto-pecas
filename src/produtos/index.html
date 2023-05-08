@@ -18,12 +18,12 @@
 
     </header>
 
-    <main id="page">
+    <main id="page" class="">
 
-        <section id="filtersSection">
+        <aside id="filtersSection">
 
             <div id="divFilterTitle">
-                <img src="./assets/filter_list.png" alt="icone do filtro">
+                <img src="./assets/filter_list.png" alt="ícone do filtro">
                 <h1>Filtros</h1>
             </div>
 
@@ -31,27 +31,24 @@
                 <h3>Marca</h3>
             </div>
 
-        </section>
-        <!-- <section>
-           
-
-        </section> -->
+        </aside>
 
         <section id="store">
-            <input id="inputSearch" type="text">
-
-
-
+            <div id="searchContainer">
+                <input id="inputSearch" type="text">
+                <img id="lupa" src="./assets/lupa.png" alt="">
+            </div>
+            <div id="buttonsChangePage">
+                <button class="buttonsChangePage">Produtos</button>
+                <button id="buttonsChangePage">Serviços</button>
+            </div>
             <div class="card-product" id="completeSection"></div>
-
-
-
         </section>
 
     </main>
 
     <footer id="footer">
-        SSSS
+
     </footer>
 
     <script type="module" src="./main.js"></script>

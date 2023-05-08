@@ -5,60 +5,49 @@ body{
 
 
 #page{
-    display: grid;
-    grid-template-columns: 1fr 4fr;    
+    display: flex;    
 }
 
-#store{
-    display: flex;    
-    flex-direction: column;    
-    justify-content: center;    
-    text-align: center;
-    width: 988px;    
-    background-color: var(--cinza-claro);
-    border-right: 3px solid var(--cinza-escuro);   
-}
+
 
 header{
     display: flex;
     width: 1280px;
     height: 112.66px;
-    background-color: var(--preto);    
-    text-align: center;
+    background-color: var(--preto);       
+    margin: auto;
+}
+
+footer{
+    display: flex;
+    width: 1280px;
+    height: 112.66px;
+    background-color: var(--preto);       
+    margin: auto;
 }
 
 .card-product{
     display: grid;
     flex-direction: column;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;       
+    grid-template-columns: 1fr 1fr 1fr;       
     align-items: center;   
-    column-gap: 1rem;     
+    column-gap: 6rem;     
     row-gap: 5rem;
     margin: auto;    
 }
 
-#inputsFilterOptions{
-    display: grid;    
-    row-gap: 1rem;        
-    margin-left: 3rem
-}
-
-#inputsFilterOptions h3{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
 
 .card{
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;       
-    padding: 0px;
-    max-width: 261px;   
-    max-height: 465px;
-    gap: 20px;    
-
-    /* text-align: left; */
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;   
+    gap: 1rem;    
+    border-radius: 0.25rem;
+    transition: box-shadow 200ms;
+    text-align: center;
 }
 
 .img{
@@ -68,15 +57,20 @@ header{
 }
 
 .card h3{   
-    height: 2rem;
     width: 200px;
+    height: 45px;
+
+    font-size: 20px;
+
+
     
 }
 
 .card p{
-    height: 3rem;
     width: 200px;
-    margin-top: 40px;
+    height: 65px;
+    font-size: 16px;
+    text-align: justify;
 }
 
 .card a{
@@ -84,7 +78,6 @@ header{
     justify-content: center;
     align-items: center;
     padding: 12px 15px;    
-    margin-top: 25px;    
 
     width: 160px;
     height: 41px;
@@ -95,11 +88,8 @@ header{
     text-decoration: none;
     color: var(--preto);
 
-/* Amarelo primário */
-
-background: var(--amarelo-primario);
-border-radius: 12px;
-
+    background: var(--amarelo-primario);
+    border-radius: 12px;
 }
 
 .divFilter{
@@ -108,37 +98,112 @@ border-radius: 12px;
     align-items: center;     
 }
 
+aside{
+    position: inherit;   
+    width: 289px;
+    padding: 57px 0px;
 
-#inputSearch {
-    color: var(--preto);
-    width: 814px;
-    border: 3px solid var(--preto);
-    border-radius: 2rem;
-    box-sizing: border-box;
-    background: var(--branco);
-    opacity: 0.2;
-    font-size: 16px;
-    padding: 0.5rem 1.0rem 0.5rem 1.0rem;    
-    margin: auto;
+    border-left: 3px solid var(--cinza-escuro);
+    border-right: 3px solid var(--cinza-escuro);    
 }
 
-
-
-h3{
-    font-size: 20px;
-}
 
 #divFilterTitle{
     display: flex;
     justify-content: center;
     column-gap: 0.5rem;
-    align-items: center;
+    align-items: center;    
 }
 
-#filtersSection{
-    
-    width: 289px;
-    border-left: 3px solid var(--cinza-escuro);
-    border-right: 3px solid var(--cinza-escuro);
-    
+
+#inputsFilterOptions{
+    display: grid;    
+    row-gap: 1rem;        
+    margin-left: 1rem;
+    margin-top: 2rem;
+
+    padding: 15px 25px;
+   
+  
 }
+
+#inputsFilterOptions h3:nth-of-type(n+2){   
+    margin-top: 2rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+#store{
+    display: flex;    
+    flex-direction: column;    
+    justify-content: center;    
+    /* text-align: center; */
+    gap: 49px;
+    width: 988px;    
+    background-color: var(--cinza-claro);
+    border-right: 3px solid var(--cinza-escuro);       
+}
+
+#searchContainer{
+    display: flex;
+    align-items: center;   
+}
+
+#inputSearch {
+    color: var(--preto);
+    width: 814px;
+    height: 48px;
+    border: 3px solid var(--preto);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    background: var(--branco);
+    opacity: 0.2;
+    font-size: 18px;
+    padding: 0rem 0rem 0rem 1.0rem;    
+    margin: auto;
+    isolation: isolate;    
+}
+
+#lupa{
+    width: 40px;
+    height: 40px;    
+    position: relative;
+    left: -12%;         
+}
+
+#buttonsChangePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 19px;   
+    margin: auto;
+}
+
+#buttonsChangePage button{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    
+    padding: 12px 24px;   
+
+    width: 112px;
+    height: 41px;
+
+    background-color: var(--amarelo-secundario);
+    border: transparent;
+    border-radius: 12px;
+}
+
+#buttonsChangePage button:hover{
+    background-color: var(--amarelo-primario);
+}
+
+#buttonsChangePage button:active{
+    background-color: var(--amarelo-primario);
+}
+    
+    
+

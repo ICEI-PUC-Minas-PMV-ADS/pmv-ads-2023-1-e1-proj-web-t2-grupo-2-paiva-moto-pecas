@@ -12,8 +12,8 @@ export function listProducts(picture, name, presentation, targetTag) {
 }
 
 export function initialSection() {
-    completeSection.innerHTML = '' 
-    return products.map((product) => {        
+    completeSection.innerHTML = ''
+    return products.map((product) => {
         const { picture, name, presentation } = product
         listProducts(
             picture,

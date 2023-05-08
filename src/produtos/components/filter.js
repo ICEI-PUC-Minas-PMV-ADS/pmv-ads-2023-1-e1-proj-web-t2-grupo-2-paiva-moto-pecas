@@ -16,7 +16,7 @@ allIOptions.map((option) => {
 })
 
 allIOptions.map((option) => {
-    store.innerHTML += `<div class="card-product" id="filterSection">`
+    store.innerHTML += `<div class="card-product" id="containerFilterInputsOptions">`
     inputsFilterOptions.innerHTML += `
     <div class="divFilter">
         <input id="${option.split(' ').join("")}" type="checkbox" name="${option}" value="${option}">
@@ -27,13 +27,13 @@ allIOptions.map((option) => {
 })
 
 function creatingSelectedElements(picture, name, presentation) {
-    const filterSection = document.querySelector(`#filterSection`)
-    listProducts(picture, name, presentation, filterSection)
+    const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
+    listProducts(picture, name, presentation, containerFilterInputsOptions)
 }
 
 export function listingSelectedElements(brand) {
     const optionID = document.querySelector(`${brand}`)
-    const filterSectionBrand = document.querySelector(`#filterSection`)
+    const containerFilterInputsOptionsBrand = document.querySelector(`#containerFilterInputsOptions`)
     let filtered = []
 
     optionID.addEventListener('change', () => {
@@ -52,7 +52,7 @@ export function listingSelectedElements(brand) {
             })
         } else if (!optionID.checked) {
             filtered = []
-            filterSectionBrand.innerHTML = ''
+            containerFilterInputsOptionsBrand.innerHTML = ''
             let newFiltered = []
 
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
