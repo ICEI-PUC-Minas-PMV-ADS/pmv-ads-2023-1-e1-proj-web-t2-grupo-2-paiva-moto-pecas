@@ -60,12 +60,20 @@ export function listingSelectedElements(brand) {
                 if (checkbox.checked) {
                     newFiltered.push(checkbox.value);
                 }
-            })          
-
-            filtered = products.filter((product) => {
-                return newFiltered.includes(product.brand) || newFiltered.includes(product.category);
             })
-          
+
+            for (const option of newFiltered) {
+                const matchingProducts = products.filter((product) => {
+                  return product.brand === option || product.category === option;
+                });
+                
+                filtered.push(...matchingProducts);
+              }
+
+            // filtered = products.filter((product) => {
+            //     return newFiltered.includes(product.brand) || newFiltered.includes(product.category);
+            // })
+
             filtered.map((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(
