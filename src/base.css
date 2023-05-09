@@ -15,6 +15,7 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -31,7 +32,9 @@ nav ul {
   gap: 20px;
 }
 
-nav ul li:hover {
+nav ul li:hover,
+nav ul li:active,
+nav ul li:focus-visible {
   font-weight: 700;
 }
 
@@ -44,6 +47,11 @@ nav ul li a {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 body {
@@ -104,7 +112,9 @@ li {
   background-color: var(--amarelo-primario);
 }
 
-.btn-amarelo:hover {
+.btn-amarelo:hover,
+.btn-amarelo:active,
+.btn-amarelo:focus-visible {
   background-color: var(--amarelo-secundario);
 }
 
@@ -112,7 +122,9 @@ li {
   background-color: var(--cinza-claro);
 }
 
-.btn-cinza:hover {
+.btn-cinza:hover,
+.btn-cinza:active,
+.btn-cinza:focus-visible {
   background-color: var(--cinza);
 }
 
@@ -121,7 +133,9 @@ li {
   color: var(--branco);
 }
 
-.btn-preto:hover {
+.btn-preto:hover,
+.btn-preto:active,
+.btn-preto:focus-visible {
   background-color: var(--cinza-escuro);
 }
 
