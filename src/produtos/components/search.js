@@ -7,25 +7,25 @@ export function listFilterSearchInput() {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     const datalist = document.querySelector('#datalist')
 
-    let datalistSuggestions = []
-
-    datalistSuggestions = products.filter((product) => {
-        product.presentation.includes(inputSearch.value)
-    })
-
-    for (const suggestion of datalistSuggestions) {
-        datalist.innerHTML = `<option value="${suggestion.name}">
-        <img src="${t}"></img>
-        </option>`
-    }
 
     inputSearch.addEventListener('input', () => {
         completeSection.innerHTML = ''
         completeSection.style.display = 'none'
 
+        let suggestionsOptions = []
         let filtered = []
 
         if (inputSearch.value.length >= 2) {
+
+            suggestionsOptions = products.filter((product) => {
+                return product.presentation.includes(inputSearch.value)
+            })
+
+            for (const suggestion of suggestionsOptions) {
+                datalist.innerHTML += `<option value="${suggestion.name}"></option>`
+            }
+
+
             filtered = products.filter((product) => {
                 return product.name.includes(inputSearch.value)
                     || product.presentation.includes(inputSearch.value)
@@ -40,6 +40,8 @@ export function listFilterSearchInput() {
         } else if (inputSearch.value.length === 0) {
             containerFilterInputsOptions.innerHTML = ''
             filtered = []
+            suggestionsOptions = []
+            datalist.innerHTML = ''
             completeSection.style.display = 'flex'
             initialSection()
         }

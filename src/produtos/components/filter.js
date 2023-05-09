@@ -1,7 +1,7 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
 import { listProducts } from '../../components/list-itens.js'
-import { buttonShowMore } from './button-show-more.js'
+// import { buttonShowMore } from './button-show-more.js'
 
 
 const brands = products.map((product) => {
@@ -38,7 +38,7 @@ export function creatingSelectedElements(picture, name, presentation) {
     listProducts(picture, name, presentation, containerFilterInputsOptions)
 }
 
-let filteredLength = 0
+// let filteredLength = 0
 
 export function listingSelectedElements(option) {
     const optionID = document.querySelector(`${option}`)
@@ -65,8 +65,8 @@ export function listingSelectedElements(option) {
                 )
 
             })
-            const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
-            buttonShowMore(1000, spacesByCardsRow)
+            // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
+            // buttonShowMore(1000, spacesByCardsRow)
 
         } else if (!optionID.checked) {
             filtered = []
@@ -100,8 +100,8 @@ export function listingSelectedElements(option) {
                     presentation
                 )
             })
-            const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
-            buttonShowMore(600, - spacesByCardsRow)
+            // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
+            // buttonShowMore(600, - spacesByCardsRow)
 
         }
 

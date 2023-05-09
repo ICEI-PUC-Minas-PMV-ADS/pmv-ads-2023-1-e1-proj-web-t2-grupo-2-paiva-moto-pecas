@@ -1,18 +1,5 @@
-export function buttonShowMore(initialHeight, maxHeight) {
-
-    const main = document.querySelector('#main')
-    // const button = document.querySelector('#button-show-more button')
-
-    main.style.height = `${initialHeight}px`
-    
-    // button.addEventListener('click', () => {
-    //     button.style.display = 'none'
-    //     if (initialHeight < maxHeight) {
-    //         initialHeight += 940
-    //         initialHeight = initialHeight <= maxHeight ? initialHeight : maxHeight
-    //         main.style.height = `${initialHeight}px`
-    //     }
-    // });
+export function buttonShowMore(fullLength, initialHeight) {
+    const button = document.querySelector('#button-show-more button')
 
     window.addEventListener('scroll', function () {
         const windowHeight = window.innerHeight;
@@ -20,15 +7,13 @@ export function buttonShowMore(initialHeight, maxHeight) {
         const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 
         if (scrollPosition + windowHeight >= fullHeight) {
-            if (initialHeight < maxHeight) {
-                initialHeight += 940
-                initialHeight = initialHeight <= maxHeight ? initialHeight : maxHeight
-                main.style.height = `${initialHeight}px`
-            }
+            console.log('chegou ao final da página')
         }
 
-        // if (scrollPosition + windowHeight < fullHeight || initialHeight >= maxHeight) {
-        //     button.style.display = 'none'
-        // }
+        if (scrollPosition + windowHeight < fullHeight || initialHeight >= windowHeight) {
+            console.log('ainda não chegou ao final da página');
+            // button.style.display = 'none'
+        }
     });
+
 }
