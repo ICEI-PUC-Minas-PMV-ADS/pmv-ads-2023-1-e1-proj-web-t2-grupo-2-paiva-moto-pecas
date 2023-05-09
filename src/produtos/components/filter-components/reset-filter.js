@@ -1,5 +1,4 @@
-import { initialSection } from '../list-itens.js';
-import { products } from '../../../database/produtos/produtos-db.js';
+import { initialSection } from '../initial.js';
 
 function checkingCheckboxes() {
     let isChecked = false;
@@ -18,13 +17,14 @@ function checkingCheckboxes() {
 }
 
 export function resetFilter(...marcas) {
-    const marcaID = document.querySelectorAll(`${marcas}`)
-
+    const marcaID = document.querySelectorAll(`${marcas}`)   
+    
     marcaID.forEach((marca) => {
-        marca.addEventListener('change', () => {
+        marca.addEventListener('change', () => {            
             if (checkingCheckboxes() === true) {
                 marca.addEventListener('change', () => {
                     if (checkingCheckboxes() === false) {
+                        completeSection.style.display = 'flex'
                         initialSection()
                     }
                 })

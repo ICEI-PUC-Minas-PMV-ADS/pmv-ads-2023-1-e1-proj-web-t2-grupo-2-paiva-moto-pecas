@@ -14,7 +14,8 @@ export const products = [
         brand: 'Honda',
         category: 'Chassis',
         picture: '2',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Embreagem Completa',
@@ -27,7 +28,8 @@ export const products = [
         brand: 'Yamaha',
         category: 'Transmissão',
         picture: '7',
-        sector: "Produto"
+        sector: "Produto",
+        featured: true
     },
     {
         name: 'Rabeta traseira',
@@ -43,7 +45,8 @@ export const products = [
         brand: 'Metal Leve', // Honda (marca original)
         category: 'Chassis',
         picture: '1',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Placa De Partida',
@@ -58,7 +61,8 @@ export const products = [
         brand: 'Magnetron',
         category: 'Peças de Partida',
         picture: '14',
-        sector: "Produto"
+        sector: "Produto",
+        featured: true
     },
     {
         name: 'Cabo Acelerador',
@@ -74,7 +78,8 @@ export const products = [
         brand: 'Pro Tork', // Honda (marca original)
         category: 'Chassis',
         picture: '5',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Pneu dianteira',
@@ -88,7 +93,8 @@ export const products = [
         brand: 'Michelin',
         category: 'Pneu',
         picture: '21',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Borracha Pedaleira Estribo ',
@@ -105,7 +111,8 @@ export const products = [
         brand: 'Honda',
         category: 'Chassis',
         picture: '3',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Amortecedor Traseiro',
@@ -121,7 +128,8 @@ export const products = [
         brand: 'Michelin',
         category: 'Chassis',
         picture: '4',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Disco De Freio Traseiro',
@@ -137,7 +145,8 @@ export const products = [
         brand: 'Magnetron', // Honda (marca original)
         category: 'Chassis',
         picture: '6',
-        sector: "Produto"
+        sector: "Produto",
+        featured: true
     },
     {
         name: 'Rolete Neo 115 6 Gramas',
@@ -148,7 +157,8 @@ export const products = [
         brand: 'Yamaha',
         category: 'Transmissão',
         picture: '8',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Eixo Pinhão',
@@ -160,7 +170,8 @@ export const products = [
         brand: 'Metal Leve',
         category: 'Transmissão',
         picture: '9',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Tampa Do Cvt Nmax',
@@ -172,7 +183,8 @@ export const products = [
         brand: 'Pro Tork', // Yamaha (marca original)
         category: 'Transmissão',
         picture: '10',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Retentor Do Eixo Embreagem',
@@ -184,7 +196,8 @@ export const products = [
         brand: 'Yamaha',
         category: 'Transmissão',
         picture: '11',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Kit Peças Motor',
@@ -210,7 +223,8 @@ export const products = [
         brand: 'Metal Leve',
         category: 'Motor',
         picture: '12',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Kit Cilindro Pistão Anéis',
@@ -223,7 +237,8 @@ export const products = [
         brand: 'Metal Leve',
         category: 'Motor',
         picture: '13',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Motor Partida Arranque',
@@ -240,7 +255,8 @@ export const products = [
         brand: 'Magnetron',
         category: 'Peças de Partida',
         picture: '15',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Placa Partida',
@@ -258,7 +274,8 @@ export const products = [
         brand: 'Magnetron',
         category: 'Peças de Partida',
         picture: '16',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Engrenagem Embreagem Partida',
@@ -273,7 +290,8 @@ export const products = [
         brand: 'Pro Tork',
         category: 'Peças de Partida',
         picture: '17',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Ponteira Com Curva',
@@ -289,7 +307,8 @@ export const products = [
         brand: 'Yamaha',
         category: 'Escapamento',
         picture: '18',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Escapamento Moto CG',
@@ -303,7 +322,8 @@ export const products = [
         brand: 'Honda', // Pro Tork
         category: 'Escapamento',
         picture: '19',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Pneu Moto Cb500',
@@ -316,7 +336,8 @@ export const products = [
         brand: 'Michelin',
         category: 'Pneu',
         picture: '20',
-        sector: "Produto"
+        sector: "Produto",
+        featured: false
     },
     {
         name: 'Câmaras De Ar',
@@ -339,6 +360,7 @@ export const products = [
         brand: 'Michelin',
         category: 'Pneu',
         picture: '22',
-        sector: "Produto"
+        sector: "Produto",
+        featured: true
     },
 ]

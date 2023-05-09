@@ -1,16 +1,7 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { buttonShowMore } from './button-show-more.js'
 
-export function listProducts(picture, name, presentation, targetTag) {
-    targetTag.innerHTML += `
-    <div  class="card" >    
-        <img class="img" src="../database/produtos/assets/${picture}.png" alt="">
-        <h3>${name}</h3>
-        <p>${presentation}</p>
-        <a href="#">Adicionar ao carrinho</a>
-    </div>     
-    `
-}
+import {listProducts} from '../../components/list-itens.js'
 
 export function initialSection() {
     completeSection.innerHTML = ''
