@@ -18,12 +18,13 @@ function checkingCheckboxes() {
 
 export function resetFilter(...marcas) {
     const marcaID = document.querySelectorAll(`${marcas}`)   
+    const inputSearch = document.querySelector('#inputSearch')
     
     marcaID.forEach((marca) => {
         marca.addEventListener('change', () => {            
             if (checkingCheckboxes() === true) {
                 marca.addEventListener('change', () => {
-                    if (checkingCheckboxes() === false) {
+                    if (checkingCheckboxes() === false && inputSearch.value !== '') {
                         completeSection.style.display = 'flex'
                         initialSection()
                     }

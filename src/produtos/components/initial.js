@@ -6,7 +6,7 @@ import { listProducts } from '../../components/list-itens.js'
 export function initialSection() {
     completeSection.innerHTML = ''
     // buttonShowMore(1470, 3450) 
-    return products.map((product) => {
+    return products.forEach((product) => {
         const { picture, name, presentation } = product
         listProducts(
             picture,

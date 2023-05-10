@@ -2,50 +2,108 @@ import { products } from "../../database/produtos/produtos-db.js";
 import { creatingSelectedElements } from './filter.js'
 import { initialSection } from './initial.js'
 
+function datalistSuggestions() {
+    const datalist = document.querySelector('#datalist')
+
+    let suggestionsOptions = []
+
+    suggestionsOptions = products.filter(async (product) => {
+        return product.presentation.includes(await inputSearch.value)
+    })
+
+    datalist.innerHTML = ''
+    return suggestionsOptions.map((suggestion) => {
+        datalist.innerHTML += `<option value="${suggestion.name}"></option>`
+    })
+}
+
 export function listFilterSearchInput() {
     const inputSearch = document.querySelector('#inputSearch')
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
-    const datalist = document.querySelector('#datalist')
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
+    let filtered = []
+    let newFiltered = []
+
+    function returningOnlyItemsFromTheSelectedOptions() {
+        checkboxes.forEach(async (checkbox) => {
+            if (await checkbox.checked) {
+                filtered.forEach((product) => {
+                    if (product.brand === checkbox.value || product.category === checkbox.value) {
+                        newFiltered.push(product)
+                    }
+                })
+
+                containerFilterInputsOptions.innerHTML = ''
+                return newFiltered.forEach((product) => {
+                    const { picture, name, presentation } = product
+                    creatingSelectedElements(picture, name, presentation)
+                })
+            }
+        })
+    }
 
     inputSearch.addEventListener('input', () => {
-        completeSection.innerHTML = ''
-        completeSection.style.display = 'none'
-
-        let suggestionsOptions = []
-        let filtered = []
 
         if (inputSearch.value.length >= 2) {
+            completeSection.innerHTML = ''
+            completeSection.style.display = 'none'
 
-            suggestionsOptions = products.filter((product) => {
-                return product.presentation.includes(inputSearch.value)
-            })
-
-            for (const suggestion of suggestionsOptions) {
-                datalist.innerHTML += `<option value="${suggestion.name}"></option>`
-            }
-
+            datalistSuggestions()
 
             filtered = products.filter((product) => {
                 return product.name.includes(inputSearch.value)
                     || product.presentation.includes(inputSearch.value)
-
             })
 
+            returningOnlyItemsFromTheSelectedOptions()
+
             containerFilterInputsOptions.innerHTML = ''
-            filtered.map((product) => {
+            return filtered.forEach((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(picture, name, presentation)
             })
         } else if (inputSearch.value.length === 0) {
-            containerFilterInputsOptions.innerHTML = ''
-            filtered = []
-            suggestionsOptions = []
-            datalist.innerHTML = ''
-            completeSection.style.display = 'flex'
-            initialSection()
+            checkboxes.forEach(async (checkbox) => {
+                if (await checkbox.checked) {
+                    containerFilterInputsOptions.innerHTML = ''
+                    datalist.innerHTML = ''
+                    newFiltered = products.filter((product) => {
+                        return product.brand === checkbox.value || product.category === checkbox.value
+                    })
+                    return newFiltered.forEach((product) => {
+                        const { picture, name, presentation } = product
+                        creatingSelectedElements(picture, name, presentation)
+                    })
+                }
+            })
         }
     })
 }
 
 
+// export class teste {
+//     filtered = []
+//     newFiltered = []
+
+//     constructor() {
+//     }
+
+//     datalistSuggestions() {
+//         const datalist = document.querySelector('#datalist')
+
+//         let suggestionsOptions = []
+
+//         suggestionsOptions = products.filter(async (product) => {
+//             return product.presentation.includes(await inputSearch.value)
+//         })
+
+//         datalist.innerHTML = ''
+//         return suggestionsOptions.map((suggestion) => {
+//             datalist.innerHTML += `<option value="${suggestion.name}"></option>`
+//         })
+//     }
+
+        // returningOnlyItemsFromTheSelectedOptions()
+
+// }
