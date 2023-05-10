@@ -148,22 +148,22 @@ li {
 .card {
   width: 100%;
   max-width: 260px;
-  height: 100%;
   padding: 16px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  gap: 16px;
   background-color: var(--branco);
+  color: var(--preto);
 }
 
 .card img {
   background-color: var(--branco);
   width: 100%;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 40px;
 }
 
