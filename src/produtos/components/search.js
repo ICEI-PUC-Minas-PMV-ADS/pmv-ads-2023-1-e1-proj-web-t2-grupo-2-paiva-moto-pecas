@@ -1,6 +1,7 @@
 import { products } from "../../database/produtos/produtos-db.js";
 import { creatingSelectedElements } from './filter.js'
 import { initialSection } from './initial.js'
+import { OptionsWithoutSpaces } from './filter.js'
 
 function datalistSuggestions() {
     const datalist = document.querySelector('#datalist')
@@ -24,6 +25,26 @@ export function listFilterSearchInput() {
 
     let filtered = []
     let newFiltered = []
+    let trueCheckboxesValue = []
+
+    const trueCheckboxes = () => {
+        trueCheckboxesValue = []
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                trueCheckboxesValue.push(checkbox.value);
+            }
+        })
+        trueCheckboxesValue = trueCheckboxesValue.reduce((unique, item) => {
+            return unique.includes(item) ? unique : [...unique, item]
+        }, [])
+
+        for (const option of trueCheckboxesValue) {
+            const checkboxesMatchingProducts = products.filter((product) => {
+                return product.brand === option || product.category === option;
+            });
+            newFiltered.push(...checkboxesMatchingProducts);
+        }
+    }
 
     function returningOnlyItemsFromTheSelectedOptions() {
         checkboxes.forEach(async (checkbox) => {
@@ -32,7 +53,11 @@ export function listFilterSearchInput() {
                     if (product.brand === checkbox.value || product.category === checkbox.value) {
                         newFiltered.push(product)
                     }
-                })
+                })               
+
+                newFiltered = newFiltered.reduce((unique, item) => {
+                    return unique.includes(item) ? unique : [...unique, item]
+                }, [])
 
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
@@ -44,7 +69,6 @@ export function listFilterSearchInput() {
     }
 
     inputSearch.addEventListener('input', () => {
-
         if (inputSearch.value.length >= 2) {
             completeSection.innerHTML = ''
             completeSection.style.display = 'none'
@@ -65,16 +89,26 @@ export function listFilterSearchInput() {
             })
         } else if (inputSearch.value.length === 0) {
             checkboxes.forEach(async (checkbox) => {
-                if (await checkbox.checked) {
+                if (await checkbox.checked) {                    
                     containerFilterInputsOptions.innerHTML = ''
                     datalist.innerHTML = ''
-                    newFiltered = products.filter((product) => {
-                        return product.brand === checkbox.value || product.category === checkbox.value
-                    })
+                    filtered = []
+                    newFiltered = []
+                    trueCheckboxes()
+                   
                     return newFiltered.forEach((product) => {
                         const { picture, name, presentation } = product
                         creatingSelectedElements(picture, name, presentation)
                     })
+                }
+
+                if (inputSearch.value.length === 0 && !checkbox.checked.length === OptionsWithoutSpaces.length) {
+                    containerFilterInputsOptions.innerHTML = ''
+                    datalist.innerHTML = ''
+                    filtered = []
+                    newFiltered = []
+                    completeSection.style.display = 'flex'
+                    initialSection()
                 }
             })
         }

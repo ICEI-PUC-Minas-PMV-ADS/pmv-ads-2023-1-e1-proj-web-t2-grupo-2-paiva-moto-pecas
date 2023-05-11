@@ -1,6 +1,8 @@
 import { initialSection } from '../initial.js';
+import { products } from '../../../database/produtos/produtos-db.js';
+import { creatingSelectedElements } from '../filter.js';
 
-function checkingCheckboxes() {
+export function checkingCheckboxes() {
     let isChecked = false;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
@@ -17,16 +19,30 @@ function checkingCheckboxes() {
 }
 
 export function resetFilter(...marcas) {
-    const marcaID = document.querySelectorAll(`${marcas}`)   
+    const marcaID = document.querySelectorAll(`${marcas}`)
     const inputSearch = document.querySelector('#inputSearch')
-    
+    const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
+
+    let filtered = []
+
     marcaID.forEach((marca) => {
-        marca.addEventListener('change', () => {            
-            if (checkingCheckboxes() === true) {
+        marca.addEventListener('change', () => {
+            if (checkingCheckboxes()) {
                 marca.addEventListener('change', () => {
-                    if (checkingCheckboxes() === false && inputSearch.value !== '') {
+                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {
                         completeSection.style.display = 'flex'
                         initialSection()
+                    }
+                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
+                        filtered = products.filter((product) => {
+                            return product.name.includes(inputSearch.value)
+                                || product.presentation.includes(inputSearch.value)
+                        })
+                        containerFilterInputsOptions.innerHTML = ''
+                        return filtered.forEach((product) => {
+                            const { picture, name, presentation } = product
+                            creatingSelectedElements(picture, name, presentation)
+                        })
                     }
                 })
             }

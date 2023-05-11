@@ -18,7 +18,6 @@ allIOptions.map((option) => {
     OptionsWithoutSpaces.push(option.split(' ').join(""))
 })
 
-
 export function listFilterInputsOptions() {
     inputsFilterOptions.innerHTML += `<h3 class="">Marcas</h3>`
     allIOptions.map((option) => {
@@ -76,23 +75,18 @@ export function listingSelectedElements(option) {
             if (checkbox.checked && inputSearch.value.length !== 0) {
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
-                })
-
+                })                
                 newFiltered.push(...matchingProducts)
-
 
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
 
-                console.log("returningOnlyItemsFromTheSelectedOptions ");
-                console.log(newFiltered);
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation)
                 })
-
             }
 
             checkbox.addEventListener('change', () => {
@@ -114,15 +108,17 @@ export function listingSelectedElements(option) {
                         creatingSelectedElements(picture, name, presentation)
                     })
                 }
+
+                if (!checkbox.checked && inputSearch.value.length !== 0) {
+                    console.log('oi');
+                }
             })
         })
     }
 
 
     optionID.addEventListener('change', () => {
-
         if (optionID.checked) {
-
             filtered = products.filter((product) => {
                 return product.brand === optionID.value || product.category === optionID.value
             })
@@ -148,10 +144,10 @@ export function listingSelectedElements(option) {
             filtered = []
             containerFilterInputsOptions.innerHTML = ''
 
-
-
-
             if (inputSearch.value.length !== 0) {
+                checkboxes.forEach((checkbox) => {
+                    
+                })
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions()
 
@@ -160,9 +156,7 @@ export function listingSelectedElements(option) {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation)
                 })
-
-            }
-
+            } 
             // checkboxes.forEach((checkbox) => {
             //     if (checkbox.checked) {
             //         newFiltered.push(checkbox.value);
@@ -178,7 +172,6 @@ export function listingSelectedElements(option) {
                 completeSection.style.display = 'flex'
                 initialSection()
             }
-
             // for (const option of trueCheckboxesValue) {
             //     const matchingProducts = products.filter((product) => {
             //         return product.brand === option || product.category === option;
@@ -194,15 +187,10 @@ export function listingSelectedElements(option) {
                     presentation
                 )
             })
-
-
             // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
             // buttonShowMore(600, - spacesByCardsRow)
-
         }
-
     })
-
 }
 
 
