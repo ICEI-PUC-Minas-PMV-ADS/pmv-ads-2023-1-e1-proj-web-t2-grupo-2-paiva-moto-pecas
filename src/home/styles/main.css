@@ -1,3 +1,14 @@
+.banner-principal {
+  padding: 0;
+  position: relative;
+}
+
+.banner-principal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .banner-principal .container {
   display: flex;
   flex-direction: column;
@@ -6,12 +17,19 @@
 }
 
 .banner-principal svg {
-  width: 200px;
-  height: 100%;
+  width: 20%;
+  height: fit-content;
+  position: absolute;
+  top: 10%;
 }
 
 .banner-principal h1 {
+  padding: 8px;
   text-align: center;
+  position: absolute;
+  color: var(--branco);
+  bottom: 15%;
+  transition: 0.3s ease;
 }
 
 .produtos-destaque {
@@ -24,6 +42,10 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+
+.produtos-destaque h2 {
+  text-align: center;
 }
 
 .produtos-destaque .produtos {
@@ -42,6 +64,9 @@
   background-color: var(--amarelo-primario);
   padding: 40px;
   border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .mapa {
@@ -58,7 +83,20 @@
   width: 100%;
 }
 
+@media (min-width: 48em) {
+  .banner-principal h1 {
+    bottom: 30%;
+  }
+}
+
 @media (min-width: 80em) {
+  .banner-principal svg {
+    width: 15%;
+  }
+  .banner-principal h1 {
+    bottom: 30%;
+  }
+
   .depoimentos .depoimento {
     padding: 64px 72px;
   }
