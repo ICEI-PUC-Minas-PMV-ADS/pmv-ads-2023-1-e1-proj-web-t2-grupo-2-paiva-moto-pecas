@@ -2,6 +2,7 @@ import { products } from "../../database/produtos/produtos-db.js";
 import { creatingSelectedElements } from './filter.js'
 import { initialSection } from './initial.js'
 import { OptionsWithoutSpaces } from './filter.js'
+import {checkingCheckboxes} from './filter-components/reset-filter.js'
 
 function datalistSuggestions() {
     const datalist = document.querySelector('#datalist')
@@ -29,6 +30,7 @@ export function listFilterSearchInput() {
 
     const trueCheckboxes = () => {
         trueCheckboxesValue = []
+        newFiltered = []
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
                 trueCheckboxesValue.push(checkbox.value);
@@ -53,7 +55,7 @@ export function listFilterSearchInput() {
                     if (product.brand === checkbox.value || product.category === checkbox.value) {
                         newFiltered.push(product)
                     }
-                })               
+                })
 
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
@@ -88,21 +90,22 @@ export function listFilterSearchInput() {
                 creatingSelectedElements(picture, name, presentation)
             })
         } else if (inputSearch.value.length === 0) {
+            // datalist.innerHTML = ''
             checkboxes.forEach(async (checkbox) => {
-                if (await checkbox.checked) {                    
+                if (await checkbox.checked) {
                     containerFilterInputsOptions.innerHTML = ''
                     datalist.innerHTML = ''
                     filtered = []
                     newFiltered = []
                     trueCheckboxes()
-                   
+
                     return newFiltered.forEach((product) => {
                         const { picture, name, presentation } = product
                         creatingSelectedElements(picture, name, presentation)
                     })
-                }
-
-                if (inputSearch.value.length === 0 && !checkbox.checked.length === OptionsWithoutSpaces.length) {
+                } 
+                if (!checkingCheckboxes() && inputSearch.value.length === 0){
+                    console.log('oi');
                     containerFilterInputsOptions.innerHTML = ''
                     datalist.innerHTML = ''
                     filtered = []

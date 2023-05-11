@@ -43,9 +43,11 @@ export function resetFilter(...marcas) {
                             const { picture, name, presentation } = product
                             creatingSelectedElements(picture, name, presentation)
                         })
-                    }
+                    }                    
                 })
             }
         })
     })
+
+
 }
