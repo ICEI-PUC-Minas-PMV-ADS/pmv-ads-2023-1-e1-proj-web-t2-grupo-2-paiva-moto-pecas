@@ -32,12 +32,6 @@ nav ul {
   gap: 20px;
 }
 
-nav ul li:hover,
-nav ul li:active,
-nav ul li:focus-visible {
-  font-weight: 700;
-}
-
 nav ul li a {
   display: flex;
   align-items: center;
@@ -194,7 +188,7 @@ footer .container {
 }
 
 footer div {
-  max-width: 340px;
+  width: 100%;
 }
 
 footer h3 {
@@ -230,5 +224,9 @@ footer h3 {
 
   p {
     font-size: 18px;
+  }
+
+  footer div {
+    width: 340px;
   }
 }
