@@ -80,30 +80,3 @@ export function listFilterSearchInput() {
         }
     })
 }
-
-
-// export class teste {
-//     filtered = []
-//     newFiltered = []
-
-//     constructor() {
-//     }
-
-//     datalistSuggestions() {
-//         const datalist = document.querySelector('#datalist')
-
-//         let suggestionsOptions = []
-
-//         suggestionsOptions = products.filter(async (product) => {
-//             return product.presentation.includes(await inputSearch.value)
-//         })
-
-//         datalist.innerHTML = ''
-//         return suggestionsOptions.map((suggestion) => {
-//             datalist.innerHTML += `<option value="${suggestion.name}"></option>`
-//         })
-//     }
-
-        // returningOnlyItemsFromTheSelectedOptions()
-
-// }

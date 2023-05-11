@@ -1,10 +1,10 @@
-export function listProducts(picture, name, presentation, targetTag, href) {
+export function listCards(picture, name, presentation, targetTag, href) {
     targetTag.innerHTML += `
     <a href="${href}" class="card" >    
         <img class="" src="../database/produtos/assets/${picture}.png" alt="">
         <h3>${name}</h3>
         <p>${presentation}</p>
-        <button id="add-button" class="btn btn-amarelo" type="submit">Adicionar ao carrinho</button>
+        <button id="add-button" class="btn btn-amarelo" type="submit">Adicionar a lista</button>
     </a>     
     `
 }

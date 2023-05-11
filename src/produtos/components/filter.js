@@ -1,6 +1,6 @@
 import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
-import { listProducts } from '../../components/list-itens.js'
+import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
 // import { buttonShowMore } from './button-show-more.js'
 
@@ -36,7 +36,7 @@ export function listFilterInputsOptions() {
 
 export function creatingSelectedElements(picture, name, presentation) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
-    listProducts(picture, name, presentation, containerFilterInputsOptions)
+    listCards(picture, name, presentation, containerFilterInputsOptions)
 }
 
 // let filteredLength = 0
@@ -51,13 +51,13 @@ export function listingSelectedElements(option) {
     let newFiltered = []
     let trueCheckboxesValue = []
 
-    const trueCheckboxes = () => {       
+    const trueCheckboxes = () => {
+        trueCheckboxesValue = []
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
                 trueCheckboxesValue.push(checkbox.value);
             }
         })
-
         trueCheckboxesValue = trueCheckboxesValue.reduce((unique, item) => {
             return unique.includes(item) ? unique : [...unique, item]
         }, [])
@@ -67,7 +67,7 @@ export function listingSelectedElements(option) {
                 return product.brand === option || product.category === option;
             });
             filtered.push(...checkboxesMatchingProducts);
-        }        
+        }
     }
 
     const returningOnlyItemsFromTheSelectedOptions = () => {
@@ -80,10 +80,13 @@ export function listingSelectedElements(option) {
 
                 newFiltered.push(...matchingProducts)
 
+
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
 
+                console.log("returningOnlyItemsFromTheSelectedOptions ");
+                console.log(newFiltered);
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
@@ -91,9 +94,30 @@ export function listingSelectedElements(option) {
                 })
 
             }
-        })
 
+            checkbox.addEventListener('change', () => {
+                if (!checkbox.checked) {
+                    trueCheckboxes()
+                    const matchingProducts = newFiltered.filter((product) => {
+                        return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
+                    })
+                    newFiltered = []
+                    newFiltered.push(...matchingProducts)
+
+                    newFiltered = newFiltered.reduce((unique, item) => {
+                        return unique.includes(item) ? unique : [...unique, item]
+                    }, [])
+
+                    containerFilterInputsOptions.innerHTML = ''
+                    return newFiltered.forEach((product) => {
+                        const { picture, name, presentation } = product
+                        creatingSelectedElements(picture, name, presentation)
+                    })
+                }
+            })
+        })
     }
+
 
     optionID.addEventListener('change', () => {
 
@@ -121,15 +145,22 @@ export function listingSelectedElements(option) {
             // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
             // buttonShowMore(1000, spacesByCardsRow)
         } else if (!optionID.checked) {
-            filtered = []            
+            filtered = []
             containerFilterInputsOptions.innerHTML = ''
 
-            if (inputSearch.value.length !== 0) {                
+
+
+
+            if (inputSearch.value.length !== 0) {
+                newFiltered = []
+                returningOnlyItemsFromTheSelectedOptions()
+
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation)
                 })
+
             }
 
             // checkboxes.forEach((checkbox) => {
@@ -138,7 +169,6 @@ export function listingSelectedElements(option) {
             //     }
             // })
             trueCheckboxes()
-            console.log(trueCheckboxesValue);
             if (inputSearch.value.length === 0 && trueCheckboxesValue.length === 0) {
                 containerFilterInputsOptions.innerHTML = ''
                 filtered = []
