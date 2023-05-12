@@ -10,20 +10,25 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 
 ## Integrantes
 
-* Alessandra Santos
-* Enzo Moura
-* Ingrid Barros
-* Karina Barbosa
-* Lucas Vazzoller Marangoni
-* Paloma Rizzon
+- Alessandra Santos
+- Enzo Moura
+- Ingrid Barros
+- Karina Barbosa
+- Lucas Vazzoller Marangoni
+- Paloma Rizzon
 
 ## Orientador
 
-* Joyce Carvalho
+- Joyce Carvalho
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+<ol>
+<li>Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;</li>
+<li>Descompacte o arquivo em uma pasta específica;</li>
+<li>Abra o Visual Studio Code e execute o Live Server;</li>
+<li>Abra um navegador de Internet e informe a seguinte URL: http://localhost:5500/index.html</li>
+</ol>
 
 # Documentação
 
@@ -43,12 +48,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado.
+- Insira o endereço eletrônico público de acesso ao conteúdo publicado.
 
 # Armazenamento do Código-Fonte
 
-* <a href="src/README.md">Código Fonte</a>
+- <a href="/src/home/index.html">Código Fonte</a>
 
 # Armazenamento da Apresentação
 
-* <a href="presentation/README.md">Apresentação da solução</a>
+- <a href="presentation/README.md">Apresentação da solução</a>
