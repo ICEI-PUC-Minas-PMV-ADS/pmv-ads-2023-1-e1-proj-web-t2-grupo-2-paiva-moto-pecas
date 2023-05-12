@@ -154,6 +154,10 @@ li {
   color: var(--preto);
 }
 
+.card span {
+  display: none;
+}
+
 .card img {
   background-color: var(--branco);
   width: 100%;
