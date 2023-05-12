@@ -42,7 +42,7 @@ Figura 16 - opções de botões
 
 ## Estrutura
 
-O padrão de layout a ser utilizado pelo site tem correspondência ao projeto de interface elaborado anteriormente, conforme Figura 12. Consideramos menu e rodapé os elementos em comum de todas as páginas.
+O padrão de layout a ser utilizado pelo site tem correspondência ao projeto de interface elaborado anteriormente, conforme Figura 17. Consideramos menu e rodapé os elementos em comum de todas as páginas.
 
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-estrutura.jpg?raw=true" />
 
