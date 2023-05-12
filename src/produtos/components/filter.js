@@ -75,14 +75,14 @@ export function listingSelectedElements(option) {
             if (checkbox.checked && inputSearch.value.length !== 0) {
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
-                })                
+                })
                 newFiltered.push(...matchingProducts)
 
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
 
-                containerFilterInputsOptions.innerHTML = ''
+                 containerFilterInputsOptions.innerHTML = ``
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation)
@@ -102,7 +102,7 @@ export function listingSelectedElements(option) {
                         return unique.includes(item) ? unique : [...unique, item]
                     }, [])
 
-                    containerFilterInputsOptions.innerHTML = ''
+                    containerFilterInputsOptions.innerHTML = ``
                     return newFiltered.forEach((product) => {
                         const { picture, name, presentation } = product
                         creatingSelectedElements(picture, name, presentation)
@@ -137,26 +137,30 @@ export function listingSelectedElements(option) {
 
             if (inputSearch.value.length !== 0) {
                 returningOnlyItemsFromTheSelectedOptions()
+                if (newFiltered.length === 0) {
+                    containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                }
+
             }
             // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
             // buttonShowMore(1000, spacesByCardsRow)
         } else if (!optionID.checked) {
             filtered = []
-            containerFilterInputsOptions.innerHTML = ''
+            containerFilterInputsOptions.innerHTML = ``
 
             if (inputSearch.value.length !== 0) {
                 checkboxes.forEach((checkbox) => {
-                    
+
                 })
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions()
 
-                containerFilterInputsOptions.innerHTML = ''
+                containerFilterInputsOptions.innerHTML = ``
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation)
                 })
-            } 
+            }
             // checkboxes.forEach((checkbox) => {
             //     if (checkbox.checked) {
             //         newFiltered.push(checkbox.value);
@@ -164,7 +168,7 @@ export function listingSelectedElements(option) {
             // })
             trueCheckboxes()
             if (inputSearch.value.length === 0 && trueCheckboxesValue.length === 0) {
-                containerFilterInputsOptions.innerHTML = ''
+                containerFilterInputsOptions.innerHTML = ``
                 filtered = []
                 newFiltered = []
                 // trueCheckboxesValue = []

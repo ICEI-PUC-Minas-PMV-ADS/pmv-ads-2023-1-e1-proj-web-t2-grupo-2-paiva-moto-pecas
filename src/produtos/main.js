@@ -5,8 +5,6 @@ import { resetFilter } from './components/filter-components/reset-filter.js'
 import { listFilterInputsOptions } from './components/filter.js'
 import { listFilterSearchInput } from './components/search.js'
 
-
-
 export function productsMain() {
     initialSection()
     listFilterInputsOptions()

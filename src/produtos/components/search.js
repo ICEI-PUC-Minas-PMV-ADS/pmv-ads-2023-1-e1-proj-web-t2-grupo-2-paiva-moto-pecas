@@ -2,7 +2,7 @@ import { products } from "../../database/produtos/produtos-db.js";
 import { creatingSelectedElements } from './filter.js'
 import { initialSection } from './initial.js'
 import { OptionsWithoutSpaces } from './filter.js'
-import {checkingCheckboxes} from './filter-components/reset-filter.js'
+import { checkingCheckboxes } from './filter-components/reset-filter.js'
 
 function datalistSuggestions() {
     const datalist = document.querySelector('#datalist')
@@ -71,8 +71,10 @@ export function listFilterSearchInput() {
     }
 
     inputSearch.addEventListener('input', () => {
+
         if (inputSearch.value.length >= 2) {
-            completeSection.innerHTML = ''
+            containerFilterInputsOptions.innerHTML = ``
+            datalist.innerHTML = ''
             completeSection.style.display = 'none'
 
             datalistSuggestions()
@@ -83,8 +85,13 @@ export function listFilterSearchInput() {
             })
 
             returningOnlyItemsFromTheSelectedOptions()
+           
+            if (filtered.length === 0) {
+                containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+            } else {
+                containerFilterInputsOptions.innerHTML = ''
+            }
 
-            containerFilterInputsOptions.innerHTML = ''
             return filtered.forEach((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(picture, name, presentation)
@@ -103,9 +110,8 @@ export function listFilterSearchInput() {
                         const { picture, name, presentation } = product
                         creatingSelectedElements(picture, name, presentation)
                     })
-                } 
-                if (!checkingCheckboxes() && inputSearch.value.length === 0){
-                    console.log('oi');
+                }
+                if (!checkingCheckboxes() && inputSearch.value.length === 0) {
                     containerFilterInputsOptions.innerHTML = ''
                     datalist.innerHTML = ''
                     filtered = []
