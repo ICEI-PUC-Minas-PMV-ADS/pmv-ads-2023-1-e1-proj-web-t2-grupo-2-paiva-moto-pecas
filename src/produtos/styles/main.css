@@ -176,3 +176,6 @@ aside{
 }
     
 
+.card span{
+    display: none;
+}
