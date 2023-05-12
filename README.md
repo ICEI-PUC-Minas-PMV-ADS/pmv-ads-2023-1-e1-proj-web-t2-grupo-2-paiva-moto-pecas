@@ -1,3 +1,5 @@
+<img src="docs/img/logotipo-paiva-moto-pecas.png" alt="logotipo Paiva Moto Peças">
+
 # PAIVA MOTO PEÇAS
 
 `CURSO:` Análise e Desenvolvimento de Sistemas

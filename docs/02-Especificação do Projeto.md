@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-<span>Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+<span>Pré-requisitos: <a href="01-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
 A precisa delimitação do problema e os aspectos mais importantes a serem abordados nesse projeto foram estabelecidos com a observação dos usuários em seus ambientes cotidianos e a realização de entrevistas. As informações obtidas foram então organizadas em personas e histórias de usuários.
 
@@ -35,7 +35,7 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Bruna Silva          | quero ver os horários de funcionamento da oficina                           | para que eu possa me planejar para ir até lá                                   |
 | Bruna Silva          | quero ver mídias dos produtos e serviços                                    | para que eu possa ter certeza do que estou comprando                           |
 | Bruna Silva          | quero conseguir filtrar os produtos por marca, categoria, tipo e relevância | para facilitar a minha busca                                                   |
-| Bruna Silva          | qquero poder realizar buscas por texto                                      | para que eu possa encontrar o que eu quero com facilidade e rapidez            |
+| Bruna Silva          | quero poder realizar buscas por texto                                       | para que eu possa encontrar o que eu quero com facilidade e rapidez            |
 | Bruna Silva          | quero ter informações técnicas sobre os produtos e serviços                 | para que eu possa avaliar previamente minha compra                             |
 | Pedro Ribeiro        | quero que o cliente consiga chegar até minha oficina com facilidade         | para que ele não deixe de comprar pela dificuldade de se localizar             |
 | Pedro Ribeiro        | quero que o cliente possa conhecer mais sobre a oficina                     | para que o cliente se sinta seguro na compra                                   |
