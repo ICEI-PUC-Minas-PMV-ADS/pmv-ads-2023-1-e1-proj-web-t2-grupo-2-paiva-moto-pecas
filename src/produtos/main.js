@@ -19,19 +19,3 @@ export function productsMain() {
 
 productsMain()
 
-
-
-// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-// for (let i = 0; i < checkboxes.length; i++) {
-
-//     if (checkboxes[i].value !==) {
-
-//         checkboxes[i].addEventListener('change', () => {
-//             if (checkboxes[i].checked) {
-//                 checkboxes[i].checked = false
-//             }
-//         })
-//     }
-// }
-
