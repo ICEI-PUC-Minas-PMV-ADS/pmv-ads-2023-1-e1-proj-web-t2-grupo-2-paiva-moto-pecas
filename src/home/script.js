@@ -1,4 +1,4 @@
-import { listProducts } from "../components/list-itens.js";
+import { listCards } from "../components/list-cards.js";
 import { products } from "../database/produtos/produtos-db.js";
 
 const containerProdutos = document.querySelector(".produtos");
@@ -9,7 +9,7 @@ function featuredProducts() {
     return product.featured == true;
   });
   return homeProducts.map((product) => {
-    listProducts(
+    listCards(
       product.picture,
       product.name,
       product.presentation,
