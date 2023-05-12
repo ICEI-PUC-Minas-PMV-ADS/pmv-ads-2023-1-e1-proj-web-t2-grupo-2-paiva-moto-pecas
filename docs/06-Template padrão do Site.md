@@ -1,6 +1,6 @@
 # Template padrão do site
 
-<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="03-Projeto de Interface.md"> Projeto de Interface</a>, <a href="04-Metodologia.md"> Metodologia</a>
+<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="03-Metodologia.md"> Metodologia</a>, <a href="04-Projeto de Interface.md"> Projeto de Interface</a>
 
 Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
@@ -8,27 +8,37 @@ Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com
 
 ### Logos
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/logos.jpg?raw=true" />
+<img width= "500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/logos.jpg?raw=true" />
+
+Figura 12 - variações das logos
 
 ### Paleta de cores
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/paleta-de-cores.jpg?raw=true" />
 
+Figura 13 - paleta de cores escolhida
+
 ### Tipografia
 
 Fonte escolhida: Montserrat
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tipografia.jpg?raw=true" />
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tipografia.jpg?raw=true" />
+
+Figura 14 - tipografia escolhida
 
 ### Ícones
 
 Ícones criados pela fonte Material Icons do Figma.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/icones.jpg?raw=true" />
+<img width= "500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/icones.jpg?raw=true" />
+
+Figura 15 - ícones usados
 
 ### Botões
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/botoes.jpg?raw=true" />
+<img width= "480px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/botoes.jpg?raw=true" />
+
+Figura 16 - opções de botões
 
 ## Estrutura
 
@@ -36,7 +46,7 @@ O padrão de layout a ser utilizado pelo site tem correspondência ao projeto de
 
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-estrutura.jpg?raw=true" />
 
-Figura 12 - Estrutura padrão do site
+Figura 17 - Estrutura padrão do site
 
 Os templates criados estão disponíveis [aqui](https://www.figma.com/file/AQnV3bdBiIJOyrLcBKpZvp/Grupo-02---Paiva-Moto-Pe%C3%A7as?type=design&node-id=67-194&t=rda4l6cbDeABgS5c-0) e são composto pelos seguintes layouts:
 
@@ -53,9 +63,9 @@ Os templates criados estão disponíveis [aqui](https://www.figma.com/file/AQnV3
 
 Tela que abrange o conteúdo principal da página, por exemplo: menu, banner do site, alguns produtos e serviços em destaque, depoimentos, mapa e rodapé.
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/home.jpg?raw=true" />
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/home.jpg?raw=true" />
 
-Figura 13 - Design da página inicial/home
+Figura 18 - Design da página inicial/home
 
 ### Tela sobre
 
