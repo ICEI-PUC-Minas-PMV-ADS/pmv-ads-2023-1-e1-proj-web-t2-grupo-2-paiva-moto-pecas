@@ -10,7 +10,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 ### Bruna Silva
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Persona%201.jpg" />
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/persona-bruna.jpg" />
 
 Idade: 29 <br>
 Ocupação: Biomédica <br>
@@ -18,7 +18,7 @@ Bruna possui carteira há 4 anos e utiliza a moto para passeio e para se desloca
 
 ### Pedro Ribeiro
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Persona%202.jpg" />
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/persona-pedro.jpg" />
 
 Idade: 30 <br>
 Ocupação: Empresário <br>

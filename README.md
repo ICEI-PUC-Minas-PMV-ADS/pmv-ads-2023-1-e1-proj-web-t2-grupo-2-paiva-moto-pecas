@@ -52,7 +52,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 
 # Armazenamento do Código-Fonte
 
-- <a href="/src/home/index.html">Código Fonte</a>
+- <a href="src/README.md">Código Fonte</a>
 
 # Armazenamento da Apresentação
 
