@@ -52,19 +52,52 @@ section {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    padding: 64px 72px;
+    padding: 64px 0px;
     gap: 40px;
     margin: auto;
     align-items: center;
 }
 
-#listagem-produtos{
+#listagem-produtos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.card{
-    
-}
+@media (min-width: 80em) {
+    section {
+      padding: 64px 0;
+    }
+  
+    .container {
+      padding: 0 72px;
+      max-width: 80em;
+      margin: 0 auto;
+    }
+  
+    nav ul {
+      justify-content: space-between;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    h2 {
+      font-size: 32px;
+    }
+  
+    h3 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  
+    footer div {
+      width: 340px;
+    }
+  }
+
