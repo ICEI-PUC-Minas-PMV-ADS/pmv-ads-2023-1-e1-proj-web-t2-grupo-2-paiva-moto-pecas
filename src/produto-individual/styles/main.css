@@ -1,5 +1,10 @@
+main {
+    display: flex;
+}
+
 section {
     background-color: var(--cinza-claro);
+    width: 100%;
 }
 
 #cont-principal {
@@ -15,8 +20,9 @@ section {
 
 #container-produto {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 40px;
     width: 100%;
@@ -32,6 +38,8 @@ section {
 #container-info {
     display: grid;
     gap: 16px;
+    max-width: 530px;
+    width: 100%;
 }
 
 #container-info h2 {
@@ -46,4 +54,14 @@ section {
     width: 100%;
     padding: 64px 72px;
     gap: 40px;
+    margin: auto;
+    align-items: center;
+}
+
+#listagem-produtos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    padding: 0px 40px ;
 }
