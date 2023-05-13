@@ -175,9 +175,7 @@ export function listFilterSearchInput() {
             containerPersonalDatalist.innerHTML = ''
             fullDatabase.style.display = 'none'
             newFiltered = []
-            filtered = []
-
-            console.log('inputSearch.value.length >= 2');
+            filtered = []       
 
             personalDatalist()
 

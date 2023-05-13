@@ -142,15 +142,12 @@ export function listingSelectedElements(option) {
                     presentation
                 )
             })
-
-            if (inputSearch.value.length !== 0) {
-                console.log('entrou');
+            if (inputSearch.value.length !== 0) {                
                 returningOnlyItemsFromTheSelectedOptions()
                 if (newFiltered.length === 0) {
                     containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
                 }
             }
-
         } else if (!optionID.checked) {
             filtered = []
             containerFilterInputsOptions.innerHTML = ``            
