@@ -100,4 +100,10 @@ Figura 22 - Design da página do serviço individual
 
 ### Tela contato
 
+Tela em que o usuário poderá se informar com algumas perguntas frequentes (FAQ). Caso sua dúvida não esteja na FAQ, ele poderá enviar um formulário contendo nome, e-mail, telefone, assunto e mensagem desejada, buscando saber sobre produtos e serviços disponíveis.
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Contato.png">
+
+Figura 23 - Design da página de contato
+
 ### Tela carrinho
