@@ -53,7 +53,7 @@ export function listFilterSearchInput() {
         let suggestionsOptions = []
 
         suggestionsOptions = products.filter((product) => {
-            return product.presentation.includes(inputSearch.value)
+            return product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
         })
 
         suggestionsOptions.length = 5
@@ -83,7 +83,8 @@ export function listFilterSearchInput() {
 
         for (const option of trueCheckboxesValue) {
             const checkboxesMatchingProducts = products.filter((product) => {
-                return product.brand === option || product.category === option;
+                return product.brand.toLowerCase() === option.toLowerCase() 
+                || product.category.toLowerCase() === option.toLowerCase();
             });
             newFiltered.push(...checkboxesMatchingProducts);
         }
@@ -99,7 +100,7 @@ export function listFilterSearchInput() {
                 })
 
                 newFiltered = newFiltered.reduce((unique, item) => {
-                    return unique.includes(item) ? unique : [...unique, item]
+                    return unique.toLowerCase().includes(item.toLowerCase()) ? unique : [...unique, item]
                 }, [])
 
                 containerFilterInputsOptions.innerHTML = ''
@@ -136,7 +137,7 @@ export function listFilterSearchInput() {
                 trueCheckboxes()
 
                 newFiltered = newFiltered.reduce((unique, item) => {
-                    return unique.includes(item) ? unique : [...unique, item]
+                    return unique.toLowerCase().includes(item.toLowerCase()) ? unique : [...unique, item]
                 }, [])
 
                 return newFiltered.forEach((product) => {
@@ -180,8 +181,8 @@ export function listFilterSearchInput() {
             personalDatalist()
 
             filtered = products.filter((product) => {
-                return product.name.includes(inputSearch.value)
-                    || product.presentation.includes(inputSearch.value)
+                return product.name.toLowerCase().includes(inputSearch.value.toLowerCase())
+                    || product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
             })
 
             returningOnlyItemsFromTheSelectedOptions()
