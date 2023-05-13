@@ -60,8 +60,11 @@ section {
 
 #listagem-produtos{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     height: 100%;
-    padding: 0px 40px ;
+    padding: 0px 40px;
+    width: 100%;
+    max-width: 1124px;
 }
