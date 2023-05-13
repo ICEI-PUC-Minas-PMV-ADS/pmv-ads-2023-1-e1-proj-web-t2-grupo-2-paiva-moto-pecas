@@ -50,7 +50,7 @@ export function responsiveFilter() {
         display: grid;
         position: absolute;
         top: 12px;
-        right: 0px;        
+        right: 12px;        
 
     `
     })

@@ -25,9 +25,7 @@ export function showMoreFullDB() {
 
     const buttonShowMore = () => {
         const containerFilterInputsOptions = document.querySelector('#containerFilterInputsOptions')
-
-
-
+        
         window.addEventListener('scroll', function () {
             const windowHeight = window.innerHeight;
             const fullHeight = document.body.scrollHeight;
@@ -50,7 +48,7 @@ export function showMoreFullDB() {
                     button.style.display = 'none'
                 }
             } catch(err){
-                
+
             }
         });
     }
