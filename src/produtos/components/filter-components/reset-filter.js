@@ -30,8 +30,8 @@ export function resetFilter(...marcas) {
             if (checkingCheckboxes()) {
                 marca.addEventListener('change', () => {
                     if (!checkingCheckboxes() && inputSearch.value.length === 0) {
-                        completeSection.style.display = 'flex'
-                        initialSection()
+                        fullDatabase.style.display = 'flex'
+                        initialSection()                        
                     }
                     if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
                         filtered = products.filter((product) => {

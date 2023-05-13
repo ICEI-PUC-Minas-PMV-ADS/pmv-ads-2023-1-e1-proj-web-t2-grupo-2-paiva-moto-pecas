@@ -65,21 +65,24 @@ aside{
     flex-wrap: wrap;   
     flex-direction: column;    
     justify-content: center;           
-    width: 100%;       
+    width: 100%;      
+
+    position: relative;
     
     padding: 72px 0px;      
 }
 
 #button-show-more {     
     display: flex;
-    justify-content: center;
-    align-items: center;    
+    justify-content: center;      
+    margin: auto;         
 
-    position: relative;
+    position: absolute;
+    bottom: 15px;
     left: 50%;
-    right: 50%;        
-    top: 90%;         
+    transform: translateX(-50%);
    
+    width: 250px;
     height: 41px;     
     border-radius: 12px;       
 

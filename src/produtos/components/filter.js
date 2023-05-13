@@ -2,8 +2,6 @@ import { products } from '../../database/produtos/produtos-db.js';
 import { filterTypes } from './filter-components/filter-types.js'
 import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
-// import { buttonShowMore } from './button-show-more.js'
-
 
 const brands = products.map((product) => {
     return product.brand
@@ -39,8 +37,6 @@ export function creatingSelectedElements(picture, name, presentation) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     listCards(picture, name, presentation, containerFilterInputsOptions)
 }
-
-// let filteredLength = 0
 
 export function listingSelectedElements(option) {
     const optionID = document.querySelector(`${option}`)
@@ -117,12 +113,12 @@ export function listingSelectedElements(option) {
         if (optionID.checked) {
             trueCheckboxesValue = []
             containerFilterInputsOptions.innerHTML = ``
+
             checkboxes.forEach((checkbox) => {
                 if (checkbox.checked) {
                     trueCheckboxesValue.push(checkbox.value);
                 }
-            })
-            console.log(trueCheckboxesValue);
+            })            
 
             let filtered = [];
             for (let option of trueCheckboxesValue) {
@@ -136,10 +132,8 @@ export function listingSelectedElements(option) {
                 return unique.includes(item) ? unique : [...unique, item]
             }, [])
 
-            // filteredLength += filtered.length
-
-            completeSection.innerHTML = ''
-            completeSection.style.display = 'none'
+            fullDatabase.innerHTML = ''
+            fullDatabase.style.display = 'none'
             filtered.forEach((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(
@@ -156,11 +150,10 @@ export function listingSelectedElements(option) {
                     containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
                 }
             }
-            // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
-            // buttonShowMore(1000, spacesByCardsRow)
+
         } else if (!optionID.checked) {
             filtered = []
-            containerFilterInputsOptions.innerHTML = ``
+            containerFilterInputsOptions.innerHTML = ``            
 
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
@@ -179,8 +172,8 @@ export function listingSelectedElements(option) {
                 filtered = []
                 newFiltered = []
                 // datalist.innerHTML = ''
-                completeSection.style.display = 'flex'
-                initialSection()
+                fullDatabase.style.display = 'flex'
+                initialSection()                
             }
 
             filtered = filtered.reduce((unique, item) => {
@@ -195,8 +188,6 @@ export function listingSelectedElements(option) {
                     presentation
                 )
             })
-            // const spacesByCardsRow = 880 * (Math.floor(filteredLength / 3));
-            // buttonShowMore(600, - spacesByCardsRow)
         }
     })
 }

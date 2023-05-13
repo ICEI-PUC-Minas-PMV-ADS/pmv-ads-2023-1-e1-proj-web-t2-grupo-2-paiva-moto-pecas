@@ -149,7 +149,7 @@ export function listFilterSearchInput() {
                 containerPersonalDatalist.innerHTML = ''
                 filtered = []
                 newFiltered = []
-                completeSection.style.display = 'flex'
+                fullDatabase.style.display = 'flex'
                 initialSection()
             }
         })
@@ -173,7 +173,7 @@ export function listFilterSearchInput() {
         if (inputSearch.value.length >= 2) {
             containerFilterInputsOptions.innerHTML = ``
             containerPersonalDatalist.innerHTML = ''
-            completeSection.style.display = 'none'
+            fullDatabase.style.display = 'none'
             newFiltered = []
             filtered = []
 
