@@ -44,6 +44,11 @@
     max-width: 450px;
 }
 
+.sobre .container .botaof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (min-width: 80em) {
     .sobre .banner1 img {
