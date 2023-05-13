@@ -4,11 +4,11 @@
 
 ## Etapa 1
 
-A primeira etapa iniciou-se com pesquisas, visando coletar dados e informações a respeito do tema, seguimos com a elaboração do problema, definição dos objetivos, justificativa e público-alvo, desenvolveu-se as especificações do projeto que contemplam a criação das personas, elaboração de histórias de usuários e descrição dos requisitos funcionais e não funcionais, pensando sempre em atender da melhor forma possível as necessidades do dono e seus clientes.
+Na primeira etapa, realizamos pesquisas para coletar dados e informações sobre o tema, elaboramos o problema, definimos objetivos, justificativa e público-alvo. Desenvolvemos as especificações do projeto, sempre com foco em atender às necessidades do proprietário e clientes de forma eficiente.
 
 ## Etapa 2
 
-Nesta etapa desenvolveu-se a metodologia utilizada no projeto, criando a relação de ambiente de trabalho que contempla: repositório de código fonte, documentos do projeto, projeto de interface e wireframes, gerenciamento do projeto, nesta fase, o gerenciamento do projeto está dividido em: scrum master, product owner, equipe de desenvolvimento, equipe de design, sendo que o projeto é separado em cinco sprints e dentro de cada sprint existem ações a serem realizadas, essas ações estão dispostas em cards no backlog do produto, seguindo com a elaboração do projeto de interface, criando o fluxo de usuário que traz a visão geral da interação do usuário com as telas de funcionalidades que fazem parte do sistema wireframes, contendo cabeçalho, conteúdo e rodapé, buscando atender as necessidades dos usuários.
+Nesta etapa, desenvolvemos a metodologia do projeto que é dividido em cinco sprints, cada um com ações específicas organizadas em cards no backlog do produto. Além disso, elaboramos o projeto de interface com fluxo de usuário e wireframes buscando atender às necessidades dos usuários.
 
 ## Relação de Ambientes de Trabalho
 
