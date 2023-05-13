@@ -70,6 +70,8 @@ Figura 18 - Design da página inicial/home
 ### Tela sobre
 A tela mostra informações sobre a história da empresa, imagens dos funcionários e um botão para conhecer a FAQ.
 
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-sobre.jpg" />
+
 Figura 19 - Design da página sobre
 
 ### Tela produtos e serviços / produtos-serviços
