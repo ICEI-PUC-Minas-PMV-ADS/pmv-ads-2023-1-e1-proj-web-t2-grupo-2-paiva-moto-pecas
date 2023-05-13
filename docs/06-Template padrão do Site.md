@@ -68,6 +68,9 @@ Tela que abrange o conteúdo principal da página, por exemplo: menu, banner do 
 Figura 18 - Design da página inicial/home
 
 ### Tela sobre
+A tela mostra informações sobre a história da empresa, imagens dos funcionários e um botão para conhecer a FAQ.
+
+Figura 19 - Design da página sobre
 
 ### Tela produtos e serviços / produtos-serviços
 
