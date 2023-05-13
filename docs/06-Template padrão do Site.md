@@ -79,7 +79,19 @@ Figura 20 - Design da página de produtos e serviços
 
 ### Tela produto específico
 
+Tela que mostra um produto específico do site e que informa as características do mesmo, e também sugere outros itens para compra.
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/produtoindividual.jpg?raw=true">
+
+Figura 21 - Design da página do produto individual
+
 ### Tela serviço específico
+
+Tela que mostra as características dos serviços que a oficina disponibiliza, e também sugere outros tipos de serviço.
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/serviçoindividual.jpg?raw=true">
+
+Figura 22 - Design da página do serviço individual
 
 ### Tela contato
 
