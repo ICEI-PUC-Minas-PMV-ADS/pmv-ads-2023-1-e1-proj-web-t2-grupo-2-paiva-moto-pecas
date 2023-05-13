@@ -29,7 +29,7 @@
 aside{        
     padding: 40px 0px;       
     height: fit-content;       
-    margin-top: 32px;       
+    margin: 32px 0px;       
 
     top: 32px;
     position: sticky;  
@@ -154,9 +154,13 @@ aside{
     border-radius: 10px 10px 10px 10px;
 }
 
+#personalDatalist:hover{
+    background-color: var(--amarelo-primario);
+}
 
-
-
+#personalDatalist:active{
+    background-color: var(--amarelo-secundario);
+}
 
 #buttonsChangePage{
     width: 100%;
@@ -176,6 +180,3 @@ aside{
 }
     
 
-.card span{
-    display: none;
-}

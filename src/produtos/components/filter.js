@@ -35,7 +35,6 @@ export function listFilterInputsOptions() {
     })
 }
 
-
 export function creatingSelectedElements(picture, name, presentation) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     listCards(picture, name, presentation, containerFilterInputsOptions)
@@ -52,8 +51,6 @@ export function listingSelectedElements(option) {
     let filtered = []
     let newFiltered = []
     let trueCheckboxesValue = []
-
-
 
     const trueCheckboxes = () => {
         trueCheckboxesValue = []
@@ -74,12 +71,10 @@ export function listingSelectedElements(option) {
         }
     }
 
-
-
     const returningOnlyItemsFromTheSelectedOptions = () => {
         trueCheckboxes()
         checkboxes.forEach((checkbox) => {
-            if (checkbox.checked && inputSearch.value.length !== 0) {                
+            if (checkbox.checked && inputSearch.value.length !== 0) {
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
                 })
@@ -140,7 +135,7 @@ export function listingSelectedElements(option) {
             filtered = filtered.reduce((unique, item) => {
                 return unique.includes(item) ? unique : [...unique, item]
             }, [])
-           
+
             // filteredLength += filtered.length
 
             completeSection.innerHTML = ''
@@ -153,7 +148,7 @@ export function listingSelectedElements(option) {
                     presentation
                 )
             })
-            
+
             if (inputSearch.value.length !== 0) {
                 console.log('entrou');
                 returningOnlyItemsFromTheSelectedOptions()
@@ -178,7 +173,7 @@ export function listingSelectedElements(option) {
                 })
             }
 
-            trueCheckboxes()            
+            trueCheckboxes()
             if (inputSearch.value.length === 0 && trueCheckboxesValue.length === 0) {
                 containerFilterInputsOptions.innerHTML = ``
                 filtered = []
@@ -190,7 +185,7 @@ export function listingSelectedElements(option) {
 
             filtered = filtered.reduce((unique, item) => {
                 return unique.includes(item) ? unique : [...unique, item]
-            }, [])            
+            }, [])
 
             filtered.forEach((product) => {
                 const { picture, name, presentation } = product

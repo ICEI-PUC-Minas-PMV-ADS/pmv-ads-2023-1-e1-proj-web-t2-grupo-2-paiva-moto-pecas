@@ -69,7 +69,13 @@ Figura 18 - Design da página inicial/home
 
 ### Tela sobre
 
-### Tela produtos e serviços
+### Tela produtos e serviços / produtos-serviços
+
+A tela de produtos e serviços oferece acesso a ambas opções por meio dos botões “Produtos” e “Serviços”. No topo da página é possível buscar por itens usando a barra de busca, por exemplo nome ou modelo da moto. Também é possível aplicar, em conjunto com a barra de busca, os filtros pré definidos, disponíveis na lateral esquerda. Cada card possui um botão “adicionar à lista” cuja função é adicionar diretamente o item à lista, mas se o usuário precisar de mais informações ele pode clicar no card que o levará à página do produto específico.
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/produtos-serviços.jpg?raw=true">
+
+Figura 20 - Design da página de produtos e serviços
 
 ### Tela produto específico
 
