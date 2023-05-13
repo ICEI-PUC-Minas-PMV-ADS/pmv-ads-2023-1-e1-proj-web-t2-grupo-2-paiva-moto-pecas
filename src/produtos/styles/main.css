@@ -3,7 +3,7 @@
     background-color: var(--cinza-claro);        
 }
 
-#main{
+#div-main{
     display: flex;
     align-items: flex-start;       
 }
@@ -180,3 +180,10 @@ aside{
 }
     
 
+#click-icon-filter{
+    display: none;
+}
+
+#click-close-filter {
+    display: none;
+}
