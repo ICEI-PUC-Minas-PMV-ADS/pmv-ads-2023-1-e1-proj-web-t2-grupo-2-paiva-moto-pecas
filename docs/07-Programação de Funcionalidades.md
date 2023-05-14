@@ -133,3 +133,67 @@ Figura 31 - Tela sobre desenvolvida
 - base.css
 - main.css
 - main.js
+
+## Listagem de produtos e serviços
+
+Seção que contém os produtos e serviços oferecidos pela oficina.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/mostruario.PNG" />
+
+Figura 32 - Tela produtos e serviços.
+
+### Requisitos atendidos
+
+- RF-01 - O site deve exibir todos os produtos e serviços oferecidos pela oficina, com mídias e suas respectivas informações técnicas.
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- initial.js
+- main.js
+
+## Filtro de produtos e serviços
+
+Seção que contém os produtos e serviços oferecidos pela oficina.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/filter.PNG" />
+
+Figura 33 - Tela produtos e serviços.
+
+### Requisitos atendidos
+
+- RF-05 - O site deve permitir que os usuários naveguem pelos produtos disponíveis para venda, filtrando-os por critérios pré estabelecidos.
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- initial.js
+- filter.js
+- filter-types.js
+- reset-filter.js
+- main.js
+
+## Filtro de produtos e serviços
+
+Seção que contém os produtos e serviços oferecidos pela oficina.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/search.PNG" />
+
+Figura 33 - Tela produtos e serviços.
+
+### Requisitos atendidos
+
+- RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características.
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- initial.js
+- search.js
+- main.js
