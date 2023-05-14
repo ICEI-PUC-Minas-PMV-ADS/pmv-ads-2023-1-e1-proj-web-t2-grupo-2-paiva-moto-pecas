@@ -197,3 +197,22 @@ Figura 34 - Tela produtos e serviços.
 - initial.js
 - search.js
 - main.js
+
+## Produto Individual
+
+Tela específica que mostra produto do site de modo individual.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-prod-individual.jpg" />
+
+Figura 35 - Tela produto individual.
+
+### Requisitos atendidos
+
+- RF-01 - O site deve exibir todos os produtos e serviços oferecidos pela oficina, com mídias e suas respectivas informações técnicas.
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- script.js
