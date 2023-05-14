@@ -183,7 +183,7 @@ Seção que contém os produtos e serviços oferecidos pela oficina.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/search.png" />
 
-Figura 33 - Tela produtos e serviços.
+Figura 34 - Tela produtos e serviços.
 
 ### Requisitos atendidos
 
