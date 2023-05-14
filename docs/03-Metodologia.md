@@ -10,6 +10,10 @@ Na primeira etapa, realizamos pesquisas para coletar dados e informações sobre
 
 Nesta etapa, desenvolvemos a metodologia do projeto que é dividido em cinco sprints, cada um com ações específicas organizadas em cards no backlog do produto. Além disso, elaboramos o projeto de interface com fluxo de usuário e wireframes buscando atender às necessidades dos usuários.
 
+## Etapa 3
+
+Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, produtos, produto individual, serviços, serviço individual, carrinho, contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, criação das páginas utilizando as linguagens HTML e CSS e seu versionamento no GitHub.
+
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
