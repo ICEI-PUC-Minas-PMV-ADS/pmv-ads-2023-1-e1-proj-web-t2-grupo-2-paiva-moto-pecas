@@ -1,10 +1,5 @@
-main {
-    display: flex;
-}
-
-section {
+.produto-individual {
     background-color: var(--cinza-claro);
-    width: 100%;
 }
 
 #cont-principal {
@@ -14,22 +9,20 @@ section {
     align-items: center;
     width: 100%;
     margin: auto;
-    padding: 64px 72px;
     gap: 40px;
 }
 
 #container-produto {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
     width: 100%;
-    padding: 0px 20px;
 }
 
 #imagem-produto {
+    width: 100%; 
     max-width: 300px;
     border-radius: 40px;
 
@@ -42,17 +35,11 @@ section {
     width: 100%;
 }
 
-#container-info h2 {
-    margin-bottom: 24px;
-}
-
 #container-secundario {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    padding: 64px 0px;
     gap: 40px;
     margin: auto;
     align-items: center;
@@ -66,19 +53,6 @@ section {
 }
 
 @media (min-width: 80em) {
-    section {
-      padding: 64px 0;
-    }
-  
-    .container {
-      padding: 0 72px;
-      max-width: 80em;
-      margin: 0 auto;
-    }
-  
-    nav ul {
-      justify-content: space-between;
-    }
   
     h1 {
       font-size: 40px;
@@ -90,14 +64,6 @@ section {
   
     h3 {
       font-size: 22px;
-    }
-  
-    p {
-      font-size: 18px;
-    }
-  
-    footer div {
-      width: 340px;
     }
   }
 
