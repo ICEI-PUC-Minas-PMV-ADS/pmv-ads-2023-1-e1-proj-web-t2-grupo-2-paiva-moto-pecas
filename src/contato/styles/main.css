@@ -15,12 +15,6 @@ section {
   background-color: var(--cinza-claro);
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 #container-principal{
   display: flex;
   flex-direction: column;
