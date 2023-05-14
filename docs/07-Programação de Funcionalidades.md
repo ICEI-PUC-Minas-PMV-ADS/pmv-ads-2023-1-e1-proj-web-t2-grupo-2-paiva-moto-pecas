@@ -134,7 +134,7 @@ Figura 31 - Tela sobre desenvolvida
 - main.css
 - main.js
 
-## Listagem de produtos e serviços
+## Mostruário de produtos e serviços
 
 Seção que contém os produtos e serviços oferecidos pela oficina.
 
@@ -177,7 +177,7 @@ Figura 33 - Tela produtos e serviços.
 - reset-filter.js
 - main.js
 
-## Filtro de produtos e serviços
+## Barra de busca de produtos e serviços
 
 Seção que contém os produtos e serviços oferecidos pela oficina.
 
