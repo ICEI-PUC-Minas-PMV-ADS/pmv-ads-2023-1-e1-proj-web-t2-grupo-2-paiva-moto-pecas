@@ -119,7 +119,7 @@ Figura 30 - botão desenvolvido
 
 Seção que contém história da empresa e seus funcionários.
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/secao-sobre.jpg?raw=true" />
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/secao-sobre.JPG" />
 
 Figura 31 - Tela sobre desenvolvida
 
