@@ -8,6 +8,11 @@
     
 }
 
+.sobre .container.banner1 {
+    height: fit-content;
+  position: absolute;
+}
+
 .sobre .container .bloco1 {
     display: flex; 
     flex-direction: column;
