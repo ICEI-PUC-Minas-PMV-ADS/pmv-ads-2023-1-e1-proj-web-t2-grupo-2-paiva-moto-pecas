@@ -216,3 +216,42 @@ Figura 35 - Tela produto individual.
 - base.css
 - main.css
 - script.js
+
+## FAQ
+
+Tela que contém FAQ, exibindo perguntas e respostas tirando as principais dúvidas dos usuários.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/faq.jpg" />
+
+Figura 36 - Tela FAQ.
+
+### Requisitos atendidos
+
+- RF-08 - O site deve conter perguntas frequentes (faq)
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- main.js
+
+
+## Formulário de Contato
+
+Seção de contato, exibindo formulário com informações dos usuários e envio das dúvidas para oficina. 
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/formulario.jpg" />
+
+Figura 37 - Tela Formulário.
+
+### Requisitos atendidos
+
+- RF-09 - O site deve conter um formulário de contato
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- main.js
