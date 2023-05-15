@@ -107,3 +107,12 @@ Tela em que o usuário poderá se informar com algumas perguntas frequentes (FAQ
 Figura 23 - Design da página de contato
 
 ### Tela carrinho
+Tela que mostra o itens escolhidos para serem encaminhados para a etapa final de compra
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-carrinho-cheio.jpg?raw=true">
+
+Figura 24 - Design da página de carrinho com itens
+
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-carrinho-vazio.jpg?raw=true">
+
+Figura 25 - Design da página de carrinho sem itens
