@@ -1,0 +1,404 @@
+/* .menu-child {
+  position: relative;
+  width: 150px;
+  height: 72.66px;
+}
+.produtos {
+  font-weight: 500;
+}
+.produtos,
+.shopping-cart {
+  position: relative;
+}
+.lista-de-desejos {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+}
+.menu,
+.shopping-cart-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.shopping-cart-parent {
+  width: 177px;
+  height: 40px;
+  gap: 8px;
+  font-size: var(--font-size-21xl);
+  font-family: var(--font-material-icons);
+}
+.menu {
+  align-self: stretch;
+  background-color: var(--amarelo-primrio);
+  padding: var(--padding-xl) var(--padding-53xl);
+  gap: 116px;
+}
+.lista-de-desejos1 {
+  position: relative;
+  display: inline-block;
+  width: 446px;
+}
+.desmarcar-todos-os {
+  position: relative;
+  font-size: var(--font-size-lg);
+}
+.lista-de-desejos-parent {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-child {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.oleo-moto-1-icon {
+  position: relative;
+  width: 144.86px;
+  height: 144.86px;
+  object-fit: cover;
+}
+.imagem {
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  border-radius: 37.14px;
+  background-color: var(--branco);
+  width: 145px;
+  height: 156px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.em-estoque,
+.leo-pro-honda {
+  position: absolute;
+  left: 22px;
+  font-family: var(--font-montserrat);
+  text-align: left;
+}
+.leo-pro-honda {
+  top: 1px;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  color: var(--preto);
+  width: 302px;
+}
+.em-estoque {
+  top: 30px;
+  font-size: var(--font-size-base);
+  color: var(--color-limegreen);
+}
+.adicionar-ao-carrinho,
+.delete {
+  color: var(--preto);
+  text-align: left;
+}
+.delete {
+  position: absolute;
+  top: 107px;
+  left: 103px;
+  font-size: 32.38px;
+  letter-spacing: 0.43em;
+  line-height: 93.5%;
+  font-family: var(--font-material-icons);
+  display: inline-block;
+  width: 32.38px;
+  height: 34px;
+}
+.adicionar-ao-carrinho {
+  position: relative;
+  font-size: var(--font-size-3xs);
+  font-family: var(--font-montserrat);
+}
+.adicionar-ao-carrinho-wrapper,
+.boto-secundrio {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.adicionar-ao-carrinho-wrapper {
+  border-radius: 8.97px;
+  background-color: var(--cinza-mais-claro);
+  padding: 8.965517044067383px 17.931034088134766px;
+}
+.boto-secundrio {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 105px;
+  left: 22px;
+}
+.leo-pro-honda-10w30-parent {
+  position: absolute;
+  top: 15px;
+  left: 185px;
+  width: 675px;
+  height: 145px;
+  overflow: hidden;
+}
+.frame-item {
+  position: absolute;
+  top: 184.5px;
+  left: -6.5px;
+  border-top: 1px solid var(--amarelo-primrio);
+  box-sizing: border-box;
+  width: 893px;
+  height: 1px;
+}
+.imagem-parent {
+  position: relative;
+  width: 781px;
+  height: 203px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.boto-secundrio1 {
+  position: absolute;
+  top: 105px;
+  left: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.imagem-group {
+  position: relative;
+  width: 781px;
+  height: 204px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.imagem-icon {
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  border-radius: 37.14px;
+  width: 145px;
+  height: 156px;
+  object-fit: cover;
+}
+.imagem-container {
+  position: relative;
+  width: 781px;
+  height: 185px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frame-group {
+  width: 781px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-div,
+.frame-parent {
+  border-radius: var(--br-xs);
+}
+.frame-parent {
+  background-color: var(--branco);
+  width: 861px;
+  height: 772px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-21xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+}
+.frame-div {
+  background-color: var(--amarelo-primrio);
+  padding: 12px 24px;
+}
+.boto-produtos,
+.boto-produtos-wrapper,
+.frame-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.boto-produtos-wrapper {
+  align-self: stretch;
+  border-radius: var(--br-xs);
+  background-color: var(--branco);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-21xl);
+}
+.voc-tambm-pode {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-lg);
+  text-align: center;
+}
+.leo-pro-honda3 {
+  position: absolute;
+  top: 7.66px;
+  left: 52.5px;
+  display: inline-block;
+  width: 123px;
+  height: 37px;
+}
+.adicionar-ao-carrinho-wrapper1,
+.boto-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.adicionar-ao-carrinho-wrapper1 {
+  border-radius: 7.39px;
+  background-color: var(--amarelo-primrio);
+  padding: 7.387122631072998px 14.774245262145996px;
+}
+.boto-principal {
+  position: absolute;
+  top: 52px;
+  left: 53px;
+  font-size: 8.62px;
+}
+.oleo-moto-2-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62px;
+  height: 86px;
+  object-fit: cover;
+}
+.leo-pro-honda-10w30-parent1 {
+  position: relative;
+  width: 185px;
+  height: 83px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.leo-pro-honda4 {
+  position: absolute;
+  top: 7.66px;
+  left: 52.5px;
+  display: inline-block;
+  width: 123px;
+  height: 38px;
+}
+.voc-tambm-pode-gostar-parent {
+  align-self: stretch;
+  border-radius: var(--br-xs);
+  background-color: var(--branco);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xl);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-21xl);
+  font-size: 14.54px;
+}
+.carrinho1,
+.frame-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gap-21xl);
+}
+.frame-container {
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+}
+.carrinho1 {
+  align-self: stretch;
+  background-color: var(--cinza-mais-claro);
+  flex-direction: row;
+  padding: var(--padding-21xl) var(--padding-53xl);
+  align-items: flex-start;
+  font-size: var(--font-size-21xl);
+}
+.linha-separadora {
+  align-self: stretch;
+  background-color: var(--amarelo-primrio);
+  height: 20px;
+}
+.rua-so-sebastio {
+  margin: 0;
+}
+.rua-so-sebastio-container {
+  position: relative;
+  font-size: var(--font-size-base);
+}
+.frame-parent1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-base);
+  z-index: 0;
+}
+.contatos {
+  position: relative;
+  font-size: var(--font-size-xl);
+}
+.contatos-parent,
+.horrio-de-funcionamento-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.contatos-parent {
+  z-index: 1;
+  font-size: var(--font-size-base);
+}
+.horrio-de-funcionamento-parent {
+  z-index: 2;
+}
+.whatsapp-icon {
+  position: absolute;
+  margin: 0 !important;
+  top: 184.34px;
+  left: 1200px;
+  width: 50px;
+  height: 50.24px;
+  z-index: 3;
+}
+.carrinho,
+.rodap {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.rodap {
+  align-self: stretch;
+  background-color: var(--preto);
+  flex-direction: row;
+  padding: 64px var(--padding-53xl);
+  justify-content: space-between;
+  font-size: var(--font-size-xl);
+  color: var(--branco);
+}
+.carrinho {
+  background-color: var(--branco);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--preto);
+  font-family: var(--font-montserrat);
+} */

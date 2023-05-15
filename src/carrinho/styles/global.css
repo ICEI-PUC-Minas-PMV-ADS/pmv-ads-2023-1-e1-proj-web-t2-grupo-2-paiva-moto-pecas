@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-montserrat: Montserrat;
+  --font-material-icons: "Material Icons";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --font-size-4xs-6: 8.6px;
+  --font-size-mini-5: 14.5px;
+  --font-size-lg: 18px;
+  --font-size-3xs: 10px;
+  --font-size-13xl-4: 32.4px;
+  --font-size-5xl: 24px;
+  --font-size-21xl: 40px;
+
+  /* Colors */
+  --branco: #fff;
+  --preto: #000;
+  --amarelo-primrio: #ffde59;
+  --cinza-mais-claro: #eee;
+  --color-limegreen: #36c534;
+
+  /* Gaps */
+  --gap-base: 16px;
+  --gap-21xl: 40px;
+
+  /* Paddings */
+  --padding-53xl: 72px;
+  --padding-21xl: 40px;
+  --padding-xl: 20px;
+  --padding-5xs-4: 7.4px;
+  --padding-mini-8: 14.8px;
+  --padding-4xs: 9px;
+  --padding-mid-9: 17.9px;
+
+  /* border radiuses */
+  --br-xs: 12px;
+  --br-5xs-4: 7.4px;
+  --br-4xs: 9px;
+  --br-18xl-1: 37.1px;
+}
