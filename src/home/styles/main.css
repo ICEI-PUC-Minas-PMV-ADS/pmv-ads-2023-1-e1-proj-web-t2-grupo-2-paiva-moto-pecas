@@ -15,17 +15,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .banner-principal svg {
-  height: fit-content;
+  /* height: fit-content; */
   position: absolute;
   top: 32px;
 }
 
 .banner-principal h1 {
-  padding: 8px;
+  margin: 16px;
   text-align: center;
   position: absolute;
   color: var(--branco);
