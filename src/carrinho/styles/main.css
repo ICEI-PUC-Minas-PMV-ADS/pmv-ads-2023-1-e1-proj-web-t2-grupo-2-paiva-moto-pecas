@@ -18,30 +18,6 @@
     scroll-behavior: smooth;
 }
 
-nav {
-    padding: 20px 0;
-    background-color: var(--amarelo-primario);
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav ul li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--preto);
-}
-
-a {
-    text-decoration: none;
-}
 
 button {
     border: none;
@@ -54,11 +30,6 @@ body {
 
 section {
     padding: 40px 0;
-}
-
-.container {
-    padding: 0 32px;
-    width: 100%;
 }
 
 h1,
@@ -100,7 +71,6 @@ li {
     font-size: 14px;
     text-align: center;
     transition: 0.3s ease;
-    background-color: var(--amarelo-primario);
 }
 
 .btn-amarelo {
@@ -141,65 +111,6 @@ li {
     z-index: 5;
 }
 
-.card {
-    width: 100%;
-    max-width: 260px;
-    padding: 16px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    background-color: var(--branco);
-    color: var(--preto);
-}
-
-.card span {
-    display: none;
-}
-
-.card img {
-    background-color: var(--branco);
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    border-radius: 40px;
-}
-
-.card h3,
-.card p,
-.card a {
-    width: 100%;
-    text-align: center;
-}
-
-.faixa-amarela {
-    width: 100%;
-    height: 20px;
-    background-color: var(--amarelo-primario);
-}
-
-footer {
-    padding: 64px 0;
-    background-color: var(--preto);
-    color: var(--branco);
-}
-
-footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-footer div {
-    width: 100%;
-}
-
-footer h3 {
-    margin-bottom: 16px;
-}
 
 @media (min-width: 80em) {
     section {
@@ -265,7 +176,7 @@ footer h3 {
 
 
 }
-.carrinho-main {
+.centro {
     height: 600px;
     width: 300px;
     height: 865px;
@@ -283,7 +194,7 @@ footer h3 {
 
 }
 
-.right-side {
+.coluna-direita {
     display: inline-block;
     flex-direction: column;
     align-items: flex-end;
@@ -296,13 +207,13 @@ footer h3 {
     height: 737px;
 }
 
-.botao-compra {
+.fechar-lista {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 21px;
 
-    width: 240px;
+    width: 235px;
     height: 121px;
 
     background: #FFFFFF;
@@ -310,7 +221,7 @@ footer h3 {
 
 }
 
-.other-products {
+.sugestao-produtos {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -320,7 +231,7 @@ footer h3 {
     margin-top: 30px;
 
 
-    width: 240px;
+    width: 235px;
     height: 576px;
 
     background: #FFFFFF;
