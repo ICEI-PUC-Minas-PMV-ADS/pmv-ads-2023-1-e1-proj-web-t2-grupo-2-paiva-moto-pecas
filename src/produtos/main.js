@@ -10,7 +10,7 @@ import { botaoWpp } from '../components/botao-wpp.js'
 import { responsiveFilter } from './components/filter-components/responsive-filter.js'
 
 
-export function productsMain() {
+(function productsMain() {
     menu()
     initialSection()
     listFilterInputsOptions()
@@ -24,9 +24,6 @@ export function productsMain() {
     botaoWpp()
     rodape()
     showMoreFullDB()
-}
+})()
 
-productsMain()
-
-
-
+// productsMain()
