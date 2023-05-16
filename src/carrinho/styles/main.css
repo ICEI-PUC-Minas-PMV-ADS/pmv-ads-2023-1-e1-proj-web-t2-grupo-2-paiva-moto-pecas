@@ -237,3 +237,15 @@ li {
     background: #FFFFFF;
     border-radius: 12px;
 }
+
+.carrinho-itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+
+    width: 810px;
+    height: 228px;
+}
