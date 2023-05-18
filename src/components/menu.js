@@ -83,9 +83,6 @@ export function menu() {
         <a href="/src/produtos/index.html">Produtos</a>
       </li>
       <li>
-        <a href="">Serviços</a>
-      </li>
-      <li>
         <a href="/src/contato/index.html">Contato</a>
       </li>
       <li>
