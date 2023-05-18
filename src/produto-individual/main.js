@@ -16,6 +16,8 @@ products.map((product)=>{
 listCards(product.picture, product.name, product.presentation, listagemProdutos)
 })
 
+// conferir produtos aleatórios
+
 
 
 
