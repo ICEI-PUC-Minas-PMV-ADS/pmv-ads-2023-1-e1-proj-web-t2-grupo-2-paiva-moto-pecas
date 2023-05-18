@@ -1,5 +1,4 @@
 import { initialSection } from '../initial.js';
-import { products } from '../../../database/produtos/produtos-db.js';
 import { creatingSelectedElements } from '../filter.js';
 
 export function checkingCheckboxes() {
@@ -18,32 +17,33 @@ export function checkingCheckboxes() {
     return isChecked;
 }
 
-export function resetFilter(...marcas) {
-    const marcaID = document.querySelectorAll(`${marcas}`)
+export function resetFilter(database, assets, ...options) {
+    const optionID = document.querySelectorAll(`${options}`)
     const inputSearch = document.querySelector('#inputSearch')
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
+    const fullDatabase = document.querySelector('#fullDatabase')
 
     let filtered = []
 
-    marcaID.forEach((marca) => {
-        marca.addEventListener('change', () => {
+    optionID.forEach((option) => {
+        option.addEventListener('change', () => {
             if (checkingCheckboxes()) {
-                marca.addEventListener('change', () => {
+                option.addEventListener('change', () => {
                     if (!checkingCheckboxes() && inputSearch.value.length === 0) {
                         fullDatabase.style.display = 'flex'
-                        initialSection()                        
+                        initialSection(database, assets)
                     }
                     if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
-                        filtered = products.filter((product) => {
-                            return product.name.includes(inputSearch.value)
-                                || product.presentation.includes(inputSearch.value)
+                        filtered = database.filter((itens) => {
+                            return itens.name.includes(inputSearch.value)
+                                || itens.presentation.includes(inputSearch.value)
                         })
                         containerFilterInputsOptions.innerHTML = ''
-                        return filtered.forEach((product) => {
-                            const { picture, name, presentation } = product
-                            creatingSelectedElements(picture, name, presentation)
+                        return filtered.forEach((itens) => {
+                            const { picture, name, presentation } = itens                            
+                            creatingSelectedElements(picture, name, presentation, assets)
                         })
-                    }                    
+                    }
                 })
             }
         })

@@ -190,3 +190,9 @@ aside{
 #click-close-filter {
     display: none;
 }
+
+
+#buttonsChangePage button:first-child{
+    background-color: var(--amarelo-secundario);    
+}
+   

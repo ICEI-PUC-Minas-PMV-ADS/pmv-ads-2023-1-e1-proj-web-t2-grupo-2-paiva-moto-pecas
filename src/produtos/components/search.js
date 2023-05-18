@@ -1,14 +1,13 @@
-import { products } from "../../database/produtos/produtos-db.js";
 import { creatingSelectedElements } from './filter.js'
 import { initialSection } from './initial.js'
 import { checkingCheckboxes } from './filter-components/reset-filter.js'
 
-function datalistSuggestions() {
+function datalistSuggestions(database) {
     const datalist = document.querySelector('#datalist')
 
     let suggestionsOptions = []
 
-    suggestionsOptions = products.filter(async (product) => {
+    suggestionsOptions = database.filter(async (product) => {
         return product.presentation.includes(await inputSearch.value)
     })
 
@@ -20,10 +19,11 @@ function datalistSuggestions() {
 
 
 
-export function listFilterSearchInput() {
+export function listFilterSearchInput(database, assets) {
     const inputSearch = document.querySelector('#inputSearch')
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const fullDatabase = document.querySelector('#fullDatabase')
 
     let filtered = []
     let newFiltered = []
@@ -52,7 +52,7 @@ export function listFilterSearchInput() {
 
         let suggestionsOptions = []
 
-        suggestionsOptions = products.filter((product) => {
+        suggestionsOptions = database.filter((product) => {
             return product.presentation.includes(inputSearch.value)
         })
 
@@ -82,7 +82,7 @@ export function listFilterSearchInput() {
         }, [])
 
         for (const option of trueCheckboxesValue) {
-            const checkboxesMatchingProducts = products.filter((product) => {
+            const checkboxesMatchingProducts = database.filter((product) => {
                 return product.brand === option 
                 || product.category === option;
             });
@@ -106,7 +106,7 @@ export function listFilterSearchInput() {
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation)
+                    creatingSelectedElements(picture, name, presentation, assets)
                 })
             }
         })
@@ -142,7 +142,7 @@ export function listFilterSearchInput() {
 
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation)
+                    creatingSelectedElements(picture, name, presentation, assets)
                 })
             }
             if (!checkingCheckboxes() && inputSearch.value.length === 0) {
@@ -151,7 +151,7 @@ export function listFilterSearchInput() {
                 filtered = []
                 newFiltered = []
                 fullDatabase.style.display = 'flex'
-                initialSection()
+                initialSection(database, assets)
             }
         })
     }
@@ -180,7 +180,7 @@ export function listFilterSearchInput() {
 
             personalDatalist()
 
-            filtered = products.filter((product) => {
+            filtered = database.filter((product) => {
                 return product.name.includes(inputSearch.value)
                     || product.presentation.includes(inputSearch.value)
             })
@@ -195,7 +195,7 @@ export function listFilterSearchInput() {
 
             return filtered.forEach((product) => {
                 const { picture, name, presentation } = product
-                creatingSelectedElements(picture, name, presentation)
+                creatingSelectedElements(picture, name, presentation, assets)
             })
         } else if (inputSearch.value.length === 0) {
             inCaseTheSearchInputBecomesEmpty()

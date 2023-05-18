@@ -1,46 +1,16 @@
-import { products } from '../../database/produtos/produtos-db.js';
-import { filterTypes } from './filter-components/filter-types.js'
 import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
 
-const brands = products.map((product) => {
-    return product.brand
-})
-const categories = products.map((product) => {
-    return product.category
-})
 
-const allIOptions = [...brands, ...categories].filter((value, index, arr) => arr.indexOf(value) === index);
-export const OptionsWithoutSpaces = []
-allIOptions.map((option) => {
-    OptionsWithoutSpaces.push(option.split(' ').join(""))
-})
-
-export function listFilterInputsOptions() {
-    const inputsFilterOptions = document.querySelector('#inputsFilterOptions')
-    const store = document.querySelector('#store')
-
-    inputsFilterOptions.innerHTML += `<h3 class="">Marcas</h3>`
-    allIOptions.map((option) => {
-        store.innerHTML += `<div class="card-product" id="containerFilterInputsOptions">`
-        inputsFilterOptions.innerHTML += `
-        <div class="divFilter">
-            <input id="${option.split(' ').join("")}" type="checkbox" name="${option}" value="${option}">
-            <p>${option}</p>
-        </div>`
-
-        filterTypes(brands, 'Categorias')
-    })
-}
-
-export function creatingSelectedElements(picture, name, presentation) {
+export function creatingSelectedElements(picture, name, presentation, assets) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
-    listCards(picture, name, presentation, containerFilterInputsOptions)
+    listCards(picture, name, presentation, containerFilterInputsOptions, assets)
 }
 
-export function listingSelectedElements(option) {
+export function listingSelectedElements(option, database, assets) {
     const optionID = document.querySelector(`${option}`)
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
+    const fullDatabase = document.querySelector(`#fullDatabase`)
     const inputSearch = document.querySelector('#inputSearch')
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
@@ -60,7 +30,7 @@ export function listingSelectedElements(option) {
         }, [])
 
         for (const option of trueCheckboxesValue) {
-            const checkboxesMatchingProducts = products.filter((product) => {
+            const checkboxesMatchingProducts = database.filter((product) => {
                 return product.brand === option || product.category === option;
             });
             filtered.push(...checkboxesMatchingProducts);
@@ -70,7 +40,7 @@ export function listingSelectedElements(option) {
     const returningOnlyItemsFromTheSelectedOptions = () => {
         trueCheckboxes()
         checkboxes.forEach((checkbox) => {
-            if (checkbox.checked && inputSearch.value.length !== 0) {
+            if (checkbox.checked && inputSearch.value.length !== 0) {                
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
                 })
@@ -83,7 +53,7 @@ export function listingSelectedElements(option) {
                 containerFilterInputsOptions.innerHTML = ``
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation)
+                    creatingSelectedElements(picture, name, presentation, assets)
                 })
             }
 
@@ -103,14 +73,14 @@ export function listingSelectedElements(option) {
                     containerFilterInputsOptions.innerHTML = ``
                     return newFiltered.forEach((product) => {
                         const { picture, name, presentation } = product
-                        creatingSelectedElements(picture, name, presentation)
+                        creatingSelectedElements(picture, name, presentation, assets)
                     })
                 }
             })
         })
     }
     optionID.addEventListener('change', () => {
-        if (optionID.checked) {
+        if (optionID.checked) {            
             trueCheckboxesValue = []
             containerFilterInputsOptions.innerHTML = ``
 
@@ -118,11 +88,11 @@ export function listingSelectedElements(option) {
                 if (checkbox.checked) {
                     trueCheckboxesValue.push(checkbox.value);
                 }
-            })            
+            })
 
             let filtered = [];
             for (let option of trueCheckboxesValue) {
-                const optionFiltered = products.filter((product) => {
+                const optionFiltered = database.filter((product) => {
                     return product.brand === option || product.category === option;
                 });
                 filtered = filtered.concat(optionFiltered);
@@ -139,27 +109,28 @@ export function listingSelectedElements(option) {
                 creatingSelectedElements(
                     picture,
                     name,
-                    presentation
+                    presentation,
+                    assets
                 )
             })
-            if (inputSearch.value.length !== 0) {                
-                returningOnlyItemsFromTheSelectedOptions()
+            if (inputSearch.value.length !== 0) {
+                returningOnlyItemsFromTheSelectedOptions(database)
                 if (newFiltered.length === 0) {
                     containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
                 }
             }
         } else if (!optionID.checked) {
             filtered = []
-            containerFilterInputsOptions.innerHTML = ``            
+            containerFilterInputsOptions.innerHTML = ``
 
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
-                returningOnlyItemsFromTheSelectedOptions()
+                returningOnlyItemsFromTheSelectedOptions(database)
 
                 containerFilterInputsOptions.innerHTML = ``
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation)
+                    creatingSelectedElements(picture, name, presentation, assets)
                 })
             }
 
@@ -168,9 +139,8 @@ export function listingSelectedElements(option) {
                 containerFilterInputsOptions.innerHTML = ``
                 filtered = []
                 newFiltered = []
-                // datalist.innerHTML = ''
                 fullDatabase.style.display = 'flex'
-                initialSection()                
+                initialSection(database, assets)
             }
 
             filtered = filtered.reduce((unique, item) => {
@@ -182,7 +152,8 @@ export function listingSelectedElements(option) {
                 creatingSelectedElements(
                     picture,
                     name,
-                    presentation
+                    presentation,
+                    assets
                 )
             })
         }
