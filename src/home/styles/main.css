@@ -32,11 +32,13 @@
   bottom: 120px;
 }
 
-.produtos-destaque {
+.produtos-destaque,
+.servicos-destaque {
   background-color: var(--cinza-claro);
 }
 
-.produtos-destaque .container {
+.produtos-destaque .container,
+.servicos-destaque .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,11 +46,13 @@
   gap: 40px;
 }
 
-.produtos-destaque h2 {
+.produtos-destaque h2,
+.servicos-destaque h2 {
   text-align: center;
 }
 
-.produtos-destaque .produtos {
+.produtos-destaque .produtos,
+.servicos-destaque .servicos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
