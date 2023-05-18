@@ -24,7 +24,7 @@ import { OptionsWithoutSpaces, OptionsWithoutSpacesServices } from './components
     }
     listFilterSearchInput(database, assets)
     resetFilter(database, assets, optionsWithHashtag)
-    showMoreFullDB()
+    showMoreFullDB(database)
     botaoWpp()
     rodape()
 
