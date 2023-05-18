@@ -80,7 +80,7 @@ export function menu() {
         </a>
       </li>
       <li>
-        <a href="/src/produtos/index.html">Produtos</a>
+        <a href="/src/produtos/index.html">Produtos/Serviços</a>
       </li>
       <li>
         <a href="/src/contato/index.html">Contato</a>
