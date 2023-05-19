@@ -127,7 +127,7 @@ export function listingSelectedElements(option, database, assets) {
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions(database)
-                console.log('ok');
+              
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
