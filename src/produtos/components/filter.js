@@ -1,5 +1,6 @@
 import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
+import {checkingCheckboxes} from './filter-components/reset-filter.js'
 
 
 export function creatingSelectedElements(picture, name, presentation, assets) {
@@ -40,7 +41,7 @@ export function listingSelectedElements(option, database, assets) {
     const returningOnlyItemsFromTheSelectedOptions = () => {
         trueCheckboxes()
         checkboxes.forEach((checkbox) => {
-            if (checkbox.checked && inputSearch.value.length !== 0) {                
+            if (checkingCheckboxes() && inputSearch.value.length !== 0) {
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
                 })
@@ -80,7 +81,7 @@ export function listingSelectedElements(option, database, assets) {
         })
     }
     optionID.addEventListener('change', () => {
-        if (optionID.checked) {            
+        if (optionID.checked) {
             trueCheckboxesValue = []
             containerFilterInputsOptions.innerHTML = ``
 
@@ -126,8 +127,8 @@ export function listingSelectedElements(option, database, assets) {
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions(database)
-
-                containerFilterInputsOptions.innerHTML = ``
+                console.log('ok');
+                containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation, assets)

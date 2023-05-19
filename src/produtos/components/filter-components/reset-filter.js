@@ -33,14 +33,18 @@ export function resetFilter(database, assets, ...options) {
                         fullDatabase.style.display = 'flex'
                         initialSection(database, assets)
                     }
-                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
+                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                       
                         filtered = database.filter((itens) => {
                             return itens.name.includes(inputSearch.value)
                                 || itens.presentation.includes(inputSearch.value)
                         })
-                        containerFilterInputsOptions.innerHTML = ''
+
+                        filtered.length === 0
+                            ? containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                            : containerFilterInputsOptions.innerHTML = ''
+
                         return filtered.forEach((itens) => {
-                            const { picture, name, presentation } = itens                            
+                            const { picture, name, presentation } = itens
                             creatingSelectedElements(picture, name, presentation, assets)
                         })
                     }
@@ -48,6 +52,4 @@ export function resetFilter(database, assets, ...options) {
             }
         })
     })
-
-
 }

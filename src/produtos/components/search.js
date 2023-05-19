@@ -62,7 +62,7 @@ export function listFilterSearchInput(database, assets) {
         return suggestionsOptions.map((suggestion) => {
             containerPersonalDatalist.innerHTML += `
                 <a href="${href}" id="personalDatalist">
-                    <img src="../database/produtos/assets/${suggestion.picture}.png" alt="">
+                    <img src="../database/${assets}/assets/${suggestion.picture}.png" alt="">
                     <p>${suggestion.name} - ${suggestion.presentation}</p>                   
                 </a>
             `
@@ -83,8 +83,8 @@ export function listFilterSearchInput(database, assets) {
 
         for (const option of trueCheckboxesValue) {
             const checkboxesMatchingProducts = database.filter((product) => {
-                return product.brand === option 
-                || product.category === option;
+                return product.brand === option
+                    || product.category === option;
             });
             newFiltered.push(...checkboxesMatchingProducts);
         }
@@ -145,6 +145,7 @@ export function listFilterSearchInput(database, assets) {
                     creatingSelectedElements(picture, name, presentation, assets)
                 })
             }
+
             if (!checkingCheckboxes() && inputSearch.value.length === 0) {
                 containerFilterInputsOptions.innerHTML = ''
                 containerPersonalDatalist.innerHTML = ''
@@ -176,7 +177,7 @@ export function listFilterSearchInput(database, assets) {
             containerPersonalDatalist.innerHTML = ''
             fullDatabase.style.display = 'none'
             newFiltered = []
-            filtered = []       
+            filtered = []
 
             personalDatalist()
 
@@ -187,11 +188,9 @@ export function listFilterSearchInput(database, assets) {
 
             returningOnlyItemsFromTheSelectedOptions()
 
-            if (filtered.length === 0) {
-                containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
-            } else {
-                containerFilterInputsOptions.innerHTML = ''
-            }
+            filtered.length === 0
+                ? containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                : containerFilterInputsOptions.innerHTML = ''
 
             return filtered.forEach((product) => {
                 const { picture, name, presentation } = product
