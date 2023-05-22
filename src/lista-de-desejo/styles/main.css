@@ -1,158 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap");
-
-:root {
-    --amarelo-primario: #ffde59;
-    --amarelo-secundario: #ddc04d;
-    --cinza-claro: #eeeeee;
-    --cinza: #d1d1d1;
-    --cinza-escuro: #535353;
-    --branco: #fff;
-    --preto: #000;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-
-button {
-    border: none;
-    cursor: pointer;
-}
-
-body {
-    width: 100%;
-}
-
-section {
-    padding: 40px 0;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 32px;
-    font-weight: 800;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-p,
-li {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.1;
-    transition: 0.3s ease;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    padding: 12px 24px;
-    border-radius: 12px;
-    color: var(--preto);
-    font-size: 14px;
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.btn-amarelo {
-    background-color: var(--amarelo-primario);
-}
-
-.btn-amarelo:hover,
-.btn-amarelo:active,
-.btn-amarelo:focus-visible {
-    background-color: var(--amarelo-secundario);
-}
-
-.btn-cinza {
-    background-color: var(--cinza-claro);
-}
-
-.btn-cinza:hover,
-.btn-cinza:active,
-.btn-cinza:focus-visible {
-    background-color: var(--cinza);
-}
-
-.btn-preto {
-    background-color: var(--preto);
-    color: var(--branco);
-}
-
-.btn-preto:hover,
-.btn-preto:active,
-.btn-preto:focus-visible {
-    background-color: var(--cinza-escuro);
-}
-
-.whatsapp {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 5;
-}
-
-
-@media (min-width: 80em) {
-    section {
-        padding: 64px 0;
-    }
-
-    .container {
-        padding: 0 72px;
-        max-width: 80em;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        justify-content: space-between;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    h3 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    footer div {
-        width: 340px;
-    }
-}
-
 .carrinho-lista {
-    height: 354px;
-    width: 861px;
-    left: 0px;
-    top: 0px;
+    height: 100%;
+    width: 100%;
     border-radius: 12px;
     padding: 40px;
     background-color: var(--branco);
@@ -165,31 +13,20 @@ li {
 }
 .section {
     background-color: var(--cinza-claro);
-    left: 0px;
-    top: 112.6593017578125px;
-    border-radius: 0px;
-    padding: 64px 72px 64px 72px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
 }
 .centro {
-    height: 600px;
-    width: 300px;
-    height: 865px;
-    width: 1280px;
-    left: 0px;
-    top: 112.6593017578125px;
-    border-radius: 0px;
-    padding: 64px 72px 64px 72px;
-
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 40px;
+
+    margin: 72px;
 
 
 }
@@ -241,13 +78,12 @@ li {
 .carrinho-itens {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    padding: 40px;
     gap: 20px;
 
-    width: 810px;
-    height: 228px;
+    width: 100%;
+    height: 100%;
 }
 
 .imagem-produto {
@@ -256,6 +92,21 @@ li {
     left: 19px;
     top: 10.340667724609375px;
     border-radius: 37.14285659790039px;
+}
 
+.produto {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    
+}
 
+.info-produto {
+    margin-left: 100px;
+    width: 100%;
+}
+
+.info-produto-btn {
+    display: flex;
+    flex-direction: row;
 }
