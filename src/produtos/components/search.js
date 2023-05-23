@@ -61,7 +61,7 @@ export function listFilterSearchInput(database, assets) {
         containerPersonalDatalist.innerHTML = ''
         return suggestionsOptions.map((suggestion) => {
             containerPersonalDatalist.innerHTML += `
-                <a href="${href}" id="personalDatalist">
+                <a href="${href}" id="personalDatalist" class="go-page">
                     <img src="../database/${assets}/assets/${suggestion.picture}.png" alt="">
                     <p>${suggestion.name} - ${suggestion.presentation}</p>                   
                 </a>

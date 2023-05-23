@@ -1,6 +1,6 @@
 export function listCards(picture, name, presentation, targetTag, directory, href) {
     targetTag.innerHTML += `
-    <a href="${href}" class="card" >
+    <a href="${href}" class="card" class="go-page">
         <span>${picture}</span>    
         <img class="" src="../database/${directory}/assets/${picture}.png" alt="">
         <h3>${name}</h3>
