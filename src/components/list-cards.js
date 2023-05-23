@@ -5,7 +5,7 @@ export function listCards(picture, name, presentation, targetTag, directory, hre
         <img class="" src="../database/${directory}/assets/${picture}.png" alt="">
         <h3>${name}</h3>
         <p>${presentation}</p>
-        <button class="btn btn-amarelo" type="submit">Adicionar a lista</button>
+        <button class="btn btn-amarelo add-button" type="submit">Adicionar a lista</button>
     </a>     
     `
 }
