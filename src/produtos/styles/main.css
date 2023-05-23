@@ -157,6 +157,10 @@ aside{
     border-radius: 10px 10px 10px 10px;
 }
 
+#personalDatalist span{
+    display: none;
+}
+
 #personalDatalist:hover{
     background-color: var(--amarelo-primario);
 }
