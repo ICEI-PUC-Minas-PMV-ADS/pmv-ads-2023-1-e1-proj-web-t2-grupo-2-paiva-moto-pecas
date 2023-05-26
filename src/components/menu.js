@@ -89,7 +89,7 @@ export function menu() {
         <a href="/src/sobre/index.html">Sobre</a>
       </li>
       <li>
-        <a href="/src/carrinho/index.html">
+        <a href="/src/lista-de-desejo/index.html">
           <svg
             width="34"
             height="34"
