@@ -1,202 +1,168 @@
-#section{
-    padding: 0;
-    background-color: var(--cinza-claro);        
+#section {
+  background-color: var(--cinza-claro);
 }
 
-#div-main{
-    display: flex;
-    align-items: flex-start;       
+#div-main {
+  display: flex;
+  flex-direction: column;
 }
 
-.card-product{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    column-gap: 20px;     
-    row-gap: 20px;
-    margin: auto;    
-    padding: 0px 40px;  
-    height: 100%;      
+aside {
+  padding: 40px 20px;
+  border-radius: 12px;
+  background-color: var(--branco);
+  z-index: 2;
+  width: 100%;
+  max-width: 220px;
 }
 
-.divFilter{
-    display: flex;
-    column-gap: 0.5rem;
-    align-items: center; 
-    white-space: nowrap;     
+#divFilterTitle {
+  margin-bottom: 20px;
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
 }
 
-aside{        
-    padding: 40px 0px;       
-    height: fit-content;       
-    margin: 32px 0px;       
-
-    top: 32px;
-    position: sticky;  
-    z-index: 1;
-
-    border-radius: 12px;
-
-    background-color: var(--branco);      
+.divFilter {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  /* white-space: nowrap; */
 }
 
-
-
-#divFilterTitle{   
-    display: flex;
-    justify-content: center;
-    column-gap: 0.5rem;
-    align-items: center;     
+#inputsFilterOptions {
+  display: grid;
+  row-gap: 12px;
 }
 
-#inputsFilterOptions{
-    display: grid;    
-    row-gap: 15px;        
-    
-    padding: 15px 25px;      
+#inputsFilterOptions h2:nth-of-type(n + 2) {
+  margin-top: 8px;
 }
 
-#inputsFilterOptions h3:nth-of-type(n+2){   
-    margin-top: 8px;
+#store {
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
 
-#store{    
-    display: flex;         
-    flex-wrap: wrap;   
-    flex-direction: column;    
-    justify-content: center;           
-    width: 100%;      
-
-    position: relative;
-    
-    padding: 72px 0px;      
+#searchContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-#button-show-more {     
-    display: flex;
-    justify-content: center;      
-    margin: auto;         
-
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-   
-    width: 250px;
-    height: 41px;     
-    border-radius: 12px;       
-
-    cursor: pointer;    
+#inputSearch {
+  color: var(--preto);
+  width: 100%;
+  height: 48px;
+  border: 3px solid var(--cinza);
+  border-radius: 2rem;
+  box-sizing: border-box;
+  background: var(--cinza-claro);
+  font-size: 18px;
+  padding: 0rem 0rem 0rem 1rem;
 }
 
-#searchContainer{
-    width: 100%;
-    display: flex;  
-    align-items: center;
-    justify-content: end;
-    padding: 0px 40px;   
+#lupa {
+  height: 40px;
+  margin-right: 20px;
+  position: absolute;
 }
 
-#inputSearch {        
-    color: var(--preto);    
-    width: 100%;
-    height: 48px;
-    border: 3px solid var(--cinza);
-    border-radius: 2rem;
-    box-sizing: border-box;
-    background: var(--cinza-claro);    
-    font-size: 18px;
-    padding: 0rem 0rem 0rem 1.0rem;    
-    margin: auto;    
+#containerPersonalDatalist {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  max-width: 843px;
 }
 
-#lupa{    
-    height: 40px;    
-    position: absolute;
-    margin-right: 20px;
-
-   
+#personalDatalist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  max-height: 58px;
+  padding: 10px;
+  overflow: hidden;
+  color: var(--preto);
+  background-color: var(--branco);
+  border-bottom: 1px solid var(--amarelo-secundario);
+  border-radius: 10px 10px 10px 10px;
 }
 
-#containerPersonalDatalist{
-    display: flex;
-    flex-direction: column;       
-    
-    position: relative;
-    
-
-    padding: 0px 40px;      
-    width: 100%;
-
-   
+#personalDatalist img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px 10px 10px 10px;
 }
 
-#personalDatalist{
-    display: flex;
-    flex-direction: row;     
-    align-items: center;   
-    gap: 10px;        
-    margin: auto;   
-    
-    width: 100%;    
-    max-height: 58px;
-    padding: 10px;
-
-    overflow: hidden;
-    
-
-    color: var(--preto);
-    background-color: var(--branco);
-    border-bottom: 1px solid var(--amarelo-secundario);
-    border-radius: 10px 10px 10px 10px;    
-} 
-
-#personalDatalist img{
-    width: 48px;
-    height: 48px;
-    border-radius: 10px 10px 10px 10px;
+#personalDatalist span {
+  display: none;
 }
 
-#personalDatalist span{
-    display: none;
+#personalDatalist:hover {
+  background-color: var(--amarelo-primario);
 }
 
-#personalDatalist:hover{
-    background-color: var(--amarelo-primario);
+#personalDatalist:active {
+  background-color: var(--amarelo-secundario);
 }
 
-#personalDatalist:active{
-    background-color: var(--amarelo-secundario);
+#buttonsChangePage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+  gap: 20px;
 }
 
-#buttonsChangePage{
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 32px;
-    gap: 20px;   
-    margin: auto;    
+#buttonsChangePage button:first-child {
+  background-color: var(--amarelo-secundario);
 }
 
-.change-button{
-    max-width: 150px;
-    min-width: 112px;  
+.change-button {
+  max-width: 150px;
+  min-width: 112px;
 }
-    
 
-#click-icon-filter{
-    display: none;
+.card-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+}
+
+#button-show-more {
+  justify-content: center;
+  margin: 40px auto 0;
+  max-width: 250px;
+}
+
+#click-icon-filter {
+  display: none;
 }
 
 #click-close-filter {
-    display: none;
+  display: none;
 }
 
-
-#buttonsChangePage button:first-child{
-    background-color: var(--amarelo-secundario);    
+@media (min-width: 80em) {
+  aside {
+    position: sticky;
+    top: 32px;
+  }
+  #div-main {
+    flex-direction: unset;
+    align-items: flex-start;
+  }
 }
-   
