@@ -194,7 +194,7 @@ a {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: contain;
-  border-radius: 40px;
+  border-radius: 12px;
 }
 
 .card h3,
