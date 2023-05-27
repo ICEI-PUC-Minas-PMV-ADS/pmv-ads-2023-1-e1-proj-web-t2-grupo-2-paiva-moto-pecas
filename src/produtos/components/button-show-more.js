@@ -3,7 +3,7 @@ import { checkingCheckboxes } from './filter-components/reset-filter.js'
 export function showMoreFullDB(database) {
     const button = document.querySelector('#button-show-more')
     const fullDatabase = document.querySelector('#fullDatabase')
-    const divsFromFullDatabase = fullDatabase.querySelectorAll('a')
+    const divsFromFullDatabase = fullDatabase.querySelectorAll('a')   
 
     let showLength = 6;
 
@@ -24,7 +24,6 @@ export function showMoreFullDB(database) {
     })
 
     const buttonShowMore = () => {
-        const containerFilterInputsOptions = document.querySelector('#containerFilterInputsOptions')
 
         window.addEventListener('scroll', function () {
             const windowHeight = window.innerHeight;
@@ -34,14 +33,14 @@ export function showMoreFullDB(database) {
             if (scrollPosition + windowHeight >= fullHeight) {
                 button.style.display = 'flex'
                 button.style.opacity = '1'
-            }
+            } 
 
             if (scrollPosition + windowHeight < fullHeight) {
                 button.style.opacity = '0'
             }
 
             if (checkingCheckboxes()) {
-                button.style.display = 'none'
+                button.style.display = 'none'                
             }          
 
             if (showLength >= database.length) {

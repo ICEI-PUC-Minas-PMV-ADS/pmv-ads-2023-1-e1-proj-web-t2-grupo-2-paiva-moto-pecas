@@ -1,6 +1,6 @@
 import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
-import {checkingCheckboxes} from './filter-components/reset-filter.js'
+import { checkingCheckboxes } from './filter-components/reset-filter.js'
 
 
 export function creatingSelectedElements(picture, name, presentation, assets) {
@@ -81,7 +81,11 @@ export function listingSelectedElements(option, database, assets) {
         })
     }
     optionID.addEventListener('change', () => {
-        if (optionID.checked) {
+        const button = document.querySelector('#button-show-more')
+        if (optionID.checked) {            
+            if (checkingCheckboxes()) {
+                button.style.display = 'none'
+            }
             trueCheckboxesValue = []
             containerFilterInputsOptions.innerHTML = ``
 
@@ -127,7 +131,7 @@ export function listingSelectedElements(option, database, assets) {
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions(database)
-              
+
                 containerFilterInputsOptions.innerHTML = ''
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
