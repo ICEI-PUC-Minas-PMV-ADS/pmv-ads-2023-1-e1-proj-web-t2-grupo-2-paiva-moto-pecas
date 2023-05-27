@@ -187,9 +187,13 @@ export function listFilterSearchInput(database, assets) {
                     || product.presentation.includes(inputSearch.value)
             })
 
-            returningOnlyItemsFromTheSelectedOptions()          
+            returningOnlyItemsFromTheSelectedOptions()     
+            const sector = database.find((item) => item.sector === 'Produto' )      
             filtered.length === 0
-                ? containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                ? containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined 
+                        ? 'produto' 
+                        : 'serviço'} 
+                        encontrado</p>`
                 : containerFilterInputsOptions.innerHTML = ''
 
             return filtered.forEach((product) => {

@@ -120,10 +120,14 @@ export function listingSelectedElements(option, database, assets) {
                     assets
                 )
             })
+            const sector = database.find((item) => item.sector === 'Produto' )            
             if (inputSearch.value.length !== 0) {
                 returningOnlyItemsFromTheSelectedOptions(database)
                 if (newFiltered.length === 0) {
-                    containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                    containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined 
+                        ? 'produto' 
+                        : 'serviço'} 
+                        encontrado</p>`
                 }
             }
         } else if (!optionID.checked) {

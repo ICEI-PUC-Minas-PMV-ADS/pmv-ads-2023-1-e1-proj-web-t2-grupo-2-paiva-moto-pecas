@@ -28,17 +28,21 @@ export function resetFilter(database, assets, ...options) {
         option.addEventListener('change', () => {
             if (checkingCheckboxes()) {
                 option.addEventListener('change', () => {
-                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {                                               
+                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {
                         initialSection(database, assets)
                     }
-                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                       
+                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
                         filtered = database.filter((itens) => {
                             return itens.name.includes(inputSearch.value)
                                 || itens.presentation.includes(inputSearch.value)
                         })
 
+                        const sector = database.find((item) => item.sector === 'Produto')
                         filtered.length === 0
-                            ? containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
+                            ? containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined
+                                ? 'produto'
+                                : 'serviço'} 
+                        encontrado</p>`
                             : containerFilterInputsOptions.innerHTML = ''
 
                         return filtered.forEach((itens) => {
