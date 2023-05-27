@@ -82,10 +82,12 @@ export function listingSelectedElements(option, database, assets) {
     }
     optionID.addEventListener('change', () => {
         const button = document.querySelector('#button-show-more')
-        if (optionID.checked) {            
+        if (optionID.checked) {
+
             if (checkingCheckboxes()) {
                 button.style.display = 'none'
             }
+
             trueCheckboxesValue = []
             containerFilterInputsOptions.innerHTML = ``
 
@@ -127,8 +129,9 @@ export function listingSelectedElements(option, database, assets) {
         } else if (!optionID.checked) {
             filtered = []
             containerFilterInputsOptions.innerHTML = ``
-
+            console.log('oi1');
             if (inputSearch.value.length !== 0) {
+                console.log('oi2');
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions(database)
 
@@ -140,19 +143,21 @@ export function listingSelectedElements(option, database, assets) {
             }
 
             trueCheckboxes()
-            if (inputSearch.value.length === 0 && trueCheckboxesValue.length === 0) {
+            if (inputSearch.value.length === 0 && !checkingCheckboxes()) {
+                console.log('oi3');
                 containerFilterInputsOptions.innerHTML = ``
                 filtered = []
                 newFiltered = []
                 fullDatabase.style.display = 'flex'
                 initialSection(database, assets)
             }
-
+            console.log('oi4');
             filtered = filtered.reduce((unique, item) => {
                 return unique.includes(item) ? unique : [...unique, item]
             }, [])
 
             filtered.forEach((product) => {
+                console.log('oi5');
                 const { picture, name, presentation } = product
                 creatingSelectedElements(
                     picture,

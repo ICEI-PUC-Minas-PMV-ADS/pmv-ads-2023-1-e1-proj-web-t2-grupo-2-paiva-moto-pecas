@@ -80,17 +80,33 @@ aside {
   position: absolute;
   top: 48px;
   width: 100%;
-  max-width: 843px;
+  max-width: 843px;   
+  height: 174px;
+  overflow-y: scroll;  
 }
+
+#containerPersonalDatalist::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */   
+  }
+  
+  #containerPersonalDatalist::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor de fundo da barra de rolagem */
+  }
+  
+  #containerPersonalDatalist::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do botão de rolagem */
+    scrollbar-color: #888 #f1f1f1; /* Cor da barra de rolagem e do botão de rolagem */
+    border-radius: 5px;
+  }
+
 
 #personalDatalist {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  max-height: 58px;
-  padding: 10px;
-  overflow: hidden;
+  height: 58px;
+  padding: 10px;  
   color: var(--preto);
   background-color: var(--branco);
   border-bottom: 1px solid var(--amarelo-secundario);

@@ -4,6 +4,8 @@ export function showMoreFullDB(database) {
     const button = document.querySelector('#button-show-more')
     const fullDatabase = document.querySelector('#fullDatabase')
     const divsFromFullDatabase = fullDatabase.querySelectorAll('a')
+    const inputSearch = document.querySelector('#inputSearch')
+
 
     let showLength = 6;
 
@@ -30,7 +32,7 @@ export function showMoreFullDB(database) {
             const fullHeight = document.body.scrollHeight - 200;
             const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollPosition + windowHeight >= fullHeight) {
+            if (scrollPosition + windowHeight >= fullHeight && !checkingCheckboxes() && inputSearch.value.length === 0) {
                 button.style.display = 'flex'
                 button.style.opacity = '1'
             }
@@ -39,9 +41,7 @@ export function showMoreFullDB(database) {
                 button.style.opacity = '0'
             }
 
-            if (checkingCheckboxes()) {
-                button.style.display = 'none'
-            }
+           
 
             if (showLength >= database.length) {
                 button.style.opacity = '0'

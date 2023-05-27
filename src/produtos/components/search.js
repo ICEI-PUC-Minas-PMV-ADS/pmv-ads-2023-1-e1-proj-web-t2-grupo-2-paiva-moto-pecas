@@ -24,11 +24,12 @@ export function listFilterSearchInput(database, assets) {
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const fullDatabase = document.querySelector('#fullDatabase')
+    const containerPersonalDatalist = document.querySelector('#containerPersonalDatalist')
+    const buttonsChangePage = document.querySelector('#buttonsChangePage')
 
     let filtered = []
     let newFiltered = []
     let trueCheckboxesValue = []
-
 
     const lupa = document.querySelector('#lupa')
     if (inputSearch.value.length === 0) {
@@ -48,15 +49,15 @@ export function listFilterSearchInput(database, assets) {
     }
 
     function personalDatalist(href) {
-        const containerPersonalDatalist = document.querySelector('#containerPersonalDatalist')
 
         let suggestionsOptions = []
 
         suggestionsOptions = database.filter((product) => {
             return product.presentation.includes(inputSearch.value)
         })
+        if (suggestionsOptions.length >= 3) buttonsChangePage.style.marginTop = '20px'
 
-        suggestionsOptions.length = 3
+        // suggestionsOptions.length = 3
 
         containerPersonalDatalist.innerHTML = ''
         return suggestionsOptions.map((suggestion) => {
@@ -181,8 +182,7 @@ export function listFilterSearchInput(database, assets) {
             newFiltered = []
             filtered = []
 
-            button.style.opacity = '0'
-
+            button.style.display = 'none'           
 
             personalDatalist()
 
@@ -202,6 +202,8 @@ export function listFilterSearchInput(database, assets) {
                 creatingSelectedElements(picture, name, presentation, assets)
             })
         } else if (inputSearch.value.length === 0) {
+            const buttonsChangePage = document.querySelector('#buttonsChangePage')
+            buttonsChangePage.style.marginTop = '0px'
             inCaseTheSearchInputBecomesEmpty()
         }
     })

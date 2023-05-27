@@ -28,12 +28,13 @@ export function resetFilter(database, assets, ...options) {
     optionID.forEach((option) => {
         option.addEventListener('change', () => {
             if (checkingCheckboxes()) {
-                option.addEventListener('change', () => {
-                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {
-                        fullDatabase.style.display = 'flex'
-                        initialSection(database, assets)
-                    }
-                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                       
+                option.addEventListener('change', () => {                    
+                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {                       
+                        fullDatabase.style.display = 'flex'                                             
+                        initialSection(database, assets)                        
+                    }                   
+                   
+                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                                                                   
                         filtered = database.filter((itens) => {
                             return itens.name.includes(inputSearch.value)
                                 || itens.presentation.includes(inputSearch.value)
