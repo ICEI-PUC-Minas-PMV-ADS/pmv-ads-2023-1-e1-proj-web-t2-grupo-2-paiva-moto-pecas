@@ -73,6 +73,10 @@
   gap: 16px;
 }
 
+.depoimentos .depoimento p {
+  font-style: italic;
+}
+
 .mapa {
   background-color: var(--preto);
 }
