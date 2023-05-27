@@ -146,6 +146,10 @@ aside {
   justify-content: center;
   margin: 40px auto 0;
   max-width: 250px;
+
+  position: sticky;
+  /* bottom: -55px;
+  left: 50%; */
 }
 
 #click-icon-filter {

@@ -28,15 +28,16 @@ export function showMoreFullDB(database) {
 
         window.addEventListener('scroll', function () {
             const windowHeight = window.innerHeight;
-            const fullHeight = document.body.scrollHeight;
+            const fullHeight = document.body.scrollHeight -200;
             const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollPosition + windowHeight >= fullHeight) {
                 button.style.display = 'flex'
+                button.style.opacity = '1'
             }
 
             if (scrollPosition + windowHeight < fullHeight) {
-                button.style.display = 'none'
+                button.style.opacity = '0'
             }
 
             if (checkingCheckboxes()) {
@@ -44,7 +45,7 @@ export function showMoreFullDB(database) {
             }          
 
             if (showLength >= database.length) {
-                button.style.display = 'none'
+                button.style.opacity = '0'
             }
         });
     }
