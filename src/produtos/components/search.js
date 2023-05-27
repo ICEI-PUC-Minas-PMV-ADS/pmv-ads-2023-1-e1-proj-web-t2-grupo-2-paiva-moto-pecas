@@ -56,7 +56,7 @@ export function listFilterSearchInput(database, assets) {
             return product.presentation.includes(inputSearch.value)
         })
 
-        suggestionsOptions.length = 5
+        suggestionsOptions.length = 3
 
         containerPersonalDatalist.innerHTML = ''
         return suggestionsOptions.map((suggestion) => {
@@ -159,8 +159,9 @@ export function listFilterSearchInput(database, assets) {
     }
 
     inputSearch.addEventListener('input', () => {
-
+        const button = document.querySelector('#button-show-more')
         if (inputSearch.value.length !== 0) {
+
             lupa.innerHTML = ''
             lupa.innerHTML += `<path d="M20 1.32073L18.6792 0L10 8.67915L1.32085 0L0 1.32073L8.67921 
             9.99994L0 18.6792L1.32085 19.9999L10 11.3207L18.6792 19.9999L20 18.6792L11.3208 
@@ -179,6 +180,9 @@ export function listFilterSearchInput(database, assets) {
             fullDatabase.style.display = 'none'
             newFiltered = []
             filtered = []
+
+            button.style.opacity = '0'
+
 
             personalDatalist()
 
