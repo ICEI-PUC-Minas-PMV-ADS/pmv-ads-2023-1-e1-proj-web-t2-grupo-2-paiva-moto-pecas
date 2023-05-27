@@ -13,7 +13,7 @@ export const servicos = [
     },
     {
         name: 'Desempeno de Aros e Rodas',
-        presentation: 'Desempeno alinhamento de rodas e aros',
+        presentation: 'Desempeno, alinhamento de rodas e aros',
         description: `
         Moderno equipamento e profissional treinado, para eliminar aqueles inconvenientes amassados devido a má qualidade do piso do nosso asfalto, venha, a roda da sua moto vai ficar nova de novo!
         `,
