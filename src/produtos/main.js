@@ -16,6 +16,7 @@ import {
 } from "./components/filter-components/options.js";
 import { checkingCheckboxes } from "./components/filter-components/reset-filter.js";
 
+
 (function main(database, options, assets) {
   menu();
   initialSection(database, assets);
@@ -32,27 +33,16 @@ import { checkingCheckboxes } from "./components/filter-components/reset-filter.
   rodape();
 
   const title = document.querySelector("title");
-  const buttonsChangePage = document.querySelector("#buttonsChangePage");
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
-  const containerFilterInputsOptions = document.querySelector(
-    `#containerFilterInputsOptions`
-  );
-  const fullDatabase = document.querySelector("#fullDatabase");
-  const containerPersonalDatalist = document.querySelector(
-    "#containerPersonalDatalist"
-  );
-  const inputSearch = document.querySelector("#inputSearch");
+
 
   servicesButton.addEventListener("click", () => {
     title.innerText = `Paiva Moto Peças | Serviços`;
     productsButton.style.backgroundColor = "var(--amarelo-primario)";
     servicesButton.style.backgroundColor = "var(--amarelo-secundario)";
-    if (checkingCheckboxes() || inputSearch.value.length !== 0) {
-      containerFilterInputsOptions.innerHTML = "";
-      inputSearch.value = "";
-      containerPersonalDatalist.innerHTML = "";
-      fullDatabase.style.display = "flex";
+    if (checkingCheckboxes() || inputSearch.value.length !== 0) {        
+      containerPersonalDatalist.innerHTML = "";     
       initialSection(servicos, "serviços");
     }
 
@@ -62,11 +52,8 @@ import { checkingCheckboxes } from "./components/filter-components/reset-filter.
     title.innerText = `Paiva Moto Peças - Produtos`;
     productsButton.style.backgroundColor = "var(--amarelo-secundario)";
     servicesButton.style.backgroundColor = "var(--amarelo-primario)";
-    if (checkingCheckboxes() || inputSearch.value.length !== 0) {
-      containerFilterInputsOptions.innerHTML = "";
-      inputSearch.value = "";
-      containerPersonalDatalist.innerHTML = "";
-      fullDatabase.style.display = "flex";
+    if (checkingCheckboxes() || inputSearch.value.length !== 0) {         
+      containerPersonalDatalist.innerHTML = "";      
       initialSection(products, "produtos");
     }
 

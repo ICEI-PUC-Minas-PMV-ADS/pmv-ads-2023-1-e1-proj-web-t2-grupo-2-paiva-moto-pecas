@@ -21,20 +21,17 @@ export function resetFilter(database, assets, ...options) {
     const optionID = document.querySelectorAll(`${options}`)
     const inputSearch = document.querySelector('#inputSearch')
     const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
-    const fullDatabase = document.querySelector('#fullDatabase')
 
     let filtered = []
 
     optionID.forEach((option) => {
         option.addEventListener('change', () => {
             if (checkingCheckboxes()) {
-                option.addEventListener('change', () => {                    
-                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {                       
-                        fullDatabase.style.display = 'flex'                                             
-                        initialSection(database, assets)                        
-                    }                   
-                   
-                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                                                                   
+                option.addEventListener('change', () => {
+                    if (!checkingCheckboxes() && inputSearch.value.length === 0) {                                               
+                        initialSection(database, assets)
+                    }
+                    if (!checkingCheckboxes() && inputSearch.value.length !== 0) {                       
                         filtered = database.filter((itens) => {
                             return itens.name.includes(inputSearch.value)
                                 || itens.presentation.includes(inputSearch.value)

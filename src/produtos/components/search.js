@@ -92,15 +92,14 @@ export function listFilterSearchInput(database, assets) {
         }
     }
 
-    function returningOnlyItemsFromTheSelectedOptions() {
+    function returningOnlyItemsFromTheSelectedOptions() {       
         checkboxes.forEach(async (checkbox) => {
-            if (await checkbox.checked) {
+            if (await checkbox.checked) {                
                 filtered.forEach((product) => {
                     if (product.brand === checkbox.value || product.category === checkbox.value) {
                         newFiltered.push(product)
                     }
-                })
-
+                })               
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
@@ -130,39 +129,36 @@ export function listFilterSearchInput(database, assets) {
             3.86246C20.599 5.94579 21.6406 8.49787 21.6406 11.5187C21.6406 12.6125 21.3802 13.8625 
             20.8594 15.2687C20.3385 16.6229 19.7396 17.7166 19.0625 18.55L19.5312 19.0187H20.8594Z" fill="black" />
             `
-        checkboxes.forEach(async (checkbox) => {
-            if (await checkbox.checked) {
-                containerFilterInputsOptions.innerHTML = ''
-                containerPersonalDatalist.innerHTML = ''
-                filtered = []
-                newFiltered = []
-                trueCheckboxes()
 
-                newFiltered = newFiltered.reduce((unique, item) => {
-                    return unique.includes(item) ? unique : [...unique, item]
-                }, [])
+        if (checkingCheckboxes()) {
+            containerFilterInputsOptions.innerHTML = ''
+            containerPersonalDatalist.innerHTML = ''
+            filtered = []
+            newFiltered = []
+            trueCheckboxes()
 
-                return newFiltered.forEach((product) => {
-                    const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation, assets)
-                })
-            }
+            newFiltered = newFiltered.reduce((unique, item) => {
+                return unique.includes(item) ? unique : [...unique, item]
+            }, [])
 
-            if (!checkingCheckboxes() && inputSearch.value.length === 0) {
-                containerFilterInputsOptions.innerHTML = ''
-                containerPersonalDatalist.innerHTML = ''
-                filtered = []
-                newFiltered = []
-                fullDatabase.style.display = 'flex'
-                initialSection(database, assets)
-            }
-        })
+            return newFiltered.forEach((product) => {
+                const { picture, name, presentation } = product
+                creatingSelectedElements(picture, name, presentation, assets)
+            })
+        }
+
+        if (!checkingCheckboxes() && inputSearch.value.length === 0) {
+            filtered = []
+            newFiltered = []
+            containerPersonalDatalist.innerHTML = ''
+            initialSection(database, assets)
+        }
+
     }
 
     inputSearch.addEventListener('input', () => {
         const button = document.querySelector('#button-show-more')
         if (inputSearch.value.length !== 0) {
-
             lupa.innerHTML = ''
             lupa.innerHTML += `<path d="M20 1.32073L18.6792 0L10 8.67915L1.32085 0L0 1.32073L8.67921 
             9.99994L0 18.6792L1.32085 19.9999L10 11.3207L18.6792 19.9999L20 18.6792L11.3208 
@@ -181,8 +177,8 @@ export function listFilterSearchInput(database, assets) {
             fullDatabase.style.display = 'none'
             newFiltered = []
             filtered = []
-
-            button.style.display = 'none'           
+           
+            button.style.display = 'none'
 
             personalDatalist()
 
@@ -191,8 +187,7 @@ export function listFilterSearchInput(database, assets) {
                     || product.presentation.includes(inputSearch.value)
             })
 
-            returningOnlyItemsFromTheSelectedOptions()
-
+            returningOnlyItemsFromTheSelectedOptions()          
             filtered.length === 0
                 ? containerFilterInputsOptions.innerHTML = `<p>Nenhum produto encontrado</p>`
                 : containerFilterInputsOptions.innerHTML = ''

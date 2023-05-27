@@ -2,9 +2,8 @@ import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
 import { checkingCheckboxes } from './filter-components/reset-filter.js'
 
-
 export function creatingSelectedElements(picture, name, presentation, assets) {
-    const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)
+    const containerFilterInputsOptions = document.querySelector(`#containerFilterInputsOptions`)   
     listCards(picture, name, presentation, containerFilterInputsOptions, assets)
 }
 
@@ -45,6 +44,7 @@ export function listingSelectedElements(option, database, assets) {
                 const matchingProducts = filtered.filter((product) => {
                     return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
                 })
+               
                 newFiltered.push(...matchingProducts)
 
                 newFiltered = newFiltered.reduce((unique, item) => {
@@ -58,8 +58,8 @@ export function listingSelectedElements(option, database, assets) {
                 })
             }
 
-            checkbox.addEventListener('change', () => {
-                if (!checkbox.checked) {
+            
+                if (checkingCheckboxes()) {                 
                     trueCheckboxes()
                     const matchingProducts = newFiltered.filter((product) => {
                         return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
@@ -77,7 +77,7 @@ export function listingSelectedElements(option, database, assets) {
                         creatingSelectedElements(picture, name, presentation, assets)
                     })
                 }
-            })
+            
         })
     }
     optionID.addEventListener('change', () => {
@@ -97,7 +97,7 @@ export function listingSelectedElements(option, database, assets) {
                 }
             })
 
-            let filtered = [];
+            let filtered = [];             
             for (let option of trueCheckboxesValue) {
                 const optionFiltered = database.filter((product) => {
                     return product.brand === option || product.category === option;
@@ -129,9 +129,8 @@ export function listingSelectedElements(option, database, assets) {
         } else if (!optionID.checked) {
             filtered = []
             containerFilterInputsOptions.innerHTML = ``
-            console.log('oi1');
-            if (inputSearch.value.length !== 0) {
-                console.log('oi2');
+           
+            if (inputSearch.value.length !== 0) {               
                 newFiltered = []
                 returningOnlyItemsFromTheSelectedOptions(database)
 
@@ -142,30 +141,29 @@ export function listingSelectedElements(option, database, assets) {
                 })
             }
 
-            trueCheckboxes()
-            if (inputSearch.value.length === 0 && !checkingCheckboxes()) {
-                console.log('oi3');
-                containerFilterInputsOptions.innerHTML = ``
+            if (inputSearch.value.length === 0 && !checkingCheckboxes()) {               
                 filtered = []
                 newFiltered = []
-                fullDatabase.style.display = 'flex'
                 initialSection(database, assets)
             }
-            console.log('oi4');
-            filtered = filtered.reduce((unique, item) => {
-                return unique.includes(item) ? unique : [...unique, item]
-            }, [])
 
-            filtered.forEach((product) => {
-                console.log('oi5');
-                const { picture, name, presentation } = product
-                creatingSelectedElements(
-                    picture,
-                    name,
-                    presentation,
-                    assets
-                )
-            })
+
+            if (checkingCheckboxes()) {               
+                trueCheckboxes()
+                filtered = filtered.reduce((unique, item) => {
+                    return unique.includes(item) ? unique : [...unique, item]
+                }, [])
+                
+                filtered.forEach((product) => {
+                    const { picture, name, presentation } = product
+                    creatingSelectedElements(
+                        picture,
+                        name,
+                        presentation,
+                        assets
+                    )
+                })
+            }
         }
     })
 }
