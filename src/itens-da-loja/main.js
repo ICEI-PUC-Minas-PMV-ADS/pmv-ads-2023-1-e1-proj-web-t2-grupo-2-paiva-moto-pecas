@@ -36,27 +36,29 @@ import { checkingCheckboxes } from "./components/filter-components/reset-filter.
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
 
+  if (title.innerText === `Paiva Moto Peças | Produtos`) {
+    servicesButton.addEventListener("click", () => {
+      title.innerText = `Paiva Moto Peças | Serviços`;
+      productsButton.style.backgroundColor = "var(--amarelo-primario)";
+      servicesButton.style.backgroundColor = "var(--amarelo-secundario)";
+      if (checkingCheckboxes() || inputSearch.value.length !== 0) {
+        containerPersonalDatalist.innerHTML = "";
+        initialSection(servicos, "serviços");
+      }
+      main(servicos, OptionsWithoutSpacesServices, "serviços");
+    });
+  }
 
-  servicesButton.addEventListener("click", () => {
-    title.innerText = `Paiva Moto Peças | Serviços`;
-    productsButton.style.backgroundColor = "var(--amarelo-primario)";
-    servicesButton.style.backgroundColor = "var(--amarelo-secundario)";
-    if (checkingCheckboxes() || inputSearch.value.length !== 0) {        
-      containerPersonalDatalist.innerHTML = "";     
-      initialSection(servicos, "serviços");
-    }
-
-    main(servicos, OptionsWithoutSpacesServices, "serviços");
-  });
-  productsButton.addEventListener("click", () => {
-    title.innerText = `Paiva Moto Peças - Produtos`;
-    productsButton.style.backgroundColor = "var(--amarelo-secundario)";
-    servicesButton.style.backgroundColor = "var(--amarelo-primario)";
-    if (checkingCheckboxes() || inputSearch.value.length !== 0) {         
-      containerPersonalDatalist.innerHTML = "";      
-      initialSection(products, "produtos");
-    }
-
-    main(products, OptionsWithoutSpaces, "produtos");
-  });
+  if (title.innerText === `Paiva Moto Peças | Serviços`) {
+    productsButton.addEventListener("click", () => {
+      title.innerText = `Paiva Moto Peças | Produtos`;
+      productsButton.style.backgroundColor = "var(--amarelo-secundario)";
+      servicesButton.style.backgroundColor = "var(--amarelo-primario)";
+      if (checkingCheckboxes() || inputSearch.value.length !== 0) {
+        containerPersonalDatalist.innerHTML = "";
+        initialSection(products, "produtos");
+      }
+      main(products, OptionsWithoutSpaces, "produtos");
+    });
+  }
 })(products, OptionsWithoutSpaces, "produtos");
