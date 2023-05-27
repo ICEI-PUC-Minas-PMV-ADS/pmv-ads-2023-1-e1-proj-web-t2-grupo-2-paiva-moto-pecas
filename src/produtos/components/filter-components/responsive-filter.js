@@ -31,19 +31,14 @@ export function responsiveFilter() {
       clickIconFilter.style.display = 'none'
       clickCloseFilter.style.display = 'none'
 
-      aside.style.cssText = `
-  padding: 40px 0px;       
-  height: fit-content;       
-  margin: 32px 0px;       
-
-  top: 32px;
-  position: sticky;  
-  z-index: 1;
-
-  border-radius: 12px;
-
-  background-color: var(--branco);     
-  `
+      filtersSection.style.cssText = `
+      padding: 40px 20px;
+      border-radius: 12px;
+      background-color: var(--branco);
+      z-index: 2;
+      width: 100%;
+      max-width: 220px;    
+      `
     }
   })
 
