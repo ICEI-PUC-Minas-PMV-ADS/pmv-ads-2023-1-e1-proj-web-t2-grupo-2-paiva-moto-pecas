@@ -7,7 +7,7 @@ export function listCards(
   href
 ) {
   targetTag.innerHTML += `
-    <a href="${href}" class="card go-page">
+    <a href="../produto-individual/index.html" class="card go-page">
         <span>${picture}</span>    
         <img src="../database/${directory}/assets/${picture}.png" alt="">
         <h3>${name}</h3>
