@@ -6,10 +6,10 @@ export function responsiveFilter() {
   const clickCloseFilter = document.querySelector('#click-close-filter')
 
   addEventListener('resize', () => {
-      if (window.innerWidth <= 913) {
-          containerFilter.style.display = 'none'
-         
-          filtersSection.style.cssText = `             
+    if (window.innerWidth <= 913) {
+      containerFilter.style.display = 'none'
+
+      filtersSection.style.cssText = `             
           background-color: transparent;
           display: flex; 
           justify-content: center;
@@ -24,14 +24,14 @@ export function responsiveFilter() {
           align-items: center;
           gap: 8px;
       `
-      }
+    }
 
-      if (window.innerWidth > 913) {
-          containerFilter.style.display = 'grid'
-          clickIconFilter.style.display = 'none'
-          clickCloseFilter.style.display = 'none'
+    if (window.innerWidth > 913) {
+      containerFilter.style.display = 'grid'
+      clickIconFilter.style.display = 'none'
+      clickCloseFilter.style.display = 'none'
 
-          aside.style.cssText = `
+      aside.style.cssText = `
   padding: 40px 0px;       
   height: fit-content;       
   margin: 32px 0px;       
@@ -44,18 +44,20 @@ export function responsiveFilter() {
 
   background-color: var(--branco);     
   `
-      }
+    }
   })
 
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
-      filtersSection.style.cssText = `             
+    filtersSection.style.cssText = `             
   position: absolute;
-  top: 257px;     
+  top: 257px; 
+  left: 50%;
+  transform: translateX(-50%);   
   `
-      clickIconFilter.style.display = 'none'
-      containerFilter.style.display = 'grid'
+    clickIconFilter.style.display = 'none'
+    containerFilter.style.display = 'grid'
 
-      clickCloseFilter.style.cssText = `
+    clickCloseFilter.style.cssText = `
       display: grid;
       position: absolute;
       top: 12px;
@@ -64,15 +66,17 @@ export function responsiveFilter() {
   })
 
   clickCloseFilter.addEventListener('click', () => {
-      containerFilter.style.display = 'none'
-      clickIconFilter.style.display = 'grid'
-      clickCloseFilter.style.display = 'none'
+    containerFilter.style.display = 'none'
+    clickIconFilter.style.display = 'flex'
+    clickCloseFilter.style.display = 'none'
 
-      filtersSection.style.cssText = `             
-  position: sticky;
-  top: 213px;
-  left: 60px;
-  background-color: var(--cinza-claro);      
+    filtersSection.style.cssText = `             
+    background-color: transparent;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-height: 50px;      
   `
   })
 }
