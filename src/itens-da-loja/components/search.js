@@ -59,7 +59,7 @@ export function listFilterSearchInput(database, assets) {
         if (suggestionsOptions.length >= 3) buttonsChangePage.style.marginTop = '20px'
 
         document.addEventListener("click", function (event) {
-            var elementoClicado = event.target;
+            const elementoClicado = event.target;
 
             if (elementoClicado !== containerPersonalDatalist && elementoClicado !== inputSearch) {
                 containerPersonalDatalist.style.display = 'none'

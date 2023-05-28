@@ -15,6 +15,7 @@ import {
   OptionsWithoutSpacesServices,
 } from "./components/filter-components/options.js";
 import { checkingCheckboxes } from "./components/filter-components/reset-filter.js";
+import { pageshow } from "./components/pageshow.js";
 
 (function main(database, options, assets) {
   menu();
@@ -30,6 +31,7 @@ import { checkingCheckboxes } from "./components/filter-components/reset-filter.
   responsiveFilter();
   botaoWpp();
   rodape();
+  pageshow(database, assets);
 
   const title = document.querySelector("title");
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
