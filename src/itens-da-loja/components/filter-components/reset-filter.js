@@ -33,8 +33,8 @@ export function resetFilter(database, assets, ...options) {
                     }
                     if (!checkingCheckboxes() && inputSearch.value.length !== 0) {
                         filtered = database.filter((itens) => {
-                            return itens.name.includes(inputSearch.value)
-                                || itens.presentation.includes(inputSearch.value)
+                            return itens.name.toLowerCase().includes(inputSearch.value.toLowerCase())
+                                || itens.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
                         })
 
                         const sector = database.find((item) => item.sector === 'Produto')

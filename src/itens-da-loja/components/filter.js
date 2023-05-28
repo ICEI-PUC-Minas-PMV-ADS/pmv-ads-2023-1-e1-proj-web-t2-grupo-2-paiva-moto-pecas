@@ -32,7 +32,8 @@ export function listingSelectedElements(option, database, assets) {
 
         for (const option of trueCheckboxesValue) {
             const checkboxesMatchingProducts = database.filter((product) => {
-                return product.brand === option || product.category === option;
+                return product.brand.toLowerCase() === option.toLowerCase()
+                    || product.category.toLowerCase() === option.toLowerCase();
             });
             filtered.push(...checkboxesMatchingProducts);
         }
@@ -40,45 +41,47 @@ export function listingSelectedElements(option, database, assets) {
 
     const returningOnlyItemsFromTheSelectedOptions = () => {
         trueCheckboxes()
-        checkboxes.forEach((checkbox) => {
-            if (checkingCheckboxes() && inputSearch.value.length !== 0) {
-                const matchingProducts = filtered.filter((product) => {
-                    return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
-                })
 
-                newFiltered.push(...matchingProducts)
-                
-                newFiltered = newFiltered.reduce((unique, item) => {
-                    return unique.includes(item) ? unique : [...unique, item]
-                }, [])
-               
-                containerFilterInputsOptions.innerHTML = ``
-                return newFiltered.forEach((product) => {
-                    const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation, assets)
-                })
-            }
+        if (checkingCheckboxes() && inputSearch.value.length !== 0) {
+            const matchingProducts = filtered.filter((product) => {
+                return product.name.toLowerCase().includes(inputSearch.value.toLowerCase())
+                    || product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
+            })
 
-            if (checkingCheckboxes()) {
-                trueCheckboxes()
-                const matchingProducts = newFiltered.filter((product) => {
-                    return product.name.includes(inputSearch.value) || product.presentation.includes(inputSearch.value)
-                })
-                newFiltered = []
-                newFiltered.push(...matchingProducts)
-                
-                newFiltered = newFiltered.reduce((unique, item) => {
-                    return unique.includes(item) ? unique : [...unique, item]
-                }, [])
+            newFiltered.push(...matchingProducts)
 
-                containerFilterInputsOptions.innerHTML = ``
-                return newFiltered.forEach((product) => {
-                    const { picture, name, presentation } = product
-                    creatingSelectedElements(picture, name, presentation, assets)
-                })
-            }
+            newFiltered = newFiltered.reduce((unique, item) => {
+                return unique.includes(item) ? unique : [...unique, item]
+            }, [])
 
-        })
+            containerFilterInputsOptions.innerHTML = ``
+            return newFiltered.forEach((product) => {
+                const { picture, name, presentation } = product
+                creatingSelectedElements(picture, name, presentation, assets)
+            })
+        }
+
+        if (checkingCheckboxes()) {
+            trueCheckboxes()
+            const matchingProducts = newFiltered.filter((product) => {
+                return product.name.toLowerCase().includes(inputSearch.value.toLowerCase())
+                    || product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
+            })
+            newFiltered = []
+            newFiltered.push(...matchingProducts)
+
+            newFiltered = newFiltered.reduce((unique, item) => {
+                return unique.includes(item) ? unique : [...unique, item]
+            }, [])
+
+            containerFilterInputsOptions.innerHTML = ``
+            return newFiltered.forEach((product) => {
+                const { picture, name, presentation } = product
+                creatingSelectedElements(picture, name, presentation, assets)
+            })
+        }
+
+
     }
     optionID.addEventListener('change', () => {
         const button = document.querySelector('#button-show-more')
@@ -100,7 +103,8 @@ export function listingSelectedElements(option, database, assets) {
             let filtered = [];
             for (let option of trueCheckboxesValue) {
                 const optionFiltered = database.filter((product) => {
-                    return product.brand === option || product.category === option;
+                    return product.brand.toLowerCase() === option.toLowerCase()
+                        || product.category.toLowerCase() === option.toLowerCase();
                 });
                 filtered = filtered.concat(optionFiltered);
             }
@@ -122,7 +126,7 @@ export function listingSelectedElements(option, database, assets) {
             })
 
             if (inputSearch.value.length !== 0) {
-                returningOnlyItemsFromTheSelectedOptions(database)               
+                returningOnlyItemsFromTheSelectedOptions(database)
                 if (newFiltered.length === 0) {
                     containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined
                         ? 'produto'
@@ -136,17 +140,17 @@ export function listingSelectedElements(option, database, assets) {
 
             if (inputSearch.value.length !== 0) {
                 newFiltered = []
-
+               
                 returningOnlyItemsFromTheSelectedOptions(database)
-                if (newFiltered.length === 0) {
+                if (newFiltered.length === 0) {          
                     containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined
                         ? 'produto'
                         : 'serviço'} 
                         encontrado</p>`
-                } else {
+                } else {                  
                     containerFilterInputsOptions.innerHTML = ``
                 }
-
+              
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation, assets)
