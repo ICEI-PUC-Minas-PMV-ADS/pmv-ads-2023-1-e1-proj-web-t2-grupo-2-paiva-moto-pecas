@@ -26,6 +26,7 @@ export function listFilterSearchInput(database, assets) {
     const fullDatabase = document.querySelector('#fullDatabase')
     const containerPersonalDatalist = document.querySelector('#containerPersonalDatalist')
     const buttonsChangePage = document.querySelector('#buttonsChangePage')
+    const sector = database.find((item) => item.sector === 'Produto')
 
     let filtered = []
     let newFiltered = []
@@ -92,19 +93,28 @@ export function listFilterSearchInput(database, assets) {
         }
     }
 
-    function returningOnlyItemsFromTheSelectedOptions() {       
+    function returningOnlyItemsFromTheSelectedOptions() {
         checkboxes.forEach(async (checkbox) => {
-            if (await checkbox.checked) {                
+            if (await checkbox.checked) {
                 filtered.forEach((product) => {
                     if (product.brand === checkbox.value || product.category === checkbox.value) {
                         newFiltered.push(product)
                     }
-                })               
+                })
+
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
 
-                containerFilterInputsOptions.innerHTML = ''
+                if (newFiltered.length === 0) {
+                    containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined
+                        ? 'produto'
+                        : 'serviço'} 
+                        encontrado</p>`
+                } else {
+                    containerFilterInputsOptions.innerHTML = ''
+                }
+                
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation, assets)
@@ -177,7 +187,7 @@ export function listFilterSearchInput(database, assets) {
             fullDatabase.style.display = 'none'
             newFiltered = []
             filtered = []
-           
+
             button.style.display = 'none'
 
             personalDatalist()
@@ -187,12 +197,11 @@ export function listFilterSearchInput(database, assets) {
                     || product.presentation.includes(inputSearch.value)
             })
 
-            returningOnlyItemsFromTheSelectedOptions()     
-            const sector = database.find((item) => item.sector === 'Produto' )      
+            returningOnlyItemsFromTheSelectedOptions()
             filtered.length === 0
-                ? containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined 
-                        ? 'produto' 
-                        : 'serviço'} 
+                ? containerFilterInputsOptions.innerHTML = `<p>Nenhum ${sector !== undefined
+                    ? 'produto'
+                    : 'serviço'} 
                         encontrado</p>`
                 : containerFilterInputsOptions.innerHTML = ''
 

@@ -20,7 +20,7 @@ export function initialSection(database, assets) {
             name,
             presentation,
             fullDatabase,
-            assets
+            assets,            
         )
     })
     showMoreFullDB(database)

@@ -16,7 +16,6 @@ import {
 } from "./components/filter-components/options.js";
 import { checkingCheckboxes } from "./components/filter-components/reset-filter.js";
 
-
 (function main(database, options, assets) {
   menu();
   initialSection(database, assets);
@@ -62,3 +61,4 @@ import { checkingCheckboxes } from "./components/filter-components/reset-filter.
     });
   }
 })(products, OptionsWithoutSpaces, "produtos");
+

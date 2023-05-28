@@ -4,9 +4,10 @@ export function responsiveFilter() {
   const containerFilter = document.querySelector('#container-filter')
   const clickIconFilter = document.querySelector('#click-icon-filter')
   const clickCloseFilter = document.querySelector('#click-close-filter')
+  const divMain = document.querySelector('#div-main')
 
   addEventListener('resize', () => {
-    if (window.innerWidth <= 913) {
+    if (window.innerWidth <= 768) {
       containerFilter.style.display = 'none'
 
       filtersSection.style.cssText = `             
@@ -26,7 +27,7 @@ export function responsiveFilter() {
       `
     }
 
-    if (window.innerWidth > 913) {
+    if (window.innerWidth > 768) {
       containerFilter.style.display = 'grid'
       clickIconFilter.style.display = 'none'
       clickCloseFilter.style.display = 'none'
@@ -44,14 +45,14 @@ export function responsiveFilter() {
 
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
     filtersSection.style.cssText = `             
-  position: absolute;
-  top: 257px; 
-  left: 50%;
-  transform: translateX(-50%);   
+    position: absolute;
+    top: 257px; 
+    left: 50%;
+    transform: translateX(-50%);       
   `
     clickIconFilter.style.display = 'none'
     containerFilter.style.display = 'grid'
-
+    
     clickCloseFilter.style.cssText = `
       display: grid;
       position: absolute;
