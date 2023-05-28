@@ -1,23 +1,20 @@
 export function responsiveFilter() {
-  const filtersSection = document.querySelector('#filtersSection')
-  const aside = document.querySelector('aside')
+  const filtersSectionId = document.querySelector('#filtersSection')
+  const defaultFiltersSection = document.querySelector('.filtersSection')
   const containerFilter = document.querySelector('#container-filter')
   const clickIconFilter = document.querySelector('#click-icon-filter')
   const clickCloseFilter = document.querySelector('#click-close-filter')
-  const divMain = document.querySelector('#div-main')
+  const divMain = document.querySelector('#section ')
+  const elementoBloqueado = document.querySelector("body");
 
-  addEventListener('resize', () => {
+  function bloquearScroll(event) {
+    event.preventDefault();
+  }
+
+  addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth <= 768) {
       containerFilter.style.display = 'none'
-
-      filtersSection.style.cssText = `             
-          background-color: transparent;
-          display: flex; 
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-          max-height: 50px; 
-      `
+      filtersSectionId.classList.replace("filtersSection", "responsive-filtersSection");  
 
       clickIconFilter.style.cssText = `
           display: flex; 
@@ -31,28 +28,16 @@ export function responsiveFilter() {
       containerFilter.style.display = 'grid'
       clickIconFilter.style.display = 'none'
       clickCloseFilter.style.display = 'none'
-
-      filtersSection.style.cssText = `
-      padding: 40px 20px;
-      border-radius: 12px;
-      background-color: var(--branco);
-      z-index: 2;
-      width: 100%;
-      max-width: 220px;    
-      `
+      filtersSectionId.classList.replace("responsive-filtersSection", "filtersSection");     
     }
   })
 
-  document.querySelector('#click-icon-filter').addEventListener('click', () => {
-    filtersSection.style.cssText = `             
-    position: absolute;
-    top: 257px; 
-    left: 50%;
-    transform: translateX(-50%);       
-  `
+    document.querySelector('#click-icon-filter').addEventListener('click', () => {
+    filtersSectionId.classList.replace("responsive-filtersSection", "open-responsive-filtersSection");    
+    elementoBloqueado.addEventListener("wheel", bloquearScroll, { passive: false });
     clickIconFilter.style.display = 'none'
     containerFilter.style.display = 'grid'
-    
+
     clickCloseFilter.style.cssText = `
       display: grid;
       position: absolute;
@@ -60,19 +45,12 @@ export function responsiveFilter() {
       right: 12px;        
   `
   })
-
-  clickCloseFilter.addEventListener('click', () => {
+    clickCloseFilter.addEventListener('click', () => {
     containerFilter.style.display = 'none'
     clickIconFilter.style.display = 'flex'
     clickCloseFilter.style.display = 'none'
 
-    filtersSection.style.cssText = `             
-    background-color: transparent;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    max-height: 50px;      
-  `
+    elementoBloqueado.removeEventListener("wheel", bloquearScroll);
+    filtersSectionId.classList.replace("open-responsive-filtersSection", "responsive-filtersSection");
   })
 }

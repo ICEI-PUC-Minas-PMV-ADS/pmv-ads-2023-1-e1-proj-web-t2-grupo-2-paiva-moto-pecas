@@ -7,13 +7,33 @@
   flex-direction: column;
 }
 
-#filtersSection {
+#filtersSection{
   padding: 40px 20px;
   border-radius: 12px;
-  background-color: var(--branco);
   z-index: 2;
-  width: 100%;
   max-width: 220px;
+  width: 100%;
+}
+
+.filtersSection {  
+  background-color: var(--branco); 
+}
+
+.responsive-filtersSection{
+  background-color: transparent;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-height: 50px;       
+}
+
+.open-responsive-filtersSection{  
+  position: absolute;
+  top: 257px; 
+  left: 50%;  
+  transform: translateX(-50%);   
+  background-color: var(--branco);
 }
 
 #divFilterTitle {
