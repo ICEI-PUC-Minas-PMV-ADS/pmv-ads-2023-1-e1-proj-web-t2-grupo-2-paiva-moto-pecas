@@ -48,25 +48,39 @@ export function listFilterSearchInput(database, assets) {
         `
     }
 
-    function personalDatalist(href) {
-
+    function personalDatalist() {
         let suggestionsOptions = []
+
+        containerPersonalDatalist.style.display = 'flex'
 
         suggestionsOptions = database.filter((product) => {
             return product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
         })
         if (suggestionsOptions.length >= 3) buttonsChangePage.style.marginTop = '20px'
 
-        containerPersonalDatalist.innerHTML = ''
+        document.addEventListener("click", function (event) {
+            var elementoClicado = event.target;
+
+            if (elementoClicado !== containerPersonalDatalist && elementoClicado !== inputSearch) {
+                containerPersonalDatalist.style.display = 'none'
+            }
+        });
+
+        inputSearch.addEventListener("click", function () {
+            containerPersonalDatalist.style.display = 'flex'
+        });
+
+        containerPersonalDatalist.innerHTML = '';
         return suggestionsOptions.map((suggestion) => {
             containerPersonalDatalist.innerHTML += `
-                <a href="${href}" id="personalDatalist" class="go-page">
+                <a href="../produto-individual/index.html?${assets}=${suggestion.picture}" 
+                id="personalDatalist" class="go-page">
                     <span>${suggestion.picture}</span>                                        
                     <img src="../database/${assets}/assets/${suggestion.picture}.png" alt="">
                     <p>${suggestion.name} - ${suggestion.presentation}</p>                                         
                 </a>
-            `
-        })
+            `;
+        });
     }
 
     const trueCheckboxes = () => {
@@ -90,7 +104,7 @@ export function listFilterSearchInput(database, assets) {
         }
     }
 
-    function returningOnlyItemsFromTheSelectedOptions() {       
+    function returningOnlyItemsFromTheSelectedOptions() {
         checkboxes.forEach(async (checkbox) => {
             if (await checkbox.checked) {
                 filtered.forEach((product) => {
@@ -99,7 +113,7 @@ export function listFilterSearchInput(database, assets) {
                         newFiltered.push(product)
                     }
                 })
-               
+
                 newFiltered = newFiltered.reduce((unique, item) => {
                     return unique.includes(item) ? unique : [...unique, item]
                 }, [])
@@ -112,7 +126,7 @@ export function listFilterSearchInput(database, assets) {
                 } else {
                     containerFilterInputsOptions.innerHTML = ''
                 }
-                
+
                 return newFiltered.forEach((product) => {
                     const { picture, name, presentation } = product
                     creatingSelectedElements(picture, name, presentation, assets)
@@ -148,7 +162,7 @@ export function listFilterSearchInput(database, assets) {
             newFiltered = newFiltered.reduce((unique, item) => {
                 return unique.includes(item) ? unique : [...unique, item]
             }, [])
-            
+
             return newFiltered.forEach((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(picture, name, presentation, assets)
@@ -165,7 +179,7 @@ export function listFilterSearchInput(database, assets) {
     }
 
     inputSearch.addEventListener('input', () => {
-        
+
         if (inputSearch.value.length !== 0) {
             lupa.innerHTML = ''
             lupa.innerHTML += `<path d="M20 1.32073L18.6792 0L10 8.67915L1.32085 0L0 1.32073L8.67921 
@@ -187,9 +201,9 @@ export function listFilterSearchInput(database, assets) {
             filtered = []
 
             button.style.display = 'none'
-          
+
             personalDatalist()
-           
+
             filtered = database.filter((product) => {
                 return product.name.toLowerCase().includes(inputSearch.value.toLowerCase())
                     || product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
@@ -201,9 +215,9 @@ export function listFilterSearchInput(database, assets) {
                     ? 'produto'
                     : 'serviço'} 
                         encontrado</p>`
-                : containerFilterInputsOptions.innerHTML = ''            
-               
-            return filtered.forEach((product) => {                
+                : containerFilterInputsOptions.innerHTML = ''
+
+            return filtered.forEach((product) => {
                 const { picture, name, presentation } = product
                 creatingSelectedElements(picture, name, presentation, assets)
             })

@@ -3,8 +3,7 @@ export function listCards(
   name,
   presentation,
   targetTag,
-  directory,
-  href
+  directory,  
 ) {
   targetTag.innerHTML += `
     <a href="../produto-individual/index.html?${directory}=${picture}" class="card go-page">
