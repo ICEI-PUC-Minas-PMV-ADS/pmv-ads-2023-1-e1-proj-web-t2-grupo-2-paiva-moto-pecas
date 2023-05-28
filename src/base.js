@@ -3,7 +3,7 @@ import { servicos } from "./database/serviços/servicos-db.js";
 
 export function preencherElem() {
   const contElements = document.getElementById("cont-principal");
-  const card = document.querySelector(".go-page");
+  //   const card = document.querySelector(".go-page");
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -30,9 +30,9 @@ export function preencherElem() {
         <h1 class="titulo-medio">${elemUnico.name}</h1>
         <p>${elemUnico.description}
         </p>
-        <h2 class="titulo-pequeno">${
+        ${
           elemUnico.brand
-            ? `<strong>Marca: </strong>${elemUnico.brand}</h2>`
+            ? `<h2 class="titulo-pequeno"><strong>Marca: </strong>${elemUnico.brand}</h2>`
             : ""
         }
         <h2 class="titulo-pequeno"><strong>Categoria: </strong>${
