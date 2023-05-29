@@ -10,7 +10,6 @@ rodape();
 preencherElem();
 botaoWpp();
 
-//const imagemProduto = document.querySelector("#imagem-produto");
 const listagemProdutos = document.querySelector("#listagem-produtos");
 products.length = 4;
 products.sort(() => Math.random() - 0.5);
