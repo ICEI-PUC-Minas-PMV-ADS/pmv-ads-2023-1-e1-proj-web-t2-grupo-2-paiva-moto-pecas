@@ -38,10 +38,11 @@
     align-items: center;
 }
 
-.sobre .container .botaof {
+.sobre .container a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:auto
 }
 
 @media (min-width: 80em) {
