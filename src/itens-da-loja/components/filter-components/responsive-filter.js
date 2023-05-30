@@ -6,6 +6,7 @@ export function responsiveFilter() {
   const clickCloseFilter = document.querySelector('#click-close-filter')
   const divMain = document.querySelector('#section ')
   const elementoBloqueado = document.querySelector("body");
+  const fundo = document.querySelector('#fundo')
 
   function bloquearScroll(event) {
     event.preventDefault();
@@ -37,6 +38,8 @@ export function responsiveFilter() {
     elementoBloqueado.addEventListener("wheel", bloquearScroll, { passive: false });
     clickIconFilter.style.display = 'none'
     containerFilter.style.display = 'grid'
+    fundo.style.display = 'block'
+    fundo.style.zIndex = '3'
 
     clickCloseFilter.style.cssText = `
       display: grid;
@@ -49,6 +52,7 @@ export function responsiveFilter() {
     containerFilter.style.display = 'none'
     clickIconFilter.style.display = 'flex'
     clickCloseFilter.style.display = 'none'
+    fundo.style.display = 'none'
 
     elementoBloqueado.removeEventListener("wheel", bloquearScroll);
     filtersSectionId.classList.replace("open-responsive-filtersSection", "responsive-filtersSection");

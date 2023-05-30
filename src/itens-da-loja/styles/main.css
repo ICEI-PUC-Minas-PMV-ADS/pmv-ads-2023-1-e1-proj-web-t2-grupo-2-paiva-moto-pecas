@@ -10,7 +10,7 @@
 #filtersSection{
   padding: 40px 20px;
   border-radius: 12px;
-  z-index: 2;
+  /* z-index: 2; */
   max-width: 220px;
   width: 100%;
 }
@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-height: 50px;       
+  max-height: 50px;     
 }
 
 .open-responsive-filtersSection{  
@@ -34,6 +34,23 @@
   left: 50%;  
   transform: translateX(-50%);   
   background-color: var(--branco);
+  z-index: 10;
+}
+
+#click-icon-filter {
+  display: none;
+}
+
+#click-close-filter {
+  display: none;
+}
+
+#fundo{
+  background-color: rgba(0, 0, 0, 0.486);
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 
 #divFilterTitle {
@@ -189,13 +206,7 @@
   left: 50%; */
 }
 
-#click-icon-filter {
-  display: none;
-}
 
-#click-close-filter {
-  display: none;
-}
 
 @media (min-width: 48em) {
   aside {
