@@ -37,9 +37,9 @@ export function responsiveFilter() {
     filtersSectionId.classList.replace("responsive-filtersSection", "open-responsive-filtersSection");
 
     clickIconFilter.style.display = 'none'
-    containerFilter.style.display = 'grid'
+    containerFilter.style.display = 'block'
     fundo.style.display = 'block'
-    fundo.style.zIndex = '3'
+    fundo.style.height = `${divMain.offsetHeight}px`
 
     clickCloseFilter.style.cssText = `
       display: grid;

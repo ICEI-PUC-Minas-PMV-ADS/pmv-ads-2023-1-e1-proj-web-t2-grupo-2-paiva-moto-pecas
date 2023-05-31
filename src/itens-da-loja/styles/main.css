@@ -58,6 +58,7 @@
   position: absolute;   
   width: 100vw;
   height: 200vh;
+  z-index: 3;
 }
 
 #divFilterTitle {

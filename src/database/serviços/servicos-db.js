@@ -8,7 +8,7 @@ export const servicos = [
         brand: '',
         category: 'Alinhamento e balanceamento',
         picture: '1',
-        sector: "Servico",
+        sector: "Serviço",
         featured: false
     },
     {
@@ -20,7 +20,7 @@ export const servicos = [
         brand: '',
         category: 'Alinhamento e balanceamento',
         picture: '2',
-        sector: "Servico",
+        sector: "Serviço",
         featured: true
     },
     {
@@ -32,7 +32,7 @@ export const servicos = [
         brand: '',
         category: 'Diagnóstico',
         picture: '3',
-        sector: "Servico",
+        sector: "Serviço",
         featured: false
     },
     {
@@ -44,7 +44,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '4',
-        sector: "Servico",
+        sector: "Serviço",
         featured: true
     },
     {
@@ -58,7 +58,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '5',
-        sector: "Servico",
+        sector: "Serviço",
         featured: true
     },
     {
@@ -70,7 +70,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '6',
-        sector: "Servico",
+        sector: "Serviço",
         featured: false
     },
     {
@@ -82,7 +82,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '7',
-        sector: "Servico",
+        sector: "Serviço",
         featured: true
     },
     {
@@ -94,7 +94,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '8',
-        sector: "Servico",
+        sector: "Serviço",
         featured: false
     },
     {
@@ -106,7 +106,7 @@ export const servicos = [
         brand: '',
         category: 'Revisão',
         picture: '9',
-        sector: "Servico",
+        sector: "Serviço",
         featured: false
     },
 ]

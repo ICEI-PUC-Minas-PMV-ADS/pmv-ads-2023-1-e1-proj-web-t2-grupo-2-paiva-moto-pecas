@@ -17,6 +17,8 @@ import {
 import { checkingCheckboxes } from "./components/filter-components/reset-filter.js";
 import { pageshow } from "./components/pageshow.js";
 
+
+
 (function main(database, options, assets) {
   menu();
   initialSection(database, assets);
@@ -37,29 +39,31 @@ import { pageshow } from "./components/pageshow.js";
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
 
-  if (title.innerText === `Paiva Moto Peças | Produtos`) {
-    servicesButton.addEventListener("click", () => {
-      title.innerText = `Paiva Moto Peças | Serviços`;
-      productsButton.style.backgroundColor = "var(--amarelo-primario)";
-      servicesButton.style.backgroundColor = "var(--amarelo-secundario)";
-      if (checkingCheckboxes() || inputSearch.value.length !== 0) {
-        containerPersonalDatalist.innerHTML = "";
-        initialSection(servicos, "serviços");
-      }
-      main(servicos, OptionsWithoutSpacesServices, "serviços");
-    });
+  function setSector(button, sectorDB, options){
+  
+    // if (database === sectorDB) {
+      button.addEventListener("click", () => {
+        title.innerText = `Paiva Moto Peças | ${database[0].sector}s`;
+        productsButton.style.backgroundColor = "var(--amarelo-secundario)";
+        servicesButton.style.backgroundColor = "var(--amarelo-primario)";
+        if (checkingCheckboxes() || inputSearch.value.length !== 0) {
+          containerPersonalDatalist.innerHTML = "";         
+          initialSection(sectorDB, `${sectorDB[0].sector}s`)
+        }
+        console.log((`${sectorDB[0].sector}s`).toLowerCase());
+        main(sectorDB, options, (`${sectorDB[0].sector}s`).toLowerCase());
+      });
+    // }
   }
 
-  if (title.innerText === `Paiva Moto Peças | Serviços`) {
-    productsButton.addEventListener("click", () => {
-      title.innerText = `Paiva Moto Peças | Produtos`;
-      productsButton.style.backgroundColor = "var(--amarelo-secundario)";
-      servicesButton.style.backgroundColor = "var(--amarelo-primario)";
-      if (checkingCheckboxes() || inputSearch.value.length !== 0) {
-        containerPersonalDatalist.innerHTML = "";
-        initialSection(products, "produtos");
-      }
-      main(products, OptionsWithoutSpaces, "produtos");
-    });
-  }
+  setSector(servicesButton, servicos, OptionsWithoutSpacesServices)
+  setSector(productsButton, products, OptionsWithoutSpaces)
+
+
 })(products, OptionsWithoutSpaces, "produtos");
+
+
+
+
+
+
