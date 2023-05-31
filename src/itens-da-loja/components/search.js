@@ -56,8 +56,6 @@ export function listFilterSearchInput(database, assets) {
         suggestionsOptions = database.filter((product) => {
             return product.presentation.toLowerCase().includes(inputSearch.value.toLowerCase())
         })
-        if (suggestionsOptions.length >= 3) buttonsChangePage.style.marginTop = '20px'
-
         document.addEventListener("click", function (event) {
             const elementoClicado = event.target;
 
@@ -223,7 +221,6 @@ export function listFilterSearchInput(database, assets) {
             })
         } else if (inputSearch.value.length === 0) {
             const buttonsChangePage = document.querySelector('#buttonsChangePage')
-            buttonsChangePage.style.marginTop = '0px'
             inCaseTheSearchInputBecomesEmpty()
         }
     })

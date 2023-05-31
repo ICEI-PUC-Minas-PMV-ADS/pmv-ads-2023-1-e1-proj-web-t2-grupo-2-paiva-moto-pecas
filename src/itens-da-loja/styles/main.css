@@ -28,14 +28,21 @@
   max-height: 50px;     
 }
 
-.open-responsive-filtersSection{  
-  position: absolute;
-  top: 257px; 
-  left: 50%;  
-  transform: translateX(-50%);   
+.open-responsive-filtersSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 32px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--branco);
   z-index: 10;
 }
+
 
 #click-icon-filter {
   display: none;
@@ -48,9 +55,9 @@
 #fundo{
   background-color: rgba(0, 0, 0, 0.486);
   display: none;
-  position: absolute;
+  position: absolute;   
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
 }
 
 #divFilterTitle {
@@ -120,6 +127,7 @@
   max-width: 843px;   
   max-height: 116px;
   overflow-y: scroll;  
+  z-index: 3;
 }
 
 #containerPersonalDatalist::-webkit-scrollbar {
