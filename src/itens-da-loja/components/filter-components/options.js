@@ -10,11 +10,10 @@ const categoriesProducts = products.map((product) => {
 const allIProductsOptions = [...brandsProducts, ...categoriesProducts]
 .filter((value, index, arr) => arr.indexOf(value) === index);
 
-export const OptionsWithoutSpaces = []
+export const OptionsWithoutSpacesProducts = []
 allIProductsOptions.map((option) => {
-    OptionsWithoutSpaces.push(option.split(' ').join(""))
+    OptionsWithoutSpacesProducts.push(option.split(' ').join(""))
 })
-
 
 const categoriesServices = servicos.map((service) => {
     return service.category

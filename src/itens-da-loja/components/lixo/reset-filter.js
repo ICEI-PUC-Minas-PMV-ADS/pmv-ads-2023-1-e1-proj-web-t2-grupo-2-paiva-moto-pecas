@@ -1,5 +1,5 @@
 import { initialSection } from '../initial.js';
-import { creatingSelectedElements } from '../filter.js';
+import { creatingSelectedElements } from './filter.js';
 
 export function checkingCheckboxes() {
     let isChecked = false;

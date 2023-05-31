@@ -1,4 +1,4 @@
-import { checkingCheckboxes } from './filter-components/reset-filter.js'
+import { checkingCheckboxes } from './lixo/reset-filter.js'
 
 export function showMoreFullDB(database) {
     const button = document.querySelector('#button-show-more')
