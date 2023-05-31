@@ -63,16 +63,3 @@ import { pageshow } from "./components/pageshow.js";
     });
   }
 })(products, OptionsWithoutSpaces, "produtos");
-
-
-const array = [
-  {
-    name: 'Caixa Direção CG Honda',
-    presentation: 'Caixa de direção original honda CG 125, CG 150, CG 160',
-   
-},
-{
-    name: 'Embreagem Completa',
-    presentation: ` Embreagem dos discos para moto Yzf R1 Ano 2004 A 2008.`,   
-},
-]
