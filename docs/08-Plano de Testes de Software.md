@@ -42,6 +42,8 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Passos                 | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar na página de filtro de produto<br>  5) Digitar produto desejado no campo de busca<br>|   
 | Critérios de Êxito     | A página deve apresentar a lista do produto solicitado na busca|
 
+## Caso de Insucesso
+
 | Caso de Teste          | CT-05 - Pesquisa de produto não encontrado no filtro |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Requisitos Associados  | RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características.                      |
