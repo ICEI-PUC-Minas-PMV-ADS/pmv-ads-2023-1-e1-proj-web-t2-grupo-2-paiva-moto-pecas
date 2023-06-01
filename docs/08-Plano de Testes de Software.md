@@ -14,7 +14,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 
 ## Caso de Sucesso
 
-| Caso de Teste          |                                          CT-01 - Visualizar produto marcado no filtro categoria                                                                 |
+| Caso de Teste          | CT-01 - Visualizar produto marcado no filtro categoria                                                                 |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Requisitos Associados  | RF-05 - O site deve permitir que os usuários naveguem pelos produtos disponíveis para venda, filtrando-os por critérios pré estabelecidos                       |
 | Objetivo do Teste      | Verificar se o filtro categoria está funcionando corretamente                                                                                                   |        
@@ -22,3 +22,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Critérios de Êxito     | Os filtros devem exibir corretamente os produtos, listado na categoria                                                                                          |
 
 <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso.jpg"/>
+
+Figura 26 - Teste de filtro por marca
+
+
