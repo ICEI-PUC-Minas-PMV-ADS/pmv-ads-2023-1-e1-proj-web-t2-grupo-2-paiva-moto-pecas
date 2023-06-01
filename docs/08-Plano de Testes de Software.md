@@ -20,9 +20,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Requisitos Associados  | RF-05 - O site deve permitir que os usuários naveguem pelos produtos disponíveis para venda, filtrando-os por critérios pré estabelecidos                       |
 | Objetivo do Teste      | Verificar se o filtro categoria está funcionando corretamente                                                                                                   |        
-| Passos                 | 1) Acessar o Navegador 
-2) Informar o endereço do Site 
-3) 3) Visualizar a página principal
-4)  4) Clicar na página de filtro de produto
-5)   5) Marcar filtro categoria;|
+| Passos                 | 1) Acessar o Navegador 2) Informar o endereço do Site 3) Visualizar a página principal 4) Clicar na página de filtro de produto  5) Marcar filtro categoria;    |   
 | Critérios de Êxito     | Os filtros devem exibir corretamente os produtos, listado na categoria                                                                                          |
+
