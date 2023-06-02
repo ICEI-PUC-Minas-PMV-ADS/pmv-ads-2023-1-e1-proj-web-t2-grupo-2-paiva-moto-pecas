@@ -14,6 +14,10 @@ Nesta etapa, desenvolvemos a metodologia do projeto que é dividido em cinco spr
 
 Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, produtos, produto individual, serviços, serviço individual, carrinho, contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, criação das páginas utilizando as linguagens HTML e CSS e seu versionamento no GitHub.
 
+## Etapa 4
+
+Aperfeiçoamento e ajustes das funcionalidades das páginas, elaboração de plano de teste de software exibindo casos de sucesso e insucesso e registro de teste de software.
+
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
