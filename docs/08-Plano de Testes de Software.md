@@ -8,11 +8,7 @@ Os requisitos para realização dos testes de software são:
 - Navegador da Internet - Chrome, Firefox ou Edge
 - Conectividade de Internet para acesso às plataformas (APISs)
 
-
 Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
-
-
-## Caso de Sucesso
 
 | Caso de Teste          | CT-01 - Visualizar produto marcado no filtro categoria                                                                 |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,8 +37,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste      | Verificar por nome específico se filtro funciona normalmente   |        
 | Passos                 | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar na página de filtro de produto<br>  5) Digitar produto desejado no campo de busca<br>|   
 | Critérios de Êxito     | A página deve apresentar a lista do produto solicitado na busca|
-
-## Caso de Insucesso
 
 | Caso de Teste          | CT-05 - Pesquisa de produto não encontrado no filtro |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
