@@ -1,3 +1,20 @@
+.section {
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.centro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
 .carrinho-lista {
     height: 100%;
     width: 100%;
@@ -10,31 +27,60 @@
     align-items: flex-start;
     flex-direction: column;
 }
-.section {
-    background-color: var(--cinza-claro);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.centro {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 40px;
-    margin: 65px;
+
+.carrinho-head h1 {
+    margin-bottom: 10px;
 }
 
-.coluna-direita {
-    display: inline-block;
+.carrinho-itens {
+    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 40px;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
 
     width: 100%;
-    height: 100%px;
+    height: 100%;
+}
+
+.card-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--amarelo-primario);
+    padding-bottom: 20px;
+
+}
+
+.card-item img {
+    width: 100%;
+    max-width: 145px;
+
+
+}
+
+.card-item p {
+    color: #36C534;
+
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-danger {
+    background-color: var(--branco);
+}
+
+button.link {
+    background: none;
+    border: none;
+    font-size: 20px;
 }
 
 .fechar-lista {
@@ -56,74 +102,9 @@
 
 
     width: 100%;
-    height: 576px;
+    height: 100%;
 
     background: #FFFFFF;
     border-radius: 12px;
 }
 
-.carrinho-itens {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    gap: 20px;
-    margin-top: 25px;
-
-    width: 100%;
-    height: 100%;
-}
-
-.imagem-produto {
-    height: 145px;
-    width: 145px;
-    left: 19px;
-}
-
-.produto {
-    width: 100%;
-    display: flex;
-    margin-top: 10px;
-    border-bottom: 2px solid var(--amarelo-primario);
-}
-
-.info-produto {
-    margin-left: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.info-produto-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
-
-.quantidade-input {
-    width: 35px;
-    height: 35px;
-    border-radius: 12px;
-    border: 1px solid var(--cinza);
-    background-color: var(--cinza-claro);
-    text-align: center;
-}
-
-.imagem-sugestao {
-    width: 100px;
-    height: 100px;
-}
-
-.btn-danger{
-    border: none;
-}
-
-.produto-titulo {
-
-}
-
-button.link {
-    background: none;
-    border: none;
-    font-size: 20px;
-}
