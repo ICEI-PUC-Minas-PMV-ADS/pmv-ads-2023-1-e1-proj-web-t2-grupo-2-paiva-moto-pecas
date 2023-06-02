@@ -43,21 +43,12 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |:---:	|:---:	|
 | Imagem | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso.jpg"/> |
 |	Requisito Associado 	| RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características |
-| Avaliação 	|Filtro de busca exibe nenhum produto encontrado |
+| Avaliação 	|✅ Filtro de busca funciona corretamente |
 |  	|  	|
 
 **Caso de Teste** 	| **CT-07 - Pesquisa de produto não encontrado no filtro** 	|
 |:---:	|:---:	|
 | Imagem | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso%20filtros.jpg"/> |
 |	Requisito Associado 	| RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características |
-| Avaliação 	| Filtro de busca exibe nenhum produto encontrado|
+| Avaliação 	| ✅ Filtro de busca funciona corretamente|
 |  	|  	|
-
-
-## Avaliação
-
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-> **Links Úteis**:
->
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
