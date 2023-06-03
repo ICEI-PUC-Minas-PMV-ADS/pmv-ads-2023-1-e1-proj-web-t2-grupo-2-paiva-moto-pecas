@@ -10,11 +10,17 @@ rodape();
 preencherElem();
 botaoWpp();
 
-const produtoIndividual = document.getElementById("container-produto");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const produtos = urlParams.get("produtos");
 const listagemProdutos = document.querySelector("#listagem-produtos");
-products.length = 4;
-products.sort(() => Math.random() - 0.5);
-products.map((product) => {
+const filtrarCard = products.filter((product)=>{
+  return product.picture !== produtos
+})
+
+filtrarCard.sort(() => Math.random() - 0.5);
+filtrarCard.length = 4;
+filtrarCard.map((product) => {
   listCards(
     product.picture,
     product.name,
@@ -23,3 +29,5 @@ products.map((product) => {
     "produtos"
   );
 });
+
+
