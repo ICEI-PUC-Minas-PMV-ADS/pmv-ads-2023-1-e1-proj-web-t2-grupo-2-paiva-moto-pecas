@@ -4,6 +4,7 @@ import { menu } from "../components/menu.js";
 import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
 import { preencherElem } from "../base.js";
+import { servicos } from "../database/serviços/servicos-db.js";
 
 menu();
 rodape();
@@ -13,21 +14,30 @@ botaoWpp();
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const produtos = urlParams.get("produtos");
-const listagemProdutos = document.querySelector("#listagem-produtos");
-const filtrarCard = products.filter((product)=>{
-  return product.picture !== produtos
+const servicosurl = urlParams.get("serviços");
+
+function selecionarListCards(database, urlParams, directory){
+  const listagemProdutos = document.querySelector("#listagem-produtos");
+const filtrarCard = database.filter((item)=>{
+  return item.picture !== urlParams
 })
 
 filtrarCard.sort(() => Math.random() - 0.5);
 filtrarCard.length = 4;
-filtrarCard.map((product) => {
+filtrarCard.map((item) => {
   listCards(
-    product.picture,
-    product.name,
-    product.presentation,
+    item.picture,
+    item.name,
+    item.presentation,
     listagemProdutos,
-    "produtos"
+    directory
   );
 });
+}
 
+if (!servicosurl) {
+ selecionarListCards(products, produtos, "produtos")
+} else if (!produtos) {
+  selecionarListCards(servicos, servicosurl, "serviços")
+}
 
