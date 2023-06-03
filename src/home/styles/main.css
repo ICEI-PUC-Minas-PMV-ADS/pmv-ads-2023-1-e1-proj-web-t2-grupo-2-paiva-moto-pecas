@@ -15,11 +15,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .banner-principal svg {
-  /* height: fit-content; */
   position: absolute;
   top: 32px;
 }
