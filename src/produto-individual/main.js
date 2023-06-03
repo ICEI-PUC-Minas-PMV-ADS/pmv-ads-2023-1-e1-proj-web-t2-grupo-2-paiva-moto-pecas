@@ -10,6 +10,7 @@ rodape();
 preencherElem();
 botaoWpp();
 
+const produtoIndividual = document.getElementById("container-produto");
 const listagemProdutos = document.querySelector("#listagem-produtos");
 products.length = 4;
 products.sort(() => Math.random() - 0.5);
@@ -22,5 +23,3 @@ products.map((product) => {
     "produtos"
   );
 });
-
-// conferir produtos aleatórios
