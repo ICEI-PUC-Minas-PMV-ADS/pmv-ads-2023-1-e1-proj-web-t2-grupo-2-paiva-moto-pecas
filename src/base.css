@@ -23,13 +23,35 @@ nav {
   background-color: var(--amarelo-primario);
 }
 
-nav ul {
+.nav-menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+}
+
+nav ul {
+  display: none;
   justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 32px;
   list-style: none;
-  flex-wrap: wrap;
-  gap: 20px;
+  width: 100%;
+  max-height: 500px;
+}
+
+nav ul.active {
+  display: flex;
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  background: var(--amarelo-primario);
 }
 
 nav ul li:nth-child(n) {
@@ -41,19 +63,15 @@ nav ul li:nth-child(n):hover {
   background: var(--amarelo-secundario);
 }
 
-nav ul li:first-child {
-  padding: 0;
-}
-
-nav ul li:first-child:hover {
-  background: none;
-}
-
 nav ul li a {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--preto);
+}
+
+nav ul li a svg {
+  height: 20px;
 }
 
 a {
@@ -234,6 +252,25 @@ footer a {
   color: var(--branco);
 }
 
+@media (min-width: 1000px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-container .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 80em) {
   section,
   footer {
@@ -244,10 +281,6 @@ footer a {
     padding: 0 72px;
     max-width: 80em;
     margin: 0 auto;
-  }
-
-  nav ul {
-    justify-content: space-between;
   }
 
   h1,
