@@ -4,8 +4,7 @@ export function botaoWpp(content) {
   const wppNumber = "5511999999999";
 
   btnWpp.innerHTML = `
-  <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content 
-  ? content.map((item) => { return `*Nome*: ${item.name}, *Apresentação*: ${item.presentation} %0A` }) : ''}"  
+  <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:"  
   target="_blank" rel="noopener noreferrer"
           ><svg
             width="50"

@@ -36,10 +36,8 @@ export function filter(database, assets) {
             } else if (searchValue.length >= 2) {
                 return searchMatch
             }
-
             // return true
         })
-
         return filteredItems
     }
 
@@ -53,10 +51,10 @@ export function filter(database, assets) {
                     ? 'produto'
                     : 'serviço'} 
                             encontrado</p>`
-            } else{
+            } else {
                 initialSection(database, assets)
             }
-           
+
         } else {
             filteredItems.forEach(item => {
                 const { picture, name, presentation } = item
@@ -87,7 +85,7 @@ export function filter(database, assets) {
     9.99994L0 18.6792L1.32085 19.9999L10 11.3207L18.6792 19.9999L20 18.6792L11.3208 
     9.99994L20 1.32073Z" fill="black"/> `
 
-    if (inputSearch.value.length === 0) {           
+    if (inputSearch.value.length === 0) {
         iconSearchBar.innerHTML = svgLupa
     }
 
@@ -96,15 +94,15 @@ export function filter(database, assets) {
         if (inputSearch.value.length === 0) {
             suggestionsOptions = []
             containerPersonalDatalist.innerHTML = ''
-            containerPersonalDatalist.style.display = 'none'   
+            containerPersonalDatalist.style.display = 'none'
             iconSearchBar.style.marginTop = '0px'
-            iconSearchBar.innerHTML = svgLupa          
-        } else {            
+            iconSearchBar.innerHTML = svgLupa
+        } else {
             iconSearchBar.innerHTML = svgX
             iconSearchBar.style.cursor = 'pointer'
             iconSearchBar.style.marginTop = '8px'
             const clearInputSearch = (() => {
-                iconSearchBar.addEventListener('click', () => {                    
+                iconSearchBar.addEventListener('click', () => {
                     inputSearch.value = ''
                     iconSearchBar.innerHTML = ''
                     iconSearchBar.style.cursor = 'default'

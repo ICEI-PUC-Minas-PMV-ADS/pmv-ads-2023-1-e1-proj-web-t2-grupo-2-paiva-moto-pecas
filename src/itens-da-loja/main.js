@@ -27,13 +27,14 @@ import { filter } from "./components/filter.js";
   rodape();
   pageshow(database, assets);
   const title = document.querySelector("title");
+  const buttonsChangePage = document.querySelector("#buttonsChangePage");
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
 
   function setSector(button, sectorDB, optionsSector){  
     if (database !== sectorDB) {
       button.addEventListener("click", () => {
-        title.innerText = `Paiva Moto Peças | ${database[0].sector}s`;
+        title.innerText = `Paiva Moto Peças | ${sectorDB[0].sector}s`;
         const dynamicServicesButton = button === productsButton ? servicesButton : productsButton;
         const dynamicProductsButton = button === productsButton ? productsButton : servicesButton;
 
@@ -47,7 +48,6 @@ import { filter } from "./components/filter.js";
   setSector(productsButton, products, OptionsWithoutSpacesProducts)
 
 })(products, OptionsWithoutSpacesProducts, "produtos");
-
 
 
 
