@@ -22,10 +22,10 @@ As telas do sistema são apresentadas em detalhes nos itens que se seguem. As te
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-estrutura.jpg?raw=true" />
 Figura 3 - Estrutura padrão do site
 
-### Tela - Home-Page
+### Tela - Home/Página inicial
 
-A tela de home page apresenta os produtos e serviços em destaque, assim como os depoimentos de clientes e o mapa para localização.
-O bloco de Cabeçalho traz o menu fixo para navegação. O bloco de rodapé contém as informações fixas de horário de funcionamento, endereço e telefone para contato. O bloco de conteúdo é dividido da seguinte forma:
+A tela inicial apresenta os produtos e serviços em destaque, assim como os depoimentos de clientes e o mapa para localização.
+O bloco de cabeçalho traz o menu fixo para navegação. O bloco de rodapé contém as informações fixas de horário de funcionamento, endereço e telefone para contato. O bloco de conteúdo é dividido da seguinte forma:
 
 - Banner: contém logo e slogan;
 - Produtos em destaque;
@@ -33,8 +33,8 @@ O bloco de Cabeçalho traz o menu fixo para navegação. O bloco de rodapé cont
 - Depoimentos de clientes;
 - Mapa com a localização exata da loja.
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-home-page.jpg?raw=true" />
-Figura 4 - Tela Home-Page
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-home.jpg?raw=true" />
+Figura 4 - Tela Home/Página inicial
 
 ### Tela - Sobre
 
@@ -43,54 +43,33 @@ A tela de sobre traz informações sobre a história da empresa, assim como dos 
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-sobre.jpg?raw=true" />
 Figura 5 - Tela Sobre
 
-### Tela - Produtos
+### Tela - Produtos/Serviços
 
-A tela de produtos apresenta todos os produtos disponíveis e traz dois
-elementos distintos:
+A tela de produtos e serviços apresenta todos os produtos/serviços disponíveis e traz dois elementos distintos:
 
-- Componente de pesquisa que permite substituir o conteúdo da página com o
-  resultado da busca solicitada pelo usuário;
+- Componente de pesquisa que permite substituir o conteúdo da página com o resultado da busca solicitada pelo usuário;
 - Componente de filtro que permite ao usuário direcionar a busca a categorias específicas.
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-produtos.jpg?raw=true" />
-Figura 6 - Tela Produtos
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-produtos-servicos.jpg?raw=true" />
+Figura 6 - Tela Produtos/Serviços
 
-### Tela - Serviços
+### Tela - Item Específico
 
-A tela de serviços apresenta todos os serviços disponíveis e traz dois
-elementos distintos:
+A tela de item específico apresenta detalhes do produto ou serviço selecionado e abaixo uma seção de sugestões acompanhado de um botão para que o usuário seja redirecionado a página de itens da loja.
 
-- Componente de pesquisa que permite substituir o conteúdo da página com o
-  resultado da busca solicitada pelo usuário;
-- Componente de filtro que permite ao usuário direcionar a busca a categorias específicas.
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-item-individual.jpg?raw=true" />
+Figura 7 - Tela Item Específico
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-servi%C3%A7os.jpg?raw=true" />
-Figura 7 - Tela Serviços
+### Tela - FAQ & Contato
 
-### Tela - Produto Específico
+A tela de FAQ & Contato apresenta dúvidas frequentes de usuários acompanhado de um formulário para criação de um orçamento e/ou espaço para tirar dúvidas.
 
-A tela de Produto Específico apresenta detalhes do produto e um botão para que o usuário seja redirecionado a página de contato.
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-faq-contato?raw=true" />
+Figura 8 - Tela de FAQ & Contato
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-produto.jpg?raw=true" />
-Figura 8 - Tela Produto Específico
+### Tela - Lista de Desejos
 
-### Tela - Serviço Específico
+A tela lista de desejos apresenta todos os produtos e/ou serviços selecionados pelo usuário. Na lateral também sugere outros itens que pode ser do interesse do cliente.
 
-A tela de Serviço Específico apresenta detalhes do produto e um botão para que o usuário seja redirecionado a página de contato.
-
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-servi%C3%A7o.jpg?raw=true" />
-Figura 9 - Tela Serviço Específico
-
-### Tela - Contato
-
-A tela de contato apresenta um formulário para criação de um orçamento e/ou espaço para tirar dúvidas.
-
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-contato.jpg?raw=true" />
-Figura 10 - Tela de Contato
-
-### Tela - Carrinho
-
-A tela do carrinho apresenta todos os produtos e/ou serviços selecionados.
-
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-carrinho.jpg?raw=true" />
-Figura 11 - Tela do Carrinho
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-lista-desejos.jpg?raw=true" />
+Figura 9 - Tela Lista de Desejos

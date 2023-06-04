@@ -12,11 +12,11 @@ Nesta etapa, desenvolvemos a metodologia do projeto que é dividido em cinco spr
 
 ## Etapa 3
 
-Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, produtos, produto individual, serviços, serviço individual, carrinho, contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, criação das páginas utilizando as linguagens HTML e CSS e seu versionamento no GitHub.
+Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, produtos/serviços, item individual, lista de desejos, FAQ/contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, criação das páginas utilizando as linguagens HTML, CSS e JavaScript e seu versionamento no GitHub.
 
 ## Etapa 4
 
-Aperfeiçoamento e ajustes das funcionalidades das páginas, elaboração de plano de teste de software exibindo casos de sucesso e insucesso e registro de teste de software.
+Aperfeiçoamento e ajustes das funcionalidades das páginas, elaboração de planos de teste de software exibindo casos de sucesso e insucesso e seus registros de teste de software.
 
 ## Relação de Ambientes de Trabalho
 
@@ -55,6 +55,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 - Done: essa lista indica que uma tarefa foi concluída após passar pelos testes necessários e ser aprovada pelo cliente.
 
 O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível através desta URL e é apresentado, no estado atual, na Figura 1.
+<br>
 <br>
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-kanban.jpg?raw=true" />
 <br>

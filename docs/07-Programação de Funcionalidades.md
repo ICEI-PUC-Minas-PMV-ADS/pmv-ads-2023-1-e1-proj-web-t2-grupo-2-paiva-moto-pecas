@@ -2,15 +2,15 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="03-Metodologia.md"> Metodologia</a>, <a href="04-Projeto de Interface.md"> Projeto de Interface</a>, <a href="05-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
-Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema. O respectivo endereço (URL) e outras orientações de acesso são apresentadas na sequência.
+Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema.
 
 ## Menu
 
-Todas as telas do site apresentam o menu com as seguintes informações: A logo que leva para a página inicial e links que levam para as páginas de produtos, serviços, contato, sobre e lista de desejos - facilitando a navegação do usuário. Estruturamos o css geral das telas em um arquivo base e um outro arquivo css individual para estilizações específicas de cada página. Um exemplo da tela é apresentado na Figura 25.
+Todas as telas do site apresentam o menu com as seguintes informações: A logo que leva para a página inicial e links que levam para as páginas de produtos/serviços, faq & contato, sobre e lista de desejos - facilitando a navegação do usuário. Estruturamos o css geral das telas em um arquivo base e um outro arquivo css individual para estilizações específicas de cada página. Um exemplo da tela é apresentado na Figura 24.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/banner-principal.jpg?raw=true" />
 
-Figura 25 - Menu desenvolvido
+Figura 24 - Menu desenvolvido
 
 ### Requisitos atendidos
 
@@ -19,9 +19,10 @@ Figura 25 - Menu desenvolvido
 ### Artefatos da funcionalidade
 
 - index.html
-- script.js
+- main.js
 - base.css
 - main.css
+- base.js
 
 ## Banner principal
 
@@ -29,7 +30,7 @@ Banner da página principal chamando a atenção para a logo da oficina.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/banner-principal.jpg?raw=true" />
 
-Figura 26 - Banner desenvolvido
+Figura 25 - Banner desenvolvido
 
 ### Requisitos atendidos
 
@@ -48,7 +49,7 @@ Nesta seção temos o depoimento de um cliente fictício.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/depoimento.jpg?raw=true" />
 
-Figura 27 -Depoimento desenvolvido
+Figura 26 -Depoimento desenvolvido
 
 ### Requisitos atendidos
 
@@ -66,7 +67,7 @@ Iframe do google maps incorporado no mapa para facilitar a navegação do usuár
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/mapa.jpg?raw=true" />
 
-Figura 28 - mapa desenvolvido
+Figura 27 - Mapa desenvolvido
 
 ### Requisitos atendidos
 
@@ -84,7 +85,7 @@ Todas as telas do site apresentam o rodapé com as seguintes informações: ende
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/rodape.jpg?raw=true" />
 
-Figura 29 - rodapé desenvolvido
+Figura 28 - Rodapé desenvolvido
 
 ### Requisitos atendidos
 
@@ -102,7 +103,7 @@ Botão fixo na tela em todas as páginas que leva para o WhatsApp web da oficina
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/rodape.jpg?raw=true" />
 
-Figura 30 - botão desenvolvido
+Figura 29 - Botão WhatsApp desenvolvido
 
 ### Requisitos atendidos
 
@@ -113,15 +114,15 @@ Figura 30 - botão desenvolvido
 - index.html
 - base.css
 - main.css
-- script.js
+- main.js
 
 ## História da empresa
 
 Seção que contém história da empresa e seus funcionários.
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/secao-sobre.JPG" />
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/secao-sobre.jpg" />
 
-Figura 31 - Tela sobre desenvolvida
+Figura 30 - Tela sobre desenvolvida
 
 ### Requisitos atendidos
 
@@ -138,9 +139,9 @@ Figura 31 - Tela sobre desenvolvida
 
 Seção que contém os produtos e serviços oferecidos pela oficina.
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/mostruario.png" />
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/mostruario.jpg" />
 
-Figura 32 - Tela produtos e serviços.
+Figura 31 - Tela produtos e serviços
 
 ### Requisitos atendidos
 
@@ -158,9 +159,9 @@ Figura 32 - Tela produtos e serviços.
 
 Seção que contém os produtos e serviços oferecidos pela oficina.
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/filter.png" />
+<img height="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/filter.jpg" />
 
-Figura 33 - Tela produtos e serviços.
+Figura 32 - Tela produtos e serviços
 
 ### Requisitos atendidos
 
@@ -181,9 +182,9 @@ Figura 33 - Tela produtos e serviços.
 
 Seção que contém os produtos e serviços oferecidos pela oficina.
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/search.png" />
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/search.jpg" />
 
-Figura 34 - Tela produtos e serviços.
+Figura 33 - Tela produtos e serviços
 
 ### Requisitos atendidos
 
@@ -198,13 +199,13 @@ Figura 34 - Tela produtos e serviços.
 - search.js
 - main.js
 
-## Produto Individual
+## Item Individual
 
-Tela específica que mostra produto do site de modo individual.
+Tela específica que mostra produto ou serviço do site de modo individual.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-prod-individual.jpg" />
 
-Figura 35 - Tela produto individual.
+Figura 34 - Tela item individual
 
 ### Requisitos atendidos
 
@@ -223,11 +224,11 @@ Tela que contém FAQ, exibindo perguntas e respostas tirando as principais dúvi
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/faq.jpg" />
 
-Figura 36 - Tela FAQ.
+Figura 35 - Tela FAQ
 
 ### Requisitos atendidos
 
-- RF-08 - O site deve conter perguntas frequentes (faq)
+- RF-08 - O site deve conter perguntas frequentes (faq).
 
 ### Artefatos da funcionalidade
 
@@ -236,14 +237,13 @@ Figura 36 - Tela FAQ.
 - main.css
 - main.js
 
-
 ## Formulário de Contato
 
-Seção de contato, exibindo formulário com informações dos usuários e envio das dúvidas para oficina. 
+Seção de contato, exibindo formulário com informações dos usuários e envio das dúvidas para a oficina.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/formulario.jpg" />
 
-Figura 37 - Tela Formulário.
+Figura 36 - Tela Formulário
 
 ### Requisitos atendidos
 
