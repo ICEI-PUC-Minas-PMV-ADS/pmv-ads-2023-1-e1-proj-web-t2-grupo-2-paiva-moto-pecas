@@ -4,8 +4,9 @@ import { botaoWpp } from '../components/botao-wpp.js'
 import { AdicionaAlista} from '../base.js'
 import { listCards } from "../components/list-cards.js";
 import { products } from "../database/produtos/produtos-db.js";
+import { CartItems } from '../base.js';
 
-AdicionaAlista()
+AdicionaAlista(CartItems)
 menu()
 rodape()
 botaoWpp()
@@ -32,3 +33,41 @@ products.map((product) => {
     "produtos"
   );
 });
+
+
+var listaDeDesejo = localStorage.getItem('lista');
+var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
+// faça um loop que passe por todo a lista e gere um html.inner pra cada item
+
+// Passo 2: Obtenha o elemento HTML onde você deseja exibir os itens da lista
+var listaContainer = document.getElementById('carrinho-itens');
+
+// Passo 3: Percorra a lista e gere elementos HTML para cada item
+lista.forEach(function(item) {
+  // Crie um novo elemento HTML
+  var itemElement = document.createElement("div");
+  itemElement.classList.add("card-item");
+  
+  // Defina o conteúdo do elemento com base nas propriedades do item
+  itemElement.innerHTML = `
+  <div class="card-info">
+  <img src="../database/produtos/assets/${item.picture}.png">
+  <div>
+    <h2 class="titulo-pequeno">${item.name}</h2>
+    <p>Em estoque</p>
+  </div>
+  </div>
+  <button class="btn-danger">
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">
+      <path d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 
+      0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 
+      26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"/></svg>
+  </button>
+</div>`;
+  
+  // Adicione o elemento ao container
+  listaContainer.appendChild(itemElement);
+
+});
+
+

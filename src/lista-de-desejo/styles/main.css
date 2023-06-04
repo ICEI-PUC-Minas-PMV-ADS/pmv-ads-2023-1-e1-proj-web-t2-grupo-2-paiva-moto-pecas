@@ -32,7 +32,7 @@
     margin-bottom: 10px;
 }
 
-.carrinho-itens {
+#carrinho-itens {
     display: flex;
     flex-direction: column;
     justify-content: left;

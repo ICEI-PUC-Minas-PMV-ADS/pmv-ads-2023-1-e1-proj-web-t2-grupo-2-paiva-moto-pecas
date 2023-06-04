@@ -43,7 +43,8 @@ export function preencherElem() {
 
 // SCRIPT LISTA DE DESEJO
 export function AdicionaAlista() {
-  const CartItems = []
+  var listaDeDesejo = localStorage.getItem('lista');
+  var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
 
   const addToCartButtons = document.querySelectorAll('.add-button')
   for (let i = 0; i < addToCartButtons.length; i++) {
@@ -62,11 +63,13 @@ export function AdicionaAlista() {
       }
       else {
         CartItems.push(produto)
+        localStorage.setItem("lista",JSON.stringify(CartItems))
         console.log(CartItems)
       }
     }
     )
-  }
+  }  
 
 }
 
+export const CartItems = []
