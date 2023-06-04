@@ -39,7 +39,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |      Avaliação      |                                                                        ✅ Filtro de busca funciona corretamente                                                                        |
 |                     |                                                                                                                                                                                        |
 
-|  **Caso de Teste**  |                                                           **CT-06 – Pesquisa de produto não encontrado no filtro**                                                           |
+|  **Caso de Teste**  |                                                           **CT-06 – Pesquisa de produto não encontrado na busca**                                                            |
 | :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso.jpg"/> |
 | Requisito Associado |            RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características            |
