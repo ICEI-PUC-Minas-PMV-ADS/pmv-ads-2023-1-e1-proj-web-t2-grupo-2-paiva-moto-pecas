@@ -64,7 +64,7 @@ Figura 7 - Tela Item Específico
 
 A tela de FAQ & Contato apresenta dúvidas frequentes de usuários acompanhado de um formulário para criação de um orçamento e/ou espaço para tirar dúvidas.
 
-<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-faq-contato?raw=true" />
+<img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/wireframe-faq-contato.jpg?raw=true" />
 Figura 8 - Tela de FAQ & Contato
 
 ### Tela - Lista de Desejos
