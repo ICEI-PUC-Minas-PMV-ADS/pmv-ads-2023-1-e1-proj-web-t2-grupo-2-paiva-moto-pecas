@@ -85,7 +85,6 @@
 }
 
 #store {
-  padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -225,5 +224,8 @@
   #div-main {
     flex-direction: unset;
     align-items: flex-start;
+  }
+  #store {
+    padding: 0 40px;
   }
 }
