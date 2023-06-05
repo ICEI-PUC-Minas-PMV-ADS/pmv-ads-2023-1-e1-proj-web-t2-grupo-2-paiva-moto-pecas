@@ -37,21 +37,16 @@ products.map((product) => {
 
 var listaDeDesejo = localStorage.getItem('lista');
 var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
-// faça um loop que passe por todo a lista e gere um html.inner pra cada item
-
-// Passo 2: Obtenha o elemento HTML onde você deseja exibir os itens da lista
 var listaContainer = document.getElementById('carrinho-itens');
 
-// Passo 3: Percorra a lista e gere elementos HTML para cada item
 lista.forEach(function(item) {
-  // Crie um novo elemento HTML
   var itemElement = document.createElement("div");
   itemElement.classList.add("card-item");
   
-  // Defina o conteúdo do elemento com base nas propriedades do item
+
   itemElement.innerHTML = `
   <div class="card-info">
-  <img src="../database/produtos/assets/${item.picture}.png">
+  <img src="../database/${servicosurl ? "serviços" : "produtos"}/assets/${item.picture}.png">
   <div>
     <h2 class="titulo-pequeno">${item.name}</h2>
     <p>Em estoque</p>
