@@ -28,20 +28,20 @@ Pedro é dono de uma oficina de motos há 3 anos e acredita que o bom relacionam
 
 A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários.
 
-| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                          | PARA ... `MOTIVO/VALOR`                                                        |
-| -------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Bruna Silva          | quero conseguir ser atendida pelo WhatsApp                                  | para conseguir tirar minhas dúvidas e conseguir me sentir segura para a compra |
-| Bruna Silva          | quero poder ver a lista de serviços e produtos disponíveis                  | para que eu possa escolher o que eu preciso                                    |
-| Bruna Silva          | quero ver os horários de funcionamento da oficina                           | para que eu possa me planejar para ir até lá                                   |
-| Bruna Silva          | quero ver mídias dos produtos e serviços                                    | para que eu possa ter certeza do que estou comprando                           |
-| Bruna Silva          | quero conseguir filtrar os produtos por marca, categoria, tipo e relevância | para facilitar a minha busca                                                   |
-| Bruna Silva          | quero poder realizar buscas por texto                                       | para que eu possa encontrar o que eu quero com facilidade e rapidez            |
-| Bruna Silva          | quero ter informações técnicas sobre os produtos e serviços                 | para que eu possa avaliar previamente minha compra                             |
-| Pedro Ribeiro        | quero que o cliente consiga chegar até minha oficina com facilidade         | para que ele não deixe de comprar pela dificuldade de se localizar             |
-| Pedro Ribeiro        | quero que o cliente possa conhecer mais sobre a oficina                     | para que o cliente se sinta seguro na compra                                   |
-| Pedro Ribeiro        | quero que o site mostre, com destaque, o nome e logotipo da oficina         | para que o cliente consiga identificar com facilidade nossa oficina            |
-| Pedro Ribeiro        | quero que meus clientes consigam tirar suas dúvidas de maneira rápida       | para que não tenham dúvidas na hora da compra                                  |
-| Pedro Ribeiro        | quero que meus clientes possam entrar em contato com a oficina              | para que consigam fazer orçamentos e tirar dúvidas                             |
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                    | PARA ... `MOTIVO/VALOR`                                                        |
+| -------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Bruna Silva          | quero conseguir ser atendida pelo WhatsApp                            | para conseguir tirar minhas dúvidas e conseguir me sentir segura para a compra |
+| Bruna Silva          | quero poder ver a lista de serviços e produtos disponíveis            | para que eu possa escolher o que eu preciso                                    |
+| Bruna Silva          | quero ver os horários de funcionamento da oficina                     | para que eu possa me planejar para ir até lá                                   |
+| Bruna Silva          | quero ver mídias dos produtos e serviços                              | para que eu possa ter certeza do que estou comprando                           |
+| Bruna Silva          | quero conseguir filtrar os produtos por marca e categoria             | para facilitar a minha busca                                                   |
+| Bruna Silva          | quero poder realizar buscas por texto                                 | para que eu possa encontrar o que eu quero com facilidade e rapidez            |
+| Bruna Silva          | quero ter informações técnicas sobre os produtos e serviços           | para que eu possa avaliar previamente minha compra                             |
+| Pedro Ribeiro        | quero que o cliente consiga chegar até minha oficina com facilidade   | para que ele não deixe de comprar pela dificuldade de se localizar             |
+| Pedro Ribeiro        | quero que o cliente possa conhecer mais sobre a oficina               | para que o cliente se sinta seguro na compra                                   |
+| Pedro Ribeiro        | quero que o site mostre, com destaque, o nome e logotipo da oficina   | para que o cliente consiga identificar com facilidade nossa oficina            |
+| Pedro Ribeiro        | quero que meus clientes consigam tirar suas dúvidas de maneira rápida | para que não tenham dúvidas na hora da compra                                  |
+| Pedro Ribeiro        | quero que meus clientes possam entrar em contato com a oficina        | para que consigam fazer orçamentos e tirar dúvidas                             |
 
 ## Requisitos
 
