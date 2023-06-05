@@ -45,6 +45,7 @@ export function preencherElem() {
 export function adicionaAlista() {
   var listaDeDesejo = localStorage.getItem('lista');
   var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
+  console.log(CartItems)
 
   const addToCartButtons = document.querySelectorAll('.add-button')
   for (let i = 0; i < addToCartButtons.length; i++) {
@@ -71,15 +72,17 @@ export function adicionaAlista() {
           return servico.picture === produtoIndex;
         })};
 
-
-        if (CartItems.includes(produto)) {
-          return
+        // ve se o produto ja esta na lista, se tiver, nao adiciona
+        var produtoJaEstaNaLista = CartItems.find((item) => {
+          return item.name === produto.name
         }
-        else {
+        );
+        if(!produtoJaEstaNaLista){
           CartItems.push(produto)
           localStorage.setItem("lista", JSON.stringify(CartItems))
           console.log(CartItems)
         }
+        
       }
     )
   }
