@@ -1,17 +1,15 @@
 import { menu } from '../components/menu.js'
 import { rodape } from '../components/rodape.js'
 import { botaoWpp } from '../components/botao-wpp.js'
-import { AdicionaAlista} from '../base.js'
+import { adicionaAlista} from '../base.js'
 import { listCards } from "../components/list-cards.js";
 import { products } from "../database/produtos/produtos-db.js";
-import { CartItems } from '../base.js';
 
-AdicionaAlista(CartItems)
+adicionaAlista()
 menu()
 rodape()
 botaoWpp()
 
-// script apaga item da lista
 const removeCartItemButtons = document.querySelectorAll('.btn-danger')
 for (let i = 0; i < removeCartItemButtons.length; i++) {
     const button = removeCartItemButtons[i]
@@ -46,7 +44,7 @@ lista.forEach(function(item) {
 
   itemElement.innerHTML = `
   <div class="card-info">
-  <img src="../database/${servicosurl ? "serviços" : "produtos"}/assets/${item.picture}.png">
+  <img src="../database/${item.sector == "Produto" ? "produtos" : "serviços"}/assets/${item.picture}.png">
   <div>
     <h2 class="titulo-pequeno">${item.name}</h2>
     <p>Em estoque</p>

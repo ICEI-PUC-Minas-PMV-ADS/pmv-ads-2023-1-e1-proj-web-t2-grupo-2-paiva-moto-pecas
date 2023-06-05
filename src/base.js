@@ -42,7 +42,7 @@ export function preencherElem() {
 }
 
 // SCRIPT LISTA DE DESEJO
-export function AdicionaAlista() {
+export function adicionaAlista() {
   var listaDeDesejo = localStorage.getItem('lista');
   var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
 
@@ -51,25 +51,37 @@ export function AdicionaAlista() {
     const button = addToCartButtons[i]
     button.addEventListener('click', function (event) {
       var buttonEvent = event.target
+
       var produtoIndex = window.location.search.split('=')[1]
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const produtos = urlParams.get("produtos");
+      const servicosurl = urlParams.get("serviços");
+
       console.log(produtoIndex);
-      var produto = products.find((product) => {
-        return product.picture === produtoIndex;
+
+      if (!servicosurl) {
+
+        var produto = products.find((product) => {
+          return product.picture === produtoIndex;
+        }
+        );
+      } else if (!produtos) {
+        var produto = servicos.find((servico) => {
+          return servico.picture === produtoIndex;
+        })};
+
+
+        if (CartItems.includes(produto)) {
+          return
+        }
+        else {
+          CartItems.push(produto)
+          localStorage.setItem("lista", JSON.stringify(CartItems))
+          console.log(CartItems)
+        }
       }
-      );
-      // verifica se produto ja existe no CartItems, se sim, não adiciona
-      if (CartItems.includes(produto)) {
-        return
-      }
-      else {
-        CartItems.push(produto)
-        localStorage.setItem("lista",JSON.stringify(CartItems))
-        console.log(CartItems)
-      }
-    }
     )
-  }  
+  }
 
 }
-
-export const CartItems = []
