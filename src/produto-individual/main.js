@@ -5,11 +5,13 @@ import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
 import { preencherElem } from "../base.js";
 import { servicos } from "../database/serviços/servicos-db.js";
+import { adicionaAlista } from "../base.js";
 
 menu();
 rodape();
 preencherElem();
 botaoWpp();
+adicionaAlista();
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);

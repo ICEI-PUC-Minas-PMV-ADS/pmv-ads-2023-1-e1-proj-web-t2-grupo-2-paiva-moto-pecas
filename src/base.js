@@ -3,7 +3,6 @@ import { servicos } from "./database/serviços/servicos-db.js";
 
 export function preencherElem() {
   const contElements = document.getElementById("cont-principal");
-  //   const card = document.querySelector(".go-page");
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);

@@ -1,7 +1,6 @@
 import { menu } from "../components/menu.js";
 import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
-import { listCards } from "../components/list-cards.js";
 import { products } from "../database/produtos/produtos-db.js";
 
 const removeCartItemButtons = document.querySelectorAll(".btn-danger");
@@ -32,7 +31,7 @@ var listaDeDesejo = localStorage.getItem("lista");
 var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
 
 const listagemProdutos = document.querySelector(".produtos-listados");
-products.length = 3;
+products.length = 4;
 products.sort(() => Math.random() - 1);
 products.map((product) => {
   listCards(
@@ -46,11 +45,25 @@ products.map((product) => {
 
 var listaContainer = document.getElementById("carrinho-itens");
 
-lista.forEach(function (item) {
-  var itemElement = document.createElement("div");
-  itemElement.classList.add("card-item");
+if (lista.length == 0) {
+  listaContainer.innerHTML = `
+  <div id="carrinho-vazio">
+  <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M61.5391 69.1984C63.2318 67.5057 65.1849 66.6593 67.3984 66.6593C69.612 66.6593 71.5 67.5057 73.0625 69.1984C74.7552 70.8911 75.6016 72.8442 75.6016 75.0577C75.6016 77.2713 74.7552 79.2244 73.0625 80.9171C71.5 82.4796 69.612 83.2609 67.3984 83.2609C65.1849 83.2609 63.2318 82.4796 61.5391 80.9171C59.8464 79.2244 59 77.2713 59 75.0577C59 72.8442 59.8464 70.8911 61.5391 69.1984ZM0.601562 0.0577393H14.2734L18.1797 8.26086H79.8984C81.0703 8.26086 82.0469 8.71659 82.8281 9.62805C83.6094 10.4093 84 11.3859 84 12.5577C84 12.6879 83.8047 13.339 83.4141 14.5109L68.5703 41.464C67.0078 44.3286 64.599 45.7609 61.3438 45.7609H30.2891L26.5781 52.5968L26.3828 53.1827C26.3828 53.8338 26.7083 54.1593 27.3594 54.1593H75.6016V62.5577H25.6016C23.388 62.5577 21.4349 61.7114 19.7422 60.0187C18.1797 58.326 17.3984 56.3728 17.3984 54.1593C17.3984 52.8572 17.724 51.5551 18.375 50.2531L24.0391 39.9015L9 8.26086H0.601562V0.0577393ZM19.7422 69.1984C21.4349 67.5057 23.388 66.6593 25.6016 66.6593C27.8151 66.6593 29.7682 67.5057 31.4609 69.1984C33.1536 70.8911 34 72.8442 34 75.0577C34 77.2713 33.1536 79.2244 31.4609 80.9171C29.7682 82.4796 27.8151 83.2609 25.6016 83.2609C23.388 83.2609 21.4349 82.4796 19.7422 80.9171C18.1797 79.2244 17.3984 77.2713 17.3984 75.0577C17.3984 72.8442 18.1797 70.8911 19.7422 69.1984Z" fill="#D1D1D1"/>
+</svg>
+    <p>Sua lista de desejos está vazia</p>
+  </div>
+  `;
 
-  itemElement.innerHTML = `
+  document.getElementById("fechar-lista").style.display = "none";
+  document.getElementById("sugestao-produtos").style.marginTop = "0";
+  document.getElementById("link").style.display = "none";
+} else {
+  lista.forEach(function (item) {
+    var itemElement = document.createElement("div");
+    itemElement.classList.add("card-item");
+
+    itemElement.innerHTML = `
   <div class="card-info">
   <img src="../database/${item.sector == "Produto" ? "produtos" : "serviços"
     }/assets/${item.picture}.png">
@@ -71,12 +84,29 @@ lista.forEach(function (item) {
   
 </div>`;
 
-  // Adicione o elemento ao container
-  listaContainer.appendChild(itemElement);
-  itemElement
-    .querySelector(".btn-danger")
-    .addEventListener("click", removeCart);
-});
+    // Adicione o elemento ao container
+    listaContainer.appendChild(itemElement);
+    itemElement
+      .querySelector(".btn-danger")
+      .addEventListener("click", removeCart);
+  });
+}
+
+function listCards(picture, name, presentation, targetTag, directory) {
+  targetTag.innerHTML += `
+  <a href="../produto-individual/index.html?${directory}=${picture}"class="produto-sugerido">
+  <img style="${
+    directory == "serviços" ? "object-fit:cover" : ""
+  }" src="../database/${directory}/assets/${picture}.png" alt="">
+  <div>
+    <h4 class="titulo-pequeno">${name}</h4>
+    <div>
+      <button class="btn btn-amarelo add-button">Adicionar ao carrinho</button>
+    </div>
+  </div>
+</a>
+`;
+}
 
 menu();
 rodape();
