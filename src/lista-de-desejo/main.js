@@ -86,7 +86,8 @@ function whatsappWithCloseList(content) {
   const wppNumber = "5511999999999";
   document.querySelector("#fechar-lista").innerHTML = `
 <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content
-      ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}">
+      ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}" 
+      target="_blank" rel="noopener noreferrer">
 `
 }
 const closeList = JSON.parse(localStorage.getItem("list"));

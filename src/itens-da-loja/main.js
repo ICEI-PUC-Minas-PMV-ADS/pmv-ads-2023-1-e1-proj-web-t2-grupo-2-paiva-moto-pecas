@@ -14,8 +14,6 @@ import {
 import { pageshow } from "./components/pageshow.js";
 import { filter } from "./components/filter.js";
 
-
-
 (function main(database, options, assets) {
   menu();
   initialSection(database, assets);
