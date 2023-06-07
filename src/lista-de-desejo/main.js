@@ -52,9 +52,8 @@ lista.forEach(function (item) {
 
   itemElement.innerHTML = `
   <div class="card-info">
-  <img src="../database/${
-    item.sector == "Produto" ? "produtos" : "serviços"
-  }/assets/${item.picture}.png">
+  <img src="../database/${item.sector == "Produto" ? "produtos" : "serviços"
+    }/assets/${item.picture}.png">
   <div>
     <h2 class="titulo-pequeno">${item.name}</h2>
     <p>Em estoque</p>
@@ -82,3 +81,13 @@ lista.forEach(function (item) {
 menu();
 rodape();
 botaoWpp();
+
+function whatsappWithCloseList(content) {
+  const wppNumber = "5511999999999";
+  document.querySelector("#fechar-lista").innerHTML = `
+<a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content
+      ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}">
+`
+}
+const closeList = JSON.parse(localStorage.getItem("list"));
+whatsappWithCloseList(closeList);
