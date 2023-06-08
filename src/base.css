@@ -21,6 +21,9 @@
 nav {
   padding: 20px 0;
   background-color: var(--amarelo-primario);
+  z-index: 3;
+  position: sticky;
+  width: 100%;
 }
 
 .nav-menu {
@@ -48,10 +51,15 @@ nav ul {
 
 nav ul.active {
   display: flex;
-  position: fixed;
   left: 0;
   z-index: 3;
   background: var(--amarelo-primario);
+  position: absolute;
+}
+
+nav ul.active .menu-container {
+  position: sticky;
+  width: 100%;
 }
 
 nav ul li:nth-child(n) {
@@ -59,7 +67,8 @@ nav ul li:nth-child(n) {
   border-radius: 8px;
 }
 
-nav ul li:nth-child(n):hover {
+nav ul li:nth-child(n):hover,
+nav ul li:nth-child(n):focus-visible {
   background: var(--amarelo-secundario);
 }
 
@@ -181,7 +190,8 @@ a {
   transition: 0.2s ease;
 }
 
-.whatsapp:hover {
+.whatsapp:hover,
+.whatsapp:focus-visible {
   transform: scale(1.05);
 }
 
@@ -196,30 +206,32 @@ a {
   align-items: center;
   gap: 16px;
   background-color: var(--branco);
-  color: var(--preto);
+  transition: 0.3s ease;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
   transform: scale(1.05);
 }
 
-.card span {
-  display: none;
-}
-
 .card img {
-  background-color: var(--branco);
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: contain;
   border-radius: 12px;
 }
 
+.card a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .card h3,
 .card p,
 .card a {
-  width: 100%;
   text-align: center;
+  color: var(--preto);
 }
 
 .faixa-amarela {
