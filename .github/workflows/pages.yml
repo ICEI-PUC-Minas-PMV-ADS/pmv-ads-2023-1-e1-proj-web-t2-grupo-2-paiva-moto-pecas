@@ -16,7 +16,8 @@ jobs:
       - name: Copy files
         run: |
           mkdir -p src/home
-          cp -R base.css base.js src/home/
+          cp base.css src/home/
+          cp base.js src/home/
           cp -R components src/home/
           cp -R contato src/home/
           cp -R database src/home/
