@@ -16,22 +16,22 @@ jobs:
       - name: Copy files
         run: |
           mkdir -p src/home
-          rsync -avz --exclude='.git' src/base.css src/home/
-          rsync -avz --exclude='.git' src/base.js src/home/
-          rsync -avz --exclude='.git' src/components src/home/
-          rsync -avz --exclude='.git' src/contato src/home/
-          rsync -avz --exclude='.git' src/database src/home/
-          rsync -avz --exclude='.git' src/home src/home/
-          rsync -avz --exclude='.git' src/imagens src/home/
-          rsync -avz --exclude='.git' src/itens-da-loja src/home/
-          rsync -avz --exclude='.git' src/lista-de-desejo src/home/
-          rsync -avz --exclude='.git' src/modelo.html src/home/
-          rsync -avz --exclude='.git' src/produto-individual src/home/
-          rsync -avz --exclude='.git' src/README.md src/home/
-          rsync -avz --exclude='.git' src/sobre src/home/
+          rsync -avz --exclude='.git' src/base.css src/
+          rsync -avz --exclude='.git' src/base.js src/
+          rsync -avz --exclude='.git' src/components src/
+          rsync -avz --exclude='.git' src/contato src/
+          rsync -avz --exclude='.git' src/database src/
+          rsync -avz --exclude='.git' src/home src/
+          rsync -avz --exclude='.git' src/imagens src/
+          rsync -avz --exclude='.git' src/itens-da-loja src/
+          rsync -avz --exclude='.git' src/lista-de-desejo src/
+          rsync -avz --exclude='.git' src/modelo.html src/
+          rsync -avz --exclude='.git' src/produto-individual src/
+          rsync -avz --exclude='.git' src/README.md src/
+          rsync -avz --exclude='.git' src/sobre src/
 
       - name: Build and deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: src/home
+          folder: src
