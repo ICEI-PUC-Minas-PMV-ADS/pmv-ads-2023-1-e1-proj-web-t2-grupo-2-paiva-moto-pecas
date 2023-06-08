@@ -14,20 +14,18 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Copy files
-        run: |
-          mkdir -p src/home
-          cp src/base.css src/home/
-          cp src/base.js src/home/
-          cp -R src/components src/home/
-          cp -R src/contato src/home/
-          cp -R src/database src/home/
-          cp -R src/imagens src/home/
-          cp -R src/itens-da-loja src/home/
-          cp -R src/lista-de-desejo src/home/
-          cp -R src/modelo.html src/home/
-          cp -R src/produto-individual src/home/
-          cp -R src/README.md src/home/
-          cp -R src/sobre src/home/
+        run: |          
+          cp src/base.css src
+          cp src/base.js src
+          cp -R src/components src
+          cp -R src/contato src
+          cp -R src/database src
+          cp -R src/imagens src
+          cp -R src/itens-da-loja src
+          cp -R src/lista-de-desejo src
+          cp -R src/modelo.html src
+          cp -R src/produto-individual src        
+          cp -R src/sobre src
 
       - name: Build and deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
