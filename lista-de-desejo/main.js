@@ -31,8 +31,8 @@ var listaDeDesejo = localStorage.getItem("lista");
 var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
 
 const listagemProdutos = document.querySelector(".produtos-listados");
+products.sort(() => Math.random() - 0.5);
 products.length = 4;
-products.sort(() => Math.random() - 1);
 products.map((product) => {
   listCards(
     product.picture,
@@ -112,13 +112,13 @@ menu();
 rodape();
 botaoWpp();
 
-function whatsappWithCloseList(content) {
-  const wppNumber = "5511999999999";
-  document.querySelector("#fechar-lista").innerHTML = `
-<a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content
-      ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}" 
-      target="_blank" rel="noopener noreferrer">
-`
-}
-const closeList = JSON.parse(localStorage.getItem("list"));
-whatsappWithCloseList(closeList);
+// function whatsappWithCloseList(content) {
+//   const wppNumber = "5511999999999";
+//   document.querySelector("#fechar-lista").innerHTML = `
+// <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content
+//       ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}" 
+//       target="_blank" rel="noopener noreferrer">
+// `
+// }
+// const closeList = JSON.parse(localStorage.getItem("list"));
+// whatsappWithCloseList(closeList);
