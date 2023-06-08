@@ -51,7 +51,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 # Hospedagem
 
 - Insira o endereço eletrônico público de acesso ao conteúdo publicado.
-  <a href="/src/home/index.html">Clique aqui</a>
+  <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/">Confira o projeto no GitHub Pages</a>
 
 # Armazenamento do Código-Fonte
 
