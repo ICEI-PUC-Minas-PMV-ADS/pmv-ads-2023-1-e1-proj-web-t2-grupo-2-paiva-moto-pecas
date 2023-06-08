@@ -21,7 +21,6 @@ jobs:
           cp -R src/components src/home/
           cp -R src/contato src/home/
           cp -R src/database src/home/
-          cp -R src/home src/home/
           cp -R src/imagens src/home/
           cp -R src/itens-da-loja src/home/
           cp -R src/lista-de-desejo src/home/
