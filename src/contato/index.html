@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../base.css">
   <link href="./styles/main.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg" />
-  <title>Paiva Moto Peças - Contato</title>
+  <title>Paiva Moto Peças | Contato</title>
 </head>
 
 <body>
@@ -77,52 +77,47 @@
 
           <p>Nos envie sua dúvida que entraremos em contato</p>
 
-          <form>
+          <form id="form" method="POST" action="https://formsubmit.co/contato@paivamotopecas.com" method="POST"
+            target="_blank">
 
             <div class="formulario-identificacao">
               <label>Nome</label>
-              <input type="text" , name="nome" id="nome">
+              <input type="text" , name="nome" id="nome" required>
             </div>
-
 
             <div class="formulario-identificacao">
               <label>E-mail</label>
-              <input type="email" , name="email" id="email">
+              <input type="email" , name="email" id="email" required>
             </div>
-
 
             <div class="formulario-identificacao">
               <label>Telefone</label>
-              <input type="telefone" , name="telefone" id="telefone">
+              <input type="telefone" , name="telefone" id="telefone" required>
             </div>
-
 
             <div class="formulario-identificacao">
               <label>Assunto</label>
               <input type="Assunto" , name="assunto" id="assunto">
             </div>
 
-
             <div class="formulario-identificacao">
               <label>Mensagem</label>
               <textarea rows="15" id="experiencia" name="experiencia"></textarea>
             </div>
 
-
           </form>
-          <button class="btn btn-amarelo" id="botao" type="submit">Enviar</button>
+          <button form="form" class="btn btn-amarelo" id="botao" type="submit" "onsubmit="">Enviar</button>
+          
         </div>
 
       </div>
 
     </section>
-    <div class="faixa-amarela"></div>
+    <div class=" faixa-amarela">
+        </div>
   </main>
 
-  <footer>
-
-  </footer>
-
+  <footer></footer>
   <script type="module" src="./main.js"></script>
 </body>
 
