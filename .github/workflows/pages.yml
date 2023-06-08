@@ -15,8 +15,7 @@ jobs:
 
       - name: Copy files
         run: |          
-          cp src/base.css src
-          cp src/base.js src
+          
           cp -R src/components src
           cp -R src/contato src
           cp -R src/database src
