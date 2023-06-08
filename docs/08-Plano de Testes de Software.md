@@ -43,3 +43,18 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 | Objetivo do Teste     | Verificar por nome específico se filtro funciona normalmente                                                                                                                                      |
 | Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar na página de filtro de produto<br> 5) Digitar produto desejado no campo de busca<br> |
 | Critérios de Êxito    | A página exibe nenhum produto encontrado                                                                                                                                                          |
+
+| Caso de Teste         | CT-06 - Carrinho Cheio                                                                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requisitos Associados | RF-10 - O site deve conter uma página para orçamentos                                           |
+| Objetivo do Teste     | Verificar como a página de lista de desejos se comporta com vários itens.                                                                                                                                      |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar na página de filtro de produto<br> 5) Clicar no botão de adicionar a lista<br> |
+| Critérios de Êxito    | A página computa todos os itens adicionados                                                                                                                                                          |
+
+
+| Caso de Teste         | CT-07 - Carrinho Vazio                                                                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requisitos Associados | RF-10 - O site deve conter uma página para orçamentos                                           |
+| Objetivo do Teste     | Verificar como a página de lista de desejos se comporta vazia.                                                                                                                                      |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone lista de desejo<br> 5) Clicar no botão Remover todos os itens<br> |
+| Critérios de Êxito    | A página apagar todos os itens que estavam adicionados                                                                                                                                                          |
