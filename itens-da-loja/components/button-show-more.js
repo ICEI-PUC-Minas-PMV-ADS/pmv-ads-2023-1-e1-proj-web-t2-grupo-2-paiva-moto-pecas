@@ -1,10 +1,24 @@
-import { checkingCheckboxes } from './lixo/reset-filter.js'
-
 export function showMoreFullDB(database) {
     const button = document.querySelector('#button-show-more')
     const fullDatabase = document.querySelector('#fullDatabase')
     const divsFromFullDatabase = fullDatabase.querySelectorAll('a')
     const inputSearch = document.querySelector('#inputSearch')
+
+    function checkingCheckboxes() {
+        let isChecked = false;
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                isChecked = true;
+                break
+            }
+        }
+        if (!isChecked) {
+            isChecked;
+        }
+        return isChecked;
+    }
 
 
     let showLength = 6;
@@ -41,7 +55,7 @@ export function showMoreFullDB(database) {
                 button.style.opacity = '0'
             }
 
-           
+
 
             if (showLength >= database.length) {
                 button.style.opacity = '0'
