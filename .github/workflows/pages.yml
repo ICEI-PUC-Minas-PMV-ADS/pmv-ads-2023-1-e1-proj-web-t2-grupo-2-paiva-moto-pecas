@@ -1,20 +1,14 @@
-name: GitHub Pages
+name: deploy 
 
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Build and deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: src/home                
+      - uses: actions/checkout@v2
+      - name: Move root to src
+        run: mv * src/home
