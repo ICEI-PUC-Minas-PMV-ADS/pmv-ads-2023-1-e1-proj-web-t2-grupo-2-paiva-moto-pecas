@@ -17,7 +17,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: src
+          folder: src/home
           clean: true                   
           single_commit: false
           enable_jekyll: false
