@@ -1,7 +1,7 @@
 export function showMoreFullDB(database) {
     const button = document.querySelector('#button-show-more')
     const fullDatabase = document.querySelector('#fullDatabase')
-    const divsFromFullDatabase = fullDatabase.querySelectorAll('a')
+    const divsFromFullDatabase = fullDatabase.querySelectorAll('.card')
     const inputSearch = document.querySelector('#inputSearch')
 
     function checkingCheckboxes() {
