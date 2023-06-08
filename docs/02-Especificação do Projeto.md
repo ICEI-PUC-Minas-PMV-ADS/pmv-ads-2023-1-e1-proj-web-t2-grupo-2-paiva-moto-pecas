@@ -37,7 +37,7 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Bruna Silva          | quero conseguir filtrar os produtos por marca e categoria             | para facilitar a minha busca                                                   |
 | Bruna Silva          | quero poder realizar buscas por texto                                 | para que eu possa encontrar o que eu quero com facilidade e rapidez            |
 | Bruna Silva          | quero ter informações técnicas sobre os produtos e serviços           | para que eu possa avaliar previamente minha compra                             |
-| Bruna Silva          | quero poder realizar um orçamento com produtos que desejo do site     | para que eu possa receber um atendimento mais específico                          |
+| Bruna Silva          | quero poder realizar um orçamento com produtos que desejo do site     | para que eu possa receber um atendimento mais específico                       |
 | Pedro Ribeiro        | quero que o cliente consiga chegar até minha oficina com facilidade   | para que ele não deixe de comprar pela dificuldade de se localizar             |
 | Pedro Ribeiro        | quero que o cliente possa conhecer mais sobre a oficina               | para que o cliente se sinta seguro na compra                                   |
 | Pedro Ribeiro        | quero que o site mostre, com destaque, o nome e logotipo da oficina   | para que o cliente consiga identificar com facilidade nossa oficina            |
@@ -63,7 +63,7 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando a
 | RF-07 | O site deve conter a história da empresa, horário de funcionamento e depoimento de clientes sobre a oficina.                                            | BAIXA      |
 | RF-08 | O site deve conter perguntas frequentes (faq)                                                                                                           | BAIXA      |
 | RF-09 | O site deve conter um formulário de contato                                                                                                             | MÉDIA      |
-| RF-10 | O site deve conter uma página para orçamentos                                                                                                           | MÉDIA      |
+| RF-10 | O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp.                            | MÉDIA      |
 
 ### Requisitos não Funcionais
 

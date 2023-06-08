@@ -25,30 +25,44 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |      Avaliação      |                                                                                     ✅ Produtos exibidos com êxito                                                                                      |
 |                     |                                                                                                                                                                                                         |
 
-|  **Caso de Teste**  |                                                                    **CT-04 – Visualizar produto por pesquisa**                                                                     |
+|  **Caso de Teste**  |                                                               **CT-04.1 – Visualizar produto/serviço por pesquisa**                                                                |
 | :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20sucesso%20marca.jpg"/> |
 | Requisito Associado |               RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características               |
 |      Avaliação      |                                                                      ✅ Filtro de busca funciona corretamente                                                                      |
 |                     |                                                                                                                                                                                    |
 
-|  **Caso de Teste**  |                                                                      **CT-05 – Visualizar produto por pesquisa**                                                                       |
+|  **Caso de Teste**  |                                                                 **CT-04.2 – Visualizar produto/serviço por pesquisa**                                                                  |
 | :-----------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20sucesso%20categoria.jpg"/> |
 | Requisito Associado |                 RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características                 |
 |      Avaliação      |                                                                        ✅ Filtro de busca funciona corretamente                                                                        |
 |                     |                                                                                                                                                                                        |
 
-|  **Caso de Teste**  |                                                           **CT-06 – Pesquisa de produto não encontrado na busca**                                                            |
+|  **Caso de Teste**  |                                                           **CT-05 – Pesquisa de produto não encontrado na busca**                                                            |
 | :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso.jpg"/> |
 | Requisito Associado |            RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características            |
 |      Avaliação      |                                                                   ✅ Filtro de busca funciona corretamente                                                                   |
 |                     |                                                                                                                                                                              |
 
-|  **Caso de Teste**  |                                                                **CT-07 - Pesquisa de produto não encontrado no filtro**                                                                |
+|  **Caso de Teste**  |                                                                **CT-06 - Pesquisa de produto não encontrado no filtro**                                                                |
 | :-----------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/Teste%20de%20insucesso%20filtros.jpg"/> |
 | Requisito Associado |                 RF-06 - O site deve fornecer um sistema de busca que permita aos usuários encontrar produtos específicos por nome, descrição ou outras características                 |
 |      Avaliação      |                                                                        ✅ Filtro de busca funciona corretamente                                                                        |
 |                     |                                                                                                                                                                                        |
+
+|  **Caso de Teste**  |                                               **CT-07 - Lista com itens selecionados**                                               |
+| :-----------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        |                                                    <img widt = "500px" src = ""/>                                                    |
+| Requisito Associado | RF-10 - O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp. |
+|      Avaliação      |                                           ✅ Lista de desejos mostra os itens corretamente                                           |
+|                     |                                                                                                                                      |
+
+|  **Caso de Teste**  |                                                                          **CT-08 - Lista de desejos vazia**                                                                           |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/caso-insucesso-lista-de-desejos.jpg"/> |
+| Requisito Associado |                         RF-10 - O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp.                          |
+|      Avaliação      |                                                  ✅ Lista de desejos mostra mensagem "Sua lista de desejos está vazia" corretamente                                                   |
+|                     |                                                                                                                                                                                       |
