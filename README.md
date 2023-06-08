@@ -51,6 +51,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 # Hospedagem
 
 - Insira o endereço eletrônico público de acesso ao conteúdo publicado.
+  <a href="/src/home/index.html>Clique aqui</a>
 
 # Armazenamento do Código-Fonte
 
