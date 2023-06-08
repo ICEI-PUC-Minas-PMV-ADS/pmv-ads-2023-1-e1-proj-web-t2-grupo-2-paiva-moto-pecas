@@ -13,8 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Copy files
+        run: |
+          mkdir -p src/home
+          cp -R path/to/html-files/* src/home/
+          cp -R path/to/js-files/* src/home/
+          cp -R path/to/css-files/* src/home/
+
       - name: Build and deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: src/home                
+          folder: src/home
