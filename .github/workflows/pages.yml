@@ -16,9 +16,18 @@ jobs:
       - name: Copy files
         run: |
           mkdir -p src/home
-          cp -R path/to/html-files/* src/home/
-          cp -R path/to/js-files/* src/home/
-          cp -R path/to/css-files/* src/home/
+          cp -R base.css base.js src/home/
+          cp -R components src/home/
+          cp -R contato src/home/
+          cp -R database src/home/
+          cp -R home src/home/
+          cp -R imagens src/home/
+          cp -R itens-da-loja src/home/
+          cp -R lista-de-desejo src/home/
+          cp -R modelo.html src/home/
+          cp -R produto-individual src/home/
+          cp -R README.md src/home/
+          cp -R sobre src/home/
 
       - name: Build and deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
