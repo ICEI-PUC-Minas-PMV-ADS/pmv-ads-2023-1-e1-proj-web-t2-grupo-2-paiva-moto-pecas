@@ -6,7 +6,7 @@ export function menu() {
         <div class="container">
           <div class="nav-menu">
             <div class="logo">
-              <a href="/src/home/index.html">
+              <a href="../home/index.html">
                 <svg
                   width="150"
                   height="73"
@@ -97,16 +97,16 @@ export function menu() {
 
           <ul>
             <li>
-              <a href="/src/itens-da-loja/index.html">Itens da loja</a>
+              <a href="../itens-da-loja/index.html">Itens da loja</a>
             </li>
             <li>
-              <a href="/src/contato/index.html">FAQ & Contato</a>
+              <a href="../contato/index.html">FAQ & Contato</a>
             </li>
             <li>
-              <a href="/src/sobre/index.html">Sobre</a>
+              <a href="../sobre/index.html">Sobre</a>
             </li>
             <li>
-              <a href="/src/lista-de-desejo/index.html">
+              <a href="../lista-de-desejo/index.html">
                 <svg
                   width="34"
                   height="34"
