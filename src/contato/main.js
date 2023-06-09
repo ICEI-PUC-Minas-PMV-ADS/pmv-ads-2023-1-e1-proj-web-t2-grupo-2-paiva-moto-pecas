@@ -1,9 +1,26 @@
-import { menu } from '../components/menu.js';
-import { rodape } from '../components/rodape.js';
-import { botaoWpp } from '../components/botao-wpp.js';
+import { menu } from "../components/menu.js";
+import { rodape } from "../components/rodape.js";
+import { botaoWpp } from "../components/botao-wpp.js";
 
 menu();
 botaoWpp();
 rodape();
 
-document.querySelector("#botao").addEventListener("click", () => { alert("Você será redirecionado a uma página de confirmação!") })
+function verificarCampos() {
+  var campos = document.getElementsByTagName("input");
+
+  for (var i = 0; i < campos.length; i++) {
+    var campo = campos[i];
+
+    if (
+      campo.hasAttribute("required") &&
+      (campo.value === "" || campo.value === null)
+    ) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return false;
+    }
+  }
+
+  // Todos os campos obrigatórios estão preenchidos
+  return true;
+}
