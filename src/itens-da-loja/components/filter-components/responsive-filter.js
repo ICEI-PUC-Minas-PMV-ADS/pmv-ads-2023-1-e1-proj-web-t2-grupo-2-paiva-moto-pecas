@@ -8,29 +8,27 @@ export function responsiveFilter() {
   const elementoBloqueado = document.querySelector("body");
   const fundo = document.querySelector('#fundo')
 
-  function bloquearScroll(event) {
-    event.preventDefault();
-  }
-
   addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth <= 768) {
-      containerFilter.style.display = 'none'
-      filtersSectionId.classList.replace("filtersSection", "responsive-filtersSection");
+    addEventListener('resize', () => {
+      if (window.innerWidth <= 768) {
+        containerFilter.style.display = 'none'
+        filtersSectionId.classList.replace("filtersSection", "responsive-filtersSection");
 
-      clickIconFilter.style.cssText = `
-          display: flex; 
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
-      `
-    }
+        clickIconFilter.style.cssText = `
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        `
+      }
 
-    if (window.innerWidth > 768) {
-      containerFilter.style.display = 'grid'
-      clickIconFilter.style.display = 'none'
-      clickCloseFilter.style.display = 'none'
-      filtersSectionId.classList.replace("responsive-filtersSection", "filtersSection");
-    }
+      if (window.innerWidth > 768) {
+        containerFilter.style.display = 'grid'
+        clickIconFilter.style.display = 'none'
+        clickCloseFilter.style.display = 'none'
+        filtersSectionId.classList.replace("responsive-filtersSection", "filtersSection");
+      }
+    })
   })
 
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
@@ -42,11 +40,11 @@ export function responsiveFilter() {
     fundo.style.height = `${divMain.offsetHeight}px`
 
     clickCloseFilter.style.cssText = `
-      display: grid;
-      position: absolute;
-      top: 12px;
-      right: 12px;        
-  `
+        display: grid;
+        position: absolute;
+        top: 12px;
+        right: 12px;        
+    `
   })
   clickCloseFilter.addEventListener('click', () => {
     containerFilter.style.display = 'none'
@@ -56,4 +54,5 @@ export function responsiveFilter() {
 
     filtersSectionId.classList.replace("open-responsive-filtersSection", "responsive-filtersSection");
   })
+
 }
