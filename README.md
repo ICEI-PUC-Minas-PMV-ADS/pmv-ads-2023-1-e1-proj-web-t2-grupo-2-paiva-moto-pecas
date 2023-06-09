@@ -1,27 +1,27 @@
-<img src="docs/img/logotipo-paiva-moto-pecas.png" alt="logotipo Paiva Moto Peças">
-
 # PAIVA MOTO PEÇAS
+
+<img src="docs/img/logotipo-paiva-moto-pecas.png" alt="logotipo Paiva Moto Peças">
 
 `CURSO:` Análise e Desenvolvimento de Sistemas
 
 `DISCIPLINA:` Projeto: Desenvolvimento de Aplicação Web Front-End
 
-`SEMESTRE:` Eixo 1
+`SEMESTRE:` Eixo 1 [2023]
 
 O projeto se trata de uma aplicação web responsável pela divulgação de produtos e serviços da oficina Paiva Moto Peças.
 
 ## Integrantes
 
-- Alessandra Santos
-- Enzo Moura
-- Ingrid Barros
-- Karina Barbosa
-- Lucas Vazzoller Marangoni
-- Paloma Rizzon
+- <a href="https://github.com/alessandrasantos1098">Alessandra Santos</a>
+- <a href="https://github.com/Magi-3">Enzo Moura</a>
+- <a href="https://github.com/ingridrsbarros">Ingrid Barros</a>
+- <a href="https://github.com/kadgbarbosa">Karina Barbosa</a>
+- <a href="https://github.com/Lucasvmarangoni">Lucas Vazzoller Marangoni</a>
+- <a href="https://github.com/palomarizzon">Paloma Rizzon</a>
 
 ## Orientador
 
-- Joyce Carvalho
+- <a href="https://github.com/joycecpc">Joyce Carvalho</a>
 
 ## Instruções de utilização
 
@@ -50,8 +50,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 
 # Hospedagem
 
-- Insira o endereço eletrônico público de acesso ao conteúdo publicado.
-  <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/">Confira o projeto no GitHub Pages</a>
+- <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/">Confira aqui o projeto no GitHub Pages</a>
 
 # Armazenamento do Código-Fonte
 
