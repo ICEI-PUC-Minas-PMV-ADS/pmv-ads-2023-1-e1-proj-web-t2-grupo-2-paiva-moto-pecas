@@ -22,8 +22,11 @@ export function preencherElem() {
 
   contElements.innerHTML = ` 
     <div id="container-produto">
-    <img id="imagem-produto" src="../database/${servicosurl ? "serviços" : "produtos"
-    }/assets/${elemUnico.picture}.png" alt="">
+    <div class="imagem-produto">
+    <img src="../database/${servicosurl ? "serviços" : "produtos"
+    }/assets/${elemUnico.picture}.png" alt="" ${servicosurl ? "style='object-fit:cover'" : ""
+  } >
+    </div>
     <div id="container-info">
         <h1 class="titulo-medio">${elemUnico.name}</h1>
         <p>${elemUnico.description}

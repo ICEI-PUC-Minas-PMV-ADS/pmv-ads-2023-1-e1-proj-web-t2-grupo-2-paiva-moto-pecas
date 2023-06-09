@@ -18,28 +18,30 @@ const urlParams = new URLSearchParams(queryString);
 const produtos = urlParams.get("produtos");
 const servicosurl = urlParams.get("serviços");
 
-function selecionarListCards(database, urlParams, directory){
+function selecionarListCards(database, urlParams, directory) {
   const listagemProdutos = document.querySelector("#listagem-produtos");
-const filtrarCard = database.filter((item)=>{
-  return item.picture !== urlParams
-})
+  const filtrarCard = database.filter((item) => {
+    return item.picture !== urlParams;
+  });
 
-filtrarCard.sort(() => Math.random() - 0.5);
-filtrarCard.length = 4;
-filtrarCard.map((item) => {
-  listCards(
-    item.picture,
-    item.name,
-    item.presentation,
-    listagemProdutos,
-    directory
-  );
-});
+  filtrarCard.sort(() => Math.random() - 0.5);
+  filtrarCard.length = 4;
+  filtrarCard.map((item) => {
+    listCards(
+      item.picture,
+      item.name,
+      item.presentation,
+      listagemProdutos,
+      directory
+    );
+  });
 }
 
 if (!servicosurl) {
- selecionarListCards(products, produtos, "produtos")
+  selecionarListCards(products, produtos, "produtos");
+  
 } else if (!produtos) {
-  selecionarListCards(servicos, servicosurl, "serviços")
+  selecionarListCards(servicos, servicosurl, "serviços");
+  const btnSeeMore = document.querySelector("#btn-veja-mais");
+  btnSeeMore.textContent = "Veja mais serviços ➔";
 }
-
