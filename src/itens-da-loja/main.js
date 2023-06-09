@@ -14,22 +14,24 @@ import {
 import { pageshow } from "./components/pageshow.js";
 import { filter } from "./components/filter.js";
 
+menu();
+botaoWpp();
+rodape();
 (function main(database, options, assets) {
-  menu();
+
   initialSection(database, assets);
   listFilterInputsOptions(database);
   filter(database, assets)
   showMoreFullDB(database);
   responsiveFilter();
-  botaoWpp();
-  rodape();
+
   pageshow(database, assets);
   const title = document.querySelector("title");
   const buttonsChangePage = document.querySelector("#buttonsChangePage");
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
 
-  function setSector(button, sectorDB, optionsSector){  
+  function setSector(button, sectorDB, optionsSector) {
     if (database !== sectorDB) {
       button.addEventListener("click", () => {
         title.innerText = `Paiva Moto Peças | ${sectorDB[0].sector}s`;
@@ -37,7 +39,7 @@ import { filter } from "./components/filter.js";
         const dynamicProductsButton = button === productsButton ? productsButton : servicesButton;
 
         dynamicProductsButton.style.backgroundColor = "var(--amarelo-secundario)";
-        dynamicServicesButton.style.backgroundColor = "var(--amarelo-primario)";             
+        dynamicServicesButton.style.backgroundColor = "var(--amarelo-primario)";
         main(sectorDB, optionsSector, (`${sectorDB[0].sector}s`).toLowerCase());
       });
     }
