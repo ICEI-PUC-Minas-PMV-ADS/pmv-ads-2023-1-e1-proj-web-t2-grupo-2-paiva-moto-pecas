@@ -1,10 +1,10 @@
-export function botaoWpp(content) {
+export function botaoWpp() {
   const btnWpp = document.querySelector(".whatsapp");
 
   const wppNumber = "5511999999999";
 
   btnWpp.innerHTML = `
-  <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:"  
+  <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Olá, gostaria de saber mais sobre a oficina."  
   target="_blank" rel="noopener noreferrer"
           ><svg
             width="50"
