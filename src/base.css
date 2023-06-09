@@ -266,6 +266,7 @@ footer .titulos-rodape {
 footer .titulos-rodape svg {
   width: 15px;
   filter: brightness(1) invert(1);
+  flex: none;
 }
 
 footer p {
@@ -329,6 +330,6 @@ footer a {
   }
 
   footer div {
-    width: 340px;
+    width: 342px;
   }
 }
