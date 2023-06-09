@@ -8,27 +8,34 @@ export function responsiveFilter() {
   const elementoBloqueado = document.querySelector("body");
   const fundo = document.querySelector('#fundo')
 
-  addEventListener('DOMContentLoaded', () => {
-    addEventListener('resize', () => {
-      if (window.innerWidth <= 768) {
-        containerFilter.style.display = 'none'
-        filtersSectionId.classList.replace("filtersSection", "responsive-filtersSection");
 
-        clickIconFilter.style.cssText = `
+  function responsive() {
+    if (window.innerWidth <= 768) {
+      containerFilter.style.display = 'none'
+      filtersSectionId.classList.replace("filtersSection", "responsive-filtersSection");
+
+      clickIconFilter.style.cssText = `
             display: flex; 
             justify-content: center;
             align-items: center;
             gap: 8px;
         `
-      }
+    }
 
-      if (window.innerWidth > 768) {
-        containerFilter.style.display = 'grid'
-        clickIconFilter.style.display = 'none'
-        clickCloseFilter.style.display = 'none'
-        filtersSectionId.classList.replace("responsive-filtersSection", "filtersSection");
-      }
-    })
+    if (window.innerWidth > 768) {
+      containerFilter.style.display = 'grid'
+      clickIconFilter.style.display = 'none'
+      clickCloseFilter.style.display = 'none'
+      filtersSectionId.classList.replace("responsive-filtersSection", "filtersSection");
+    }
+  }
+
+  addEventListener('DOMContentLoaded', () => {
+    responsive()
+  })
+
+  addEventListener('resize', () => {
+    responsive()
   })
 
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
