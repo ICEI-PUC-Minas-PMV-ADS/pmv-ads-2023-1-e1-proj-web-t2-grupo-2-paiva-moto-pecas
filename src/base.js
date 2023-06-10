@@ -9,7 +9,6 @@ export function preencherElem() {
   const produtos = urlParams.get("produtos");
   const servicosurl = urlParams.get("serviços");
   let elemUnico;
-
   if (!servicosurl) {
     elemUnico = products.find((product) => {
       return product.picture === produtos;
@@ -31,12 +30,14 @@ export function preencherElem() {
         <h1 class="titulo-medio">${elemUnico.name}</h1>
         <p>${elemUnico.description}
         </p>
-        ${elemUnico.brand
-      ? `<h2 class="titulo-pequeno"><strong>Marca: </strong>${elemUnico.brand}</h2>`
-      : ""
-    }
-        <h2 class="titulo-pequeno"><strong>Categoria: </strong>${elemUnico.category
-    }</h2>
+        ${
+          elemUnico.brand
+            ? `<h2 class="titulo-pequeno"><strong>Marca: </strong>${elemUnico.brand}</h2>`
+            : ""
+        }
+        <h2 class="titulo-pequeno"><strong>Categoria: </strong>${
+          elemUnico.category
+        }</h2>
     </div>
 </div>
 <button class="btn btn-amarelo add-button">Adicionar a lista</button>
@@ -45,48 +46,72 @@ export function preencherElem() {
 
 // SCRIPT LISTA DE DESEJO
 export function adicionaAlista() {
-  var listaDeDesejo = localStorage.getItem('lista');
+  var isInteger = n => (parseInt(n, 10) === n);
+  var listaDeDesejo = localStorage.getItem("lista");
   var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
-  console.log(CartItems)
+  console.log(CartItems);
 
-  const addToCartButtons = document.querySelectorAll('.add-button')
+  const addToCartButtons = document.querySelectorAll(".add-button");
   for (let i = 0; i < addToCartButtons.length; i++) {
-    const button = addToCartButtons[i]
-    button.addEventListener('click', function (event) {
-      var buttonEvent = event.target
+    const button = addToCartButtons[i];
+    button.addEventListener("click", function (event) {
+      var buttonEvent = event.target;
 
-      var produtoIndex = window.location.search.split('=')[1]
+      var produtoIndex = window.location.search.split("=")[1];
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const produtos = urlParams.get("produtos");
       const servicosurl = urlParams.get("serviços");
-
+      var produto 
       console.log(produtoIndex);
+      console.log(isInteger(produtoIndex));
+      produtoIndex = Number(produtoIndex);
 
-      if (!servicosurl) {
+      if(!isInteger(produtoIndex)) {
 
-        var produto = products.find((product) => {
-          return product.picture === produtoIndex;
-        }
-        );
-      } else if (!produtos) {
-        var produto = servicos.find((servico) => {
-          return servico.picture === produtoIndex;
-        })};
+        console.log(button.value);
+        produtoIndex = button.value.split(",")[0];
+        var produtoDirectory = button.value.split(",")[1];
 
-        // ve se o produto ja esta na lista, se tiver, nao adiciona
-        var produtoJaEstaNaLista = CartItems.find((item) => {
-          return item.name === produto.name
+        console.log(produtoIndex);
+        console.log(produtoDirectory);
+
+        produtoIndex = String(produtoIndex);
+        produtoDirectory = String(produtoDirectory);
+
+        if (produtoDirectory == "produtos") {
+          produto = products.find((product) => {
+            return product.picture === produtoIndex;
+          });
+        } else {
+          produto = servicos.find((servico) => {
+            return servico.picture === produtoIndex;
+          });
         }
-        );
-        if(!produtoJaEstaNaLista){
-          CartItems.push(produto)
-          localStorage.setItem("lista", JSON.stringify(CartItems))
-          console.log(CartItems)
+      } else {
+        produtoIndex = String(produtoIndex);
+        console.log(produtoIndex);
+        console.log(produtoIndex);
+
+        if (!servicosurl) {
+          produto = products.find((product) => {
+            return product.picture === produtoIndex;
+          });
+        } else if (!produtos) {
+          produto = servicos.find((servico) => {
+            return servico.picture === produtoIndex;
+          });
         }
-        
+        }
+                // ve se o produto ja esta na lista, se tiver, nao adiciona
+                var produtoJaEstaNaLista = CartItems.find((item) => {
+                  return item.name === produto.name;
+                });
+                if (!produtoJaEstaNaLista) {
+                  CartItems.push(produto);
+                  localStorage.setItem("lista", JSON.stringify(CartItems));
+                  console.log(CartItems);
       }
-    )
+    });
   }
-
 }

@@ -3,6 +3,12 @@ import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
 import { products } from "../database/produtos/produtos-db.js";
 
+mostraSugestao()
+
+var listaDeDesejo = localStorage.getItem("lista");
+var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
+const closeList = JSON.parse(localStorage.getItem("list"));
+
 const removeCartItemButtons = document.querySelectorAll(".btn-danger");
 for (let i = 0; i < removeCartItemButtons.length; i++) {
   const button = removeCartItemButtons[i];
@@ -27,13 +33,21 @@ function removeCart(event) {
   window.location.reload(true);
 }
 
-var listaDeDesejo = localStorage.getItem("lista");
-var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
+const removeAllItens = document.getElementById("link");
+removeAllItens.addEventListener("click", removeAll);
 
+function removeAll(event) {
+  localStorage.removeItem("lista");
+  window.location.reload(true);
+}
+
+function mostraSugestao() {
 const listagemProdutos = document.querySelector(".produtos-listados");
-products.sort(() => Math.random() - 0.5);
-products.length = 4;
-products.map((product) => {
+const listaVazia = []
+const listaDeSugestao = listaVazia.concat(products) 
+listaDeSugestao.sort(() => Math.random() - 0.5);
+listaDeSugestao.length = 4;
+listaDeSugestao.map((product) => {
   listCards(
     product.picture,
     product.name,
@@ -42,10 +56,36 @@ products.map((product) => {
     "produtos"
   );
 });
+}
+
+var buttons = document.querySelectorAll(".add-button");
+for (let i = 0; i < buttons.length; i++) {
+  const button = buttons[i];
+  button.addEventListener("click", function (event) {
+    var buttonEvent = event.target;
+    var itemIndex =
+      buttonEvent.parentElement.parentElement.parentElement.querySelector(
+        ".card-remove-info"
+      ).innerText;
+    console.log(typeof(itemIndex));
+
+    var item = products.find((product) => {
+      return product.picture === itemIndex;
+
+      
+    });
+
+    console.log(item);
+
+
+  });
+}
+
 
 var listaContainer = document.getElementById("carrinho-itens");
-
+console.log(lista.length);
 if (lista.length == 0) {
+  console.log("lista vazia");
   listaContainer.innerHTML = `
   <div id="carrinho-vazio">
   <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,8 +105,9 @@ if (lista.length == 0) {
 
     itemElement.innerHTML = `
   <div class="card-info">
-  <img src="../database/${item.sector == "Produto" ? "produtos" : "serviços"
-    }/assets/${item.picture}.png">
+  <img src="../database/${
+    item.sector == "Produto" ? "produtos" : "serviços"
+  }/assets/${item.picture}.png">
   <div>
     <h2 class="titulo-pequeno">${item.name}</h2>
     <p>Em estoque</p>
@@ -93,32 +134,43 @@ if (lista.length == 0) {
 }
 
 function listCards(picture, name, presentation, targetTag, directory) {
+
   targetTag.innerHTML += `
-  <a href="../produto-individual/index.html?${directory}=${picture}"class="produto-sugerido">
+  <div class="produto-sugerido">
+  <a href="../produto-individual/index.html?${directory}=${picture}">
   <img style="${
     directory == "serviços" ? "object-fit:cover" : ""
   }" src="../database/${directory}/assets/${picture}.png" alt="">
+  </a>
   <div>
     <h4 class="titulo-pequeno">${name}</h4>
     <div>
-      <button class="btn btn-amarelo add-button">Adicionar ao carrinho</button>
+      <button class="btn btn-amarelo add-button">
+      Adicionar ao carrinho
+      <p class = "card-remove-info">${picture} </p>
+      </button>
     </div>
   </div>
+</div>
+`;
+}
+
+function whatsappWithCloseList(content) {
+  const wppNumber = "5511999999999";
+  document.querySelector(".btn-fechar").innerHTML = `
+<a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${
+    content
+      ? content.map((item) => {
+          return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A`;
+        })
+      : ""
+  }" 
+      target="_blank" rel="noopener noreferrer"> Fechar-Lista
 </a>
 `;
 }
 
+whatsappWithCloseList(closeList);
 menu();
 rodape();
 botaoWpp();
-
-// function whatsappWithCloseList(content) {
-//   const wppNumber = "5511999999999";
-//   document.querySelector("#fechar-lista").innerHTML = `
-// <a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${content
-//       ? content.map((item) => { return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A` }) : ''}" 
-//       target="_blank" rel="noopener noreferrer">
-// `
-// }
-// const closeList = JSON.parse(localStorage.getItem("list"));
-// whatsappWithCloseList(closeList);
