@@ -30,11 +30,13 @@ rodape();
   const buttonsChangePage = document.querySelector("#buttonsChangePage");
   const productsButton = buttonsChangePage.querySelector("button:nth-child(1)");
   const servicesButton = buttonsChangePage.querySelector("button:nth-child(2)");
+  const buttonShowMore = document.querySelector("#button-show-more");
 
   function setSector(button, sectorDB, optionsSector) {
     if (database !== sectorDB) {
       button.addEventListener("click", () => {
         title.innerText = `Paiva Moto Peças | ${sectorDB[0].sector}s`;
+        buttonShowMore.innerText = `Ver mais ${sectorDB[0].sector}s`;
         const dynamicServicesButton = button === productsButton ? servicesButton : productsButton;
         const dynamicProductsButton = button === productsButton ? productsButton : servicesButton;
 
