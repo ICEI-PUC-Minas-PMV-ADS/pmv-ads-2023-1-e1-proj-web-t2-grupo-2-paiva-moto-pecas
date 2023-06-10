@@ -258,17 +258,17 @@ Figura 36 - Tela Formulário
 
 ## Lista de Desejos
 
-Tela que contem todos os itens presentes na lista, juntamente com sugestões e um botão de fechar lista.
+Tela que contém todos os itens presentes na lista, juntamente com sugestões e um botão de fechar lista.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo.jpg" />
 
-Figura 37 - Lista de Desejos com itens
+Figura 37 - Lista de desejos com itens
 
-Tela que mostra nenhum item juntamente com algumnas sugestões.
+Tela que mostra a lista de desejos vazia, juntamente com algumas sugestões.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo-vazia.jpg">
 
-Figura 38 - Lista de Desejos sem itens
+Figura 38 - Lista de desejos vazia
 
 ### Requisitos atendidos
 
