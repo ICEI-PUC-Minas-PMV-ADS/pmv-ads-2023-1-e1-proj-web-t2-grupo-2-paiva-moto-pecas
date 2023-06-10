@@ -3,6 +3,7 @@ import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
 import { products } from "../database/produtos/produtos-db.js";
 
+
 mostraSugestao()
 
 var listaDeDesejo = localStorage.getItem("lista");
@@ -57,6 +58,16 @@ listaDeSugestao.map((product) => {
   );
 });
 }
+var numero = 1;
+console.log(numero);
+numero = numero + "";
+console.log(numero);
+console.log(products);
+var bug = products.find((product) => {
+  return product.picture === numero;
+});
+
+console.log(bug);
 
 var buttons = document.querySelectorAll(".add-button");
 for (let i = 0; i < buttons.length; i++) {
@@ -67,18 +78,23 @@ for (let i = 0; i < buttons.length; i++) {
       buttonEvent.parentElement.parentElement.parentElement.querySelector(
         ".card-remove-info"
       ).innerText;
-    console.log(typeof(itemIndex));
+    console.log(itemIndex);
 
-    var item = products.find((product) => {
+
+    var produto = products.find((product) => {
       return product.picture === itemIndex;
-
-      
     });
 
-    console.log(item);
-
-
+    var produtoJaEstaNaLista = lista.find((item) => {
+      return item.name === produto.name;
+    });
+    if (!produtoJaEstaNaLista) {
+      lista.push(produto);
+      localStorage.setItem("lista", JSON.stringify(lista));
+      window.location.reload(true);
+    }
   });
+
 }
 
 var listaContainer = document.getElementById("carrinho-itens");
@@ -115,7 +131,7 @@ if (lista.length == 0) {
   </div>
   <div id="card-buttons">
   <div class = "option-select">
-  <select class=" btn-quantidade" id = "Qtd:">
+  <select class=" btn-quantidade" name = "job">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -157,7 +173,7 @@ function listCards(picture, name, presentation, targetTag, directory) {
     <div>
       <button class="btn btn-amarelo add-button">
       Adicionar ao carrinho
-      <p class = "card-remove-info">${picture} </p>
+      <p class = "card-remove-info">${picture}</p>
       </button>
     </div>
   </div>
@@ -180,15 +196,16 @@ function whatsappWithCloseList(content) {
 `;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var input = document.getElementById('Qtd:');
-  if (localStorage['Qtd:']) { 
-      input.value = localStorage['Qtd:']; 
-  }
-  input.onchange = function () {
-       localStorage['Qtd:'] = this.value; 
-   }
-});
+var input = document.getElementById('job');
+function loadSettings() {
+    if (localStorage['job']) {
+        input.value = localStorage['job'];
+    }
+}
+
+function saveSettings() {
+    localStorage['job'] = input.value;
+}
 
 whatsappWithCloseList(closeList);
 menu();
