@@ -85,7 +85,7 @@ Figura 18 - Design da página de produtos e serviços
 
 Tela que mostra um item específico, seja ele produto ou serviço do site e que informa as características do mesmo, e também sugere outros itens para compra.
 
-<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/item-individual.jpg?raw=true">
+<img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/produto-individual.jpg?raw=true">
 
 Figura 19 - Design da página do produto individual
 
