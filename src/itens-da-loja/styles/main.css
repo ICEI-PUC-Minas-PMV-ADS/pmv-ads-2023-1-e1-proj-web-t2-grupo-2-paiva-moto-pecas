@@ -187,10 +187,6 @@
   gap: 20px;
 }
 
-#buttonsChangePage button:first-child {
-  background-color: var(--amarelo-secundario);
-}
-
 .change-button {
   max-width: 150px;
   min-width: 112px;
