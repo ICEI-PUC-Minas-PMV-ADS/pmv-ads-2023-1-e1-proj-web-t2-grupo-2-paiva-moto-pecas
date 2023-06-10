@@ -4,6 +4,7 @@ import { servicos } from "../database/serviços/servicos-db.js";
 import { menu } from "../components/menu.js";
 import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
+import { adicionaAlista } from "../base.js";
 
 const containerProdutos = document.querySelector(".produtos");
 const containerServicos = document.querySelector(".servicos");
@@ -45,3 +46,4 @@ botaoWpp();
 featuredProducts();
 featuredServices();
 rodape();
+adicionaAlista();
