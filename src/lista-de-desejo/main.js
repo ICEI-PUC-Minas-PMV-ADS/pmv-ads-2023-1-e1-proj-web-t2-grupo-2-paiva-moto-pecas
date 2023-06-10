@@ -81,7 +81,6 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-
 var listaContainer = document.getElementById("carrinho-itens");
 console.log(lista.length);
 if (lista.length == 0) {
@@ -102,6 +101,7 @@ if (lista.length == 0) {
   lista.forEach(function (item) {
     var itemElement = document.createElement("div");
     itemElement.classList.add("card-item");
+    var quantidade;
 
     itemElement.innerHTML = `
   <div class="card-info">
@@ -113,14 +113,24 @@ if (lista.length == 0) {
     <p>Em estoque</p>
   </div>
   </div>
+  <div id="card-buttons">
+  <div class = "option-select">
+  <select class=" btn-quantidade" id = "Qtd:">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="mais">mais</option>
+  </select>
+  </div>
   <button class="btn-danger">
   <p class = "card-remove-info">${item.name}</p>
     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">
       <path d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 
       0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 
       26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"/></svg>
-
   </button>
+  </div>
   <p class = "card-remove-info">${item.name}</p>
   
 </div>`;
@@ -169,6 +179,16 @@ function whatsappWithCloseList(content) {
 </a>
 `;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('Qtd:');
+  if (localStorage['Qtd:']) { 
+      input.value = localStorage['Qtd:']; 
+  }
+  input.onchange = function () {
+       localStorage['Qtd:'] = this.value; 
+   }
+});
 
 whatsappWithCloseList(closeList);
 menu();

@@ -255,3 +255,28 @@ Figura 36 - Tela Formulário
 - base.css
 - main.css
 - main.js
+
+## Lista de Desejo
+
+Tela que contem todos os itens presentes na lista, juntamente com sugestões e um botão de fechar lista.
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo.jpg" />
+
+Figura 37 - Lista de Desejo com itens
+
+Tela que mostra a lista quando não se tem nenhum produto, juntamente com a sugestões
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo-vazia.jpg">
+
+Figura 38 - Lista de Desejo sem itens
+
+### Requisitos atendidos
+
+- RF-10 - O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp.
+
+### Artefatos da funcionalidade
+
+- index.html
+- base.css
+- main.css
+- main.js
