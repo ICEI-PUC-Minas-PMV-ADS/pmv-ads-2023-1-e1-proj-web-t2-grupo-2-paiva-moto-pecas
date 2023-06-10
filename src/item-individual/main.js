@@ -43,5 +43,5 @@ if (!servicosurl) {
 } else if (!produtos) {
   selecionarListCards(servicos, servicosurl, "serviços");
   const btnSeeMore = document.querySelector("#btn-veja-mais");
-  btnSeeMore.textContent = "Veja mais serviços ➔";
+  btnSeeMore.innerHTML =  `<a href="/src/itens-da-loja/index.html?sector=serviços" id="btn-veja-mais" class="btn btn-preto">Veja mais serviços ➔</a>`;
 }
