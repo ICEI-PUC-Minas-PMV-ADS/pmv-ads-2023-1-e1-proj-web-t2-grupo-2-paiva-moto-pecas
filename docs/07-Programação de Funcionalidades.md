@@ -256,19 +256,19 @@ Figura 36 - Tela Formulário
 - main.css
 - main.js
 
-## Lista de Desejo
+## Lista de Desejos
 
 Tela que contem todos os itens presentes na lista, juntamente com sugestões e um botão de fechar lista.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo.jpg" />
 
-Figura 37 - Lista de Desejo com itens
+Figura 37 - Lista de Desejos com itens
 
-Tela que mostra a lista quando não se tem nenhum produto, juntamente com a sugestões
+Tela que mostra nenhum item juntamente com algumnas sugestões.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/aplicacao-lista-de-desejo-vazia.jpg">
 
-Figura 38 - Lista de Desejo sem itens
+Figura 38 - Lista de Desejos sem itens
 
 ### Requisitos atendidos
 

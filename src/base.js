@@ -110,7 +110,7 @@ export function adicionaAlista() {
                 if (!produtoJaEstaNaLista) {
                   CartItems.push(produto);
                   localStorage.setItem("lista", JSON.stringify(CartItems));
-                  console.log(CartItems);
+                  alert("Item adicionado a lista com sucesso!");
       }
     });
   }

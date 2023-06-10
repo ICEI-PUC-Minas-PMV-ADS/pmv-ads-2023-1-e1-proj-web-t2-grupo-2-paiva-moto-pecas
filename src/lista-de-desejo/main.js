@@ -23,7 +23,6 @@ function removeCart(event) {
     buttonClicked.parentElement.parentElement.parentElement.querySelector(
       ".card-remove-info"
     ).innerText;
-  console.log(titulo);
 
   for (let i = 0; i < lista.length; i++) {
     if (lista[i].name == titulo) {
@@ -58,16 +57,6 @@ listaDeSugestao.map((product) => {
   );
 });
 }
-var numero = 1;
-console.log(numero);
-numero = numero + "";
-console.log(numero);
-console.log(products);
-var bug = products.find((product) => {
-  return product.picture === numero;
-});
-
-console.log(bug);
 
 var buttons = document.querySelectorAll(".add-button");
 for (let i = 0; i < buttons.length; i++) {
@@ -78,8 +67,6 @@ for (let i = 0; i < buttons.length; i++) {
       buttonEvent.parentElement.parentElement.parentElement.querySelector(
         ".card-remove-info"
       ).innerText;
-    console.log(itemIndex);
-
 
     var produto = products.find((product) => {
       return product.picture === itemIndex;
@@ -100,7 +87,6 @@ for (let i = 0; i < buttons.length; i++) {
 var listaContainer = document.getElementById("carrinho-itens");
 console.log(lista.length);
 if (lista.length == 0) {
-  console.log("lista vazia");
   listaContainer.innerHTML = `
   <div id="carrinho-vazio">
   <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +137,6 @@ if (lista.length == 0) {
   
 </div>`;
 
-    // Adicione o elemento ao container
     listaContainer.appendChild(itemElement);
     itemElement
       .querySelector(".btn-danger")
@@ -163,49 +148,38 @@ function listCards(picture, name, presentation, targetTag, directory) {
 
   targetTag.innerHTML += `
   <div class="produto-sugerido">
-  <a href="../produto-individual/index.html?${directory}=${picture}">
+  <a href="../item-individual/index.html?${directory}=${picture}">
   <img style="${
     directory == "serviços" ? "object-fit:cover" : ""
   }" src="../database/${directory}/assets/${picture}.png" alt="">
+  <div class="produto-info">
+  <h4 class="titulo-pequeno">${name}</h4>
+  <p class = "card-remove-info">${picture}</p>
+  </div>
   </a>
-  <div>
-    <h4 class="titulo-pequeno">${name}</h4>
-    <div>
       <button class="btn btn-amarelo add-button">
       Adicionar ao carrinho
-      <p class = "card-remove-info">${picture}</p>
       </button>
-    </div>
-  </div>
 </div>
 `;
 }
 
 function whatsappWithCloseList(content) {
   const wppNumber = "5511999999999";
-  document.querySelector(".btn-fechar").innerHTML = `
-<a href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${
+  document.getElementById('fechar-lista').innerHTML = `
+<h2 class="titulo-pequeno">Enviar orçamento pelo WhatsApp</h2>
+<a class="btn btn-amarelo" href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${
     content
       ? content.map((item) => {
           return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A`;
         })
       : ""
   }" 
-      target="_blank" rel="noopener noreferrer"> Fechar-Lista
+      target="_blank" rel="noopener noreferrer"> Fechar lista
 </a>
 `;
 }
 
-var input = document.getElementById('job');
-function loadSettings() {
-    if (localStorage['job']) {
-        input.value = localStorage['job'];
-    }
-}
-
-function saveSettings() {
-    localStorage['job'] = input.value;
-}
 
 whatsappWithCloseList(closeList);
 menu();
