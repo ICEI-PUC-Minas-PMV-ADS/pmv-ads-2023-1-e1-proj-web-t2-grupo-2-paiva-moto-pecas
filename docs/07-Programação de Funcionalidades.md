@@ -141,7 +141,7 @@ Seção que contém os produtos e serviços oferecidos pela oficina.
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/mostruario.jpg" />
 
-Figura 31 - Tela produtos e serviços
+Figura 31 - Tela itens da loja
 
 ### Requisitos atendidos
 
@@ -153,6 +153,7 @@ Figura 31 - Tela produtos e serviços
 - base.css
 - main.css
 - initial.js
+- button-show-more.js
 - main.js
 
 ## Filtro de produtos e serviços
@@ -174,8 +175,10 @@ Figura 32 - Tela produtos e serviços
 - main.css
 - initial.js
 - filter.js
+- options.js
+- list0filter-options.js
+- responsive-filter.js
 - filter-types.js
-- reset-filter.js
 - main.js
 
 ## Barra de busca de produtos e serviços
@@ -196,7 +199,8 @@ Figura 33 - Tela produtos e serviços
 - base.css
 - main.css
 - initial.js
-- search.js
+- filter.js
+- custom-datalist.js
 - main.js
 
 ## Item Individual

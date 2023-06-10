@@ -1,6 +1,6 @@
 import { listCards } from '../../components/list-cards.js'
 import { initialSection } from './initial.js'
-import { customDatalist } from './search.js'
+import { customDatalist } from './custom-datalist.js'
 
 export function filter(database, assets) {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]')
