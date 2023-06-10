@@ -30,7 +30,7 @@ export function customDatalist(database, assets, suggestionsOptions, containerPe
 
     return suggestionsOptions.forEach((suggestion) => {
         containerPersonalDatalist.innerHTML += `
-                    <a href="../produto-individual/index.html?${assets}=${suggestion.picture}" 
+                    <a href="../item-individual/index.html?${assets}=${suggestion.picture}" 
                     id="personalDatalist" class="go-page">
                         <span>${suggestion.picture}</span>                                        
                         <img src="../database/${assets}/assets/${suggestion.picture}.png" alt="">
