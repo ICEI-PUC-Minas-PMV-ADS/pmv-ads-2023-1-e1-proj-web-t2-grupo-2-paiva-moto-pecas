@@ -37,11 +37,12 @@ function selecionarListCards(database, urlParams, directory) {
   });
 }
 
+const btnSeeMore = document.querySelector("#listagem-produtos");
+
 if (!servicosurl) {
   selecionarListCards(products, produtos, "produtos");
-  
+  btnSeeMore.innerHTML += `<a href="/src/itens-da-loja/index.html?sector=produtos" class="btn btn-preto">Veja mais produtos ➔</a>`;
 } else if (!produtos) {
   selecionarListCards(servicos, servicosurl, "serviços");
-  const btnSeeMore = document.querySelector("#btn-veja-mais");
-  btnSeeMore.innerHTML =  `<a href="/src/itens-da-loja/index.html?sector=serviços" id="btn-veja-mais" class="btn btn-preto">Veja mais serviços ➔</a>`;
+  btnSeeMore.innerHTML += `<a href="/src/itens-da-loja/index.html?sector=serviços" class="btn btn-preto">Veja mais serviços ➔</a>`;
 }
