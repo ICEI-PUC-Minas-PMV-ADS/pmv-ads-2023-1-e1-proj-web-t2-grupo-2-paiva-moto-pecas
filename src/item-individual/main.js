@@ -41,8 +41,8 @@ const btnSeeMore = document.querySelector("#listagem-produtos");
 
 if (!servicosurl) {
   selecionarListCards(products, produtos, "produtos");
-  btnSeeMore.innerHTML += `<a href="/src/itens-da-loja/index.html?sector=produtos" class="btn btn-preto">Veja mais produtos ➔</a>`;
+  btnSeeMore.innerHTML += `<a href="../itens-da-loja/index.html?sector=produtos" class="btn btn-preto">Veja mais produtos ➔</a>`;
 } else if (!produtos) {
   selecionarListCards(servicos, servicosurl, "serviços");
-  btnSeeMore.innerHTML += `<a href="/src/itens-da-loja/index.html?sector=serviços" class="btn btn-preto">Veja mais serviços ➔</a>`;
+  btnSeeMore.innerHTML += `<a href="../itens-da-loja/index.html?sector=serviços" class="btn btn-preto">Veja mais serviços ➔</a>`;
 }
