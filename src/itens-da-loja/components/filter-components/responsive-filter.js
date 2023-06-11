@@ -41,6 +41,21 @@ export function responsiveFilter() {
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
     filtersSectionId.classList.replace("responsive-filtersSection", "open-responsive-filtersSection");
 
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const filtersSectionId = document.querySelector('.open-responsive-filtersSection');
+
+      if (scrollPosition >= 100) {
+        console.log('entrou');
+        filtersSectionId.style.top = '32px';
+      } else {
+        filtersSectionId.style.top = '150px';
+      }
+    });
+
+
+
     clickIconFilter.style.display = 'none'
     containerFilter.style.display = 'block'
     fundo.style.display = 'block'

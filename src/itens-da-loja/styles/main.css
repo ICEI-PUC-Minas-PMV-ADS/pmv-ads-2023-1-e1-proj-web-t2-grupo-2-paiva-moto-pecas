@@ -32,9 +32,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  position: sticky;
-  top: 32px;
+  width: 100%;  
+  position: fixed;
+  /* top: 150px; */
   left: 0;
   right: 0;
   margin-left: auto;
