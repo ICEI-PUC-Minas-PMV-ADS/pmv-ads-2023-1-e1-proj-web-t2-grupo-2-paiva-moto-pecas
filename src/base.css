@@ -234,6 +234,10 @@ a {
   color: var(--preto);
 }
 
+.card button:active{
+  background-color: #000;
+}
+
 .faixa-amarela {
   width: 100%;
   height: 20px;
