@@ -49,18 +49,18 @@ export function responsiveFilter() {
       const filtersSectionId = document.querySelector('.open-responsive-filtersSection');
     
       if (scrollPosition >= 100) {
-        filtersSectionId.style.top = '32px';
+        filtersSectionId.style.top = `${32 + i}px`;
       } else {
-        filtersSectionId.style.top = '150px';
+        filtersSectionId.style.top = `${150}px`;
       }
     
       if (scrollPosition >= 2500) {
-        i = -10 - (scrollPosition - 2500); 
-    
+        i = -10 - (scrollPosition - 2500);     
         filtersSectionId.style.top = `${i}px`;
+      } else {
+        i = 0;
       }
     });
-    
     
 
 
