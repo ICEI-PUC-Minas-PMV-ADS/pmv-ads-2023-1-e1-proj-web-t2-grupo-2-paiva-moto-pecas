@@ -25,12 +25,14 @@
 }
 .carrinho-head {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 
 .carrinho-head h1 {
+    display: flex;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 #link {
@@ -155,7 +157,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     padding: 20px;
     gap: 40px;
     margin-top: 43px;
@@ -179,7 +181,11 @@ aside {
     gap: 20px;
     width: 100%;
     max-height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.produto-info {
+
 }
 
 .produto-sugerido img {
@@ -190,6 +196,7 @@ aside {
 .produto-sugerido button {
     font-size: 11px;
     width: 100%;
+    max-width: 200px;
     height: 45px;
     padding: 10px;
 }
@@ -214,5 +221,55 @@ aside {
     aside {
         width: unset;
     }
+
+    .carrinho-head {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    #produto-sugestao h3 {
+        text-align: center;
+    }
+
+    .produto-sugerido {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .produto-sugerido a {
+        display: flex;
+    }
+
+    .produto-info {
+        height: 50px;
+        width: 100px;
+        text-align: center;
+    }
+
+    .produto-sugerido button {
+        display: flex;
+        font-size: 9px;
+        width: 100%;
+        height: 45px;
+        align-content: center;
+        padding: 10px;
+    }
+
+    .produto-sugerido h4 {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
 }
+
 

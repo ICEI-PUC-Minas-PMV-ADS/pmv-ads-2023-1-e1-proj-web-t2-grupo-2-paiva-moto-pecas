@@ -8,7 +8,7 @@ mostraSugestao()
 
 var listaDeDesejo = localStorage.getItem("lista");
 var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
-const closeList = JSON.parse(localStorage.getItem("list"));
+const closeList = JSON.parse(localStorage.getItem("lista"));
 
 const removeCartItemButtons = document.querySelectorAll(".btn-danger");
 for (let i = 0; i < removeCartItemButtons.length; i++) {
@@ -78,6 +78,7 @@ for (let i = 0; i < buttons.length; i++) {
     if (!produtoJaEstaNaLista) {
       lista.push(produto);
       localStorage.setItem("lista", JSON.stringify(lista));
+      alert("Item adicionado a lista com sucesso!");
       window.location.reload(true);
     }
   });
@@ -117,13 +118,8 @@ if (lista.length == 0) {
   </div>
   <div id="card-buttons">
   <div class = "option-select">
-  <select class=" btn-quantidade" name = "job">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="mais">mais</option>
-  </select>
+  <input class=" btn-quantidade" name = "job" type = "number" min="1" value="1">
+  </input>
   </div>
   <button class="btn-danger">
   <p class = "card-remove-info">${item.name}</p>
@@ -171,7 +167,7 @@ function whatsappWithCloseList(content) {
 <a class="btn btn-amarelo" href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${
     content
       ? content.map((item) => {
-          return `*Nome*: ${item.name}, *ID*: ${item.pictured} %0A`;
+          return `*Nome*: ${item.name}, *ID*: ${item.picture} %0A`;
         })
       : ""
   }" 
