@@ -42,17 +42,28 @@ export function responsiveFilter() {
     filtersSectionId.classList.replace("responsive-filtersSection", "open-responsive-filtersSection");
 
 
+    let i = 0;
+
     window.addEventListener('scroll', () => {
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       const filtersSectionId = document.querySelector('.open-responsive-filtersSection');
-
+    
       if (scrollPosition >= 100) {
-        console.log('entrou');
         filtersSectionId.style.top = '32px';
       } else {
         filtersSectionId.style.top = '150px';
       }
+    
+      if (scrollPosition >= 2500) {
+        i = -10 - (scrollPosition - 2500); 
+    
+        filtersSectionId.style.top = `${i}px`;
+      }
     });
+    
+    
+
+
 
 
 
