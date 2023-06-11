@@ -22,9 +22,9 @@ export function preencherElem() {
   contElements.innerHTML = ` 
     <div id="container-produto">
     <div class="imagem-produto">
-    <img src="../database/${servicosurl ? "serviços" : "produtos"
-    }/assets/${elemUnico.picture}.png" alt="" ${servicosurl ? "style='object-fit:cover'" : ""
-  } >
+    <img src="../database/${servicosurl ? "serviços" : "produtos"}/assets/${
+    elemUnico.picture
+  }.png" alt="" ${servicosurl ? "style='object-fit:cover'" : ""} >
     </div>
     <div id="container-info">
         <h1 class="titulo-medio">${elemUnico.name}</h1>
@@ -46,7 +46,7 @@ export function preencherElem() {
 
 // SCRIPT LISTA DE DESEJO
 export function adicionaAlista() {
-  var isInteger = n => (parseInt(n, 10) === n);
+  var isInteger = (n) => parseInt(n, 10) === n;
   var listaDeDesejo = localStorage.getItem("lista");
   var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
 
@@ -61,11 +61,10 @@ export function adicionaAlista() {
       const urlParams = new URLSearchParams(queryString);
       const produtos = urlParams.get("produtos");
       const servicosurl = urlParams.get("serviços");
-      var produto 
+      var produto;
       produtoIndex = Number(produtoIndex);
 
-      if(!isInteger(produtoIndex)) {
-;
+      if (!isInteger(produtoIndex)) {
         produtoIndex = button.value.split(",")[0];
         var produtoDirectory = button.value.split(",")[1];
 
@@ -93,15 +92,16 @@ export function adicionaAlista() {
             return servico.picture === produtoIndex;
           });
         }
-        }
-                // ve se o produto ja esta na lista, se tiver, nao adiciona
-                var produtoJaEstaNaLista = CartItems.find((item) => {
-                  return item.name === produto.name;
-                });
-                if (!produtoJaEstaNaLista) {
-                  CartItems.push(produto);
-                  localStorage.setItem("lista", JSON.stringify(CartItems));
-                  alert("Item adicionado a lista com sucesso!");
+      }
+      // ve se o produto ja esta na lista, se tiver, nao adiciona
+      var produtoJaEstaNaLista = CartItems.find((item) => {
+        alert("O item já se encontra na sua lista!");
+        return item.name === produto.name;
+      });
+      if (!produtoJaEstaNaLista) {
+        CartItems.push(produto);
+        localStorage.setItem("lista", JSON.stringify(CartItems));
+        alert("Item adicionado a lista com sucesso!");
       }
     });
   }

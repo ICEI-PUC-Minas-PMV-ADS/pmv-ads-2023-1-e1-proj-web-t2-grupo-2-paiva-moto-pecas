@@ -3,8 +3,7 @@ import { rodape } from "../components/rodape.js";
 import { botaoWpp } from "../components/botao-wpp.js";
 import { products } from "../database/produtos/produtos-db.js";
 
-
-mostraSugestao()
+mostraSugestao();
 
 var listaDeDesejo = localStorage.getItem("lista");
 var lista = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
@@ -42,20 +41,20 @@ function removeAll(event) {
 }
 
 function mostraSugestao() {
-const listagemProdutos = document.querySelector(".produtos-listados");
-const listaVazia = []
-const listaDeSugestao = listaVazia.concat(products) 
-listaDeSugestao.sort(() => Math.random() - 0.5);
-listaDeSugestao.length = 4;
-listaDeSugestao.map((product) => {
-  listCards(
-    product.picture,
-    product.name,
-    product.presentation,
-    listagemProdutos,
-    "produtos"
-  );
-});
+  const listagemProdutos = document.querySelector(".produtos-listados");
+  const listaVazia = [];
+  const listaDeSugestao = listaVazia.concat(products);
+  listaDeSugestao.sort(() => Math.random() - 0.5);
+  listaDeSugestao.length = 4;
+  listaDeSugestao.map((product) => {
+    listCards(
+      product.picture,
+      product.name,
+      product.presentation,
+      listagemProdutos,
+      "produtos"
+    );
+  });
 }
 
 var buttons = document.querySelectorAll(".add-button");
@@ -64,9 +63,7 @@ for (let i = 0; i < buttons.length; i++) {
   button.addEventListener("click", function (event) {
     var buttonEvent = event.target;
     var itemIndex =
-      buttonEvent.parentElement.querySelector(
-        ".card-remove-info"
-      ).innerText;
+      buttonEvent.parentElement.querySelector(".card-remove-info").innerText;
 
     var produto = products.find((product) => {
       return product.picture === itemIndex;
@@ -74,11 +71,10 @@ for (let i = 0; i < buttons.length; i++) {
 
     var produtoJaEstaNaLista = lista.find((item) => {
       return item.picture === produto.picture;
-    }
-    );
+    });
 
     if (produtoJaEstaNaLista) {
-      return
+      return;
     } else {
       lista.push(produto);
       localStorage.setItem("lista", JSON.stringify(lista));
@@ -86,7 +82,6 @@ for (let i = 0; i < buttons.length; i++) {
       window.location.reload(true);
     }
   });
-
 }
 
 var listaContainer = document.getElementById("carrinho-itens");
@@ -120,12 +115,9 @@ if (lista.length == 0) {
   </div>
   </div>
   <div id="card-buttons">
-  <div class = "option-select">
-  <input class=" btn-quantidade" name = "job" type = "number" min="1" value="1">
-  </input>
-  </div>
+  <input class="btn-quantidade" name="job" type="number" min="1" value="1"></input>
   <button class="btn-danger">
-  <p class = "card-remove-info">${item.name}</p>
+  <span class = "card-remove-info">${item.name}</span>
     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">
       <path d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 
       0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 
@@ -144,7 +136,6 @@ if (lista.length == 0) {
 }
 
 function listCards(picture, name, presentation, targetTag, directory) {
-
   targetTag.innerHTML += `
   <div class="produto-sugerido">
   <a href="../item-individual/index.html?${directory}=${picture}">
@@ -152,7 +143,7 @@ function listCards(picture, name, presentation, targetTag, directory) {
     directory == "serviços" ? "object-fit:cover" : ""
   }" src="../database/${directory}/assets/${picture}.png" alt="">
   <div class="produto-info">
-  <h4 class="titulo-pequeno">${name}</h4>
+  <h3 class="titulo-pequeno">${name}</h3>
   </div>
   </a>
       <button class="btn btn-amarelo add-button">
@@ -165,9 +156,9 @@ function listCards(picture, name, presentation, targetTag, directory) {
 
 function whatsappWithCloseList(content) {
   const wppNumber = "5511999999999";
-  document.getElementById('fechar-lista').innerHTML = `
-<h2 class="titulo-pequeno">Enviar orçamento pelo WhatsApp</h2>
-<a class="btn btn-amarelo" href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Ola gostaria de saber mais sobre:%0A${
+  document.getElementById("fechar-lista").innerHTML = `
+<p>Enviar orçamento pelo WhatsApp</p>
+<a class="btn btn-amarelo" href="https://api.whatsapp.com/send?phone=${wppNumber}&text=Olá, gostaria de saber mais sobre os itens:%0A${
     content
       ? content.map((item) => {
           return `*Nome*: ${item.name}, *ID*: ${item.picture} %0A`;
@@ -178,7 +169,6 @@ function whatsappWithCloseList(content) {
 </a>
 `;
 }
-
 
 whatsappWithCloseList(closeList);
 menu();
