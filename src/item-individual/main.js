@@ -11,7 +11,6 @@ menu();
 rodape();
 preencherElem();
 botaoWpp();
-adicionaAlista();
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -46,3 +45,5 @@ if (!servicosurl) {
   selecionarListCards(servicos, servicosurl, "serviços");
   btnSeeMore.innerHTML += `<a href="../itens-da-loja/index.html?sector=serviços" class="btn btn-preto">Veja mais serviços ➔</a>`;
 }
+
+adicionaAlista();

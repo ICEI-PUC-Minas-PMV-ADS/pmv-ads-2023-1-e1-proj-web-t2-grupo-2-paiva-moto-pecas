@@ -63,42 +63,47 @@ export function adicionaAlista() {
       const servicosurl = urlParams.get("serviços");
       var produto;
       produtoIndex = Number(produtoIndex);
+      console.log(button.value);
+      console.log(produtoIndex);
 
-      if (!isInteger(produtoIndex)) {
-        produtoIndex = button.value.split(",")[0];
-        var produtoDirectory = button.value.split(",")[1];
-
-        produtoIndex = String(produtoIndex);
-        produtoDirectory = String(produtoDirectory);
-
-        if (produtoDirectory == "produtos") {
+      if (!button.value) {
+        if (!servicosurl) {
           produto = products.find((product) => {
-            return product.picture === produtoIndex;
+            return product.picture === produtos;
           });
-        } else {
+        } else if (!produtos) {
           produto = servicos.find((servico) => {
-            return servico.picture === produtoIndex;
+            return servico.picture === servicosurl;
           });
         }
       } else {
-        produtoIndex = String(produtoIndex);
+        produtoIndex = button.value.split(",")[0];
+        var produtoLocal = button.value.split(",")[1];
 
-        if (!servicosurl) {
+        console.log(produtoIndex);
+        console.log(produtoLocal);
+
+        if (produtoLocal === "produtos") {
           produto = products.find((product) => {
             return product.picture === produtoIndex;
           });
-        } else if (!produtos) {
+        } else if (produtoLocal === "serviços") {
           produto = servicos.find((servico) => {
             return servico.picture === produtoIndex;
           });
         }
       }
-      // ve se o produto ja esta na lista, se tiver, nao adiciona
+      
       var produtoJaEstaNaLista = CartItems.find((item) => {
-        alert("O item já se encontra na sua lista!");
-        return item.name === produto.name;
+        if (item.picture === produto.picture && item.name === produto.name) {
+          return true;
+        }
       });
-      if (!produtoJaEstaNaLista) {
+  
+      if (produtoJaEstaNaLista) {
+        alert("O item já se encontra na sua lista!");
+        return;
+      } else {
         CartItems.push(produto);
         localStorage.setItem("lista", JSON.stringify(CartItems));
         alert("Item adicionado a lista com sucesso!");
