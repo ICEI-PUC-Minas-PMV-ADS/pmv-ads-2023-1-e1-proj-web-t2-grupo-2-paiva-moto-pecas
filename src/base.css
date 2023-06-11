@@ -235,7 +235,7 @@ a {
 }
 
 .card button:active{
-  background-color: #000;
+  background-color: var(--cinza-escuro);
 }
 
 .faixa-amarela {
