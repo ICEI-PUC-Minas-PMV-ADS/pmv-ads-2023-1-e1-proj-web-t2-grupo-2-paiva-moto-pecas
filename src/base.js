@@ -63,8 +63,6 @@ export function adicionaAlista() {
       const servicosurl = urlParams.get("serviços");
       var produto;
       produtoIndex = Number(produtoIndex);
-      console.log(button.value);
-      console.log(produtoIndex);
 
       if (!button.value) {
         if (!servicosurl) {
@@ -79,9 +77,6 @@ export function adicionaAlista() {
       } else {
         produtoIndex = button.value.split(",")[0];
         var produtoLocal = button.value.split(",")[1];
-
-        console.log(produtoIndex);
-        console.log(produtoLocal);
 
         if (produtoLocal === "produtos") {
           produto = products.find((product) => {
