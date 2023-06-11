@@ -34,9 +34,9 @@ export function responsiveFilter() {
     responsive()
   })
 
-  addEventListener('resize', () => {
-    responsive()
-  })
+  // addEventListener('resize', () => {
+  //   responsive()
+  // })
 
   document.querySelector('#click-icon-filter').addEventListener('click', () => {
     filtersSectionId.classList.replace("responsive-filtersSection", "open-responsive-filtersSection");
