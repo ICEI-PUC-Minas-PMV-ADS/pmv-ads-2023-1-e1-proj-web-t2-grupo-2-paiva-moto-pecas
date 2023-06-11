@@ -49,7 +49,6 @@ export function adicionaAlista() {
   var isInteger = n => (parseInt(n, 10) === n);
   var listaDeDesejo = localStorage.getItem("lista");
   var CartItems = listaDeDesejo ? JSON.parse(listaDeDesejo) : [];
-  console.log(CartItems);
 
   const addToCartButtons = document.querySelectorAll(".add-button");
   for (let i = 0; i < addToCartButtons.length; i++) {
@@ -63,18 +62,12 @@ export function adicionaAlista() {
       const produtos = urlParams.get("produtos");
       const servicosurl = urlParams.get("serviços");
       var produto 
-      console.log(produtoIndex);
-      console.log(isInteger(produtoIndex));
       produtoIndex = Number(produtoIndex);
 
       if(!isInteger(produtoIndex)) {
-
-        console.log(button.value);
+;
         produtoIndex = button.value.split(",")[0];
         var produtoDirectory = button.value.split(",")[1];
-
-        console.log(produtoIndex);
-        console.log(produtoDirectory);
 
         produtoIndex = String(produtoIndex);
         produtoDirectory = String(produtoDirectory);
@@ -90,8 +83,6 @@ export function adicionaAlista() {
         }
       } else {
         produtoIndex = String(produtoIndex);
-        console.log(produtoIndex);
-        console.log(produtoIndex);
 
         if (!servicosurl) {
           produto = products.find((product) => {

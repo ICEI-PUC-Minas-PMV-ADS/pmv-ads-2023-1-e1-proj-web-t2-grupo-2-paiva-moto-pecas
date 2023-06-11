@@ -64,7 +64,7 @@ for (let i = 0; i < buttons.length; i++) {
   button.addEventListener("click", function (event) {
     var buttonEvent = event.target;
     var itemIndex =
-      buttonEvent.parentElement.parentElement.parentElement.querySelector(
+      buttonEvent.parentElement.querySelector(
         ".card-remove-info"
       ).innerText;
 
@@ -73,9 +73,13 @@ for (let i = 0; i < buttons.length; i++) {
     });
 
     var produtoJaEstaNaLista = lista.find((item) => {
-      return item.name === produto.name;
-    });
-    if (!produtoJaEstaNaLista) {
+      return item.picture === produto.picture;
+    }
+    );
+
+    if (produtoJaEstaNaLista) {
+      return
+    } else {
       lista.push(produto);
       localStorage.setItem("lista", JSON.stringify(lista));
       alert("Item adicionado a lista com sucesso!");
@@ -86,7 +90,6 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 var listaContainer = document.getElementById("carrinho-itens");
-console.log(lista.length);
 if (lista.length == 0) {
   listaContainer.innerHTML = `
   <div id="carrinho-vazio">
@@ -150,12 +153,12 @@ function listCards(picture, name, presentation, targetTag, directory) {
   }" src="../database/${directory}/assets/${picture}.png" alt="">
   <div class="produto-info">
   <h4 class="titulo-pequeno">${name}</h4>
-  <p class = "card-remove-info">${picture}</p>
   </div>
   </a>
       <button class="btn btn-amarelo add-button">
       Adicionar ao carrinho
       </button>
+      <p class = "card-remove-info">${picture}</p>
 </div>
 `;
 }
