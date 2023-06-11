@@ -54,8 +54,8 @@ export function responsiveFilter() {
         filtersSectionId.style.top = `${150}px`;
       }
     
-      if (scrollPosition >= 2500) {
-        i = -10 - (scrollPosition - 2500);     
+      if (scrollPosition >= 2400) {
+        i = -10 - (scrollPosition - 2400);     
         filtersSectionId.style.top = `${i}px`;
       } else {
         i = 0;
