@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-#filtersSection{
+#filtersSection {
   padding: 40px 20px;
   border-radius: 12px;
   /* z-index: 2; */
@@ -15,24 +15,24 @@
   width: 100%;
 }
 
-.filtersSection {  
-  background-color: var(--branco); 
+.filtersSection {
+  background-color: var(--branco);
 }
 
-.responsive-filtersSection{
+.responsive-filtersSection {
   background-color: transparent;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-height: 50px;     
+  max-height: 50px;
 }
 
 .open-responsive-filtersSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;  
+  width: 100%;
   position: fixed;
   /* top: 150px; */
   left: 0;
@@ -43,7 +43,6 @@
   z-index: 10;
 }
 
-
 #click-icon-filter {
   display: none;
 }
@@ -52,10 +51,10 @@
   display: none;
 }
 
-#fundo{
+#fundo {
   background-color: rgba(0, 0, 0, 0.486);
   display: none;
-  position: absolute;   
+  position: absolute;
   width: 100vw;
   height: 200vh;
   z-index: 3;
@@ -72,7 +71,6 @@
   display: flex;
   column-gap: 0.5rem;
   align-items: center;
-  /* white-space: nowrap; */
 }
 
 #inputsFilterOptions {
@@ -112,7 +110,7 @@
   padding: 0rem 0rem 0rem 1rem;
 }
 
-#iconSearchBar { 
+#iconSearchBar {
   height: 40px;
   margin-right: 20px;
   position: absolute;
@@ -124,45 +122,42 @@
   position: absolute;
   top: 48px;
   width: 100%;
-  max-width: 843px;   
+  max-width: 843px;
   max-height: 116px;
-  overflow-y: scroll;  
+  overflow-y: scroll;
   z-index: 3;
 }
 
 #containerPersonalDatalist::-webkit-scrollbar {
-    width: 8px; 
-}
-  
-#containerPersonalDatalist::-webkit-scrollbar-track {
-    display: none;
-}
-  
-#containerPersonalDatalist::-webkit-scrollbar-thumb {
-    background-color: #888; 
-    scrollbar-color: #888 #f1f1f1; 
-    border-radius: 5px;
+  width: 8px;
 }
 
+#containerPersonalDatalist::-webkit-scrollbar-track {
+  display: none;
+}
+
+#containerPersonalDatalist::-webkit-scrollbar-thumb {
+  background-color: #888;
+  scrollbar-color: #888 #f1f1f1;
+  border-radius: 5px;
+}
 
 #personalDatalist {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  height: 58px;
-  padding: 10px;  
+  padding: 10px;
   color: var(--preto);
   background-color: var(--branco);
   border-bottom: 1px solid var(--amarelo-secundario);
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
 
 #personalDatalist img {
   width: 48px;
   height: 48px;
   border-radius: 10px 10px 10px 10px;
-
 }
 
 #personalDatalist span {
@@ -204,24 +199,27 @@
   justify-content: center;
   margin: 40px auto 0;
   max-width: 250px;
-
   position: sticky;
   /* bottom: -55px;
   left: 50%; */
 }
-
-
 
 @media (min-width: 48em) {
   aside {
     position: sticky;
     top: 32px;
   }
+
   #div-main {
     flex-direction: unset;
     align-items: flex-start;
   }
+
   #store {
     padding: 0 40px;
+  }
+
+  #personalDatalist {
+    height: 58px;
   }
 }
