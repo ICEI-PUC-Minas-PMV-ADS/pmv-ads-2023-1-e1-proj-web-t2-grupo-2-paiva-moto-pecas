@@ -74,6 +74,7 @@ for (let i = 0; i < buttons.length; i++) {
     });
 
     if (produtoJaEstaNaLista) {
+      alert("O item já se encontra na sua lista!");
       return;
     } else {
       lista.push(produto);
