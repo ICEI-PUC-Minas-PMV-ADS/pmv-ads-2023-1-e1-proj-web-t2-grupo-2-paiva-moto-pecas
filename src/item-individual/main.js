@@ -36,7 +36,7 @@ function selecionarListCards(database, urlParams, directory) {
   });
 }
 
-const btnSeeMore = document.querySelector("#listagem-produtos");
+const btnSeeMore = document.querySelector("#container-secundario");
 
 if (!servicosurl) {
   selecionarListCards(products, produtos, "produtos");
