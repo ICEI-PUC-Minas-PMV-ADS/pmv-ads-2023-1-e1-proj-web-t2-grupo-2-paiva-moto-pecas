@@ -73,7 +73,7 @@ A tela mostra informações sobre a história da empresa, imagens dos funcionár
 
 Figura 17 - Design da página sobre
 
-### Tela produtos e serviços
+### Tela itens da loja
 
 A tela de produtos e serviços oferece acesso a ambas opções por meio dos botões “Produtos” e “Serviços”. No topo da página é possível buscar por itens usando a barra de busca, por exemplo nome ou modelo da moto. Também é possível aplicar, em conjunto com a barra de busca, os filtros pré definidos, disponíveis na lateral esquerda. Cada card possui um botão “Adicionar à lista” cuja função é adicionar diretamente o item à lista de desejos, no entanto se o usuário precisar de mais informações ele pode clicar no card que o levará à página do produto específico. No momento em que acessar a página seis produtos são mostrados, ao rolar até o fim do scroll o botão "Mostrar mais produtos" é revelado e a cada click mais seis produtos são mostrados, o mesmo comportamento acontece para serviços.
 
