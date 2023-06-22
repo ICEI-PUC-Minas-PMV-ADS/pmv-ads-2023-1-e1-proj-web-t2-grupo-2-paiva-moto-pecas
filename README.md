@@ -23,15 +23,6 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 
 - <a href="https://github.com/joycecpc">Joyce Carvalho</a>
 
-## Instruções de utilização
-
-<ol>
-<li>Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;</li>
-<li>Descompacte o arquivo em uma pasta específica;</li>
-<li>Abra o Visual Studio Code e execute o Live Server;</li>
-<li>Abra um navegador de Internet e informe a seguinte URL: http://localhost:5500/index.html</li>
-</ol>
-
 # Documentação
 
 <ol>
@@ -46,6 +37,15 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 <li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
 <li><a href="docs/10-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
 <li><a href="docs/11-Referências.md"> Referências</a></li>
+</ol>
+
+## Instruções de utilização
+
+<ol>
+<li>Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;</li>
+<li>Descompacte o arquivo em uma pasta específica;</li>
+<li>Abra o Visual Studio Code e execute o Live Server;</li>
+<li>Abra um navegador de Internet e informe a seguinte URL: http://localhost:5500/index.html</li>
 </ol>
 
 # Hospedagem
