@@ -64,3 +64,17 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 | Objetivo do Teste     | Verificar se a página de lista informa que a lista está vazia.                                                                                                                          |
 | Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone lista de desejo<br> 5) Clicar no botão Remover todos os itens<br> |
 | Critérios de Êxito    | A página mostrar uma mensagem informando que a lista está vazia.                                                                                                                        |
+
+| Caso de Teste         | CT-09 - Botão WhatsApp                                                                                                                                                          |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requisitos Associados | RF-02  - O site deve possibilitar, por meio de um botão, o contato com a oficina pelo aplicativo WhatsApp.                                                    |
+| Objetivo do Teste     | Verificar se o link externo para o whatsapp está funcionando corretamente.                                                                                                                          |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone do WhatsApp<br> |
+| Critérios de Êxito    | Abrir uma nova página para o whatsapp com uma mensagem pronta para tirar dúvidas.                                                                                                                        |
+
+| Caso de Teste         | CT-10 - Formulário de Contato                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requisitos Associados | RF-09 - O site deve conter um formulário de contato.                                                    |
+| Objetivo do Teste     | Verificar se o campo de criação do formulário está funcionando corretamente.                                                                                                                          |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone Faq & Contato<br> 5) Preencher informações necessárias para envio de mensagem<br>  |
+| Critérios de Êxito    | Encaminhar mensagem escrita para e-mail determinado.                                                                                                                       |
