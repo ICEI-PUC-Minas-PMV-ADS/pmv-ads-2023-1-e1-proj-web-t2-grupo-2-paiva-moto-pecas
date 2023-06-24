@@ -288,13 +288,14 @@ Figura 38 - Lista de desejos vazia
 ## Banco de dados
 
 O banco de dados é uma array de objetos, tendo sua estrutura composta por: 
-name: O nome do item;
-presentatuin: uma breve descrição;
-description: a descrição completa do item;
-brand: sua marca;
-category: a categoria que o item pertence;
-picture: é o nome da imagem do produto, representada por um número e que também foi usado como identificador único;
-sector: a qual setor pertence, produtos ou serviços;
+<br>
+name: O nome do item; <br>
+presentatuin: uma breve descrição;<br>
+description: a descrição completa do item;<br>
+brand: sua marca;<br>
+category: a categoria que o item pertence;<br>
+picture: é o nome da imagem do produto, representada por um número e que também foi usado como identificador único;<br>
+sector: a qual setor pertence, produtos ou serviços;<br>
 featured: determina os itens classificados como mais importantes. 
 
 <img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/db-folder.png">
