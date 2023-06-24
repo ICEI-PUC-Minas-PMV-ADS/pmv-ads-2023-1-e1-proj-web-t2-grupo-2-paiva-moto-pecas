@@ -284,3 +284,33 @@ Figura 38 - Lista de desejos vazia
 - base.css
 - main.css
 - main.js
+
+## Banco de dados
+
+O banco de dados é uma array de objetos, tendo sua estrutura composta por: 
+name: O nome do item;
+presentatuin: uma breve descrição;
+description: a descrição completa do item;
+brand: sua marca;
+category: a categoria que o item pertence;
+picture: é o nome da imagem do produto, representada por um número e que também foi usado como identificador único;
+sector: a qual setor pertence, produtos ou serviços;
+featured: determina os itens classificados como mais importantes. 
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/db-folder.png">
+
+Figura 39 - Pastas do banco de dados 
+
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/database.png">
+
+Figura 40 - Estrutura do banco de dados 
+
+### Requisitos atendidos
+
+- RF-01 - O site deve exibir todos os produtos e serviços oferecidos pela oficina, com mídias e suas respectivas informações técnicas.
+
+
+### Artefatos da funcionalidade
+
+- produtos-db.js
+- servicos-db.js
