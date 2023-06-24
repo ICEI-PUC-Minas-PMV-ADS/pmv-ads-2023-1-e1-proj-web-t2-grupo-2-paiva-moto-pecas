@@ -78,3 +78,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 | Objetivo do Teste     | Verificar se o campo de criação do formulário está funcionando corretamente.                                                                                                                          |
 | Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone Faq & Contato<br> 5) Preencher informações necessárias para envio de mensagem<br>  |
 | Critérios de Êxito    | Encaminhar mensagem escrita para e-mail determinado.                                                                                                                       |
+
+
+| Caso de Teste         | CT-11  - Página Sobre                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requisitos Associados | RF-07 - O site deve conter a história da empresa, horário de funcionamento e depoimento de clientes sobre a oficina.                                                    |
+| Objetivo do Teste     | Verificar se a formatação de imagens e textos da página está rodando corretamente.                                                                                                                           |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar no ícone Sobre<br> |
+| Critérios de Êxito    | Carregar todas as imagens e texto corretamente.                                                                                                                      |
