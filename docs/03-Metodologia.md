@@ -18,6 +18,11 @@ Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma.
 
 Aperfeiçoamento e ajustes das funcionalidades das páginas, elaboração de planos de teste de software exibindo casos de sucesso e insucesso e seus registros de teste de software.
 
+
+## Etapa 5
+
+Disponibilização da solução  completa no servidor web, gravação de vídeo com demonstrações  das soluções, e finalizando com a apresentação do projeto pronto.
+
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
@@ -61,6 +66,3 @@ O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos
 <br>
 Figura 1 - Tela do kanban (GitHub Projects) utilizada pelo grupo
 
-## Etapa 5
-
-Disponibilização da solução  completa no servidor web, gravação de vídeo com demonstrações  das soluções, e finalizando com a apresentação do projeto pronto.
