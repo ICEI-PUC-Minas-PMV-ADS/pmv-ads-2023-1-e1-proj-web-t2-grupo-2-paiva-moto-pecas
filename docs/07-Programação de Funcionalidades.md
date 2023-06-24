@@ -301,7 +301,7 @@ featured: determina os itens classificados como mais importantes.
 
 Figura 39 - Pastas do banco de dados 
 
-<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/database.png">
+<img width="500px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/bancodedados.png">
 
 Figura 40 - Estrutura do banco de dados 
 
