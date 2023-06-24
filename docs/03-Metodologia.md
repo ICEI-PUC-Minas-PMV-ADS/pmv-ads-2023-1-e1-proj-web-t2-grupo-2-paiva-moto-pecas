@@ -60,3 +60,7 @@ O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-kanban.jpg?raw=true" />
 <br>
 Figura 1 - Tela do kanban (GitHub Projects) utilizada pelo grupo
+
+## Etapa 5
+
+Disponibilização da solução  completa no servidor web, gravação de vídeo com demonstrações  das soluções, e finalizando com a apresentação do projeto pronto.
