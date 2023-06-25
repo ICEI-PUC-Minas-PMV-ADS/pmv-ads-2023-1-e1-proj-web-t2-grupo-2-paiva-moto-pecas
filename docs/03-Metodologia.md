@@ -12,20 +12,19 @@ Nesta etapa, desenvolvemos a metodologia do projeto que é dividido em cinco spr
 
 ## Etapa 3
 
-Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, produtos/serviços, item individual, lista de desejos, FAQ/contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, criação das páginas utilizando as linguagens HTML, CSS e JavaScript e seu versionamento no GitHub.
+Iniciamos o desenvolvimento da identidade visual e layout das páginas no Figma. Para que todos desenvolvessem uma página, foram construídas telas: home, itens da loja (produtos e serviços), item individual, lista de desejos, FAQ/contato e sobre. Em seguida o desenvolvimento das funcionalidades utilizando o código css base, um javascript base, estrutura de banco de dados com as informações dos produtos e serviços, criação das páginas utilizando as linguagens HTML, CSS e JavaScript e seu versionamento no GitHub.
 
 ## Etapa 4
 
 Aperfeiçoamento e ajustes das funcionalidades das páginas, elaboração de planos de teste de software exibindo casos de sucesso e insucesso e seus registros de teste de software.
 
-
 ## Etapa 5
 
-Disponibilização da solução  completa no servidor web, gravação de vídeo com demonstrações  das soluções, e finalizando com a apresentação do projeto pronto.
+Disponibilização da solução completa no GitHub Pages, gravação do vídeo com demonstração da solução, e finalizando com a apresentação do projeto finalizado.
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentado na tabela que se segue.
 
 | AMBIENTE                          | PLATAFORMA      | LINK DE ACESSO                                                                                                                  |
 | --------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,10 +58,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 - Code Review: os integrantes da equipe avaliam o código que foi feito.
 - Done: essa lista indica que uma tarefa foi concluída após passar pelos testes necessários e ser aprovada pelo cliente.
 
-O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível através desta URL e é apresentado, no estado atual, na Figura 1.
+O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos está disponível através [desta URL](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/382/views/1) e é apresentado, no estado atual, na Figura 1.
 <br>
 <br>
 <img height="300px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-kanban.jpg?raw=true" />
 <br>
 Figura 1 - Tela do kanban (GitHub Projects) utilizada pelo grupo
-

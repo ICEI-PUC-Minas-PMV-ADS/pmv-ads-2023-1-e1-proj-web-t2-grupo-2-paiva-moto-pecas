@@ -50,16 +50,16 @@ Figura 15 - Estrutura padrão do site
 
 Os templates criados estão disponíveis [aqui](https://www.figma.com/file/AQnV3bdBiIJOyrLcBKpZvp/Grupo-02---Paiva-Moto-Pe%C3%A7as?type=design&node-id=67-194&t=rda4l6cbDeABgS5c-0) e são composto pelos seguintes layouts:
 
-- Tela principal/home
-- Tela sobre
-- Tela de produtos/serviços
-- Tela de item específico
-- Tela de FAQ & contato
-- Tela de lista de desejos
+- Tela Principal/Home
+- Tela Sobre
+- Tela de Itens da Loja
+- Tela de Item específico
+- Tela de FAQ & Contato
+- Tela de Lista de Desejos
 
 ### Tela Inicial / home
 
-Tela que abrange o conteúdo principal da página, por exemplo: menu, banner do site, alguns produtos e serviços em destaque, depoimentos, mapa e rodapé.
+Tela que abrange o conteúdo principal da página, por exemplo: menu, banner do site, alguns produtos e serviços em destaque, depoimento, mapa e rodapé.
 
 <img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/home.jpg?raw=true" />
 
@@ -75,11 +75,11 @@ Figura 17 - Design da página sobre
 
 ### Tela itens da loja
 
-A tela de produtos e serviços oferece acesso a ambas opções por meio dos botões “Produtos” e “Serviços”. No topo da página é possível buscar por itens usando a barra de busca, por exemplo nome ou modelo da moto. Também é possível aplicar, em conjunto com a barra de busca, os filtros pré definidos, disponíveis na lateral esquerda. Cada card possui um botão “Adicionar à lista” cuja função é adicionar diretamente o item à lista de desejos, no entanto se o usuário precisar de mais informações ele pode clicar no card que o levará à página do produto específico. No momento em que acessar a página seis produtos são mostrados, ao rolar até o fim do scroll o botão "Mostrar mais produtos" é revelado e a cada click mais seis produtos são mostrados, o mesmo comportamento acontece para serviços.
+A tela de itens da loja oferece acesso a ambas opções por meio dos botões “Produtos” e “Serviços”. No topo da página é possível buscar por itens usando a barra de busca, por exemplo nome ou modelo da moto. Também é possível aplicar, em conjunto com a barra de busca, os filtros pré definidos, disponíveis na lateral esquerda. Cada item possui um botão “Adicionar à lista” cuja função é adicionar diretamente o item à lista de desejos, no entanto se o usuário precisar de mais informações ele pode clicar no item que o levará à página do produto específico. No momento em que acessar a página, seis produtos são mostrados; ao rolar até o fim do scroll o botão "Mostrar mais produtos" é revelado e a cada click mais seis produtos são mostrados, o mesmo comportamento acontece para serviços.
 
 <img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/produtos-serviços.jpg?raw=true">
 
-Figura 18 - Design da página de produtos e serviços
+Figura 18 - Design da página de itens da loja
 
 ### Tela item específico
 
@@ -93,22 +93,22 @@ Figura 19 - Design da página do produto individual
 
 Figura 20 - Design da página do serviço individual
 
-### Tela FAQ & contato
+### Tela FAQ & Contato
 
-Tela em que o usuário poderá se informar com algumas perguntas frequentes (FAQ). Caso sua dúvida não esteja na FAQ, ele poderá enviar um formulário contendo nome, e-mail, telefone, assunto e mensagem desejada, buscando saber sobre produtos e serviços disponíveis.
+Tela em que o usuário poderá se informar com algumas perguntas frequentes (FAQ). Caso sua dúvida não esteja na FAQ, ele poderá enviar um formulário contendo nome, e-mail, telefone, assunto e mensagem desejada, buscando saber sobre produtos e serviços disponíveis. Alguns campos do formulário possuem \* pois julgamos como informações necessárias para que o contato seja realizado com sucesso.
 
 <img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/faq-contato.jpg">
 
-Figura 21 - Design da página de faq/contato
+Figura 21 - Design da página de faq & contato
 
 ### Tela lista de desejos
 
-Tela que mostra o itens escolhidos para serem enviados via WhatsApp. Na lateral também existem alguns itens de sugestão para o cliente.
+Tela que mostra os itens escolhidos para serem enviados via WhatsApp. Na lateral também existem alguns itens de sugestão para o cliente.
 
 <img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-lista-cheia.jpg?raw=true">
 
-Figura 22 - Design da página de desejos com itens
+Figura 22 - Design da lista de desejos com itens
 
 <img width= "600px" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/tela-desejos-vazia.jpg?raw=true">
 
-Figura 23 - Design da página de desejos vazia
+Figura 23 - Design da lista de desejos vazia

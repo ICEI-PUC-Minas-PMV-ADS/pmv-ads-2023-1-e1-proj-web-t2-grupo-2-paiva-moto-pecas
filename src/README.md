@@ -1,13 +1,12 @@
-# Instruções de utilização
+# Instruções de utilização local
 
-## Instalação do Site
+<ol>
+<li>Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;</li>
+<li>Descompacte o arquivo em uma pasta específica;</li>
+<li>Abra o Visual Studio Code e execute o Live Server;</li>
+<li>Abra um navegador de Internet e informe a seguinte URL: http://localhost:5500/index.html</li>
+</ol>
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado através de navegadores, como por exemplo: Chrome, Firefox, entre outros.
+# Hospedagem
 
-## Histórico de versões
-
-### [0.1.0] - DD/MM/AAAA
-
-#### Adicionado
-
-- Adicionado ...
+- <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/">Confira aqui o projeto no GitHub Pages</a>

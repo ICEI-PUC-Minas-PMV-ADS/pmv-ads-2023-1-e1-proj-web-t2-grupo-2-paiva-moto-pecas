@@ -1,6 +1,6 @@
 # PAIVA MOTO PEÇAS
 
-<img src="docs/img/logotipo-paiva-moto-pecas.png" alt="logotipo Paiva Moto Peças">
+<img src="docs/img/logo-secundaria.png" alt="logotipo Paiva Moto Peças">
 
 `CURSO:` Análise e Desenvolvimento de Sistemas
 
@@ -39,7 +39,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 <li><a href="docs/11-Referências.md"> Referências</a></li>
 </ol>
 
-## Instruções de utilização
+## Instruções de utilização local
 
 <ol>
 <li>Faça o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;</li>
@@ -54,7 +54,7 @@ O projeto se trata de uma aplicação web responsável pela divulgação de prod
 
 # Armazenamento do Código-Fonte
 
-- <a href="src/README.md">Código Fonte</a>
+- <a href="src">Código Fonte</a>
 
 # Armazenamento da Apresentação
 
