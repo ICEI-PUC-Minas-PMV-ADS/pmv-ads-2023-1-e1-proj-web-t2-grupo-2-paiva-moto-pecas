@@ -52,10 +52,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 | Critérios de Êxito    | A página exibe nenhum produto encontrado                                                                                                                                                                                   |
 
 | Caso de Teste         | CT-07 - Lista com itens selecionados                                                                                                                                              |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------- |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Requisitos Associados | RF-10 - O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp.                                              |
 | Objetivo do Teste     | Verificar se a página de lista de desejos mostra os itens adicionados.                                                                                                            |
-| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar em adicionar a lista através da home ou página de itens da loja.<br> | Critérios de Êxito | A página exibe todos os itens adicionados |
+| Passos                | 1) Acessar o Navegador<br> 2) Informar o endereço do Site<br> 3) Visualizar a página principal<br> 4) Clicar em adicionar a lista através da home ou página de itens da loja.<br> |
+| Critérios de Êxito    | A página exibe todos os itens adicionados                                                                                                                                         |
 
 | Caso de Teste         | CT-08 - Lista de desejos vazia                                                                                                                                                                                                    |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
