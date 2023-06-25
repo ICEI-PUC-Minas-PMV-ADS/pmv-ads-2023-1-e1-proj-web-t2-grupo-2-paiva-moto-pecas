@@ -70,7 +70,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 |  **Caso de Teste**  |                                                                          **CT-09 - Botão WhatsApp**                                                                           |
 | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/teste-bota-zap.jpg"/> |
+|       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/teste-botao-whatszapp.jpg"/> |
 | Requisito Associado |                         RF-02 - O site deve possibilitar, por meio de um botão, o contato com a oficina pelo aplicativo WhatsApp. WhatsApp.                          |
 |      Avaliação      |                                                  ✅ Abre uma nova página para o whatsapp com uma mensagem pronta para tirar dúvidas corretamente                                                   |
 |                     |                                                                                                                                                                                       |
