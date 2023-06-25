@@ -70,7 +70,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |    Caso de Teste    |                                                                           CT-09 - Botão WhatsApp                                                                            |
 | :-----------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/teste-botao-whatszapp.jpg"/> |
-| Requisito Associado |                             RF-02 - O site deve possibilitar, por meio de um botão, o contato com a oficina pelo aplicativo WhatsApp. WhatsApp.                             |
+| Requisito Associado |                                  RF-02 - O site deve possibilitar, por meio de um botão, o contato com a oficina pelo aplicativo WhatsApp.                                  |
 |      Avaliação      |                                       ✅ Abre uma nova página para o whatsapp com uma mensagem pronta para tirar dúvidas corretamente                                       |
 |                     |                                                                                                                                                                             |
 
@@ -78,15 +78,13 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/teste-contato.jpg"/> |
 | Requisito Associado |                                                        RF-09 - O site deve conter um formulário de contato.                                                         |
-|      WhatsApp.      |
-|      Avaliação      |                                                 ✅ Encaminha mensagem escrita para e-mail determinado corretamente.                                                 |
+|      Avaliação      |                                                     ✅ Faz a validação dos campos antes de enviar o formulário.                                                     |
 |                     |                                                                                                                                                                     |
 
 |    Caso de Teste    |                                                                       CT-11 - Página Sobre                                                                        |
 | :-----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/teste-sobre.jpg"/> |
 | Requisito Associado |                       RF-07 - O site deve conter a história da empresa, horário de funcionamento e depoimento de clientes sobre a oficina.                        |
-|      WhatsApp.      |
 |      Avaliação      |                                                       ✅ Leva para a página de FAQ & Contato corretamente.                                                        |
 |                     |                                                                                                                                                                   |
 
@@ -94,6 +92,5 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | :-----------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |       Imagem        | <img widt = "500px" src = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas/blob/main/docs/img/caso-teste-home.jpg"/> |
 | Requisito Associado |                 RF-10 - O site deve conter uma página onde mostra os itens selecionados pelo usuário, com a possibilidade de orçamento via WhatsApp.                  |
-|      WhatsApp.      |
 |      Avaliação      |                                                      ✅ O botão adiciona o item escolhido a lista corretamente.                                                       |
 |                     |                                                                                                                                                                       |
