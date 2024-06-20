@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: Paiva Moto Peças
+authors:
+  - family-names: Silva dos Santos Mota
+    given-names:  Alessandra
+  - family-names: Bezerra Moura
+    given-names: Enzo
+  - family-names: da Rosa Santana de Barros
+    given-names: Ingrid
+  - family-names: das Graças Barbosa
+    given-names: Karina
+  - family-names: Vazzoller Marangoni
+    given-names: Lucas
+  - family-names: de Jesus Rizzon
+    given-names: Paloma
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Christina de Paiva Carvalho
+    given-names: Joyce
+keywords:
+  - Oficina
+  - Moto
+  - Peças
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t2-grupo-2-paiva-moto-pecas
+version: 1.0.0
+date-released: 2023-06-25
